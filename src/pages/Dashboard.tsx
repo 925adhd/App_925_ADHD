@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
+
 import {
   ListChecks,
   BookOpen,
@@ -34,49 +35,27 @@ export default function Dashboard() {
   }, []);
 
   async function checkAuth() {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+    const { data: { session } } = await supabase.auth.getSession();
 
-    if (!user) {
+    if (!session) {
       navigate("/", { replace: true });
       return;
     }
 
-    try {
-      const { data, error } = await supabase
-        .from("Paid")
-        .select("email,status,is_premium")
-        .ilike("email", user.email!)
-        .eq("status", "active")
-        .single();
+    const { data, error } = await supabase
+      .from("Paid")
+      .select("email,status,is_premium")
+      .ilike("email", session.user.email!)
+      .eq("status", "active")
+      .maybeSingle();
 
-      if (error) {
-        const { data: fallback } = await supabase
-          .from("Paid")
-          .select("email,status")
-          .ilike("email", user.email!)
-          .eq("status", "active")
-          .single();
-
-        if (!fallback) {
-          await supabase.auth.signOut();
-          navigate("/", { replace: true, state: { error: "no-access" } });
-          return;
-        }
-      } else if (!data) {
-        await supabase.auth.signOut();
-        navigate("/", { replace: true, state: { error: "no-access" } });
-        return;
-      } else {
-        setIsPremium(data.is_premium || false);
-      }
-    } catch (_err) {
+    if (error || !data) {
       await supabase.auth.signOut();
-      navigate("/", { replace: true });
+      navigate("/", { replace: true, state: { error: "no-access" } });
       return;
     }
 
+    setIsPremium(data.is_premium || false);
     setLoading(false);
   }
 
