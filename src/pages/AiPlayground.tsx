@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import DOMPurify from 'dompurify';
-import { supabase } from '../lib/supabase';
 import '../styles/pages/AiPlayground.css';
 
 interface Message {
@@ -150,28 +149,20 @@ export default function AiPlayground() {
     setIsLoading(true);
 
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.access_token) {
-        throw new Error('Please sign in to use the AI Playground.');
-      }
-
       // Validate model against whitelist before sending
       const safeModel = ALLOWED_MODELS.includes(model) ? model : ALLOWED_MODELS[0];
 
       const response = await fetch(AI_FUNCTION_URL, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${session.access_token}`,
-          apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ messages: newMessages, model: safeModel }),
       });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Something went wrong');
-      // Support both { reply } (new edge fn) and { success, message } (legacy)
-      const reply = data.reply ?? data.message ?? '';
-      setMessages([...newMessages, { role: 'assistant', content: reply }]);
+      if (!data.success) throw new Error(data.error || 'Something went wrong');
+      setMessages([...newMessages, { role: 'assistant', content: data.message ?? '' }]);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Failed to get response. Please try again.';
       setError(msg);
