@@ -165,8 +165,8 @@ export default function AiPlayground() {
         body: JSON.stringify({ messages: newMessages, model: safeModel }),
       });
       const data = await response.json();
-      if (!data.success) throw new Error(data.error || 'Something went wrong');
-      setMessages([...newMessages, { role: 'assistant', content: data.message }]);
+      if (!response.ok) throw new Error(data.error || 'Something went wrong');
+      setMessages([...newMessages, { role: 'assistant', content: data.reply }]);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Failed to get response. Please try again.';
       setError(msg);
