@@ -68,7 +68,7 @@ export default function Tools() {
               <img
                 src={`${BASE}V9fFmHmj0sNrFWEZxvre.png`}
                 alt="Passion Finder"
-                onError={e => { (e.target as HTMLImageElement).parentElement!.innerHTML = '🧠' }}
+                onError={e => { (e.target as HTMLImageElement).parentElement!.textContent = '🧠' }}
               />
             </div>
             <h2 className="quiz-title">Passion Finder Quiz</h2>

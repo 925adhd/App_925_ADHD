@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { supabase } from "../lib/supabase";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import {
   ListChecks,
@@ -17,56 +16,11 @@ import {
 } from "lucide-react";
 import "../styles/pages/Dashboard.css";
 
-// True only during `npm run dev` — automatically false in production builds
-const DEV_BYPASS = import.meta.env.DEV;
-
 export default function Dashboard() {
-  const [loading, setLoading] = useState(!DEV_BYPASS);
-  const [isPremium, setIsPremium] = useState(false);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (DEV_BYPASS) return;
-    checkAuth();
-  }, []);
-
   useEffect(() => {
     document.body.classList.add("on-dashboard");
     return () => { document.body.classList.remove("on-dashboard"); };
   }, []);
-
-  async function checkAuth() {
-    const { data: { session } } = await supabase.auth.getSession();
-
-    if (!session) {
-      navigate("/", { replace: true });
-      return;
-    }
-
-    const { data, error } = await supabase
-      .from("Paid")
-      .select("email,status,is_premium")
-      .ilike("email", session.user.email!)
-      .eq("status", "active")
-      .maybeSingle();
-
-    if (error || !data) {
-      await supabase.auth.signOut();
-      navigate("/", { replace: true, state: { error: "no-access" } });
-      return;
-    }
-
-    setIsPremium(data.is_premium || false);
-    setLoading(false);
-  }
-
-  if (loading) {
-    return (
-      <div className="loading-screen">
-        <div className="spinner"></div>
-        <p style={{ color: "var(--text-muted)", fontSize: 14 }}>Loading...</p>
-      </div>
-    );
-  }
 
   return (
     <div className="dashboard">
@@ -96,7 +50,7 @@ export default function Dashboard() {
               { to: "/beginner-list", icon: <ListChecks size={32} />, label: "Beginner List", desc: "Easy starters to get momentum",   extra: "" },
               { to: "/guides",        icon: <BookOpen size={32} />,   label: "Guides",        desc: "Step-by-step help",               extra: "" },
               { to: "/adhd-hacks",    icon: <Lightbulb size={32} />,  label: "ADHD Hacks",    desc: "Tips & strategies",               extra: "" },
-              { to: "/ai-playground", icon: <Bot size={32} />,        label: "AI Playground", desc: "Practice prompts & templates",    extra: !isPremium ? " premium-required" : "" },
+              { to: "/ai-playground", icon: <Bot size={32} />,        label: "AI Playground", desc: "Practice prompts & templates",    extra: "" },
               { to: "/breathwork",    icon: <Wind size={32} />,       label: "Breathwork",    desc: "Calm your brain in 60 seconds",         extra: "" },
             ] as const).map(({ to, icon, label, desc, extra }) => (
               <Link
@@ -159,7 +113,7 @@ export default function Dashboard() {
             href="https://discord.gg/N26dcsUz3b"
             target="_blank"
             rel="noopener noreferrer"
-            className={`discord-card${!isPremium ? " premium-required" : ""}`}
+            className="discord-card"
           >
             <span className="card-icon discord-icon">
               <MessageCircle size={28} />
