@@ -151,11 +151,10 @@ export default function AiPlayground() {
 
     try {
       const { data: { session } } = await supabase.auth.getSession();
-      // In production, require a real session. In dev, fall back to anon key for local testing.
-      if (!session?.access_token && !import.meta.env.DEV) {
+      if (!session?.access_token) {
         throw new Error('Please sign in to use the AI Playground.');
       }
-      const authToken = session?.access_token ?? (import.meta.env.VITE_SUPABASE_ANON_KEY as string);
+      const authToken = session.access_token;
 
       // Validate model against whitelist before sending
       const safeModel = ALLOWED_MODELS.includes(model) ? model : ALLOWED_MODELS[0];
