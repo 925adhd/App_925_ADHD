@@ -35,10 +35,10 @@ export default function Dashboard() {
 
   async function checkAuth() {
     const {
-      data: { session },
-    } = await supabase.auth.getSession();
+      data: { user },
+    } = await supabase.auth.getUser();
 
-    if (!session) {
+    if (!user) {
       navigate("/", { replace: true });
       return;
     }
@@ -47,7 +47,7 @@ export default function Dashboard() {
       const { data, error } = await supabase
         .from("Paid")
         .select("email,status,is_premium")
-        .ilike("email", session.user.email!)
+        .ilike("email", user.email!)
         .eq("status", "active")
         .single();
 
@@ -55,7 +55,7 @@ export default function Dashboard() {
         const { data: fallback } = await supabase
           .from("Paid")
           .select("email,status")
-          .ilike("email", session.user.email!)
+          .ilike("email", user.email!)
           .eq("status", "active")
           .single();
 
