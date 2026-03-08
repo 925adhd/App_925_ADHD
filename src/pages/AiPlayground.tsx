@@ -154,7 +154,6 @@ export default function AiPlayground() {
       if (!session?.access_token) {
         throw new Error('Please sign in to use the AI Playground.');
       }
-      const authToken = session.access_token;
 
       // Validate model against whitelist before sending
       const safeModel = ALLOWED_MODELS.includes(model) ? model : ALLOWED_MODELS[0];
@@ -162,7 +161,7 @@ export default function AiPlayground() {
       const response = await fetch(AI_FUNCTION_URL, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${authToken}`,
+          Authorization: `Bearer ${session.access_token}`,
           apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
           'Content-Type': 'application/json',
         },
@@ -170,7 +169,9 @@ export default function AiPlayground() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Something went wrong');
-      setMessages([...newMessages, { role: 'assistant', content: data.reply }]);
+      // Support both { reply } (new edge fn) and { success, message } (legacy)
+      const reply = data.reply ?? data.message ?? '';
+      setMessages([...newMessages, { role: 'assistant', content: reply }]);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Failed to get response. Please try again.';
       setError(msg);
