@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import DOMPurify from 'dompurify';
+import { supabase } from '../lib/supabase';
 import '../styles/pages/AiPlayground.css';
 
 interface Message {
@@ -152,10 +153,15 @@ export default function AiPlayground() {
       // Validate model against whitelist before sending
       const safeModel = ALLOWED_MODELS.includes(model) ? model : ALLOWED_MODELS[0];
 
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+      if (!token) throw new Error('You must be logged in to use AI.');
+
       const response = await fetch(AI_FUNCTION_URL, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          Authorization: `Bearer ${token}`,
+          apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ messages: newMessages, model: safeModel }),
