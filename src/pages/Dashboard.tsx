@@ -61,12 +61,12 @@ export default function Dashboard() {
 
         if (!fallback) {
           await supabase.auth.signOut();
-          navigate("/", { replace: true });
+          navigate("/", { replace: true, state: { error: "no-access" } });
           return;
         }
       } else if (!data) {
         await supabase.auth.signOut();
-        navigate("/", { replace: true });
+        navigate("/", { replace: true, state: { error: "no-access" } });
         return;
       } else {
         setIsPremium(data.is_premium || false);

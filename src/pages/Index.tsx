@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 
 // Module-level tracker — survives localStorage.clear() within the same tab session
@@ -31,12 +31,17 @@ function recordSend(addr: string): void {
 
 export default function Index() {
   const navigate = useNavigate();
+  const location = useLocation();
   const wrapRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<{ text: string; type: string } | null>(null);
+  const [message, setMessage] = useState<{ text: string; type: string } | null>(
+    (location.state as any)?.error === "no-access"
+      ? { text: "This account doesn't have access. Purchase a membership to get in.", type: "error" }
+      : null
+  );
 
   // Redirect if already logged in
   useEffect(() => {
