@@ -161,7 +161,11 @@ export default function AiPlayground() {
 
       const response = await fetch(AI_FUNCTION_URL, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${authToken}`, 'Content-Type': 'application/json' },
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ messages: newMessages, model: safeModel }),
       });
       const data = await response.json();
