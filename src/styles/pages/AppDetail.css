@@ -1,0 +1,386 @@
+
+
+    .app-detail a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Header */
+    
+    .app-detail .header h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F0F0F;
+    }
+    
+    .app-detail .back-btn {
+      position: absolute;
+      left: 16px;
+      background: none;
+      border: none;
+      color: #0F0F0F;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px 8px;
+      text-decoration: none;
+    }
+    .app-detail .fav-btn-header {
+      position: absolute;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .app-detail .page-fav-btn {
+      position: fixed;
+      right: 20px;
+      top: 84px;
+      background: rgba(0,0,0,0.0);
+      border: none;
+      font-size: 26px;
+      color: var(--text);
+      cursor: pointer;
+      z-index: 10002;
+      padding: 6px;
+      border-radius: 8px;
+      transition: transform 0.12s ease;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .app-detail .page-fav-btn:active { transform: scale(0.96); }
+
+    @media (max-width:520px) {
+      .app-detail .page-fav-btn { right: 12px; top: 76px; font-size: 22px; }
+    }
+    
+    /* Main Content */
+    .app-detail .main-content {
+      padding: 20px 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    /* App Hero */
+    .app-detail .app-hero {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    
+    .app-detail .app-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 2px solid var(--border);
+    }
+    
+    .app-detail .app-name {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    
+    .app-detail .app-rate {
+      font-size: 16px;
+      color: var(--brand);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    
+    .app-detail .app-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .app-detail .tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(255,255,255,.08);
+      color: var(--text-muted);
+    }
+    
+    .app-detail .tag.favorite { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+    .app-detail .tag.gift { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+    .app-detail .tag.crypto { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+    .app-detail .tag.passive { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+    
+    .app-detail .visit-btn {
+      display: inline-block;
+      background: var(--brand);
+      color: #0F0F0F;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .app-detail .visit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--brand-glow);
+      text-decoration: none;
+    }
+    
+    /* Content Sections */
+    .app-detail .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    
+    .app-detail .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .app-detail .section p, .app-detail .section li {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    
+    .app-detail .section ul, .app-detail .section ol {
+      padding-left: 20px;
+    }
+    
+    .app-detail .section li {
+      margin-bottom: 8px;
+    }
+    
+    .app-detail .section strong {
+      color: var(--text);
+    }
+    
+    /* Intro Text */
+    .app-detail .intro-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    /* Pros & Cons - Card Layout */
+    .app-detail .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .app-detail .pros, .app-detail .cons {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .app-detail .pros {
+      border-left: 3px solid var(--green);
+    }
+
+    .app-detail .cons {
+      border-left: 3px solid var(--red);
+    }
+
+    .app-detail .pros .section-title {
+      color: var(--green);
+    }
+
+    .app-detail .cons .section-title {
+      color: var(--red);
+    }
+
+    .app-detail .pros ul, .app-detail .cons ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .app-detail .pros li, .app-detail .cons li {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    /* Payout Table */
+    .app-detail .payout-table {
+      width: 100%;
+      font-size: 13px;
+    }
+
+    .app-detail .payout-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    
+    .app-detail .payout-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      width: 40%;
+    }
+    
+    .app-detail .payout-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    /* Quote Box */
+    .app-detail .quote-box {
+      background: linear-gradient(135deg, rgba(86, 195, 174, 0.1), rgba(86, 195, 174, 0.02));
+      border: 1px solid rgba(86, 195, 174, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 20px;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    
+    /* Final Take */
+    .app-detail .final-take {
+      background: linear-gradient(135deg, rgba(86, 195, 174, 0.12), rgba(86, 195, 174, 0.04));
+      border: 1px solid rgba(86, 195, 174, 0.25);
+    }
+    
+    .app-detail .final-take .section-title {
+      color: var(--brand);
+    }
+    
+    /* Ideal For */
+    .app-detail .ideal-for ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .app-detail .ideal-for li {
+      padding-left: 24px;
+      position: relative;
+    }
+    
+    .app-detail .ideal-for li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Reddit Quotes */
+    .app-detail .reddit-quote {
+      background: rgba(255, 69, 0, 0.08);
+      border-left: 3px solid #ff4500;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    
+    .app-detail .reddit-quote cite {
+      display: block;
+      margin-top: 6px;
+      font-style: normal;
+      font-size: 11px;
+      color: #ff4500;
+    }
+    
+    /* Bottom Navigation */
+    .app-detail .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1A1A1A;
+      border-top: 1px solid var(--border);
+      padding: 6px 0;
+      padding-bottom: max(6px, env(safe-area-inset-bottom));
+      z-index: 100;
+    }
+    
+    .app-detail .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .app-detail .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 6px 10px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 600;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    
+    .app-detail .nav-item.active {
+      color: var(--brand);
+    }
+    
+    .app-detail .nav-item:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+    
+    .app-detail .nav-item .icon {
+      font-size: 20px;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 500px) {
+      .app-detail .pros-cons {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Tablet & Desktop */
+    @media (min-width: 600px) {
+      .app-detail .main-content {
+        padding: 28px 24px;
+      }
+      
+      .app-detail .app-logo {
+        width: 96px;
+        height: 96px;
+      }
+      
+      .app-detail .app-name {
+        font-size: 30px;
+      }
+      
+      .app-detail .section {
+        padding: 22px;
+      }
+      
+      .app-detail .nav-items {
+        max-width: 500px;
+      }
+      
+      .app-detail .nav-item {
+        font-size: 11px;
+        padding: 8px 14px;
+      }
+      
+      .app-detail .nav-item .icon {
+        font-size: 22px;
+      }
+    }

@@ -1,0 +1,552 @@
+/* === Dashboard (polished SaaS) === */
+
+/* Scoped container */
+.dashboard {
+  position: relative;
+}
+
+/* --- Radial glow background --- */
+.dashboard .dashboard-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  background: radial-gradient(
+    circle at center,
+    rgba(95,185,170,0.06),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Container wrapper --- */
+.dashboard .dashboard-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Particles --- */
+.dashboard .particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.dashboard .particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: dashFloat 15s infinite;
+}
+
+.dashboard .particle:nth-child(1)  { left: 10%; animation-delay: 0s;   background: var(--brand); }
+.dashboard .particle:nth-child(2)  { left: 20%; animation-delay: 2s;   background: #A855F7; }
+.dashboard .particle:nth-child(3)  { left: 30%; animation-delay: 4s;   background: #EC4899; }
+.dashboard .particle:nth-child(4)  { left: 40%; animation-delay: 1s;   background: #7DD3C0; }
+.dashboard .particle:nth-child(5)  { left: 50%; animation-delay: 3s;   background: #3B82F6; }
+.dashboard .particle:nth-child(6)  { left: 60%; animation-delay: 5s;   background: var(--brand); }
+.dashboard .particle:nth-child(7)  { left: 70%; animation-delay: 2.5s; background: #A855F7; }
+.dashboard .particle:nth-child(8)  { left: 80%; animation-delay: 4.5s; background: #EC4899; }
+.dashboard .particle:nth-child(9)  { left: 90%; animation-delay: 1.5s; background: var(--brand); }
+.dashboard .particle:nth-child(10) { left: 15%; animation-delay: 3.5s; background: #3B82F6; }
+
+@keyframes dashFloat {
+  0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .dashboard .particles { display: none; }
+}
+
+/* --- Main Content --- */
+.dashboard .main-content {
+  padding: 20px 0 32px;
+}
+
+/* --- Section Title --- */
+.dashboard .section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, var(--brand) 50%, #A855F7 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: dashTitleShine 4s ease infinite;
+}
+
+@keyframes dashTitleShine {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* --- Quick-Action Grid --- */
+.dashboard .quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) {
+  .dashboard .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Action Card --- */
+.dashboard .action-card {
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 24px 16px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.dashboard .action-card:hover {
+  border-color: rgba(86,195,174,0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+}
+
+/* Tap feedback on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .dashboard .action-card:active,
+  .dashboard .featured-card:active,
+  .dashboard .discord-card:active {
+    transform: scale(0.97);
+    transition: transform 120ms ease;
+  }
+}
+
+/* --- Suggested Action highlight --- */
+.dashboard .action-card.suggested-action {
+  border-color: rgba(86, 195, 174, 0.5);
+  box-shadow: 0 0 0 1px rgba(86, 195, 174, 0.25), 0 0 14px rgba(86, 195, 174, 0.18);
+  animation: qaGlow 2s ease-in-out infinite;
+}
+
+.dashboard .action-card.suggested-action .card-icon {
+  color: var(--brand);
+  filter: brightness(1.2);
+}
+
+@keyframes qaGlow {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(86, 195, 174, 0.25), 0 0 14px rgba(86, 195, 174, 0.18); }
+  50%       { box-shadow: 0 0 0 1px rgba(86, 195, 174, 0.45), 0 0 22px rgba(86, 195, 174, 0.28); }
+}
+
+/* --- Suggest label --- */
+.dashboard .qa-suggest-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand);
+  opacity: 0.75;
+  margin: -12px 0 10px;
+}
+
+/* --- Card Icon --- */
+.dashboard .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  color: var(--brand);
+  transition: transform 0.15s ease;
+}
+
+.dashboard .action-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+/* --- Card Typography --- */
+.dashboard .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 0;
+  line-height: 1.3;
+}
+
+.dashboard .card-description {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.4;
+  margin: 4px 0 0;
+}
+
+/* Premium Overlay */
+.dashboard .premium-required {
+  position: relative;
+}
+
+.dashboard .premium-required::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(251,191,36,0.06), rgba(251,191,36,0.02));
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+/* --- Featured "Motivation" Card --- */
+.dashboard .featured-card {
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(86,195,174,0.15);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.dashboard .featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  border-color: rgba(86,195,174,0.3);
+}
+
+.dashboard .featured-card .featured-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.dashboard .featured-card .card-title {
+  font-size: 16px;
+  margin: 0 0 2px;
+}
+
+.dashboard .featured-card .card-description {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* --- Discord Card --- */
+.dashboard .discord-card {
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(88,101,242,0.15);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.dashboard .discord-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  border-color: rgba(88,101,242,0.3);
+}
+
+.dashboard .discord-card .discord-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  color: #5865F2;
+  flex-shrink: 0;
+}
+
+.dashboard .discord-card .content {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard .discord-card .card-title {
+  font-size: 16px;
+  margin: 0 0 2px;
+}
+
+.dashboard .discord-card .card-description {
+  font-size: 13px;
+  margin: 0;
+}
+
+.dashboard .discord-btn {
+  background: #5865F2;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 2px 8px rgba(88,101,242,0.25);
+}
+
+.dashboard .discord-btn:hover {
+  background: #4752C4;
+  transform: scale(1.03);
+}
+
+/* --- Recommended / Activity Section --- */
+.dashboard .section-title-secondary {
+  margin-top: 8px;
+}
+
+.dashboard .activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 24px;
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.dashboard .activity-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.12s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.dashboard .activity-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard .activity-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.dashboard .activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  flex-shrink: 0;
+}
+
+.dashboard .activity-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dashboard .activity-label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.dashboard .activity-meta {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.3;
+}
+
+/* --- Loading State --- */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10000;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--brand);
+  border-radius: 50%;
+  animation: dashSpin 0.8s linear infinite;
+}
+
+@keyframes dashSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Responsive: Mobile --- */
+@media (max-width: 600px) {
+  .dashboard .main-content {
+    padding: 10px 0 12px;
+  }
+
+  .dashboard .section-title {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .dashboard .section-title-secondary {
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  .dashboard .quick-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .dashboard .action-card {
+    padding: 10px 6px;
+    min-height: 76px;
+    justify-content: center;
+  }
+
+  .dashboard .quick-actions .card-description {
+    display: none;
+  }
+
+  .dashboard .quick-actions .card-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+  }
+
+  .dashboard .quick-actions .card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dashboard .card-title {
+    font-size: 13px;
+    margin-top: 0;
+  }
+
+  .dashboard .activity-list {
+    margin-bottom: 12px;
+  }
+
+  .dashboard .activity-item {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .dashboard .activity-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dashboard .activity-label {
+    font-size: 13px;
+  }
+
+  .dashboard .activity-meta {
+    font-size: 12px;
+  }
+
+  .dashboard .featured-card,
+  .dashboard .discord-card {
+    padding: 10px 14px;
+    margin-bottom: 10px;
+  }
+}
+
+/* --- Dashboard-scoped Navbar Polish (mobile only) --- */
+/* On desktop the .site-header is transparent so .site-nav shows through as the
+   top bar. We only restyle the header on small screens where it's the real bar. */
+@media (max-width: 899px) {
+  body.on-dashboard .site-header {
+    background: rgba(95,185,170,0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* ============================================================
+   LIGHT THEME OVERRIDES
+   ============================================================ */
+
+/* Cards — replace dark gradient with white surface */
+html.light .dashboard .action-card,
+html.light .dashboard .featured-card,
+html.light .dashboard .discord-card {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.05);
+}
+
+html.light .dashboard .action-card:hover,
+html.light .dashboard .featured-card:hover,
+html.light .dashboard .discord-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+}
+
+/* Activity list */
+html.light .dashboard .activity-list {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.05);
+}
+
+html.light .dashboard .activity-item {
+  border-bottom-color: var(--border);
+}
+
+html.light .dashboard .activity-item:hover {
+  background: rgba(0,0,0,0.025);
+}
+
+html.light .dashboard .activity-icon {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Section title gradient — keep brand but darken the start color for light bg */
+html.light .dashboard .section-title {
+  background: linear-gradient(135deg, #1a1a1a 0%, var(--brand) 50%, #7c3aed 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Muted text that was hardcoded gray */
+html.light .dashboard .card-description,
+html.light .dashboard .activity-meta {
+  color: var(--text-muted);
+}

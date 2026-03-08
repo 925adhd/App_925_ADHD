@@ -1,0 +1,507 @@
+/* ============================================================
+   BREATHWORK
+   ============================================================ */
+
+.breathwork {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+/* ── Screens ── */
+.breathwork .bw-screen {
+  padding: 20px 20px 48px;
+  animation: bwFadeUp 0.3s ease-out;
+}
+
+.breathwork .bw-session-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 72vh;
+  padding: 24px 20px 40px;
+  text-align: center;
+}
+
+@keyframes bwFadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Select screen ── */
+.breathwork .bw-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.breathwork .bw-title {
+  font-size: clamp(26px, 5vw, 34px);
+  font-weight: 900;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, var(--brand) 55%, #A855F7 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: bwTitleShine 5s ease-in-out infinite;
+}
+
+@keyframes bwTitleShine {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+.breathwork .bw-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.breathwork .bw-exercise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.breathwork .bw-exercise-card {
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+/* Top accent bar per exercise type */
+.breathwork .bw-exercise-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.breathwork .bw-ex-calm::before   { background: var(--brand); }
+.breathwork .bw-ex-focus::before  { background: #A855F7; }
+.breathwork .bw-ex-energy::before { background: #F59E0B; }
+.breathwork .bw-ex-sleep::before  { background: #6366F1; }
+
+/* Per-type icon color via CSS custom property */
+.breathwork .bw-ex-calm   { --ex-color: var(--brand); }
+.breathwork .bw-ex-focus  { --ex-color: #A855F7; }
+.breathwork .bw-ex-energy { --ex-color: #F59E0B; }
+.breathwork .bw-ex-sleep  { --ex-color: #6366F1; }
+
+.breathwork .bw-exercise-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.breathwork .bw-exercise-card:active { transform: scale(0.97); }
+
+.breathwork .bw-ex-icon {
+  color: var(--ex-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.breathwork .bw-ex-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.breathwork .bw-ex-pattern {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.breathwork .bw-ex-range {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ex-color);
+}
+
+.breathwork .bw-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── Setup screen ── */
+.breathwork .bw-setup-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.breathwork .bw-setup-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.breathwork .bw-setup-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.breathwork .bw-duration-group {
+  margin-bottom: 28px;
+}
+
+.breathwork .bw-duration-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.breathwork .bw-duration-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.breathwork .bw-dur-btn {
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--text-muted);
+  padding: 12px 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.breathwork .bw-dur-btn.selected {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #0a0a0a;
+}
+
+.breathwork .bw-dur-btn:not(.selected):hover {
+  border-color: rgba(86, 195, 174, 0.4);
+  color: var(--text);
+}
+
+/* ── Shared buttons ── */
+.breathwork .bw-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 10px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+
+.breathwork .bw-btn-primary {
+  background: var(--brand);
+  color: #0a0a0a;
+  box-shadow: 0 4px 16px rgba(86, 195, 174, 0.25);
+}
+
+.breathwork .bw-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(86, 195, 174, 0.35);
+}
+
+.breathwork .bw-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.breathwork .bw-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.breathwork .bw-btn:active { transform: scale(0.98) !important; }
+
+/* ── Session screen ── */
+.breathwork .bw-session-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 36px;
+}
+
+.breathwork .bw-session-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.breathwork .bw-session-rounds {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── Circle + ring wrapper ── */
+.breathwork .bw-circle-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 40px;
+}
+
+/* SVG progress ring */
+.breathwork .bw-progress-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* start from top */
+}
+
+.breathwork .bw-ring-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-width: 2;
+}
+
+.breathwork .bw-ring-fill {
+  fill: none;
+  stroke: var(--brand);
+  stroke-width: 2;
+  stroke-linecap: round;
+  /* Animate smoothly between each 1-second step */
+  transition: stroke-dashoffset 1s linear;
+}
+
+/* Static decorative inner rings */
+.breathwork .bw-deco-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(86, 195, 174, 0.08);
+  pointer-events: none;
+}
+.breathwork .bw-deco-1 { width: 148px; height: 148px; }
+.breathwork .bw-deco-2 { width: 170px; height: 170px; }
+
+/* ── Breathing orb ──
+   Resting state: scale(0.7) — small, contracted
+   .expanded state: scale(1.55) — full inhale
+   transition-duration is set inline to match the exact phase duration
+   so the orb literally breathes in/out at the right pace.
+── */
+.breathwork .bw-breath-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.25), var(--brand) 60%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  box-shadow:
+    0 0 30px rgba(86, 195, 174, 0.3),
+    0 0 60px rgba(86, 195, 174, 0.12);
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-in-out;
+  /* transition-duration set inline per-phase */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  z-index: 2;
+}
+
+.breathwork .bw-breath-circle.expanded {
+  transform: translate(-50%, -50%) scale(1.55);
+  box-shadow:
+    0 0 60px rgba(86, 195, 174, 0.5),
+    0 0 100px rgba(86, 195, 174, 0.2);
+}
+
+.breathwork .bw-phase-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0a0a0a;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.breathwork .bw-phase-count {
+  font-size: 26px;
+  font-weight: 900;
+  color: #0a0a0a;
+  line-height: 1;
+}
+
+/* ── Paused state ── */
+.breathwork .bw-paused-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: -20px;
+}
+
+/* ── Session controls ── */
+.breathwork .bw-session-controls {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 260px;
+}
+
+.breathwork .bw-control-btn {
+  flex: 1;
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--text);
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.breathwork .bw-control-btn:hover {
+  border-color: rgba(86, 195, 174, 0.3);
+}
+
+.breathwork .bw-control-btn.resuming {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.breathwork .bw-end-btn:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.breathwork .bw-control-btn:active { transform: scale(0.96); }
+
+/* ── Complete screen ── */
+.breathwork .bw-complete {
+  text-align: center;
+  padding-top: 56px;
+  position: relative;
+}
+
+.breathwork .bw-complete-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(86, 195, 174, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.breathwork .bw-complete-title {
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 900;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, var(--brand) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.breathwork .bw-complete-msg {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 300px;
+  margin: 0 auto 32px;
+}
+
+.breathwork .bw-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 32px;
+  background: linear-gradient(145deg, #1c1c1f, #121214);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.breathwork .bw-stat {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.breathwork .bw-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.breathwork .bw-stat-val {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.breathwork .bw-stat-lbl {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Light theme ── */
+html.light .breathwork .bw-exercise-card,
+html.light .breathwork .bw-dur-btn,
+html.light .breathwork .bw-control-btn,
+html.light .breathwork .bw-stats {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+html.light .breathwork .bw-btn-secondary {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--border);
+}
+
+/* ── Responsive ── */
+@media (max-width: 400px) {
+  .breathwork .bw-duration-btns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .breathwork .bw-circle-wrap {
+    width: 190px;
+    height: 190px;
+  }
+}

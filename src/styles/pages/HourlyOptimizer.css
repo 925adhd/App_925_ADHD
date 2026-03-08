@@ -1,0 +1,288 @@
+    .hourly-optimizer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 8px;
+
+      /* Block priority color palette */
+      --high: #4ADE80;
+      --medium: #FBBF24;
+      --low: #60A5FA;
+      --break: rgba(255,255,255,.25);
+    }
+
+    /* Header */
+    .hourly-optimizer .page-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 8px;
+    }
+
+    .hourly-optimizer .page-header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .hourly-optimizer .current-time {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+
+    .hourly-optimizer .page-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Legend */
+    .hourly-optimizer .legend {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hourly-optimizer .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hourly-optimizer .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+    }
+
+    .hourly-optimizer .legend-dot.high { background: var(--high); }
+    .hourly-optimizer .legend-dot.medium { background: var(--medium); }
+    .hourly-optimizer .legend-dot.low { background: var(--low); }
+    .hourly-optimizer .legend-dot.break { background: var(--break); }
+
+    /* Time Blocks */
+    .hourly-optimizer .schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hourly-optimizer .time-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      border-left: 4px solid var(--muted);
+      transition: all 0.2s;
+      opacity: 0.6;
+    }
+
+    .hourly-optimizer .time-block.high-value { border-left-color: var(--high); }
+    .hourly-optimizer .time-block.medium-value { border-left-color: var(--medium); }
+    .hourly-optimizer .time-block.low-value { border-left-color: var(--low); }
+    .hourly-optimizer .time-block.break-time { border-left-color: var(--break); }
+
+    .hourly-optimizer .time-block.current {
+      opacity: 1;
+      border-color: var(--brand);
+      background: linear-gradient(135deg, rgba(86, 195, 174, 0.1), rgba(86, 195, 174, 0.05));
+      box-shadow: 0 0 20px rgba(86, 195, 174, 0.15);
+    }
+
+    .hourly-optimizer .time-block.future {
+      opacity: 1;
+    }
+
+    .hourly-optimizer .block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .hourly-optimizer .block-time {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hourly-optimizer .block-earnings {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      background: rgba(74, 222, 128, 0.15);
+      color: var(--low);
+      white-space: nowrap;
+    }
+
+    .hourly-optimizer .block-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hourly-optimizer .block-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    /* Platforms */
+    .hourly-optimizer .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .hourly-optimizer .platform-link {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+    }
+
+    .hourly-optimizer .platform-link:hover {
+      background: var(--brand-dim);
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    /* Boost Tip */
+    .hourly-optimizer .boost-tip {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      border-left: 2px solid var(--brand);
+    }
+
+    .hourly-optimizer .boost-tip strong {
+      color: var(--brand);
+    }
+
+    /* Current indicator */
+    .hourly-optimizer .current-badge {
+      display: inline-block;
+      background: var(--brand);
+      color: #000;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      text-transform: uppercase;
+    }
+
+    /* Off-hours popup */
+    .hourly-optimizer .off-hours-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .hourly-optimizer .off-hours-card .emoji {
+      font-size: 48px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .hourly-optimizer .off-hours-card h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .hourly-optimizer .off-hours-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .hourly-optimizer .anytime-tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .hourly-optimizer .anytime-task {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .hourly-optimizer .anytime-task h4 {
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hourly-optimizer .anytime-task .earnings {
+      font-size: 11px;
+      color: var(--low);
+      font-weight: 600;
+    }
+
+    .hourly-optimizer .anytime-task p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .hourly-optimizer .anytime-task .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .hourly-optimizer .anytime-task .links a {
+      background: var(--brand);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 14px;
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* Scroll to current */
+    .hourly-optimizer .scroll-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 16px;
+      background: var(--brand);
+      color: #000;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(86, 195, 174, 0.3);
+      display: none;
+      z-index: 50;
+    }
+
+    .hourly-optimizer .scroll-btn.visible {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }

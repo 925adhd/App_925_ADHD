@@ -1,0 +1,408 @@
+    .adhd-hacks {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .adhd-hacks .page-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .adhd-hacks .page-header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .adhd-hacks .page-header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Progress */
+    .adhd-hacks .progress-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card);
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .adhd-hacks .progress-bar .icon {
+      font-size: 20px;
+    }
+
+    .adhd-hacks .progress-info {
+      flex: 1;
+    }
+
+    .adhd-hacks .progress-info .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .adhd-hacks .progress-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .adhd-hacks .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--energy));
+      border-radius: 3px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+
+    .adhd-hacks .progress-count {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand);
+      white-space: nowrap;
+    }
+
+    /* Filters */
+    .adhd-hacks .filters {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .adhd-hacks .filters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .adhd-hacks .filter-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .adhd-hacks .filter-btn:hover {
+      background: var(--card-hover);
+      color: var(--text);
+    }
+
+    .adhd-hacks .filter-btn.active {
+      background: var(--brand);
+      color: #000;
+      border-color: var(--brand);
+    }
+
+    /* Hack Cards */
+    .adhd-hacks .hack-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .adhd-hacks .hack-card {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .adhd-hacks .hack-card:hover {
+      border-color: rgba(86, 195, 174, 0.3);
+    }
+
+    .adhd-hacks .hack-card.tried {
+      opacity: 0.7;
+    }
+
+    .adhd-hacks .hack-card.tried .hack-header::after {
+      content: '✓ Tried';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--energy);
+      color: #000;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .adhd-hacks .hack-header {
+      display: flex;
+      gap: 14px;
+      padding: 16px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .adhd-hacks .hack-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #222;
+      flex-shrink: 0;
+    }
+
+    .adhd-hacks .hack-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .adhd-hacks .hack-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+      padding-right: 60px;
+    }
+
+    .adhd-hacks .hack-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .adhd-hacks .tag {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .adhd-hacks .tag.category {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+    }
+
+    .adhd-hacks .tag.category.productivity {
+      background: rgba(129, 140, 248, 0.15);
+      color: var(--productivity);
+    }
+
+    .adhd-hacks .tag.category.focus {
+      background: rgba(34, 211, 238, 0.15);
+      color: var(--focus);
+    }
+
+    .adhd-hacks .tag.category.energy {
+      background: rgba(74, 222, 128, 0.15);
+      color: var(--energy);
+    }
+
+    .adhd-hacks .tag.time {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+    }
+
+    .adhd-hacks .hack-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    /* Try this week button */
+    .adhd-hacks .try-week-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--brand);
+      background: rgba(86, 195, 174, 0.1);
+      border: 1px solid rgba(86, 195, 174, 0.25);
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .adhd-hacks .try-week-btn:hover {
+      background: rgba(86, 195, 174, 0.2);
+      border-color: rgba(86, 195, 174, 0.5);
+    }
+
+    .adhd-hacks .try-week-btn.is-trying {
+      background: rgba(74, 222, 128, 0.12);
+      border-color: var(--energy);
+      color: var(--energy);
+    }
+
+    .adhd-hacks .expand-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--brand);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .adhd-hacks .expand-indicator:hover {
+      background: rgba(86, 195, 174, 0.08);
+    }
+
+    .adhd-hacks .expand-indicator .arrow {
+      transition: transform 0.3s;
+    }
+
+    .adhd-hacks .hack-card.expanded .expand-indicator .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Expandable Steps */
+    .adhd-hacks .hack-steps {
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid var(--border);
+    }
+
+    .adhd-hacks .steps-content {
+      padding: 16px;
+    }
+
+    .adhd-hacks .steps-content h4 {
+      font-size: 12px;
+      color: var(--brand);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .adhd-hacks .step-list {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .adhd-hacks .step-list li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .adhd-hacks .step-num {
+      width: 22px;
+      height: 22px;
+      background: var(--brand-dim);
+      color: var(--brand);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .adhd-hacks .tried-btn {
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .adhd-hacks .tried-btn:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      background: var(--brand-dim);
+    }
+
+    .adhd-hacks .hack-card.tried .tried-btn {
+      background: rgba(74, 222, 128, 0.1);
+      border-color: var(--energy);
+      color: var(--energy);
+      border-style: solid;
+    }
+
+    /* Empty State */
+    .adhd-hacks .empty-state {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--muted);
+    }
+
+    .adhd-hacks .empty-state .icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    /* Quick Tips Banner */
+    .adhd-hacks .quick-tip {
+      background: linear-gradient(135deg, rgba(86, 195, 174, 0.1), rgba(129, 140, 248, 0.08));
+      border: 1px solid rgba(86, 195, 174, 0.2);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .adhd-hacks .quick-tip strong {
+      color: var(--brand);
+    }
+
+    /* Responsive */
+    @media (min-width: 600px) {
+      .adhd-hacks .hack-header {
+        padding: 20px;
+      }
+
+      .adhd-hacks .hack-img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .adhd-hacks .hack-title {
+        font-size: 17px;
+      }
+
+      .adhd-hacks .hack-desc {
+        font-size: 14px;
+        -webkit-line-clamp: 3;
+      }
+
+      .adhd-hacks .steps-content {
+        padding: 20px;
+      }
+    }

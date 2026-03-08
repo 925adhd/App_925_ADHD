@@ -1,0 +1,426 @@
+/* Header */
+
+    .apps-page .header h1 { font-size: 18px; font-weight: 700; color: #0F0F0F; }
+
+    .apps-page .back-btn {
+      position: absolute;
+      left: 16px;
+      background: none;
+      border: none;
+      color: #0F0F0F;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+
+    /* Main Content */
+    .apps-page .main-content {
+      padding: 20px 8px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Page header row: updated badge sits inline at top */
+    .apps-page .page-header-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    /* Updated Badge */
+    .apps-page .updated-badge {
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.6;
+      margin: 0;
+    }
+
+    /* Key Card */
+    .apps-page .key-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+    }
+
+    .apps-page .key-item {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Search Box */
+    .apps-page .search-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .apps-page .search-box input {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+    }
+
+    .apps-page .search-box input:focus { border-color: var(--brand); }
+    .apps-page .search-box input::placeholder { color: var(--text-muted); }
+
+    .apps-page .search-box::before {
+      content: "🔍";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+    }
+
+    /* Category Tabs */
+    .apps-page .category-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .apps-page .category-tabs::-webkit-scrollbar { display: none; }
+
+    .apps-page .tab-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .apps-page .tab-btn:hover { border-color: var(--brand); color: var(--text); }
+    .apps-page .tab-btn.active { background: var(--brand); color: #0F0F0F; border-color: var(--brand); }
+
+    /* Section */
+    .apps-page .section { margin-top: 28px; margin-bottom: 0; }
+    .apps-page .section + .section {
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 36px;
+      margin-top: 36px;
+    }
+
+    .apps-page .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      justify-content: space-between;
+    }
+    .apps-page .header-left { display:flex; align-items:center; gap:10px; flex: 1; }
+    .apps-page .header-right { display:flex; align-items:center; gap:10px; }
+
+    .apps-page .section-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .apps-page .section-count {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    /* Best For hint */
+    .apps-page .section-best-for {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0 0 10px 0;
+      opacity: 0.75;
+    }
+
+    /* Info Card */
+    .apps-page .info-card {
+      background: rgba(86, 195, 174, 0.08);
+      border: 1px solid rgba(86, 195, 174, 0.2);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Apps Grid */
+    .apps-page .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    /* App Card — glass surface */
+    .apps-page .app-card {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.015)
+      );
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 22px 16px 16px;
+      text-align: center;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .apps-page .app-card:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(0, 255, 180, 0.06);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .apps-page .app-card:active {
+      transform: scale(0.98);
+    }
+
+    /* Normalized logo container — soft halo anchors logos to the card */
+    .apps-page .app-logo-container {
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px auto;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.01)
+      );
+    }
+
+    .apps-page .app-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--card-hover);
+      display: block;
+      border: 2px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .apps-page .app-name {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .apps-page .app-rate {
+      font-size: 12px;
+      color: var(--brand);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .apps-page .app-rate.favorite { color: #f97316; }
+
+    /* Context tags */
+    .apps-page .app-context-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .apps-page .app-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    /* Energy label */
+    .apps-page .app-energy {
+      font-size: 10px;
+      color: var(--text-muted);
+      opacity: 0.7;
+      margin: 0;
+    }
+
+    /* Bottom Navigation */
+    .apps-page .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #111;
+      border-top: 1px solid var(--border);
+      padding: 8px 0;
+      padding-bottom: max(8px, env(safe-area-inset-bottom));
+      z-index: 1000;
+    }
+
+    .apps-page .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .apps-page .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 6px 10px;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .apps-page .nav-item.active { color: var(--brand); }
+    .apps-page .nav-item:hover { color: var(--text); }
+    .apps-page .nav-item .icon { font-size: 20px; }
+
+    .apps-page .hidden { display: none !important; }
+
+    /* Tags filter styles (shared with earn) */
+    .apps-page .filter { position: relative; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+    .apps-page .filter-label { font-size: 13px; color: var(--brand); display: inline-flex; align-items: center; gap: 6px; font-weight: 700; background: transparent; border: 0; padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+    .apps-page .filter-text{ display:inline-block }
+    .apps-page .pill-x{ width:34px; height:34px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04); color:#fff; cursor:pointer; display:grid; place-items:center; line-height:1; font-size:18px; }
+    .apps-page .pill-x.hidden{ display:none !important; }
+    .apps-page .filter-menu{ position:absolute; right:0; top: calc(100% + 10px); width: 260px; padding: 12px; border-radius: 16px; border:1px solid rgba(255,255,255,.10); background: rgba(20,20,20,.92); backdrop-filter: blur(12px); box-shadow: 0 18px 50px rgba(0,0,0,.55); z-index: 50; display:flex; flex-wrap:wrap; gap:10px; align-items:flex-start; }
+
+    /* Align tags dropdown inline with the section header */
+    .apps-page .section-header .header-right .filter { margin-bottom: 0; }
+    .apps-page .section-header .header-right .filter-menu { top: 50%; transform: translateY(-50%); }
+    .apps-page .tag-chip{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius: 999px; white-space: nowrap; line-height: 1; font-size: 12px; font-weight: 800; cursor: pointer; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); color:var(--text); }
+    .apps-page .tag-chip.active{ background: var(--brand); color:#0F0F0F; border-color: var(--brand); }
+
+    /* No results */
+    .apps-page .no-results {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+
+    .apps-page .no-results .emoji { font-size: 48px; margin-bottom: 12px; }
+    .apps-page .no-results p { font-size: 14px; }
+
+    /* Loading screen */
+    .apps-page .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 9999;
+    }
+
+    .apps-page .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-top-color: var(--brand);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (min-width: 600px) {
+      .apps-page .main-content { padding: 28px 24px; }
+      .apps-page .apps-grid { gap: 20px; }
+    }
+
+    .apps-page *,
+    .apps-page a,
+    .apps-page h1,
+    .apps-page h2,
+    .apps-page h3,
+    .apps-page h4,
+    .apps-page h5,
+    .apps-page h6,
+    .apps-page p,
+    .apps-page span {
+      text-decoration: none !important;
+    }
+
+    /* ============================================================
+       LIGHT THEME OVERRIDES
+       ============================================================ */
+
+    /* App cards — replace glass shimmer with solid white surface */
+    html.light .apps-page .app-card {
+      background: var(--card);
+      border-color: var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 14px rgba(0,0,0,0.05);
+    }
+    html.light .apps-page .app-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+      border-color: rgba(0,0,0,0.11);
+    }
+
+    /* Logo halo — invert from white-glow to subtle dark-glow */
+    html.light .apps-page .app-logo-container {
+      background: radial-gradient(circle, rgba(0,0,0,0.04), rgba(0,0,0,0.01));
+    }
+    html.light .apps-page .app-logo {
+      border-color: rgba(0,0,0,0.06);
+    }
+
+    /* Context tags */
+    html.light .apps-page .app-tag {
+      background: rgba(0,0,0,0.05);
+      border-color: rgba(0,0,0,0.07);
+      color: var(--text-muted);
+    }
+
+    /* Section divider */
+    html.light .apps-page .section + .section {
+      border-top-color: var(--border);
+    }
+
+    /* Search */
+    html.light .apps-page .search-box input {
+      background: var(--card);
+    }

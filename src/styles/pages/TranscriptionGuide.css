@@ -1,0 +1,571 @@
+        .transcription-guide {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Warning banner */
+        .transcription-guide .warning-banner {
+            background: linear-gradient(135deg, var(--accent-4)22, var(--accent-1)22);
+            border: 2px solid var(--accent-4);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .transcription-guide .warning-icon { font-size: 2rem; flex-shrink: 0; }
+
+        .transcription-guide .warning-text h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: var(--accent-4);
+            margin-bottom: 5px;
+        }
+
+        .transcription-guide .warning-text p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        /* Hero */
+        .transcription-guide .hero {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .transcription-guide .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .transcription-guide h1 span {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .transcription-guide .subtitle { color: var(--text-dim); font-size: 1.1rem; }
+
+        /* Stats */
+        .transcription-guide .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .transcription-guide .stat {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .transcription-guide .stat-value {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-3);
+        }
+
+        .transcription-guide .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-top: 5px;
+        }
+
+        /* Quick nav */
+        .transcription-guide .quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 25px 0;
+        }
+
+        .transcription-guide .nav-btn {
+            background: var(--card);
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .nav-btn:hover {
+            border-color: var(--accent-1);
+        }
+
+        /* Sections */
+        .transcription-guide .section {
+            margin: 20px 0;
+        }
+
+        .transcription-guide .section-header {
+            background: var(--card);
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .section-header:hover {
+            border-color: var(--accent-2);
+        }
+
+        .transcription-guide .section-header.open {
+            border-color: var(--accent-3);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .transcription-guide .section-icon { font-size: 1.8rem; }
+        .transcription-guide .section-info { flex: 1; }
+
+        .transcription-guide .section-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .transcription-guide .section-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .transcription-guide .section-badge {
+            background: var(--accent-2)22;
+            color: var(--accent-2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .transcription-guide .section-arrow {
+            color: var(--text-dim);
+            transition: transform 0.3s ease;
+        }
+
+        .transcription-guide .section-header.open .section-arrow {
+            transform: rotate(180deg);
+        }
+
+        .transcription-guide .section-body {
+            display: none;
+            background: var(--card);
+            border: 2px solid var(--accent-3);
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            padding: 25px;
+        }
+
+        .transcription-guide .section-body.show {
+            display: block;
+        }
+
+        /* Info cards */
+        .transcription-guide .card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 18px;
+            margin: 15px 0;
+            border-left: 4px solid var(--accent-2);
+        }
+
+        .transcription-guide .card.green { border-left-color: var(--accent-3); }
+        .transcription-guide .card.yellow { border-left-color: var(--accent-4); }
+        .transcription-guide .card.pink { border-left-color: var(--accent-1); }
+        .transcription-guide .card.purple { border-left-color: var(--accent-5); }
+
+        .transcription-guide .card h4 {
+            font-family: 'Fredoka', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .transcription-guide .card ul {
+            margin: 10px 0 0 20px;
+        }
+
+        .transcription-guide .card li {
+            margin: 8px 0;
+        }
+
+        /* Quiz Styles */
+        .transcription-guide .quiz-container {
+            position: relative;
+        }
+
+        .transcription-guide .quiz-progress {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .transcription-guide .progress-dot {
+            flex: 1;
+            height: 6px;
+            background: var(--card-hover);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .progress-dot.active {
+            background: var(--accent-2);
+        }
+
+        .transcription-guide .progress-dot.complete {
+            background: var(--accent-3);
+        }
+
+        .transcription-guide .quiz-question {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .transcription-guide .quiz-question.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .transcription-guide .question-number {
+            font-size: 0.85rem;
+            color: var(--accent-2);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .transcription-guide .question-text {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .transcription-guide .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .transcription-guide .quiz-option {
+            background: var(--card-hover);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .transcription-guide .quiz-option:hover {
+            border-color: var(--accent-2);
+            transform: translateX(5px);
+        }
+
+        .transcription-guide .quiz-option.selected {
+            border-color: var(--accent-3);
+            background: rgba(52, 211, 153, 0.15);
+        }
+
+        .transcription-guide .option-emoji {
+            font-size: 1.5rem;
+        }
+
+        .transcription-guide .option-text {
+            flex: 1;
+        }
+
+        /* Quiz Results */
+        .transcription-guide .quiz-results {
+            display: none;
+            text-align: center;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .transcription-guide .quiz-results.active {
+            display: block;
+        }
+
+        .transcription-guide .result-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .transcription-guide .result-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .transcription-guide .result-title.great { color: var(--accent-3); }
+        .transcription-guide .result-title.good { color: var(--accent-2); }
+        .transcription-guide .result-title.maybe { color: var(--accent-4); }
+        .transcription-guide .result-title.skip { color: var(--accent-1); }
+
+        .transcription-guide .result-score {
+            display: inline-block;
+            background: var(--card-hover);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .transcription-guide .result-breakdown {
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .transcription-guide .breakdown-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--card-hover);
+            border-radius: 10px;
+            margin: 8px 0;
+        }
+
+        .transcription-guide .breakdown-icon {
+            font-size: 1.3rem;
+        }
+
+        .transcription-guide .breakdown-text {
+            flex: 1;
+            font-size: 0.95rem;
+        }
+
+        .transcription-guide .breakdown-score {
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .transcription-guide .breakdown-score.high {
+            background: var(--accent-3)22;
+            color: var(--accent-3);
+        }
+
+        .transcription-guide .breakdown-score.med {
+            background: var(--accent-4)22;
+            color: var(--accent-4);
+        }
+
+        .transcription-guide .breakdown-score.low {
+            background: var(--accent-1)22;
+            color: var(--accent-1);
+        }
+
+        .transcription-guide .result-advice {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .transcription-guide .result-advice h4 {
+            font-family: 'Fredoka', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .transcription-guide .quiz-restart {
+            background: var(--card-hover);
+            border: 2px solid var(--accent-2);
+            color: var(--text);
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .quiz-restart:hover {
+            background: var(--accent-2);
+            color: var(--bg);
+        }
+
+        /* Platform cards */
+        .transcription-guide .platforms {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .transcription-guide .platform {
+            background: var(--card-hover);
+            border-radius: 14px;
+            padding: 18px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .platform:hover {
+            border-color: var(--accent-1);
+        }
+
+        .transcription-guide .platform-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .transcription-guide .platform-name {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .transcription-guide .platform-status {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .transcription-guide .platform-status.open {
+            background: var(--accent-3)22;
+            color: var(--accent-3);
+        }
+
+        .transcription-guide .platform-status.limited {
+            background: var(--accent-4)22;
+            color: var(--accent-4);
+        }
+
+        .transcription-guide .platform-status.waitlist {
+            background: var(--accent-1)22;
+            color: var(--accent-1);
+        }
+
+        .transcription-guide .platform-pay {
+            color: var(--accent-4);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .transcription-guide .platform-desc {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+
+        .transcription-guide .platform-adhd {
+            font-size: 0.85rem;
+            padding: 10px;
+            background: var(--accent-5)15;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-5);
+        }
+
+        .transcription-guide .platform-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--accent-2);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Checklist */
+        .transcription-guide .checklist { margin: 20px 0; }
+
+        .transcription-guide .check-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 14px;
+            background: var(--card-hover);
+            border-radius: 10px;
+            margin: 8px 0;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .check-item.done {
+            border-color: var(--accent-3);
+            background: rgba(52, 211, 153, 0.1);
+        }
+
+        .transcription-guide .check-box {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--text-dim);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .transcription-guide .check-item.done .check-box {
+            background: var(--accent-3);
+            border-color: var(--accent-3);
+            color: var(--bg);
+        }
+
+        .transcription-guide .check-item.done .check-text {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        /* CTA */
+        .transcription-guide .cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            color: var(--text);
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .transcription-guide .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(244, 114, 182, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .transcription-guide .hero { padding: 20px 0; }
+            .transcription-guide { padding: 12px; }
+            .transcription-guide .stats { grid-template-columns: 1fr; gap: 8px; }
+            .transcription-guide .stat { padding: 12px; }
+            .transcription-guide .stat-value { font-size: 1.2rem; }
+            .transcription-guide .stat-label { font-size: 0.8rem; }
+            .transcription-guide .quick-nav { gap: 8px; margin: 15px 0; }
+            .transcription-guide .nav-btn { padding: 8px 12px; font-size: 0.85rem; }
+            .transcription-guide .section-header { padding: 12px; gap: 10px; }
+            .transcription-guide .section-body { padding: 16px; }
+            .transcription-guide .platform { padding: 12px; }
+            .transcription-guide .platform-top { margin-bottom: 8px; }
+            .transcription-guide .platform-pay { font-size: 0.85rem; }
+            .transcription-guide .platform-desc { font-size: 0.85rem; }
+            .transcription-guide .card { padding: 12px; }
+            .transcription-guide .check-item { padding: 10px; gap: 10px; }
+            .transcription-guide .cta { padding: 10px 18px; font-size: 0.95rem; }
+            .transcription-guide .hero-icon { font-size: 3rem; }
+            .transcription-guide .question-text { font-size: 1rem; }
+        }

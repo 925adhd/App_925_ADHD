@@ -1,0 +1,744 @@
+        /* Floating particles background */
+        .surveys-guide .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .surveys-guide .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--accent-2);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Top XP Bar */
+        .surveys-guide .xp-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 2px solid var(--accent-2);
+        }
+
+        .surveys-guide .xp-progress {
+            flex: 1;
+            height: 8px;
+            background: var(--card);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 15px;
+        }
+
+        .surveys-guide .xp-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+            background-size: 200% 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            animation: shimmer 2s infinite linear;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .surveys-guide .xp-label {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            color: var(--accent-3);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .surveys-guide .level-badge {
+            background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* Main container */
+        .surveys-guide {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 70px 20px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .surveys-guide .hero {
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .surveys-guide .hero-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .surveys-guide .subtitle {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* TL;DR Card */
+        .surveys-guide .tldr {
+            background: linear-gradient(135deg, var(--accent-2)22, var(--accent-1)22);
+            border: 2px solid var(--accent-2);
+            border-radius: 16px;
+            padding: 20px 15px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surveys-guide .tldr::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: transparent;
+            padding: 0;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            color: var(--accent-2);
+            font-size: 0.9rem;
+        }
+
+        .surveys-guide .tldr-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        .surveys-guide .tldr-stat {
+            padding: 10px;
+        }
+
+        .surveys-guide .tldr-value {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-3);
+        }
+
+        .surveys-guide .tldr-label {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            margin-top: 3px;
+        }
+
+        /* Quick Action Buttons */
+        .surveys-guide .quick-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .surveys-guide .action-btn {
+            background: var(--card);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            padding: 10px 18px;
+            color: var(--text);
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .surveys-guide .action-btn:hover {
+            border-color: var(--accent-2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(196, 77, 255, 0.2);
+        }
+
+        .surveys-guide .action-btn.primary {
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            border: none;
+        }
+
+        .surveys-guide .action-btn.primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+        }
+
+        /* Accordion Sections */
+        .surveys-guide .section {
+            margin: 15px 0;
+        }
+
+        .surveys-guide .section-header {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            user-select: none;
+        }
+
+        .surveys-guide .section-header:hover {
+            border-color: var(--accent-2);
+            background: var(--card-hover);
+        }
+
+        .surveys-guide .section-header.active {
+            border-color: var(--accent-3);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .surveys-guide .section-icon {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        .surveys-guide .section-info {
+            flex: 1;
+        }
+
+        .surveys-guide .section-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+
+        .surveys-guide .section-preview {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        .surveys-guide .section-time {
+            background: var(--accent-5)22;
+            color: var(--accent-5);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .surveys-guide .section-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--text-dim);
+        }
+
+        .surveys-guide .section-header.active .section-arrow {
+            transform: rotate(180deg);
+            color: var(--accent-3);
+        }
+
+        .surveys-guide .section-content {
+            background: var(--card);
+            border: 2px solid var(--accent-3);
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .surveys-guide .section-content.open {
+            max-height: 3000px;
+            padding: 15px;
+        }
+
+        /* Content Cards */
+        .surveys-guide .info-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 12px 0;
+            border-left: 3px solid var(--accent-2);
+        }
+
+        .surveys-guide .info-card.success { border-left-color: var(--accent-3); }
+        .surveys-guide .info-card.warning { border-left-color: var(--warning); }
+        .surveys-guide .info-card.danger { border-left-color: var(--danger); }
+        .surveys-guide .info-card.money { border-left-color: var(--accent-4); }
+
+        .surveys-guide .info-card h4 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Interactive Quiz */
+        .surveys-guide .quiz-card {
+            background: linear-gradient(135deg, var(--accent-5)15, var(--accent-2)15);
+            border: 2px solid var(--accent-5);
+            border-radius: 14px;
+            padding: 18px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .surveys-guide .quiz-question {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .surveys-guide .quiz-options {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .surveys-guide .quiz-option {
+            background: var(--card);
+            border: 2px solid var(--text-dim);
+            border-radius: 10px;
+            padding: 12px 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .surveys-guide .quiz-option:hover {
+            border-color: var(--accent-2);
+            transform: scale(1.05);
+        }
+
+        .surveys-guide .quiz-option.selected {
+            border-color: var(--accent-3);
+            background: var(--accent-3)22;
+        }
+
+        .surveys-guide .quiz-result {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .surveys-guide .quiz-result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .surveys-guide .quiz-result.yes {
+            background: var(--accent-3)22;
+            border: 2px solid var(--accent-3);
+        }
+
+        .surveys-guide .quiz-result.maybe {
+            background: var(--warning)22;
+            border: 2px solid var(--warning);
+        }
+
+        .surveys-guide .quiz-result.no {
+            background: var(--danger)22;
+            border: 2px solid var(--danger);
+        }
+
+        /* Platform Cards */
+        .surveys-guide .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .surveys-guide .platform-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .surveys-guide .platform-card:hover {
+            border-color: var(--accent-2);
+            transform: translateY(-5px);
+        }
+
+        .surveys-guide .platform-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .surveys-guide .platform-name {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .surveys-guide .platform-rating {
+            display: flex;
+            gap: 1px;
+        }
+
+        .surveys-guide .star {
+            color: var(--accent-4);
+            font-size: 0.8rem;
+        }
+
+        .surveys-guide .star.empty {
+            opacity: 0.3;
+        }
+
+        .surveys-guide .platform-pay {
+            background: var(--accent-3)22;
+            color: var(--accent-3);
+            padding: 3px 8px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .surveys-guide .platform-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+
+        .surveys-guide .platform-adhd {
+            font-size: 0.8rem;
+            padding: 6px 10px;
+            background: var(--accent-2)15;
+            border-radius: 6px;
+            border-left: 2px solid var(--accent-2);
+        }
+
+        .surveys-guide .platform-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--accent-5);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .surveys-guide .platform-link:hover {
+            color: var(--accent-1);
+        }
+
+        /* Achievement Popup */
+        .surveys-guide .achievement {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent-4), var(--accent-3));
+            color: var(--bg);
+            padding: 15px 25px;
+            border-radius: 16px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transform: translateX(150%);
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 1001;
+            box-shadow: 0 10px 40px rgba(77, 255, 184, 0.3);
+        }
+
+        .surveys-guide .achievement.show {
+            transform: translateX(0);
+        }
+
+        .surveys-guide .achievement-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Checklist */
+        .surveys-guide .checklist {
+            margin: 15px 0;
+        }
+
+        .surveys-guide .check-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--card);
+            border-radius: 10px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-size: 0.9rem;
+        }
+
+        .surveys-guide .check-item:hover {
+            background: var(--card-hover);
+        }
+
+        .surveys-guide .check-item.checked {
+            border-color: var(--accent-3);
+            background: var(--accent-3)11;
+        }
+
+        .surveys-guide .check-box {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--text-dim);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .surveys-guide .check-item.checked .check-box {
+            background: var(--accent-3);
+            border-color: var(--accent-3);
+            color: var(--bg);
+        }
+
+        .surveys-guide .check-text {
+            flex: 1;
+        }
+
+        .surveys-guide .check-item.checked .check-text {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .surveys-guide {
+                padding: 60px 15px 30px;
+            }
+
+            .surveys-guide .hero {
+                padding: 15px 0;
+            }
+
+            .surveys-guide .hero-emoji {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            .surveys-guide .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .surveys-guide .tldr {
+                padding: 15px 10px;
+                margin: 15px 0;
+            }
+
+            .surveys-guide .tldr-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .surveys-guide .tldr-stat {
+                padding: 8px;
+            }
+
+            .surveys-guide .tldr-value {
+                font-size: 1.2rem;
+            }
+
+            .surveys-guide .tldr-label {
+                font-size: 0.7rem;
+            }
+
+            .surveys-guide .quick-actions {
+                flex-direction: column;
+                margin: 15px 0;
+            }
+
+            .surveys-guide .action-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+
+            .surveys-guide .section {
+                margin: 12px 0;
+            }
+
+            .surveys-guide .section-header {
+                padding: 12px;
+                gap: 10px;
+            }
+
+            .surveys-guide .section-icon {
+                font-size: 1.4rem;
+            }
+
+            .surveys-guide .section-title {
+                font-size: 0.95rem;
+            }
+
+            .surveys-guide .section-preview {
+                font-size: 0.7rem;
+            }
+
+            .surveys-guide .section-time {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+
+            .surveys-guide .section-content.open {
+                padding: 12px;
+            }
+
+            .surveys-guide .info-card {
+                padding: 12px;
+                margin: 10px 0;
+                font-size: 0.9rem;
+            }
+
+            .surveys-guide .info-card h4 {
+                font-size: 0.9rem;
+            }
+
+            .surveys-guide .quiz-card {
+                padding: 15px;
+                margin: 12px 0;
+            }
+
+            .surveys-guide .quiz-question {
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+            }
+
+            .surveys-guide .quiz-option {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+
+            .surveys-guide .platform-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .surveys-guide .platform-card {
+                padding: 12px;
+            }
+
+            .surveys-guide .platform-name {
+                font-size: 0.95rem;
+            }
+
+            .surveys-guide .platform-desc {
+                font-size: 0.8rem;
+            }
+
+            .surveys-guide .platform-adhd {
+                font-size: 0.75rem;
+                padding: 5px 8px;
+            }
+
+            .surveys-guide .check-item {
+                padding: 10px;
+                gap: 10px;
+                font-size: 0.85rem;
+            }
+
+            .surveys-guide .check-box {
+                width: 22px;
+                height: 22px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Confetti animation */
+        .surveys-guide .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1002;
+            overflow: hidden;
+        }
+
+        .surveys-guide .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-1);
+            top: -10px;
+            animation: confettiFall 3s ease-in-out forwards;
+        }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Smooth scroll anchor offset */
+        .surveys-guide [id] {
+            scroll-margin-top: 70px;
+        }

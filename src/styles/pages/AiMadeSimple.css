@@ -1,0 +1,424 @@
+    .ai-made-simple {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .ai-made-simple .page-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .ai-made-simple .page-header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .ai-made-simple .page-header h1 span {
+      color: var(--brand);
+    }
+
+    .ai-made-simple .page-header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Progress */
+    .ai-made-simple .progress-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card);
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .ai-made-simple .progress-bar .icon {
+      font-size: 20px;
+    }
+
+    .ai-made-simple .progress-info {
+      flex: 1;
+    }
+
+    .ai-made-simple .progress-info .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .ai-made-simple .progress-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .ai-made-simple .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--blue));
+      border-radius: 3px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+
+    .ai-made-simple .progress-count {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    /* Table of Contents */
+    .ai-made-simple .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .ai-made-simple .toc-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .ai-made-simple .toc-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .ai-made-simple .toc-link {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+    }
+
+    .ai-made-simple .toc-link:hover {
+      background: var(--brand-dim);
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    /* Section */
+    .ai-made-simple .section {
+      margin-bottom: 32px;
+    }
+
+    .ai-made-simple .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ai-made-simple .section-header .emoji {
+      font-size: 24px;
+    }
+
+    .ai-made-simple .section-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .ai-made-simple .section-header .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Big Text */
+    .ai-made-simple .big-text {
+      background: linear-gradient(135deg, rgba(86, 195, 174, 0.1), rgba(129, 140, 248, 0.08));
+      border: 1px solid rgba(86, 195, 174, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .ai-made-simple .big-text .highlight {
+      color: var(--brand);
+    }
+
+    /* Cards Grid */
+    .ai-made-simple .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 400px) {
+      .ai-made-simple .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ai-made-simple .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      transition: border-color 0.2s;
+    }
+
+    .ai-made-simple .card:hover {
+      border-color: rgba(86, 195, 174, 0.3);
+    }
+
+    .ai-made-simple .card .emoji {
+      font-size: 28px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .ai-made-simple .card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .ai-made-simple .card p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Tool Cards */
+    .ai-made-simple .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ai-made-simple .tool-card:hover {
+      border-color: rgba(86, 195, 174, 0.3);
+    }
+
+    .ai-made-simple .tool-info {
+      flex: 1;
+    }
+
+    .ai-made-simple .tool-info h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ai-made-simple .tool-info p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .ai-made-simple .tool-cost {
+      font-size: 11px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .ai-made-simple .tool-link {
+      background: var(--brand);
+      color: #000;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.2s;
+    }
+
+    .ai-made-simple .tool-link:hover {
+      transform: scale(1.05);
+    }
+
+    /* Steps */
+    .ai-made-simple .steps {
+      margin-bottom: 16px;
+    }
+
+    .ai-made-simple .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .ai-made-simple .step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--brand-dim);
+      color: var(--brand);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .ai-made-simple .step-content h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ai-made-simple .step-content p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Alerts */
+    .ai-made-simple .alert {
+      display: flex;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border-left: 3px solid;
+    }
+
+    .ai-made-simple .alert.tip {
+      background: rgba(74, 222, 128, 0.1);
+      border-color: var(--green);
+    }
+
+    .ai-made-simple .alert.warning {
+      background: rgba(251, 191, 36, 0.1);
+      border-color: var(--yellow);
+    }
+
+    .ai-made-simple .alert.danger {
+      background: rgba(248, 113, 113, 0.1);
+      border-color: var(--red);
+    }
+
+    .ai-made-simple .alert .icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .ai-made-simple .alert-content h4 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ai-made-simple .alert-content p, .ai-made-simple .alert-content li {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .ai-made-simple .alert-content ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .ai-made-simple .alert-content li {
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .ai-made-simple .alert-content li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    /* Example Prompts */
+    .ai-made-simple .prompt-grid {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .ai-made-simple .prompt {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .ai-made-simple .prompt:hover {
+      border-color: var(--brand);
+      background: var(--brand-dim);
+    }
+
+    .ai-made-simple .prompt .emoji {
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .ai-made-simple .prompt-text {
+      color: var(--text);
+    }
+
+    .ai-made-simple .prompt .copy-hint {
+      font-size: 10px;
+      color: var(--brand);
+      margin-top: 4px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .ai-made-simple .prompt:hover .copy-hint {
+      opacity: 1;
+    }
+
+    /* Scroll indicator */
+    .ai-made-simple .scroll-top {
+      position: fixed;
+      bottom: 80px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      background: var(--brand);
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 50;
+    }
+
+    .ai-made-simple .scroll-top.visible {
+      opacity: 1;
+    }

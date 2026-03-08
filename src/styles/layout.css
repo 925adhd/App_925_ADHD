@@ -1,0 +1,1022 @@
+/* layout.css (standardized, fixed heights) */
+:root{
+  --brand:#56C3AE;
+  --cyan:#56C3AE;
+  --bg:#0F0F0F;
+  --card:#1A1A1A;
+  --card-hover:#252525;
+  --border:rgba(255,255,255,.10);
+  --text:#fff;
+  --text-muted:rgba(255,255,255,.55);
+
+  /* Structural surfaces with per-theme values */
+  --sidebar-bg:#141416;
+  --panel-bg:#1a1a1a;
+
+  --header-h:56px;
+  --nav-h:72px; /* includes padding; keep constant */
+
+  /* Semantic color tokens used across tool pages */
+  --muted: rgba(255,255,255,.55);
+  --green: #4ADE80;
+  --red: #F87171;
+  --yellow: #FBBF24;
+  --blue: #3B82F6;
+  --brand-dim: rgba(86, 195, 174, 0.12);
+}
+
+/* ============================================================
+   LIGHT THEME — applied when <html class="light">
+   Dark is the default via :root above, so only overrides needed.
+   All var(--x) references cascade automatically.
+   ============================================================ */
+html.light {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --card-hover: #f0f1f3;
+  --border: rgba(0, 0, 0, 0.09);
+  --text: #111111;
+  --text-muted: rgba(0, 0, 0, 0.52);
+  --sidebar-bg: #ebebed;
+  --panel-bg: #ffffff;
+
+  --muted: rgba(0,0,0,.52);
+  --green: #16a34a;
+  --red: #dc2626;
+  --yellow: #d97706;
+  --blue: #2563eb;
+  --brand-dim: rgba(86, 195, 174, 0.15);
+}
+
+html, body { height:100%; }
+body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  /* Reserve space so content never changes layout or overlaps */
+  padding-top:var(--header-h);
+  padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  padding-left:16px;
+  padding-right:16px;
+  box-sizing:border-box;
+}
+*, *::before, *::after { box-sizing:border-box; }
+
+/* Ensure main content respects body padding */
+main {
+  max-width: 100%;
+}
+
+/* Header: fixed height, consistent everywhere */
+.site-header{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:var(--header-h);
+  min-height:var(--header-h);
+  z-index:9999;
+
+  background:var(--brand);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+}
+
+.site-header .title{
+  font-size:18px;
+  font-weight:800;
+  color:#0F0F0F;
+  line-height:var(--header-h);
+  margin:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:calc(100% - 120px); /* keeps title from colliding with back button */
+}
+
+.site-header .back-btn{
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:10px;
+  background:none;
+  border:none;
+  color:#0F0F0F;
+  font-size:26px;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+/* Remove back buttons site-wide */
+.back-btn{ display: none !important; }
+
+/* Back arrow button (mobile only) */
+.back-arrow-btn{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: none; /* hidden on desktop */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  color: #0F0F0F;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+@media (max-width: 899px) {
+  .back-arrow-btn {
+    display: flex !important;
+  }
+}
+
+/* Brand logo + name in the left corner */
+.site-header .brand{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* hidden on mobile by default */
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  pointer-events: auto; /* allow clicks */
+}
+.site-header .brand .brand-logo{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.site-header .brand .brand-name{
+  display: none;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+@media (min-width: 900px) {
+  .site-header .brand{ display: flex; }
+  .site-header .brand .brand-name{ display: inline-block; }
+}
+
+/* Mobile menu button (hamburger) shown in the header on small screens */
+@media (max-width: 899px) {
+  .site-header .menu-btn,
+  .menu-btn {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+    color: var(--text);
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  /* Ensure any page-specific menu buttons or stray buttons inside nav are hidden */
+  .site-nav .menu-btn,
+  .nav-item .menu-btn,
+  main .menu-btn,
+  .hero .menu-btn { display: none !important; }
+
+  /* Header hamburger removed — drawer access is via the More button in bottom nav */
+  .site-header .menu-btn { display: none !important; }
+
+  /* Hide any inline SVGs or stray icons inside the primary nav to remove
+    unexpected glyphs (safely targets only the nav area). */
+  .site-nav svg { display: none !important; }
+  .site-nav img[src*="data:image/svg+xml"] { display: none !important; }
+
+  /* Ensure only `.nav-item` children appear in the nav-items container. */
+  .site-nav .nav-items > * {
+    display: none;
+  }
+  .site-nav .nav-items > .nav-item {
+    display: inline-flex !important;
+  }
+}
+
+/* Bottom nav: fixed height, consistent everywhere */
+.site-nav{
+  position:fixed;
+  left:0; right:0;
+  bottom:0;
+  height:var(--nav-h);
+  min-height:var(--nav-h);
+  z-index:9999;
+
+  background:var(--card);
+  border-top:1px solid var(--border);
+  padding:8px 0;
+  padding-bottom:calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Keep nav items centered and consistent width */
+.site-nav .nav-items{
+  height:100%;
+  max-width:700px;
+  margin:0 auto;
+  padding:0 12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:0;
+}
+
+/* Lock spacing: fixed icon box + fixed label line-height */
+.site-nav .nav-item{
+  height:100%;
+  min-width:56px;
+  padding:6px 8px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+
+  text-decoration:none;
+  color:var(--text-muted);
+  font-size:10px;
+  font-weight:700;
+  text-align:center;
+
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+}
+
+.site-nav .nav-item .icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:28px;          /* fixed icon "box" */
+  font-size:24px;
+  line-height:28px;     /* locks vertical spacing */
+}
+
+/* Image-based nav icons (local files) */
+.site-nav .nav-item .nav-icon {
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  display:block;
+}
+
+/* Larger heart for saved/favorites */
+.site-nav .nav-item.nav-favs .nav-icon {
+  width:28px;
+  height:28px;
+}
+
+.site-nav .nav-item span:not(.icon){
+  display:block;
+  line-height:12px;     /* locks label spacing */
+}
+
+.site-nav .nav-item:hover{ color:var(--text); }
+.site-nav .nav-item.active{ color:var(--brand); }
+
+/* --- Mobile active tab animation --- */
+@media (max-width: 899px) {
+  .site-nav .nav-item {
+    position: relative;
+    transition: color 150ms ease;
+  }
+
+  .site-nav .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 28px;
+    border-radius: 10px;
+    background: rgba(86, 195, 174, 0.13);
+    pointer-events: none;
+  }
+
+  .site-nav .nav-item .nav-icon {
+    transition: transform 150ms ease;
+  }
+
+  .site-nav .nav-item.active .nav-icon {
+    transform: scale(1.12);
+  }
+
+  /* More button dot icon */
+  .site-nav .nav-more-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: inherit;
+  }
+}
+
+/* Optional: if some pages set main to full height or weird padding, this helps */
+main, .main-content { min-height:calc(100vh - var(--header-h) - var(--nav-h)); }
+
+/* Allow normal scrolling everywhere */
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Desktop: move bottom nav to top and style like horizontal pill nav */
+@media (min-width: 900px) {
+  .site-nav{
+    bottom: auto;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    height: var(--nav-h);
+    min-height: var(--nav-h);
+    z-index: 9998;
+
+    background: var(--brand);
+    border-top: none;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-nav .nav-items{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .site-nav .nav-item{
+    height: 40px;
+    min-width: auto;
+    padding: 8px 14px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+  }
+
+  .site-nav .nav-item .icon{ display:inline-flex; font-size:20px; height:auto; line-height:1; }
+
+  .site-nav .nav-item .nav-icon {
+    width:22px;
+    height:22px;
+  }
+
+  .site-nav .nav-item:hover{ color: var(--text); }
+
+/* Mobile: tighten gutters so content sits a bit closer to the edge */
+@media (max-width: 520px) {
+  body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /* ensure main content uses the available width inside body padding */
+  main, .main-content {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .site-header { padding: 0 8px; }
+  .site-nav .nav-items { padding: 0 6px; }
+}
+
+  .site-nav .nav-item.active{
+    color: var(--text);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: none;
+  }
+
+  /* ensure header stays above nav */
+  .site-header{ z-index:10000; }
+}
+
+/* Keep top reserved space equal to header + nav on desktop so thickness matches mobile */
+@media (min-width: 900px) {
+  /* Keep top reserved space equal only to header height so nav overlaps it */
+  body {
+    padding-top: var(--header-h);
+  }
+
+  /* Make header visually transparent so the nav bar shows as the top bar
+     while keeping the header's back button visible on top. */
+  .site-header {
+    background: transparent;
+    z-index: 10000;
+    pointer-events: none; /* allow clicks to pass through to the nav beneath */
+  }
+
+  /* Hide the back-arrow on desktop when the top nav is visible */
+  .site-header .back-btn {
+    display: none;
+  }
+
+  /* Position nav to overlap header and match header height */
+  .site-nav{
+    top: 0;
+    height: var(--header-h);
+    min-height: var(--header-h);
+    background: var(--brand);
+    border-top: none;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Back button removed on desktop */
+  .site-header .back-btn {
+    display: none !important;
+  }
+/* Removed global image scaling that was causing images to stretch out of containers on desktop */
+
+  .site-nav .nav-items{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav .nav-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav .nav-item{
+    height: 36px;
+    padding: 6px 10px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .site-nav .nav-item .icon{ display:inline-flex; font-size:20px; height:auto; line-height:1; }
+
+  .site-nav .nav-item .nav-icon {
+    width:22px;
+    height:22px;
+  }
+
+  .site-nav .nav-item:hover{ color: var(--text); }
+
+  .site-nav .nav-item.active{
+    color: var(--text);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: none;
+  }
+
+  /* On wider screens, give nav items more breathing room */
+  @media (min-width: 1200px) {
+    .site-nav .nav-items {
+      gap: 10px;
+    }
+
+    .site-nav .nav-item {
+      padding: 6px 14px;
+      gap: 8px;
+      font-size: 14px;
+    }
+  }
+
+  /* Show the header menu button on larger screens and position it
+     on the right side so it sits in the empty spot next to nav items. */
+  .site-header .menu-btn {
+    display: flex !important;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 20px;
+    border-radius: 8px;
+    z-index: 10002;
+    pointer-events: auto; /* header had pointer-events:none on desktop */
+  }
+
+  .site-header .menu-btn:hover {
+    background: rgba(255,255,255,0.03);
+  }
+}
+
+/* Wider content on larger screens: use more horizontal space */
+
+/* TL;DR box for gig detail pages */
+.tldr-box {
+  background: linear-gradient(135deg, rgba(90,195,174,0.15), rgba(124,58,237,0.08));
+  border: 1px solid rgba(90,195,174,0.3);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tldr-label {
+  font-weight: 700;
+  color: var(--cyan);
+  margin-right: 8px;
+}
+
+@media (min-width: 1100px) {
+  main, .main-content, .gc {
+    max-width: 1200px; /* wide SaaS dashboard layout */
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Give the nav more room to breathe on very wide screens */
+  .site-nav .nav-items{ max-width: 1200px; }
+}
+
+/* High-specificity override for pages that include their own .main-content rules
+   (some pages define .main-content in inline <style> blocks). When the shared
+   layout is active, keep content comfortable and centered on larger screens. */
+@media (min-width: 1100px) {
+  body.has-site-layout main,
+  body.has-site-layout .main-content,
+  body.has-site-layout .gc {
+    max-width: 1200px !important;
+    width: calc(100% - 80px) !important;
+    margin: 0 auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+/* Guides page: keep at same comfortable width as other pages */
+@media (min-width: 1100px) {
+  body.has-site-layout.page-guides main,
+  body.has-site-layout.page-guides .main-content,
+  body.has-site-layout.page-guides .gc {
+    max-width: 1200px !important;
+    width: calc(100% - 80px) !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Hamburger overlay and panel (mobile) */
+.hamburger-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.85);
+  z-index:10005;
+  /* stretch the overlay fully; align-items:stretch so the panel can be full-height */
+  align-items:stretch;
+  justify-content:flex-start;
+  padding: 0; /* flush to the left edge */
+}
+.hamburger-overlay.open{ display:flex; }
+.hamburger-panel{
+  width: 280px;
+  max-width: calc(100% - 0px);
+  height: 100%;            /* full-height panel */
+  max-height: none;
+  background: var(--panel-bg);
+  color: var(--text);
+  transition: background-color 0.2s ease;
+  /* flush against the left edge, no rounding */
+  border-radius: 0;
+  padding: 24px 20px 24px 20px;
+  box-shadow: none;
+  overflow:auto;
+  display:flex;
+  flex-direction:column;
+  align-items: flex-start;
+  align-self: stretch; /* ensure it stretches to overlay height */
+  padding-top: calc(24px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  position: relative;
+}
+.hamburger-panel .hamburger-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:0 0 16px 0;
+  margin-bottom: 16px;
+}
+.hamburger-panel .hamburger-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--text);
+}
+.hamburger-panel .hamburger-brand .brand-name{ color: var(--brand); font-weight:700; font-size:16px; }
+.hamburger-panel .top-close-btn{
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  cursor:pointer;
+  position: absolute;
+  top: calc(24px + env(safe-area-inset-top, 0px));
+  right: 16px;
+  z-index: 10010;
+}
+
+/* Show the bottom logout/close button and pin it to the panel bottom
+   so it's always reachable (accounts for safe-area on mobile). */
+.hamburger-panel #closeMenuBtn,
+.hamburger-panel .logout-btn{
+  display: block !important;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--brand);
+  color: #0a0a0a;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: stretch;
+  text-align: center;
+}
+
+/* Pin logout button to the bottom of the panel */
+.hamburger-panel .logout-btn{
+  margin-top: auto;
+  position: sticky;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+}
+
+.hamburger-panel a,
+.hamburger-panel .nav-item{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:0;
+  padding:17px 0;
+  border-radius:0;
+  color:var(--text);
+  text-decoration:none;
+  margin-bottom:0;
+  font-size:16px;
+  font-weight: 400;
+  text-align:left;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Remove icons completely */
+.hamburger-panel .nav-item .icon{
+  display: none !important;
+}
+
+/* Ensure label text takes remaining space and is left-aligned */
+.hamburger-panel a span:not(.icon),
+.hamburger-panel .nav-item span:not(.icon) {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+/* Force menu items to be row-oriented and full-width */
+.hamburger-panel .nav-item{
+  flex-direction: row !important;
+  width: 100%;
+}
+
+.hamburger-panel a:hover{
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+}
+
+/* While the mobile menu is open, hide the header brand (logo + name) */
+.menu-open .site-header .brand { display: none !important; }
+
+/* Also hide common page-level logo elements while the mobile menu is open */
+.menu-open .hero-logo,
+.menu-open .hero-logo img,
+.menu-open img.hero-logo,
+.menu-open .hero .hero-logo,
+.menu-open .hero-logo * {
+  display: none !important;
+}
+
+/* As a last-resort target: hide the known logo image by src substring when menu open */
+.menu-open img[src*="SmartSelect_20241218_055052_Gallery.png"] { display: none !important; }
+
+/* ================================================================
+   SIDEBAR — desktop only (≥900px)
+   ================================================================ */
+.sidebar {
+  display: none; /* hidden on mobile */
+}
+
+@media (min-width: 900px) {
+  :root {
+    --sidebar-w: 240px;
+  }
+
+  /* Show the sidebar */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-w);
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    z-index: 10001;
+    padding: 24px 0 16px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: background-color 0.2s ease;
+  }
+
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+
+  /* Brand */
+  .sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 28px;
+    text-decoration: none;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .sidebar-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .sidebar-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--brand);
+  }
+
+  /* Nav sections */
+  .sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 12px;
+  }
+
+  .sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 0 8px 8px;
+  }
+
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+    border-left: 3px solid transparent;
+  }
+  .sidebar-link:hover {
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+  }
+  .sidebar-link.active {
+    background: rgba(90,185,170,0.15);
+    border-left-color: #5fb9aa;
+    color: var(--brand);
+  }
+  .sidebar-link svg {
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+  .sidebar-link.active svg {
+    opacity: 1;
+  }
+
+  /* Logout button */
+  .sidebar-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 12px 0;
+    padding: 10px 10px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.12s ease, color 0.12s ease;
+    flex-shrink: 0;
+  }
+  .sidebar-logout:hover {
+    background: rgba(239,68,68,0.1);
+    color: #ef4444;
+    border-color: rgba(239,68,68,0.2);
+  }
+
+  /* --- Hide top header & top nav on desktop (sidebar replaces them) --- */
+  .site-header {
+    display: none !important;
+  }
+  .site-nav {
+    display: none !important;
+  }
+
+  /* --- Shift body content to the right of the sidebar --- */
+  body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: var(--sidebar-w) !important;
+  }
+
+  /* Main content area — no fixed header/nav heights to account for */
+  main {
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+  main, .main-content {
+    min-height: 100vh;
+  }
+
+  /* Widen content area since sidebar takes space */
+  body.has-site-layout main,
+  body.has-site-layout .main-content,
+  body.has-site-layout .gc {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+/* ============================================================
+   LIGHT THEME — targeted overrides for hardcoded dark colors
+   ============================================================ */
+
+/* Sidebar internals */
+html.light .sidebar::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); }
+html.light .sidebar-link:hover { background: rgba(0,0,0,0.05); }
+html.light .sidebar-link.active { background: rgba(86,195,174,0.12); }
+
+/* Hamburger panel internals */
+html.light .hamburger-panel .top-close-btn { color: rgba(0,0,0,0.45); }
+html.light .hamburger-panel a,
+html.light .hamburger-panel .nav-item {
+  color: var(--text);
+  border-bottom-color: rgba(0,0,0,0.07);
+}
+html.light .hamburger-panel a:hover { color: rgba(0,0,0,0.6); }
+html.light .hamburger-theme-btn { border-bottom-color: rgba(0,0,0,0.05); }
+html.light .hamburger-theme-btn:hover { color: rgba(0,0,0,0.6); }
+
+/* Site nav on mobile — dark card background */
+html.light .site-nav { background: var(--card); }
+
+/* ============================================================
+   THEME TOGGLE — sidebar variant (desktop)
+   ============================================================ */
+.sidebar-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 12px 4px;
+  padding: 10px 12px;
+  width: calc(100% - 24px);
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.sidebar-theme-btn:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+}
+html.light .sidebar-theme-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* ============================================================
+   THEME TOGGLE — hamburger variant (mobile)
+   ============================================================ */
+.hamburger-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  background: transparent;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: left;
+}
+.hamburger-theme-btn:hover { color: rgba(255,255,255,0.7); }

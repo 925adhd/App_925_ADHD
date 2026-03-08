@@ -1,0 +1,307 @@
+/* ============================================================
+   GLOBAL FOCUS PLAYER — floating persistent Brain.fm player
+   ============================================================ */
+
+/* Full panel */
+.gfp-panel {
+  position: fixed;
+  bottom: calc(var(--nav-h, 72px) + 12px);
+  right: 16px;
+  width: 252px;
+  background: rgba(14, 14, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.65),
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  padding: 12px 14px;
+  z-index: 9990;
+}
+
+/* On desktop the bottom nav moves to top, so use static bottom offset */
+@media (min-width: 900px) {
+  .gfp-panel {
+    bottom: 24px;
+    right: 24px;
+  }
+}
+
+.gfp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gfp-artwork {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.gfp-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+}
+
+.gfp-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gfp-title svg {
+  color: var(--brand, #56C3AE);
+  flex-shrink: 0;
+}
+
+.gfp-subtitle {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  padding-left: 21px; /* aligns under title text, past the icon */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gfp-header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.gfp-icon-btn {
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.12s ease, background 0.12s ease;
+}
+.gfp-icon-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+.gfp-icon-btn--active {
+  color: var(--brand, #56C3AE) !important;
+}
+
+/* Progress track */
+.gfp-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.gfp-track-fill {
+  height: 100%;
+  background: var(--brand, #56C3AE);
+  border-radius: 2px;
+  transition: width 0.15s linear;
+}
+
+/* Controls row */
+.gfp-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gfp-time {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.gfp-dur {
+  margin-left: auto;
+}
+
+.gfp-play-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--brand, #56C3AE);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f0f0f;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, background 0.15s ease;
+  margin: 0 auto;
+}
+.gfp-play-btn:hover {
+  transform: scale(1.07);
+  background: #4db8a3;
+}
+
+/* ============================================================
+   MINIMIZED PILL
+   ============================================================ */
+.gfp-pill {
+  position: fixed;
+  bottom: calc(var(--nav-h, 72px) + 12px);
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(14, 14, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  z-index: 9990;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.gfp-pill:hover {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 900px) {
+  .gfp-pill {
+    bottom: 24px;
+    right: 24px;
+  }
+}
+
+.gfp-pill-icon {
+  color: var(--brand, #56C3AE);
+  flex-shrink: 0;
+}
+
+.gfp-pill-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.gfp-pill-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand, #56C3AE);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f0f0f;
+  flex-shrink: 0;
+  transition: transform 0.12s ease;
+}
+.gfp-pill-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Light theme */
+html.light .gfp-panel,
+html.light .gfp-pill {
+  background: rgba(255, 255, 255, 0.97);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+html.light .gfp-title { color: #111; }
+html.light .gfp-time { color: rgba(0, 0, 0, 0.45); }
+html.light .gfp-track { background: rgba(0, 0, 0, 0.1); }
+html.light .gfp-icon-btn { color: rgba(0, 0, 0, 0.45); }
+html.light .gfp-icon-btn:hover { color: #111; background: rgba(0, 0, 0, 0.05); }
+html.light .gfp-pill-label { color: rgba(0, 0, 0, 0.75); }
+
+/* ============================================================
+   FOCUS TOAST
+   ============================================================ */
+.gfp-toast {
+  position: fixed;
+  bottom: calc(var(--nav-h, 72px) + 80px);
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(14, 14, 16, 0.82);
+  border: 1px solid rgba(86, 195, 174, 0.25);
+  border-radius: 14px;
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  z-index: 9991;
+  max-width: 252px;
+  animation: gfp-toast-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             gfp-toast-out 0.3s ease 3.7s forwards;
+}
+
+@media (min-width: 900px) {
+  .gfp-toast {
+    bottom: 104px;
+    right: 24px;
+  }
+}
+
+.gfp-toast-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.gfp-toast-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.gfp-toast-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+@keyframes gfp-toast-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes gfp-toast-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(6px); }
+}
+
+html.light .gfp-toast {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(86, 195, 174, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+html.light .gfp-toast-title { color: #111; }
+html.light .gfp-toast-sub   { color: rgba(0, 0, 0, 0.5); }

@@ -1,0 +1,267 @@
+    .receipt-stacker {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 8px;
+    }
+
+    /* Header */
+    .receipt-stacker .page-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 8px;
+    }
+
+    .receipt-stacker .page-header .emoji {
+      font-size: 40px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .receipt-stacker .page-header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .receipt-stacker .page-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Progress Bar */
+    .receipt-stacker .progress-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+
+    .receipt-stacker .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .receipt-stacker .progress-header span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .receipt-stacker .progress-count {
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .receipt-stacker .progress-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .receipt-stacker .progress-fill {
+      height: 100%;
+      background: var(--brand);
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+
+    .receipt-stacker .progress-fill.complete {
+      background: var(--green);
+    }
+
+    /* Apps Grid */
+    .receipt-stacker .apps-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .receipt-stacker .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .receipt-stacker .app-card:hover {
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .receipt-stacker .app-card.completed {
+      opacity: 0.5;
+      border-color: var(--green);
+    }
+
+    .receipt-stacker .app-card.completed .app-checkbox {
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    /* Checkbox */
+    .receipt-stacker .app-checkbox {
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      font-size: 14px;
+      color: #000;
+    }
+
+    /* App Content */
+    .receipt-stacker .app-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .receipt-stacker .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .receipt-stacker .app-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .receipt-stacker .app-name a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    .receipt-stacker .app-name a:hover {
+      text-decoration: underline;
+    }
+
+    .receipt-stacker .app-earnings {
+      font-size: 12px;
+      color: var(--green);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .receipt-stacker .app-action {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .receipt-stacker .app-tip {
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 8px 10px;
+      border-radius: 6px;
+      line-height: 1.4;
+    }
+
+    /* Celebration */
+    .receipt-stacker .celebration {
+      background: linear-gradient(135deg, var(--brand), var(--green));
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    .receipt-stacker .celebration.show {
+      display: block;
+      animation: pop 0.3s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .receipt-stacker .celebration .emoji {
+      font-size: 32px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .receipt-stacker .celebration h3 {
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .receipt-stacker .celebration p {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 12px;
+    }
+
+    /* Reset Button */
+    .receipt-stacker .reset-btn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .receipt-stacker .reset-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+
+    /* Footer Tip */
+    .receipt-stacker .footer-tip {
+      text-align: center;
+      padding: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 16px;
+    }
+    
+    /* Mobile compact layout to fit on one screen */
+    @media (max-width: 480px) {
+      .receipt-stacker { max-width: 100%; padding: 10px; }
+      .receipt-stacker .page-header { margin-bottom: 8px; }
+      .receipt-stacker .page-header .emoji { display: none; }
+      .receipt-stacker .page-header h1 { font-size: 18px; margin-bottom: 2px; }
+      .receipt-stacker .page-header p { font-size: 12px; }
+
+      .receipt-stacker .progress-card { padding: 10px; margin-bottom: 8px; }
+      .receipt-stacker .progress-header span { font-size: 12px; }
+      .receipt-stacker .progress-bar { height: 6px; }
+
+      .receipt-stacker .apps-grid { gap: 6px; margin-bottom: 8px; }
+      .receipt-stacker .app-card { padding: 10px; gap: 8px; }
+      .receipt-stacker .app-checkbox { width: 20px; height: 20px; border-radius: 4px; font-size: 12px; }
+      .receipt-stacker .app-name { font-size: 14px; }
+      .receipt-stacker .app-earnings { font-size: 11px; }
+      .receipt-stacker .app-action { font-size: 11px; margin-bottom: 4px; }
+
+      /* Hide non-essential tips to save vertical space */
+      .receipt-stacker .app-tip { display: none; }
+      .receipt-stacker .footer-tip { display: none; }
+
+      .receipt-stacker .celebration { padding: 12px; margin-bottom: 8px; }
+      .receipt-stacker .celebration .emoji { font-size: 24px; }
+      .receipt-stacker .celebration h3 { font-size: 14px; }
+
+      .receipt-stacker .reset-btn { padding: 10px; font-size: 13px; border-radius: 8px; }
+    }

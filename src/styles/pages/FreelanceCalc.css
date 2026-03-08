@@ -1,0 +1,318 @@
+    .freelance-calc {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 8px;
+    }
+
+    /* Header */
+    .freelance-calc .page-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 8px;
+    }
+
+    .freelance-calc .page-header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .freelance-calc .page-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Progress Bar */
+    .freelance-calc .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .freelance-calc .progress-steps::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: var(--border);
+    }
+
+    .freelance-calc .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      z-index: 1;
+    }
+
+    .freelance-calc .step-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    .freelance-calc .step.active .step-dot {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #000;
+    }
+
+    .freelance-calc .step.complete .step-dot {
+      background: var(--green);
+      border-color: var(--green);
+      color: #000;
+    }
+
+    .freelance-calc .step-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .freelance-calc .step.active .step-label {
+      color: var(--brand);
+    }
+
+    /* Tab Content */
+    .freelance-calc .tab-content {
+      display: none;
+    }
+
+    .freelance-calc .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Form Groups */
+    .freelance-calc .form-group {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--brand);
+    }
+
+    .freelance-calc .form-group:focus-within {
+      border-left-color: var(--green);
+    }
+
+    .freelance-calc .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .freelance-calc .form-group input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .freelance-calc .form-group input:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    .freelance-calc .form-group input::placeholder {
+      color: var(--muted);
+    }
+
+    .freelance-calc .form-hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* Tip Box */
+    .freelance-calc .tip-box {
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-left: 3px solid var(--yellow);
+      border-radius: 10px;
+      padding: 12px;
+      margin: 16px 0;
+    }
+
+    .freelance-calc .tip-box strong {
+      color: var(--yellow);
+      font-size: 12px;
+    }
+
+    .freelance-calc .tip-box p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* Buttons */
+    .freelance-calc .btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .freelance-calc .btn-primary {
+      background: var(--brand);
+      color: #000;
+    }
+
+    .freelance-calc .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(86, 195, 174, 0.3);
+    }
+
+    .freelance-calc .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .freelance-calc .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .freelance-calc .btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    /* Results */
+    .freelance-calc .results-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      border-left: 4px solid var(--green);
+    }
+
+    .freelance-calc .results-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--green);
+    }
+
+    .freelance-calc .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .freelance-calc .result-item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .freelance-calc .result-label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .freelance-calc .result-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .freelance-calc .result-item.highlight {
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+    }
+
+    .freelance-calc .result-item.highlight .result-label {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .freelance-calc .result-item.highlight .result-value {
+      font-size: 18px;
+    }
+
+    /* Pro tip in results */
+    .freelance-calc .results-tip {
+      background: rgba(86, 195, 174, 0.1);
+      border: 1px solid rgba(86, 195, 174, 0.2);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 16px;
+    }
+
+    .freelance-calc .results-tip strong {
+      color: var(--brand);
+      font-size: 12px;
+    }
+
+    .freelance-calc .results-tip p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* Mobile compact adjustments to fit on one screen */
+    @media (max-width: 480px) {
+      .freelance-calc { max-width: 100%; padding: 10px 10px; }
+      .freelance-calc .page-header h1 { font-size: 18px; }
+      .freelance-calc .page-header p { font-size: 12px; }
+
+      /* Hide progress steps to save vertical space */
+      .freelance-calc .progress-steps { display: none; }
+
+      .freelance-calc .form-group { padding: 10px; margin-bottom: 8px; border-radius: 10px; }
+      .freelance-calc .form-group label { font-size: 13px; margin-bottom: 6px; }
+      .freelance-calc .form-group input { padding: 10px; font-size: 14px; }
+
+      .freelance-calc .tip-box { padding: 10px; margin: 10px 0; }
+      .freelance-calc .tip-box p { font-size: 12px; }
+
+      .freelance-calc .btn { padding: 10px; font-size: 13px; border-radius: 8px; }
+      .freelance-calc .btn-row { grid-template-columns: 1fr; gap: 8px; margin-top: 12px; }
+
+      .freelance-calc .results-card { padding: 12px; border-radius: 12px; }
+      .freelance-calc .results-title { font-size: 16px; margin-bottom: 12px; }
+      .freelance-calc .result-item { padding: 8px; }
+      .freelance-calc .result-label { font-size: 12px; }
+      .freelance-calc .result-value { font-size: 14px; }
+
+      .freelance-calc .results-tip { padding: 10px; margin-top: 10px; }
+
+      /* Reduce overall vertical gaps where possible */
+      .freelance-calc header.page-header { margin-bottom: 12px; }
+      .freelance-calc .form-group + .form-group { margin-top: 6px; }
+      .freelance-calc .tip-box + button, .freelance-calc .form-group + button { margin-top: 8px; }
+    }

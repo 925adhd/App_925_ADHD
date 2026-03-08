@@ -1,0 +1,399 @@
+    .ai-playground .bg-effects { position: fixed; inset: 0; pointer-events: none; z-index: -1; overflow: hidden; }
+    .ai-playground .grid-pattern {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(86,195,174,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(86,195,174,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+    }
+    .ai-playground .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; animation: float 20s ease-in-out infinite; }
+    .ai-playground .orb-1 { width: 400px; height: 400px; background: var(--brand); top: 10%; left: 10%; }
+    .ai-playground .orb-2 { width: 300px; height: 300px; background: var(--purple); top: 50%; right: 10%; animation-delay: -7s; }
+    .ai-playground .orb-3 { width: 350px; height: 350px; background: var(--blue); bottom: 10%; left: 30%; animation-delay: -14s; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -30px) scale(1.05); }
+      50% { transform: translate(-20px, 20px) scale(0.95); }
+      75% { transform: translate(-30px, -20px) scale(1.02); }
+    }
+    .ai-playground { max-width: 1200px; margin: 0 auto; padding: 0 12px; }
+    .ai-playground .hero { text-align: center; padding: 20px 0 12px; }
+    .ai-playground .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(86,195,174,0.1); border: 1px solid rgba(86,195,174,0.3);
+      padding: 6px 12px; border-radius: 100px; font-size: 13px; font-weight: 500; color: var(--brand); margin-bottom: 12px;
+    }
+    .ai-playground .hero-badge svg { width: 16px; height: 16px; }
+    .ai-playground .hero h1 {
+      font-size: clamp(28px, 6vw, 42px); font-weight: 700; line-height: 1.2; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text) 0%, var(--brand) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .ai-playground .hero p { font-size: 17px; color: var(--text-muted); max-width: 600px; margin: 0 auto 24px; }
+    .ai-playground .tips-banner {
+      background: linear-gradient(90deg, rgba(167,139,250,0.08), rgba(86,195,174,0.08), rgba(244,114,182,0.08));
+      border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px;
+      margin-bottom: 18px; display: flex; align-items: center; gap: 8px;
+    }
+    .ai-playground .tips-icon { flex-shrink: 0; width: 28px; height: 28px; background: rgba(251,191,36,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    /* Lock tip banner height to prevent layout shift; height is set by JS to match longest tip */
+    .ai-playground .tips-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: opacity 0.3s ease;
+      min-height: var(--tip-min-height, 2.6em); /* JS will override to exact pixel height when available */
+      display: flex;
+      align-items: center;
+      width: var(--tip-width, auto);
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    /* Slightly taller on very small screens as a sensible fallback */
+    @media (max-width: 480px) {
+      .ai-playground .tips-text { min-height: var(--tip-min-height, 3.4em); }
+    }
+    .ai-playground .progress-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 30px; }
+    .ai-playground .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
+    .ai-playground .progress-title { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .ai-playground .progress-title svg { width: 18px; height: 18px; color: var(--brand); }
+    .ai-playground .progress-stats { font-size: 13px; color: var(--text-muted); }
+    .ai-playground .progress-bar-container { background: var(--bg); border-radius: 100px; height: 10px; overflow: hidden; margin-bottom: 16px; }
+    .ai-playground .progress-bar { height: 100%; background: linear-gradient(90deg, var(--brand), var(--purple)); border-radius: 100px; transition: width 0.5s ease; position: relative; }
+    .ai-playground .progress-bar::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shimmer 2s infinite; }
+    @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+    .ai-playground .badges-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+    .ai-playground .badge { display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 500; color: var(--text-dim); transition: all 0.3s ease; }
+    .ai-playground .badge.unlocked { background: rgba(86,195,174,0.1); border-color: rgba(86,195,174,0.3); color: var(--brand); }
+    .ai-playground .badge-icon { font-size: 14px; filter: grayscale(1); opacity: 0.5; transition: all 0.3s ease; }
+    .ai-playground .badge.unlocked .badge-icon { filter: none; opacity: 1; }
+    .ai-playground .tabs-container { margin-bottom: 12px; }
+    .ai-playground .tabs { display: flex; gap: 8px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px; overflow-x: visible; flex-wrap: wrap; }
+    .ai-playground .tab { flex: 1; min-width: fit-content; padding: 12px 20px; border: none; background: transparent; color: var(--text-muted); font-family: var(--font); font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; }
+    .ai-playground .tab:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .ai-playground .tab.active { background: var(--brand); color: var(--bg); }
+    .ai-playground .tab svg { width: 16px; height: 16px; }
+    .ai-playground .tab-content { display: none; }
+    .ai-playground .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .ai-playground .ready-banner { background: transparent; border: none; border-radius: 0; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .ai-playground .ready-icon { width: 48px; height: 48px; background: rgba(52,211,153,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+    .ai-playground .ready-text h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; color: var(--green); }
+    .ai-playground .ready-text p { font-size: 14px; color: var(--text-muted); margin: 0; }
+    .ai-playground .chat-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .ai-playground .chat-header { padding: 10px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .ai-playground .model-select-wrapper { display: flex; align-items: center; gap: 10px; }
+    .ai-playground .model-select-wrapper label { font-size: 13px; color: var(--text-muted); }
+    .ai-playground .model-select { padding: 8px 32px 8px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--font); font-size: 13px; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
+    .ai-playground .model-select:focus { outline: none; border-color: var(--brand); }
+    .ai-playground .chat-actions { display: flex; gap: 8px; }
+    .ai-playground .chat-messages { min-height: 220px; max-height: 420px; overflow-y: auto; padding: 12px; }
+    .ai-playground .chat-messages::-webkit-scrollbar { width: 6px; }
+    .ai-playground .chat-messages::-webkit-scrollbar-track { background: transparent; }
+    .ai-playground .chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    .ai-playground .message { margin-bottom: 20px; animation: messageIn 0.3s ease; }
+    @keyframes messageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .ai-playground .message-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .ai-playground .message-avatar { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .ai-playground .message.user .message-avatar { background: rgba(167,139,250,0.2); }
+    .ai-playground .message.assistant .message-avatar { background: rgba(86,195,174,0.2); }
+    .ai-playground .message-sender { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+    .ai-playground .message-content { padding: 16px; border-radius: var(--radius); font-size: 15px; line-height: 1.7; }
+    .ai-playground .message.user .message-content { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.2); }
+    .ai-playground .message.assistant .message-content { background: var(--bg-elevated); border: 1px solid var(--border); }
+    .ai-playground .message-content pre { background: var(--bg); padding: 12px; border-radius: 8px; overflow-x: auto; margin: 12px 0; font-family: var(--font-mono); font-size: 13px; }
+    .ai-playground .message-content code { font-family: var(--font-mono); background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    .ai-playground .message-content pre code { background: none; padding: 0; }
+    .ai-playground .empty-chat { text-align: center; padding: 8px 10px; color: var(--text-dim); }
+    .ai-playground .empty-chat svg { width: 40px; height: 40px; margin-bottom: 6px; opacity: 0.5; }
+    .ai-playground .empty-chat h4 { font-size: 15px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .ai-playground .empty-chat p { font-size: 13px; }
+    .ai-playground .typing-indicator { display: flex; gap: 4px; padding: 16px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); width: fit-content; }
+    .ai-playground .typing-indicator span { width: 8px; height: 8px; background: var(--brand); border-radius: 50%; animation: bounce 1.4s infinite ease-in-out; }
+    .ai-playground .typing-indicator span:nth-child(1) { animation-delay: 0s; }
+    .ai-playground .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .ai-playground .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce { 0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; } 40% { transform: scale(1); opacity: 1; } }
+    .ai-playground .chat-input-area { padding: 8px 10px; border-top: 1px solid var(--border); background: var(--bg-elevated); }
+    .ai-playground .input-wrapper { display: flex; gap: 12px; align-items: center; }
+    .ai-playground .chat-input { flex: 1; padding: 14px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); font-family: var(--font); font-size: 15px; height: auto; resize: none; min-height: 72px; max-height: 45vh; transition: border-color 0.2s ease; overflow-y: hidden; }
+    .ai-playground .chat-input:focus { outline: none; border-color: var(--brand); }
+    .ai-playground .chat-input::placeholder { color: var(--text-dim); }
+    .ai-playground .btn { padding: 12px 24px; border: none; border-radius: var(--radius); font-family: var(--font); font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; }
+    .ai-playground .btn-primary { background: var(--brand); color: var(--bg); }
+    .ai-playground .btn-primary:hover { background: #4db9a5; transform: translateY(-1px); }
+    .ai-playground .btn-ghost { background: transparent; color: var(--text-muted); padding: 8px 12px; }
+    .ai-playground .btn-ghost:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .ai-playground .send-btn { width: 48px; height: 48px; padding: 0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ai-playground .send-btn svg { width: 18px; height: 18px; }
+    .ai-playground .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Copy button in chat header */
+    .ai-playground .copy-btn { margin-left: 8px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px; background: transparent; border: 1px solid var(--border); color: var(--text-muted); cursor: pointer; }
+    .ai-playground .copy-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); }
+
+    /* Modal shown after copying to remind user to remove extra AI response */
+    .ai-playground .copy-modal { position: fixed; inset: 0; display: none; align-items: flex-start; justify-content: center; z-index: 2000; }
+    .ai-playground .copy-modal.show { display: flex; }
+    .ai-playground .copy-modal .backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    .ai-playground .copy-modal .dialog { position: relative; background: var(--bg-card); border: 1px solid var(--border); color: var(--text); padding: 18px; border-radius: 12px; max-width: 420px; width: calc(100% - 40px); box-shadow: 0 12px 40px rgba(0,0,0,0.6); z-index: 2; margin-top: 18vh; }
+
+    /* ADHD-friendly reminder styling inside modal */
+    .ai-playground .copy-modal .dialog .reminder-label {
+      color: var(--brand);
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 6px;
+    }
+    .ai-playground .copy-modal .dialog .reminder-label .icon { font-size: 16px; line-height: 1; }
+    .ai-playground .copy-modal .dialog .reminder-text {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    /* Mobile: nudge the modal further down so it doesn't sit under small headers */
+    @media (max-width: 480px) {
+      .ai-playground .copy-modal .dialog { margin-top: 30vh; }
+    }
+    .ai-playground .copy-modal .dialog h4 { margin-bottom: 8px; font-size: 16px; }
+    .ai-playground .copy-modal .dialog p { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; }
+    .ai-playground .copy-modal .dialog .ok-btn { padding: 8px 12px; border-radius: 8px; background: var(--brand); color: var(--bg); border: none; cursor: pointer; }
+
+    /* reduce space below the chat card */
+    .ai-playground .chat-container { margin-bottom: 12px; }
+    .ai-playground .quick-prompts { margin-top: 24px; }
+    .ai-playground .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .ai-playground .section-title { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .ai-playground .section-title svg { width: 18px; height: 18px; color: var(--amber); }
+    .ai-playground .prompts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    /* Horizontal prompt pills that wrap so all are visible on any screen size */
+    .ai-playground .prompts-scroll { display: flex; gap: 6px; padding: 4px 4px; flex-wrap: wrap; overflow-x: visible; align-items: center; }
+    .ai-playground .prompts-scroll::-webkit-scrollbar { display: none; }
+    .ai-playground .prompts-scroll .prompt-btn { flex: 0 1 auto; min-width: 100px; border-radius: 999px; padding: 8px 10px; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-align: left; }
+    .ai-playground .prompts-scroll .prompt-btn .icon { font-size: 16px; line-height: 1; }
+    /* Mobile: single-row swipeable prompt pills */
+    @media (max-width: 480px) {
+      .ai-playground .prompts-scroll {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        padding: 6px 4px;
+      }
+
+      .ai-playground .prompts-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .ai-playground .prompts-scroll .prompt-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 999px;
+        justify-content: center; /* center content horizontally */
+        text-align: center; /* center multi-word labels */
+      }
+
+      .ai-playground .prompts-scroll .prompt-btn .icon {
+        font-size: 18px;
+        display: none; /* hide icons/emojis on very small screens to keep pills single-line */
+      }
+    }
+    .ai-playground .prompt-btn { padding: 10px 14px; background: transparent; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; color: var(--text-muted); font-family: var(--font); font-size: 13px; font-weight: 400; text-align: left; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px; }
+    .ai-playground .prompt-btn:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.03); color: var(--text); }
+    .ai-playground .prompt-btn .icon { font-size: 18px; flex-shrink: 0; }
+    .ai-playground .prompt-btn span { line-height: 1.4; }
+    .ai-playground .templates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+    .ai-playground .template-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 12px; cursor: pointer; transition: all 0.2s ease; }
+    .ai-playground .template-card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .ai-playground .template-card.category-content { border-left: 3px solid var(--purple); }
+    .ai-playground .template-card.category-client { border-left: 3px solid var(--blue); }
+    .ai-playground .template-card.category-proposal { border-left: 3px solid var(--brand); }
+    .ai-playground .template-card.category-social { border-left: 3px solid var(--pink); }
+    .ai-playground .template-card.category-problem { border-left: 3px solid var(--amber); }
+    .ai-playground .template-card.category-pricing { border-left: 3px solid var(--green); }
+    .ai-playground .template-card.category-testimonial { border-left: 3px solid var(--red); }
+    .ai-playground .template-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .ai-playground .template-title { font-size: 15px; font-weight: 600; }
+    .ai-playground .template-category { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 8px; border-radius: 4px; background: rgba(255,255,255,0.05); }
+    .ai-playground .category-content .template-category { color: var(--purple); }
+    .ai-playground .category-client .template-category { color: var(--blue); }
+    .ai-playground .category-proposal .template-category { color: var(--brand); }
+    .ai-playground .category-social .template-category { color: var(--pink); }
+    .ai-playground .category-problem .template-category { color: var(--amber); }
+    .ai-playground .category-pricing .template-category { color: var(--green); }
+    .ai-playground .category-testimonial .template-category { color: var(--red); }
+    .ai-playground .template-preview { font-size: 13px; color: var(--text-muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .ai-playground .template-preview .blank { background: rgba(86,195,174,0.2); padding: 1px 6px; border-radius: 4px; color: var(--brand); font-weight: 500; }
+    .ai-playground .template-use-hint { margin-top: 8px; font-size: 12px; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
+    .ai-playground .learn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+    .ai-playground .learn-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px; transition: all 0.2s ease; }
+    .ai-playground .learn-card:hover { border-color: var(--border-hover); }
+    .ai-playground .learn-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .ai-playground .learn-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .ai-playground .learn-card:nth-child(1) .learn-icon { background: rgba(167,139,250,0.2); }
+    .ai-playground .learn-card:nth-child(2) .learn-icon { background: rgba(86,195,174,0.2); }
+    .ai-playground .learn-card:nth-child(3) .learn-icon { background: rgba(96,165,250,0.2); }
+    .ai-playground .learn-card:nth-child(4) .learn-icon { background: rgba(244,114,182,0.2); }
+    .ai-playground .learn-card:nth-child(5) .learn-icon { background: rgba(251,191,36,0.2); }
+    .ai-playground .learn-card:nth-child(6) .learn-icon { background: rgba(52,211,153,0.2); }
+    .ai-playground .learn-card h3 { font-size: 15px; font-weight: 600; }
+    .ai-playground .learn-card > p { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+    .ai-playground .example-prompt { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; font-size: 13px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.6; }
+    .ai-playground .try-prompt-btn { width: 100%; padding: 10px; background: transparent; border: 1px dashed var(--border); border-radius: 8px; color: var(--brand); font-family: var(--font); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
+    .ai-playground .try-prompt-btn:hover { background: rgba(86,195,174,0.1); border-style: solid; border-color: var(--brand); }
+    .ai-playground .category-filter { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .ai-playground .filter-btn { padding: 8px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; color: var(--text-muted); font-family: var(--font); font-size: 13px; cursor: pointer; transition: all 0.2s ease; }
+    .ai-playground .filter-btn:hover { border-color: var(--border-hover); color: var(--text); }
+    .ai-playground .filter-btn.active { background: var(--brand); border-color: var(--brand); color: var(--bg); }
+    .ai-playground .error-message { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.3); border-radius: var(--radius); padding: 14px 16px; color: var(--red); font-size: 14px; margin-bottom: 16px; display: none; }
+    .ai-playground .error-message.show { display: flex; align-items: center; gap: 10px; }
+    .ai-playground .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 20px; font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 10px; z-index: 1000; opacity: 0; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .ai-playground .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+    .ai-playground .toast.success { border-color: rgba(52,211,153,0.3); }
+    .ai-playground .toast.success::before { content: '✓'; width: 20px; height: 20px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--bg); }
+    @media (max-width: 768px) {
+      .ai-playground { padding: 0 10px; }
+      .ai-playground .hero { padding: 12px 0 8px; }
+      .ai-playground .hero-badge { margin-bottom: 6px; padding: 4px 10px; font-size: 11px; }
+      .ai-playground .hero h1 { font-size: 20px; margin-bottom: 6px; }
+      .ai-playground .tabs-container { margin-bottom: 8px; }
+      .ai-playground .tabs { padding: 4px; gap: 4px; }
+      .ai-playground .tab { padding: 8px 12px; font-size: 12px; gap: 6px; }
+      .ai-playground .tab svg { width: 14px; height: 14px; }
+      /* Show tab text on mobile so icons are labeled */
+      .ai-playground .tab span.tab-text { display: inline; }
+      .ai-playground .tips-banner { padding: 6px 10px; margin-bottom: 10px; }
+      .ai-playground .tips-icon { width: 24px; height: 24px; font-size: 12px; }
+      .ai-playground .tips-text { font-size: 12px; }
+      .ai-playground .ready-banner { padding: 0; margin-bottom: 8px; }
+      .ai-playground .chat-container { margin-bottom: 8px; }
+      .ai-playground .chat-header { padding: 8px 10px; }
+      .ai-playground .chat-messages { min-height: 160px; max-height: 280px; padding: 10px; }
+      .ai-playground .chat-input { min-height: 48px; padding: 10px 12px; font-size: 14px; }
+      .ai-playground .send-btn { width: 42px; height: 42px; }
+      .ai-playground .chat-input-area { padding: 6px 8px; }
+      .ai-playground .prompts-grid { grid-template-columns: 1fr; }
+      .ai-playground .templates-grid { grid-template-columns: 1fr; }
+      /* Show full template previews on mobile to make them readable */
+      .ai-playground .template-preview { display: block !important; -webkit-line-clamp: unset !important; -webkit-box-orient: unset !important; overflow: visible !important; }
+      .ai-playground .learn-grid { grid-template-columns: 1fr; }
+      .ai-playground .progress-section { padding: 16px; }
+    }
+
+    /* Visual hint that prompt pills are swipeable on narrow screens */
+    @media (max-width: 480px) {
+      .ai-playground .quick-prompts { position: relative; }
+
+      /* Right edge fade */
+      .ai-playground .quick-prompts::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48px;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(
+          to left,
+          rgba(10,10,11,0.95),
+          rgba(10,10,11,0)
+        );
+      }
+
+      /* Chevron hint */
+      .ai-playground .quick-prompts::before {
+        content: "›";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: rgba(232,232,237,0.5);
+        pointer-events: none;
+        animation: swipeHint 1.6s ease-in-out infinite;
+      }
+
+      @keyframes swipeHint {
+        0% { opacity: 0.3; transform: translate(0, -50%); }
+        50% { opacity: 0.8; transform: translate(-4px, -50%); }
+        100% { opacity: 0.3; transform: translate(0, -50%); }
+      }
+    }
+
+    /* Mobile: tabs styled as rounded container with pill buttons (match mock) */
+    @media (max-width: 480px) {
+      .ai-playground .tabs {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 6px;
+      }
+      .ai-playground .tabs .tab { flex: 0 1 auto; padding: 8px 12px; border-radius: 8px; min-width: 0; display: inline-flex; align-items: center; gap: 8px; }
+      .ai-playground .tabs .tab svg { width: 14px; height: 14px; }
+      .ai-playground .tabs .tab { color: var(--text-muted); background: transparent; }
+      .ai-playground .tabs .tab.active { background: var(--brand); color: var(--bg); box-shadow: none; }
+      .ai-playground .tabs .tab:hover { background: rgba(255,255,255,0.03); color: var(--text); }
+    }
+
+    @keyframes badgeUnlock { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+    .ai-playground .badge.just-unlocked { animation: badgeUnlock 0.5s ease; }
+    .ai-playground .page-footer { margin-top: 8px; padding: 8px 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 12px; }
+
+    @media (max-width: 480px) {
+      .ai-playground .hero p { display: none; }
+    }
+    @media (max-width: 480px) {
+      /* wrapper stays non-scrolling and allows chevrons to sit outside the visible pill row */
+      .ai-playground .prompt-scroll-wrapper { position: relative; overflow: visible; }
+
+      .ai-playground .prompt-scroll-wrapper::before, .ai-playground .prompt-scroll-wrapper::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: rgba(232,232,237,0.6);
+        font-size: 20px;
+        line-height: 1;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+        z-index: 12;
+      }
+
+      /* place chevrons *outside* the pill area using negative offsets */
+      .ai-playground .prompt-scroll-wrapper::before { content: '‹'; left: -12px; }
+      .ai-playground .prompt-scroll-wrapper::after { content: '›'; right: -12px; }
+
+      /* keep the inner row as the real scroller; add internal padding so pills don't sit under chevrons */
+      .ai-playground .prompts-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; z-index: 1; padding-left: 20px; padding-right: 20px; }
+
+      /* Hide template category filter pills on small screens to reduce clutter */
+      .ai-playground .category-filter { display: none; }
+
+      /* When we want exactly two pills visible between chevrons, toggle this class via JS */
+      .ai-playground .prompt-scroll-wrapper.two-visible .prompts-scroll {
+        padding-left: 0; /* JS will set precise padding based on chevron width */
+        padding-right: 0;
+      }
+
+      .ai-playground .prompt-scroll-wrapper.two-visible .prompts-scroll .prompt-btn {
+        flex: 0 0 calc((var(--visible-width, 200px) - var(--prompts-gap, 8px)) / 2);
+        max-width: calc((var(--visible-width, 200px) - var(--prompts-gap, 8px)) / 2);
+        min-width: 0;
+        box-sizing: border-box;
+        white-space: nowrap; /* keep pill a single line */
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .ai-playground .page-footer a { color: var(--brand); text-decoration: none; }
+    .ai-playground .page-footer a:hover { text-decoration: underline; }

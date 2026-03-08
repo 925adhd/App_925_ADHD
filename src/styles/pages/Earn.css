@@ -1,0 +1,1192 @@
+﻿/* === Earn Page — SaaS Marketplace === */
+
+/* --- Page Container --- */
+.earn-page .earn-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 40px 80px;
+}
+
+@media (max-width: 600px) {
+  .earn-page .earn-content {
+    padding: 24px 16px 80px;
+  }
+}
+
+/* ===========================
+   Energy Selector — Mode Pills
+   =========================== */
+.earn-page .energy-wrap {
+  margin-bottom: 28px;
+}
+
+/* --- Updated Badge --- */
+.earn-page .updated-badge {
+  display: block;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  margin-bottom: 18px;
+}
+
+.earn-page .energy-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+  letter-spacing: 0;
+}
+
+.earn-page .energy-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.earn-page .energy-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  user-select: none;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.earn-page .energy-pill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(0,255,180,0.18), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.earn-page .energy-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.earn-page .energy-pill:active {
+  transform: scale(0.97);
+}
+
+.earn-page .energy-pill:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(95,185,170,0.3);
+}
+
+/* Active state */
+.earn-page .energy-pill.active {
+  background: linear-gradient(135deg, #0f3f35, #184f47);
+  border-color: rgba(0,255,180,0.35);
+  box-shadow: 0 0 0 1px rgba(0,255,180,0.15), 0 6px 18px rgba(0,0,0,0.35);
+  transform: translateY(0);
+}
+
+.earn-page .energy-pill.active::after {
+  opacity: 0.35;
+}
+
+.earn-page .energy-pill-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  white-space: nowrap;
+}
+
+.earn-page .energy-pill.active .energy-pill-label {
+  color: #fff;
+}
+
+.earn-page .energy-pill-desc {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.35);
+}
+
+.earn-page .energy-pill.active .energy-pill-desc {
+  color: rgba(255,255,255,0.55);
+}
+
+/* Energy-level color accents */
+.earn-page .energy-pill[data-level="low"] .energy-pill-label {
+  color: rgba(245,166,35,0.8);
+}
+.earn-page .energy-pill[data-level="ok"] .energy-pill-label {
+  color: rgba(79,163,255,0.8);
+}
+.earn-page .energy-pill[data-level="hyper"] .energy-pill-label {
+  color: rgba(0,208,132,0.8);
+}
+
+/* Active overrides accent to white */
+.earn-page .energy-pill.active .energy-pill-label {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .earn-page .energy-pills {
+    gap: 8px;
+  }
+  .earn-page .energy-pill {
+    padding: 12px 16px;
+  }
+  .earn-page .energy-pill-label {
+    font-size: 14px;
+  }
+  .earn-page .energy-pill-desc {
+    font-size: 12px;
+  }
+}
+
+/* ===========================
+   ADHD Hint Card
+   =========================== */
+.earn-page .adhd-hint {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 0 0 24px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+}
+
+.earn-page .adhd-hint strong {
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+
+/* Finding indicator */
+.earn-page .finding-msg {
+  font-size: 14px;
+  color: rgba(74,222,128,0.8);
+  margin: 0 0 16px;
+  animation: findingFade 0.3s ease;
+}
+
+@keyframes findingFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Search
+   =========================== */
+.earn-page .search-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.earn-page .search-box input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.earn-page .search-box input:focus {
+  border-color: rgba(95,185,170,0.4);
+  background: rgba(255,255,255,0.04);
+}
+
+.earn-page .search-box input::placeholder {
+  color: var(--text-muted);
+}
+
+.earn-page .search-box::before {
+  content: "\01F50D";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+/* ===========================
+   Category Tabs
+   =========================== */
+.earn-page .category-filter-bar {
+  margin-bottom: 24px;
+}
+
+.earn-page .category-label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.earn-page .category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.earn-page .tab-btn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.earn-page .tab-btn:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+}
+
+.earn-page .tab-btn.active {
+  background: linear-gradient(135deg, #0f3f35, #184f47);
+  color: #fff;
+  border-color: rgba(0,255,180,0.25);
+}
+
+.earn-page .tab-btn.more-toggle {
+  border-style: dashed;
+}
+
+.earn-page .more-filters-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  animation: moreFiltersIn 0.2s ease;
+}
+
+@keyframes moreFiltersIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Results Bar + Filters
+   =========================== */
+.earn-page .results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.earn-page .results-bar > span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.earn-page .results-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.earn-page .filter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.earn-page .filter-label {
+  font-size: 13px;
+  color: var(--brand);
+  font-weight: 700;
+  background: transparent;
+  border: 0;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.earn-page .filter-text { display: inline-block; }
+
+.earn-page .filter-menu {
+  position: static;
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.earn-page .filter-menu::-webkit-scrollbar { display: none; }
+.earn-page .filter-menu.hidden { display: flex !important; }
+
+.earn-page .tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.earn-page .tag-chip:focus { outline: none; }
+.earn-page .tag-chip.active {
+  background: var(--brand);
+  color: #0f0f0f;
+  border-color: var(--brand);
+}
+
+.earn-page .tag-chip.quick { background: rgba(90,195,174,0.1); color: #22d3ee; }
+.earn-page .tag-chip.highpay { background: rgba(251,191,36,0.1); color: #fbbf24; }
+.earn-page .tag-chip.beginner { background: rgba(255,255,255,0.04); color: var(--text-muted); }
+
+.earn-page .pill-x {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.15s ease;
+}
+
+.earn-page .pill-x:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.earn-page .hidden { display: none !important; }
+
+/* ===========================
+   Section Structure
+   =========================== */
+.earn-page .gig-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.earn-page .earn-section {
+  /* spacing-only separation — no background containers */
+}
+
+.earn-page .section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.earn-page .section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.earn-page .section-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ===========================
+   Card Grid
+   =========================== */
+.earn-page .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* ===========================
+   Card Design
+   =========================== */
+.earn-page .gig-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  background: linear-gradient(145deg, #1c1c1f, #141416);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.15s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.earn-page .gig-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.earn-page .gig-card.favorite {
+  border-color: rgba(236,72,153,0.25);
+}
+
+/* Card top row */
+.earn-page .gig-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.earn-page .gig-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #2a2a2a;
+  flex-shrink: 0;
+}
+
+.earn-page .gig-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.earn-page .gig-name {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text);
+}
+
+.earn-page .gig-rate {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4ade80;
+  margin-top: 1px;
+}
+
+.earn-page .fav-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.5;
+  transition: opacity 0.15s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.earn-page .fav-btn:hover { opacity: 1; transform: scale(1.1); }
+.earn-page .fav-btn.active { opacity: 1; }
+
+/* Card description */
+.earn-page .gig-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  max-width: 700px;
+}
+
+/* Card tags */
+.earn-page .gig-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.earn-page .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.earn-page .tag.quick {
+  background: rgba(90,195,174,0.1);
+  color: #22d3ee;
+  border-color: rgba(90,195,174,0.12);
+}
+
+.earn-page .tag.highpay {
+  background: rgba(251,191,36,0.1);
+  color: #fbbf24;
+  border-color: rgba(251,191,36,0.12);
+}
+
+.earn-page .tag.beginner {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-muted);
+  border-color: rgba(255,255,255,0.05);
+}
+
+.earn-page .tag.fave {
+  background: rgba(236,72,153,0.1);
+  color: #f472b6;
+  border-color: rgba(236,72,153,0.12);
+}
+
+/* Hide energy tags */
+.earn-page .tag.energy-low,
+.earn-page .tag.energy-med,
+.earn-page .tag.energy-high { display: none !important; }
+
+/* ===========================
+   View All Button
+   =========================== */
+.earn-page .view-all-btn {
+  display: block;
+  margin: 16px auto 0;
+  padding: 8px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.earn-page .view-all-btn:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  border-color: rgba(255,255,255,0.14);
+}
+
+/* ===========================
+   Empty State
+   =========================== */
+.earn-page .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+}
+
+.earn-page .empty-state .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.earn-page .empty-state p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.earn-page .clear-filters {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.earn-page .clear-filters:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 600px) {
+  .earn-page .earn-content {
+    padding: 16px 16px 80px;
+  }
+
+  .earn-page .section-title {
+    font-size: 18px;
+  }
+
+  .earn-page .gig-card {
+    padding: 14px;
+  }
+
+  .earn-page .adhd-hint {
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+
+  .earn-page .results-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ===========================
+   Quick Action Button
+   =========================== */
+.earn-page .quick-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(95,185,170,0.2);
+  background: rgba(95,185,170,0.06);
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.earn-page .quick-action-btn:hover {
+  background: rgba(95,185,170,0.12);
+  border-color: rgba(95,185,170,0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(95,185,170,0.1);
+}
+
+.earn-page .quick-action-btn:active {
+  transform: translateY(0);
+}
+
+.earn-page .quick-action-icon {
+  font-size: 16px;
+}
+
+/* ===========================
+   Start Here Section
+   =========================== */
+.earn-page .start-here {
+  margin-bottom: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.earn-page .start-here .section-head .section-count {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.earn-page .start-here-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.earn-page .start-here-card {
+  border-color: rgba(95,185,170,0.12);
+}
+
+.earn-page .start-here-card:hover {
+  border-color: rgba(95,185,170,0.25);
+}
+
+/* ===========================
+   Best-for Badges
+   =========================== */
+.earn-page .best-for-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.earn-page .best-for-badge.starter {
+  background: rgba(95,185,170,0.1);
+  color: #5fb9aa;
+}
+
+.earn-page .best-for-badge.fire {
+  background: rgba(251,191,36,0.1);
+  color: #fbbf24;
+}
+
+.earn-page .best-for-badge.fave {
+  background: rgba(236,72,153,0.1);
+  color: #f472b6;
+}
+
+.earn-page .best-for-badge.ai {
+  background: rgba(139,92,246,0.1);
+  color: #a78bfa;
+}
+
+.earn-page .best-for-badge.mobile {
+  background: rgba(56,189,248,0.1);
+  color: #38bdf8;
+}
+
+/* ===========================
+   Card Metadata Row
+   =========================== */
+.earn-page .gig-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.earn-page .meta-item {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ===========================
+   Momentum Button
+   =========================== */
+.earn-page .momentum-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 26px;
+  border: 1.5px solid rgba(74,222,128,0.3);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(74,222,128,0.13) 0%, rgba(56,189,248,0.07) 100%);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+  margin: 0 0 20px;
+  max-width: 520px;
+  box-shadow: 0 0 20px rgba(74,222,128,0.06), inset 0 1px 0 rgba(255,255,255,0.04);
+  position: relative;
+}
+
+.earn-page .momentum-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.earn-page .momentum-btn::after {
+  content: '→';
+  margin-left: auto;
+  font-size: 20px;
+  color: rgba(74,222,128,0.55);
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.earn-page .momentum-btn:hover {
+  border-color: rgba(74,222,128,0.55);
+  background: linear-gradient(135deg, rgba(74,222,128,0.2) 0%, rgba(56,189,248,0.12) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(74,222,128,0.15), 0 0 20px rgba(74,222,128,0.08);
+}
+
+.earn-page .momentum-btn:hover::after {
+  transform: translateX(4px);
+  color: rgba(74,222,128,0.85);
+}
+
+.earn-page .momentum-btn:active {
+  transform: translateY(0);
+}
+
+.earn-page .momentum-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.earn-page .momentum-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .earn-page .momentum-btn {
+    padding: 12px 20px;
+    gap: 10px;
+  }
+  .earn-page .momentum-label {
+    font-size: 13px;
+  }
+  .earn-page .momentum-icon {
+    font-size: 18px;
+  }
+}
+
+/* ===========================
+   Recommendation Card
+   =========================== */
+.earn-page .rec-card {
+  border: 1.5px solid rgba(74,222,128,0.3);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(74,222,128,0.06) 0%, rgba(20,20,22,0.95) 50%);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  animation: recSlideIn 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+
+@keyframes recSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Highlight pulse when momentum button picks a recommendation */
+.earn-page .rec-card.rec-highlight {
+  outline: 2px solid rgba(0,255,180,0.4);
+  box-shadow: 0 0 18px rgba(0,255,180,0.25);
+  animation: recSlideIn 0.35s cubic-bezier(0.22,1,0.36,1), recPulse 1.5s ease-out;
+}
+
+@keyframes recPulse {
+  0%   { box-shadow: 0 0 18px rgba(0,255,180,0.35); }
+  100% { box-shadow: 0 0 0px rgba(0,255,180,0); outline-color: transparent; }
+}
+
+.earn-page .rec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.earn-page .rec-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4ade80;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.earn-page .rec-dismiss {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.3);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+
+.earn-page .rec-dismiss:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.earn-page .rec-body {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.earn-page .rec-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #1c1c1f;
+}
+
+.earn-page .rec-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.earn-page .rec-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.earn-page .rec-desc {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.earn-page .rec-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.earn-page .rec-signal {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.05);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.earn-page .rec-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.earn-page .rec-start-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #4ade80;
+  color: #0a0a0a;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.earn-page .rec-start-btn:hover {
+  background: #22c55e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(74,222,128,0.3);
+}
+
+.earn-page .rec-another-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.7);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.earn-page .rec-another-btn:hover {
+  border-color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .earn-page .rec-card {
+    padding: 16px;
+  }
+  .earn-page .rec-body {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .earn-page .rec-logo {
+    width: 44px;
+    height: 44px;
+  }
+  .earn-page .rec-actions {
+    flex-direction: column;
+  }
+  .earn-page .rec-name {
+    font-size: 16px;
+  }
+}
+
+/* ============================================================
+   LIGHT THEME OVERRIDES
+   ============================================================ */
+
+/* Energy pills */
+html.light .earn-page .energy-pill {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+html.light .earn-page .energy-pill:hover {
+  background: var(--card-hover);
+  border-color: rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+}
+html.light .earn-page .energy-pill-label {
+  color: var(--text);
+}
+html.light .earn-page .energy-pill.active .energy-pill-label {
+  color: #fff;
+}
+html.light .earn-page .energy-pill-desc {
+  color: var(--text-muted);
+}
+html.light .earn-page .energy-pill.active .energy-pill-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ADHD hint */
+html.light .earn-page .adhd-hint {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+html.light .earn-page .adhd-hint strong {
+  color: var(--text);
+}
+
+/* Search */
+html.light .earn-page .search-box input {
+  background: var(--card);
+  border-color: var(--border);
+}
+html.light .earn-page .search-box input:focus {
+  background: var(--card);
+}
+
+/* Category filter */
+html.light .earn-page .category-label {
+  color: var(--text-muted);
+}
+html.light .earn-page .tab-btn {
+  background: var(--card);
+  border-color: var(--border);
+}
+html.light .earn-page .tab-btn:hover {
+  background: var(--card-hover);
+  border-color: rgba(0,0,0,0.12);
+}
+html.light .earn-page .more-filters-panel {
+  border-top-color: var(--border);
+}
+
+/* Filter / pill-x */
+html.light .earn-page .pill-x {
+  background: var(--card);
+  border-color: var(--border);
+}
+html.light .earn-page .pill-x:hover {
+  background: var(--card-hover);
+}
+
+/* Gig cards */
+html.light .earn-page .gig-card {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.05);
+}
+html.light .earn-page .gig-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.11);
+  border-color: rgba(0,0,0,0.12);
+}
+html.light .earn-page .gig-logo {
+  background: var(--card-hover);
+}
+
+/* Beginner tag — transparent on dark, needs surface on light */
+html.light .earn-page .tag.beginner {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.07);
+  color: var(--text-muted);
+}
+
+/* View-all / clear-filters buttons */
+html.light .earn-page .view-all-btn {
+  background: var(--card);
+  border-color: var(--border);
+}
+html.light .earn-page .view-all-btn:hover {
+  background: var(--card-hover);
+  border-color: rgba(0,0,0,0.14);
+}
+html.light .earn-page .clear-filters {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+/* Start here section divider */
+html.light .earn-page .start-here {
+  border-bottom-color: var(--border);
+}
+
+/* Recommendation card */
+html.light .earn-page .rec-card {
+  background: linear-gradient(135deg, rgba(74,222,128,0.07) 0%, var(--card) 60%);
+}
+html.light .earn-page .rec-logo {
+  background: var(--card-hover);
+}
+html.light .earn-page .rec-name {
+  color: var(--text);
+}
+html.light .earn-page .rec-desc {
+  color: var(--text-muted);
+}
+html.light .earn-page .rec-signal {
+  background: rgba(0,0,0,0.05);
+  color: var(--text-muted);
+}
+html.light .earn-page .rec-dismiss {
+  color: rgba(0,0,0,0.3);
+}
+html.light .earn-page .rec-dismiss:hover {
+  color: var(--text);
+  background: rgba(0,0,0,0.06);
+}
+html.light .earn-page .rec-another-btn {
+  background: var(--card-hover);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+html.light .earn-page .rec-another-btn:hover {
+  color: var(--text);
+  border-color: rgba(0,0,0,0.14);
+}
+
+/* Momentum button */
+html.light .earn-page .momentum-label {
+  color: var(--text);
+}

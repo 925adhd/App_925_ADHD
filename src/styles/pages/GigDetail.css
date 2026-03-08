@@ -1,0 +1,348 @@
+    /* Page-specific: hide the inline brand on small screens so it doesn't sit behind the hamburger */
+    @media (max-width: 899px) {
+      .gig-detail .site-header .brand { display: none !important; }
+    }
+    
+    /* Header */
+    
+    .gig-detail .back-btn {
+      position: absolute;
+      left: 16px;
+      background: none;
+      border: none;
+      color: #0F0F0F;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    
+    .gig-detail .header-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0F0F0F;
+    }
+    
+    .gig-detail .fav-btn-header {
+      position: absolute;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .gig-detail .site-fav-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: var(--text);
+      cursor: pointer;
+      z-index: 10001;
+    }
+
+    .gig-detail .page-fav-btn {
+      position: fixed;
+      right: 20px;
+      top: 84px; /* sits below the brand header */
+      background: rgba(0,0,0,0.0);
+      border: none;
+      font-size: 26px;
+      color: var(--text);
+      cursor: pointer;
+      z-index: 10002;
+      padding: 6px;
+      border-radius: 8px;
+      transition: transform 0.12s ease;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .gig-detail .page-fav-btn:active { transform: scale(0.96); }
+
+    @media (max-width:520px) {
+      .gig-detail .page-fav-btn { right: 12px; top: 76px; font-size: 22px; }
+    }
+    
+    /* Main Content */
+    
+    /* Hero Section */
+    .gig-detail .hero {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .gig-detail .hero-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: #2a2a2a;
+    }
+    
+    .gig-detail .hero-info h1 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    
+    .gig-detail .hero-rate {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--green);
+    }
+    
+    .gig-detail .hero-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    
+    /* Quick Stats */
+    .gig-detail .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    
+    .gig-detail .stat-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+    
+    .gig-detail .stat-icon { font-size: 20px; margin-bottom: 4px; }
+    .gig-detail .stat-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; }
+    .gig-detail .stat-value { font-size: 12px; font-weight: 700; margin-top: 2px; }
+    
+    /* Intro */
+    .gig-detail .intro-section {
+      background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(34,197,94,0.05));
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    
+    /* Content Sections */
+    .gig-detail .section {
+      margin-bottom: 20px;
+    }
+    
+    .gig-detail .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    
+    .gig-detail .section-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    
+    .gig-detail .section-icon.adhd { background: rgba(124,58,237,0.2); }
+    .gig-detail .section-icon.standout { background: rgba(34,197,94,0.2); }
+    .gig-detail .section-icon.warning { background: rgba(249,115,22,0.2); }
+    .gig-detail .section-icon.payout { background: rgba(90,195,174,0.2); }
+    .gig-detail .section-icon.tasks { background: rgba(59,130,246,0.2); }
+    .gig-detail .section-icon.verdict { background: rgba(236,72,153,0.2); }
+    .gig-detail .section-icon.ideal { background: rgba(250,204,21,0.2); }
+    
+    .gig-detail .section-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    
+    .gig-detail .section-content {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    
+    .gig-detail .section-content ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .gig-detail .section-content li {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .gig-detail .section-content li::before {
+      content: '•';
+      color: var(--brand);
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .gig-detail .section-content.warning li::before { color: var(--orange); }
+    
+    .gig-detail .section-content p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    
+    /* Ideal For Tags */
+    .gig-detail .ideal-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .gig-detail .ideal-tag {
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      color: #a78bfa;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    /* Empty State */
+    .gig-detail .empty-section {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 13px;
+    }
+    
+    /* CTA */
+    .gig-detail .cta-section {
+      position: fixed;
+      /* sit flush with the top of the bottom nav (no gap) */
+      bottom: calc(var(--nav-h, 72px));
+      left: 0;
+      right: 0;
+      background: rgba(15, 15, 15, 0.98);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 16px max(12px, env(safe-area-inset-bottom));
+      z-index: 10001;
+    }
+    
+    .gig-detail .cta-container {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .gig-detail .cta-btn {
+      flex: 1;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    
+    .gig-detail .cta-primary {
+      background: var(--brand);
+      color: white;
+    }
+    
+    .gig-detail .cta-primary:hover {
+      background: #6d28d9;
+      transform: translateY(-1px);
+    }
+    
+    .gig-detail .cta-secondary {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Loading State */
+    .gig-detail .loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+    
+    .gig-detail .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: var(--brand);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Not Found */
+    .gig-detail .not-found {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    .gig-detail .not-found h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    
+    .gig-detail .not-found p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    
+    .gig-detail .not-found a {
+      display: inline-block;
+      background: var(--brand);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Responsive: reduce CTA button size on small screens while keeping them side-by-side */
+    @media (max-width: 520px) {
+      .gig-detail .cta-section {
+        padding: 8px 12px max(8px, env(safe-area-inset-bottom));
+      }
+
+      .gig-detail .cta-container {
+        gap: 8px;
+        padding: 0;
+        align-items: center;
+      }
+
+      .gig-detail .cta-btn {
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 12px;
+        min-height: 44px;
+      }
+
+      .gig-detail .cta-container .cta-btn:first-child, .gig-detail .cta-container .cta-btn:last-child {
+        max-width: 49%;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 360px) {
+        .gig-detail .cta-btn { font-size: 13px; padding: 8px 10px; }
+      }
+    }

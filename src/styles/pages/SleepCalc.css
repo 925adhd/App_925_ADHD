@@ -1,0 +1,345 @@
+    .sleep-calc {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 8px;
+    }
+
+    /* Header */
+    .sleep-calc .page-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 8px;
+    }
+
+    .sleep-calc .page-header .emoji {
+      font-size: 40px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .sleep-calc .page-header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .sleep-calc .page-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Mode Toggle */
+    .sleep-calc .mode-toggle {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      background: var(--card);
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .sleep-calc .mode-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 12px 8px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .sleep-calc .mode-btn.active {
+      background: var(--brand);
+      color: #000;
+    }
+
+    /* Input Card */
+    .sleep-calc .input-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .sleep-calc .input-label {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .sleep-calc .time-input {
+      width: 100%;
+      padding: 14px;
+      font-size: 24px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .sleep-calc .time-input:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    /* Calculate Button */
+    .sleep-calc .calc-btn {
+      width: 100%;
+      background: var(--brand);
+      color: #000;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.2s;
+    }
+
+    .sleep-calc .calc-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(86, 195, 174, 0.3);
+    }
+
+    /* Results */
+    .sleep-calc .results {
+      display: none;
+    }
+
+    .sleep-calc .results.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sleep-calc .results-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--brand);
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .sleep-calc .results-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    /* Time Options */
+    .sleep-calc .time-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .sleep-calc .time-option {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .sleep-calc .time-option:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateX(4px);
+    }
+
+    .sleep-calc .time-option.best {
+      border-color: var(--green);
+      background: rgba(74, 222, 128, 0.1);
+    }
+
+    .sleep-calc .time-value {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .sleep-calc .time-option.best .time-value {
+      color: var(--green);
+    }
+
+    .sleep-calc .time-info {
+      text-align: left;
+    }
+
+    .sleep-calc .time-cycles {
+      font-size: 11px;
+      color: var(--muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .sleep-calc .time-hours {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .sleep-calc .badge {
+      background: var(--green);
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+
+    /* Quick Actions */
+    .sleep-calc .quick-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .sleep-calc .quick-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .sleep-calc .quick-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    /* Settings */
+    .sleep-calc .settings-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 20px;
+    }
+
+    .sleep-calc .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sleep-calc .setting-label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .sleep-calc .setting-input {
+      width: 70px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .sleep-calc .setting-input:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    /* Info Box */
+    .sleep-calc .info-box {
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-left: 3px solid var(--yellow);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .sleep-calc .info-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 6px;
+    }
+
+    .sleep-calc .info-text {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Toast */
+    .sleep-calc .toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: var(--green);
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .sleep-calc .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Mobile compact adjustments to fit on one screen */
+    @media (max-width: 420px) {
+      .sleep-calc { max-width: 100%; }
+      .sleep-calc .page-header .emoji { font-size: 32px; margin-bottom: 4px; }
+      .sleep-calc .page-header h1 { font-size: 18px; }
+      .sleep-calc .page-header p { font-size: 12px; }
+
+      .sleep-calc .mode-toggle { padding: 4px; gap: 6px; margin-bottom: 12px; }
+      .sleep-calc .mode-btn { padding: 8px 6px; font-size: 12px; }
+
+      .sleep-calc .input-card { padding: 12px; margin-bottom: 10px; }
+      .sleep-calc .input-label { margin-bottom: 6px; font-size: 13px; }
+      .sleep-calc .time-input { padding: 10px; font-size: 20px; }
+
+      .sleep-calc .calc-btn { padding: 10px; font-size: 13px; margin-bottom: 10px; }
+
+      .sleep-calc .results-title { font-size: 14px; }
+      .sleep-calc .results-subtitle { font-size: 12px; margin-bottom: 10px; }
+
+      .sleep-calc .time-options { gap: 8px; }
+      .sleep-calc .time-option { padding: 10px 12px; }
+      .sleep-calc .time-value { font-size: 18px; }
+
+      .sleep-calc .quick-actions { gap: 8px; }
+      .sleep-calc .quick-btn { padding: 10px; font-size: 11px; }
+
+      .sleep-calc .settings-card { padding: 10px; }
+      .sleep-calc .setting-input { width: 56px; padding: 6px; font-size: 12px; }
+
+      .sleep-calc .toast { top: 12px; font-size: 12px; padding: 8px 16px; }
+    }

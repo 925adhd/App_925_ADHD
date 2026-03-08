@@ -1,0 +1,206 @@
+    .essentials {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 8px;
+    }
+
+    /* Header */
+    .essentials .page-header {
+      text-align: center;
+      margin-bottom: 24px;
+      padding-top: 8px;
+    }
+
+    .essentials .page-header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .essentials .page-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Tool Cards */
+    .essentials .tools-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .essentials .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .essentials .tool-card:hover {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .essentials .tool-header {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .essentials .tool-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .essentials .tool-icon.browser { background: linear-gradient(135deg, #FF6B6B, #FF8E53); }
+    .essentials .tool-icon.extensions { background: linear-gradient(135deg, #818CF8, #6366F1); }
+    .essentials .tool-icon.mobile { background: linear-gradient(135deg, #4ADE80, #22C55E); }
+    .essentials .tool-icon.security { background: linear-gradient(135deg, #F87171, #EF4444); }
+    .essentials .tool-icon.organize { background: linear-gradient(135deg, #60A5FA, #3B82F6); }
+    .essentials .tool-icon.hardware { background: linear-gradient(135deg, #A78BFA, #8B5CF6); }
+
+    .essentials .tool-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .essentials .tool-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .essentials .tool-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .essentials .tool-toggle {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 12px;
+      transition: transform 0.2s;
+    }
+
+    .essentials .tool-card.open .tool-toggle {
+      transform: rotate(180deg);
+    }
+
+    /* Expandable Content */
+    .essentials .tool-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .essentials .tool-card.open .tool-content {
+      max-height: 800px;
+    }
+
+    .essentials .tool-body {
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .essentials .tool-body p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 14px 0;
+      line-height: 1.6;
+    }
+
+    /* Feature List */
+    .essentials .feature-list {
+      list-style: none;
+      margin: 14px 0;
+    }
+
+    .essentials .feature-list li {
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .essentials .feature-list li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .essentials .feature-list strong {
+      color: var(--brand);
+    }
+
+    /* Pro Tip */
+    .essentials .pro-tip {
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-left: 3px solid var(--yellow);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 14px 0;
+    }
+
+    .essentials .pro-tip-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 6px;
+    }
+
+    .essentials .pro-tip p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Link Button */
+    .essentials .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand);
+      color: #000;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+
+    .essentials .link-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Category Badge */
+    .essentials .category-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }

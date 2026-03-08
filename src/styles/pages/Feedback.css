@@ -1,0 +1,493 @@
+    .feedback {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 12px 8px;
+      min-height: 600px;
+    }
+
+    /* Header */
+    .feedback .page-header {
+      margin-bottom: 36px;
+      padding-top: 8px;
+    }
+
+    .feedback .page-header .emoji {
+      font-size: 28px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .feedback .page-header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .feedback .page-header p {
+      color: var(--text-muted, var(--muted));
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .feedback .page-header .header-sub {
+      font-size: 13px;
+      color: var(--text-muted, var(--muted));
+      margin-top: 2px;
+    }
+
+    /* Form Card */
+    .feedback .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      width: 100%;
+      max-width: none;
+      min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+      .feedback .form-card form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+      }
+
+    /* Form Elements */
+    .feedback .form-group {
+      margin-bottom: 12px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    .feedback .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .feedback .form-group .hint {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 400;
+      margin-left: 4px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* Type Selector */
+    .feedback .type-selector {
+      display: flex;
+      gap: 6px;
+    }
+
+    .feedback .type-btn {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 6px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      text-align: center;
+      position: relative;
+    }
+
+    .feedback .type-btn:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.07);
+      transform: scale(1.03);
+    }
+
+    .feedback .type-btn.active {
+      border-color: var(--brand);
+      background: var(--brand-dim);
+      transform: scale(1.05);
+    }
+
+    .feedback .type-btn .emoji {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .feedback .type-btn .label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .feedback .type-btn.active .label {
+      color: var(--brand);
+    }
+
+    .feedback .type-check {
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--brand);
+      line-height: 1;
+    }
+
+    /* Text Inputs */
+    .feedback input[type="text"], .feedback input[type="email"], .feedback textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: var(--text);
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .feedback input[type="text"]:focus, .feedback input[type="email"]:focus, .feedback textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    .feedback input::placeholder, .feedback textarea::placeholder {
+      color: var(--muted);
+    }
+
+    /* Character count */
+    .feedback .char-count {
+      text-align: right;
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 4px;
+      opacity: 0;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .feedback .char-count.visible {
+      opacity: 1;
+    }
+
+    .feedback .char-count.warning {
+      color: #f59e0b;
+    }
+
+    .feedback .char-count.danger {
+      color: var(--red, #ef4444);
+      font-weight: 700;
+    }
+
+    /* Screenshot Upload */
+    .feedback .upload-area {
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .feedback .upload-area:hover {
+      border-color: var(--brand);
+      background: var(--brand-dim);
+    }
+
+    .feedback .upload-area.has-file {
+      border-color: var(--green);
+      background: rgba(74, 222, 128, 0.1);
+      border-style: solid;
+    }
+
+    .feedback .upload-area input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .feedback .upload-area .icon {
+      font-size: 20px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .feedback .upload-area .text {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .feedback .upload-area.has-file .text {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .feedback .upload-area .filename {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+      word-break: break-all;
+    }
+
+    /* Checkbox */
+    .feedback .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .feedback .checkbox-row:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .feedback .checkbox-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--brand);
+      cursor: pointer;
+    }
+
+    .feedback .checkbox-row label {
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      flex: 1;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--text);
+    }
+
+    .feedback .checkbox-row .hint {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    /* Email Section */
+    .feedback .email-section {
+      margin-top: 8px;
+      padding: 10px;
+      background: var(--brand-dim);
+      border-radius: 8px;
+      border: 1px solid rgba(86, 195, 174, 0.2);
+      display: none;
+    }
+
+    .feedback .email-section.visible {
+      display: block;
+      animation: slideDown 0.2s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feedback .email-section label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--brand);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* Submit Button */
+    .feedback .submit-btn {
+      width: 100%;
+      background: var(--brand);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 4px;
+    }
+
+    .feedback .submit-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(86, 195, 174, 0.3);
+    }
+
+    .feedback .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Status */
+    .feedback .status {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+      min-height: 16px;
+    }
+
+    .feedback .status.error {
+      color: var(--red);
+    }
+
+    /* Success State */
+    .feedback .success-state {
+      text-align: center;
+      padding: 40px 20px;
+      display: none;
+    }
+
+    .feedback .success-state.visible {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .feedback .success-emoji {
+      font-size: 52px;
+      margin-bottom: 16px;
+      display: block;
+      animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+
+    .feedback .success-state h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feedback .success-state p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .feedback .success-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .feedback .send-another-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+
+    .feedback .send-another-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .feedback .success-state .back-btn {
+      display: inline-block;
+      background: var(--brand-dim);
+      color: var(--brand);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .feedback .success-state .back-btn:hover {
+      background: rgba(86, 195, 174, 0.15);
+    }
+
+    /* Previous Submissions */
+    .feedback .prev-submissions {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .feedback .prev-submissions h3 {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .feedback .submission-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      margin-bottom: 6px;
+    }
+
+    .feedback .submission-item .emoji {
+      font-size: 16px;
+    }
+
+    .feedback .submission-item .info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .feedback .submission-item .title {
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .feedback .submission-item .date {
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .feedback .submission-item .status-badge {
+      font-size: 9px;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+    }
+
+    .feedback .submission-item .status-badge.received {
+      background: var(--brand-dim);
+      color: var(--brand);
+    }
