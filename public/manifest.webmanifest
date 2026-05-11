@@ -1,0 +1,15 @@
+{
+  "name": "925 ADHD",
+  "short_name": "925 ADHD",
+  "description": "Earn, focus, and stack receipts on ADHD time.",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F0F0F",
+  "theme_color": "#56C3AE",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
