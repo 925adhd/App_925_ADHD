@@ -58,18 +58,11 @@ const cashbackCards: GigCard[] = [
 
 function CardComponent({ card }: { card: GigCard }) {
   const isInternal = card.href.startsWith('/')
-  const Tag = isInternal ? Link : 'a'
-  const linkProps = isInternal
-    ? { to: card.href, state: { backTo: '/beginner-list', backLabel: 'Beginner List' } }
-    : { href: card.href, target: '_blank' as const, rel: 'noopener noreferrer' }
   const payStat = card.stats.find(s => s.className.includes('pay'))
   const rate = payStat?.label.replace(/^[^\w$]+/, '').trim()
-  return (
-    <Tag
-      className={`card${card.featured ? ' featured' : ''}`}
-      {...linkProps}
-      data-gig={card.id}
-    >
+  const className = `card${card.featured ? ' featured' : ''}`
+  const inner = (
+    <>
       {card.badge && <span className="card-badge">{card.badge}</span>}
       <div className="card-content">
         <div className="card-header">
@@ -83,7 +76,27 @@ function CardComponent({ card }: { card: GigCard }) {
           </div>
         </div>
       </div>
-    </Tag>
+    </>
+  )
+  return isInternal ? (
+    <Link
+      className={className}
+      to={card.href}
+      state={{ backTo: '/beginner-list', backLabel: 'Beginner List' }}
+      data-gig={card.id}
+    >
+      {inner}
+    </Link>
+  ) : (
+    <a
+      className={className}
+      href={card.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-gig={card.id}
+    >
+      {inner}
+    </a>
   )
 }
 
