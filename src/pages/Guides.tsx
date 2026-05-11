@@ -27,8 +27,7 @@ export default function Guides() {
       <div className="hero-banner" />
 
       <div className="main-content">
-        <h1 className="page-title">ADHD Friendly Earning Guides</h1>
-        <p className="page-subtitle">Pick a path to learn how to begin earning online.</p>
+        <div className="guides-section-label">Pick a path to start earning</div>
 
         <div className="guides-grid">
           {guides.map((g) => (
@@ -40,7 +39,6 @@ export default function Guides() {
             >
               <img src={g.img} alt={g.alt} loading="lazy" decoding="async" />
               <h3>{g.title}</h3>
-              <span className="guide-card-sub">{g.sub}</span>
               {opening === g.to && <span className="guide-card-opening">✨ Opening guide…</span>}
             </a>
           ))}

@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom'
 
 const NAV_ITEMS = [
-  { to: '/dashboard', icon: '/images/home.png',        label: 'Home'   },
-  { to: '/earn',      icon: '/images/earn.png',        label: 'Earn'   },
-  { to: '/guides',    icon: '/images/guidesicon.webp', label: 'Guides' },
-  { to: '/tools',     icon: '/images/toolsicon.png',   label: 'Tools'  },
+  { to: '/dashboard', icon: '/images/home.png',        label: 'Home'      },
+  { to: '/earn',      icon: '/images/earn.png',        label: 'Earn'      },
+  { to: '/saved',     icon: '/images/hearticon.png',   label: 'Favorites' },
+  { to: '/guides',    icon: '/images/guidesicon.webp', label: 'Guides'    },
+  { to: '/tools',     icon: '/images/toolsicon.png',   label: 'Tools'     },
 ]
 
 export default function BottomNav() {

@@ -28,7 +28,7 @@ export default function Tools() {
         {/* ── Focus Tools ── */}
         <section className="tools-section">
           <div className="tools-section-label">Focus Tools</div>
-
+          <p className="tools-section-hint">🎯 Plan your day. Block your time. Match work to energy.</p>
           <div className="tools-grid">
             {FOCUS_TOOLS.map(({ to, img, title, desc }) => (
               <Link key={to} to={to} className="tool-card">
@@ -45,6 +45,7 @@ export default function Tools() {
         {/* ── Money Tools ── */}
         <section className="tools-section">
           <div className="tools-section-label">Money Tools</div>
+          <p className="tools-section-hint">💵 Track what you earn. Price your time. Stack the rewards.</p>
           <div className="tools-grid">
             {MONEY_TOOLS.map(({ to, img, title, desc }) => (
               <Link key={to} to={to} className="tool-card">
@@ -61,7 +62,7 @@ export default function Tools() {
         {/* ── Reset Tools ── */}
         <section className="tools-section">
           <div className="tools-section-label">Reset Tools</div>
-          <p className="tools-section-hint">Take care of yourself first. Reset, reframe, and refocus when your brain needs a break.</p>
+          <p className="tools-section-hint">🌿 Take care of yourself first. Reset, reframe, and refocus when your brain needs a break.</p>
           <div className="tools-grid">
             {RESET_TOOLS.map(({ to, img, title, desc, iconClass }) => (
               <Link key={to} to={to} className="tool-card">

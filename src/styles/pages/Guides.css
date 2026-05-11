@@ -19,22 +19,21 @@
     
     /* Main Content */
     .guides .main-content {
-      padding: 12px 24px 20px;
+      padding: 12px 14px 16px;
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .guides .page-title {
-      font-size: var(--fs-lg);
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .guides .page-subtitle {
-      font-size: var(--fs-13);
-      color: rgba(255,255,255,.55);
-      margin: 0 0 12px;
-      line-height: 1.4;
+    .guides .guides-section-label {
+      font-size: clamp(8px, 2.4vw, 12px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--brand);
+      margin: 0 0 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     
     .guides .pro-tip {
@@ -61,12 +60,12 @@
       margin-bottom: 8px;
     }
 
-    /* Guide Cards Grid */
+    /* Guide Cards Grid — square cards, title below */
     .guides-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 12px;
-      row-gap: 32px;
+      column-gap: 14px;
+      row-gap: 18px;
     }
     
     .guides .guide-card {
@@ -140,15 +139,16 @@
     
     .guides .guide-card img {
       width: 100%;
-      height: 200px;
-      object-fit: contain;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 16px;
       display: block;
     }
-    
-    /* Caption styling */
+
+    /* Caption styling — title sits below the card image */
     .guides .guide-card h3 {
-      padding: 6px 8px 2px;
-      font-size: var(--fs-xxs);
+      padding: 8px 6px 0;
+      font-size: var(--fs-sm);
       font-weight: 700;
       line-height: 1.2;
       white-space: nowrap;
@@ -188,31 +188,21 @@
 
     @media (max-width: 420px) {
       .guides .guide-card h3 {
-        font-size: var(--fs-xxs);
-        padding: 4px 6px 4px;
+        font-size: var(--fs-xs);
+        padding: 6px 4px 0;
       }
 
       .guides .main-content {
-        padding: 8px 6px 16px;
+        padding: 10px 10px 12px;
       }
 
-      .guides .page-title {
-        font-size: var(--fs-base);
-        margin-bottom: 4px;
-        display: none;
-      }
-
-      .guides .page-subtitle {
-        font-size: var(--fs-xs);
-        margin-bottom: 8px;
-      }
-
-      .guides .section-label {
-        margin-bottom: 6px;
+      .guides .guides-section-label {
+        margin-bottom: 10px;
       }
 
       .guides-grid {
-        gap: 6px;
+        column-gap: 10px;
+        row-gap: 14px;
       }
     }
 
@@ -278,14 +268,6 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 16px;
         row-gap: 32px;
-      }
-      
-      .guides .page-title {
-        font-size: 26px;
-      }
-
-      .guides .page-subtitle {
-        font-size: var(--fs-sm);
       }
       
       .guides .pro-tip {

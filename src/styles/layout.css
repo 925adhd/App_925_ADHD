@@ -349,19 +349,6 @@ html.light .header-back-btn{
     transition: color 150ms ease;
   }
 
-  .site-nav .nav-item.active::before {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 44px;
-    height: 28px;
-    border-radius: 10px;
-    background: rgba(86, 195, 174, 0.13);
-    pointer-events: none;
-  }
-
   .site-nav .nav-item .nav-icon {
     transition: transform 150ms ease;
   }
