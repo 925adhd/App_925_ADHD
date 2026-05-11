@@ -1,12 +1,40 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-
-import {
-  IconArrowRight,
-  IconLungs,
-  IconMusic,
-} from "@tabler/icons-react";
 import "../styles/pages/Dashboard.css";
+
+const PASSION_FINDER = {
+  to: "/passion-finder",
+  img: "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/V9fFmHmj0sNrFWEZxvre.png",
+  label: "Passion Finder",
+  desc: "4 questions. Real gig matches. No more “where do I even start?”",
+};
+
+const QUICK_ACTIONS = [
+  {
+    to: "/beginner-list",
+    img: "/images/begin.png",
+    label: "Beginner List",
+    desc: "Skip the quiz. 15 ready gigs.",
+  },
+  {
+    to: "/earn",
+    img: "/images/earnicon.png",
+    label: "Earn",
+    desc: "50+ ways to earn online.",
+  },
+  {
+    to: "/playlist",
+    img: "/images/brainfm.jpg",
+    label: "Focus Music",
+    desc: "Brain.fm audio. Press play, lock in.",
+  },
+  {
+    to: "/adhd-hacks",
+    img: "/images/hacks.png",
+    label: "ADHD Hacks",
+    desc: "Tiny tricks that actually stick.",
+  },
+];
 
 export default function Dashboard() {
   useEffect(() => {
@@ -16,103 +44,43 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
-      <div className="dashboard-container">
-        <main className="main-content">
+      <section className="dash-hero">
+        <h1 className="dash-welcome">Welcome back!</h1>
+      </section>
 
-          <Link to="/passion-finder" className="dash-hero-card" style={{ ["--stagger" as any]: "80ms" }}>
-            <div className="dhc-bg" aria-hidden />
-            <div className="dhc-grain" aria-hidden />
-            <div className="dhc-inner">
-              <div className="dhc-left">
-                <h2 className="dhc-title">
-                  Find ways to earn that <em>actually</em> fit your brain.
-                </h2>
-                <p className="dhc-desc">
-                  4 questions, real gig matches. No more &ldquo;where do I even start?&rdquo;
-                </p>
-                <span className="dhc-cta">
-                  Start the quiz <IconArrowRight size={18} />
-                </span>
-              </div>
-              <div className="dhc-art" aria-hidden>
-                <img src="https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/V9fFmHmj0sNrFWEZxvre.png" alt="" />
-              </div>
-            </div>
-          </Link>
+      <main className="main-content">
+        <p className="dash-section-label">Quick Actions</p>
 
-          <Link to="/breathwork" className="dash-quick-reset" aria-label="Breathwork">
-            <span className="dqr-icon"><IconLungs size={22} stroke={1.8} /></span>
-            <span className="dqr-text">
-              <span className="dqr-title">Breathwork</span>
-              <span className="dqr-sub">Overwhelmed? Breathe first.</span>
-            </span>
-            <span className="dqr-arrow"><IconArrowRight size={16} /></span>
-          </Link>
-
-          <div className="dash-cards">
-            {([
-              {
-                to: "/beginner-list",
-                img: "/images/begin.png",
-                label: "Beginner List",
-                desc: "Skip the quiz. 15 ready-to-go gigs.",
-                tone: "lemon",
-                delay: "160ms",
-              },
-              {
-                to: "/adhd-hacks",
-                img: "/images/hacks.png",
-                label: "ADHD Hacks",
-                desc: "Tiny tricks that actually stick.",
-                tone: "lilac",
-                delay: "220ms",
-              },
-              {
-                to: "/playlist",
-                Icon: IconMusic,
-                label: "Focus Music",
-                desc: "Brain.fm audio. Press play, lock in.",
-                tone: "mint",
-                delay: "280ms",
-              },
-            ] as const).map((card) => (
-              <Link
-                key={card.to}
-                to={card.to}
-                className={`dash-card tone-${card.tone}`}
-                style={{ ["--stagger" as any]: card.delay }}
-              >
-                <div className="dc-art">
-                  {"Icon" in card
-                    ? <card.Icon size={36} stroke={1.8} className="dc-icon" />
-                    : <img src={card.img} alt="" className="dc-img" />}
-                </div>
-                <div className="dc-body">
-                  <h3 className="dc-title">{card.label}</h3>
-                  <p className="dc-desc">{card.desc}</p>
-                </div>
-                <span className="dc-arrow" aria-hidden>
-                  <IconArrowRight size={16} />
-                </span>
-              </Link>
-            ))}
+        <Link to={PASSION_FINDER.to} className="featured-card featured-card--hero">
+          <span className="featured-icon">
+            <img src={PASSION_FINDER.img} alt="" />
+          </span>
+          <div className="featured-copy">
+            <h3>{PASSION_FINDER.label}</h3>
+            <p>{PASSION_FINDER.desc}</p>
           </div>
+        </Link>
 
-          <div className="dash-cta-row">
-            <Link to="/mindshift" className="dash-cta dash-cta--zone" style={{ ["--stagger" as any]: "340ms" }}>
-              <span className="dcta-icon">
-                <img src="/images/brainholographic.png" alt="" className="dcta-img" />
-              </span>
-              <span className="dcta-copy">
-                <span className="dcta-title">Reset your brain</span>
-                <span className="dcta-desc">Tap your mood, get a science&#8209;backed step.</span>
-              </span>
-              <span className="dcta-arrow"><IconArrowRight size={16} /></span>
+        <div className="dash-quick-grid">
+          {QUICK_ACTIONS.map(({ to, img, label, desc }) => (
+            <Link key={to} to={to} className="action-card">
+              <span className="action-icon"><img src={img} alt="" /></span>
+              <h3>{label}</h3>
+              <p>{desc}</p>
             </Link>
-          </div>
+          ))}
+        </div>
 
-        </main>
-      </div>
+        <Link to="/mindshift" className="featured-card featured-card--muted">
+          <span className="featured-icon">
+            <img src="/images/logo.png" alt="" />
+          </span>
+          <div className="featured-copy">
+            <h3>Need a boost?</h3>
+            <p>Tap your mood, reset your brain →</p>
+          </div>
+        </Link>
+      </main>
     </div>
   );
 }

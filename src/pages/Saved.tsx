@@ -34,7 +34,7 @@ export default function Saved() {
 
         {savedGigs.length === 0 ? (
           <div className="saved-empty">
-            <div className="saved-empty-icon">🤍</div>
+            <div className="saved-empty-icon">❤️</div>
             <p>No saved gigs yet.</p>
             <Link to="/earn" className="saved-empty-cta">Browse opportunities</Link>
           </div>
