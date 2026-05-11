@@ -27,6 +27,7 @@ SECURITY.md
 
 public/audio/*.wav
 public/audio/*.mp3
+!public/audio/Geode Grooves Focus Deep Work.mp3
 
 # ============================================================
 # DEPENDENCIES

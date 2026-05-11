@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
 
-const BRAINFM_SRC = '/audio/Geode%20Grooves%20Focus%20Deep%20Work.wav'
+const BRAINFM_SRC = '/audio/Geode%20Grooves%20Focus%20Deep%20Work.mp3'
 
 export interface TrackMeta { title: string; artist: string; src: string; artwork?: string }
 export type AudioSource = 'brainfm' | 'playlist'
