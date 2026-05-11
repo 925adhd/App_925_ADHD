@@ -8,7 +8,7 @@
         .transcription-guide .warning-banner {
             background: linear-gradient(135deg, var(--accent-4)22, var(--accent-1)22);
             border: 2px solid var(--accent-4);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 20px;
             margin-bottom: 20px;
             display: flex;
@@ -60,7 +60,7 @@
         .transcription-guide .stat {
             background: var(--card);
             padding: 20px;
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             text-align: center;
         }
 
@@ -98,9 +98,11 @@
             transition: all 0.3s ease;
         }
 
-        .transcription-guide .nav-btn:hover {
-            border-color: var(--accent-1);
-        }
+@media (hover: hover) {
+          .transcription-guide .nav-btn:hover {
+              border-color: var(--accent-1);
+          }
+}
 
         /* Sections */
         .transcription-guide .section {
@@ -110,7 +112,7 @@
         .transcription-guide .section-header {
             background: var(--card);
             border: 2px solid transparent;
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 20px;
             cursor: pointer;
             display: flex;
@@ -119,9 +121,11 @@
             transition: all 0.3s ease;
         }
 
-        .transcription-guide .section-header:hover {
-            border-color: var(--accent-2);
-        }
+@media (hover: hover) {
+          .transcription-guide .section-header:hover {
+              border-color: var(--accent-2);
+          }
+}
 
         .transcription-guide .section-header.open {
             border-color: var(--accent-3);
@@ -176,7 +180,7 @@
         /* Info cards */
         .transcription-guide .card {
             background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 18px;
             margin: 15px 0;
             border-left: 4px solid var(--accent-2);
@@ -263,7 +267,7 @@
         .transcription-guide .quiz-option {
             background: var(--card-hover);
             border: 2px solid transparent;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 16px 20px;
             cursor: pointer;
             display: flex;
@@ -273,10 +277,12 @@
             font-size: 1rem;
         }
 
-        .transcription-guide .quiz-option:hover {
-            border-color: var(--accent-2);
-            transform: translateX(5px);
-        }
+@media (hover: hover) {
+          .transcription-guide .quiz-option:hover {
+              border-color: var(--accent-2);
+              transform: translateX(5px);
+          }
+}
 
         .transcription-guide .quiz-option.selected {
             border-color: var(--accent-3);
@@ -375,7 +381,7 @@
 
         .transcription-guide .result-advice {
             background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 20px;
             margin: 20px 0;
             text-align: left;
@@ -399,10 +405,12 @@
             transition: all 0.3s ease;
         }
 
-        .transcription-guide .quiz-restart:hover {
-            background: var(--accent-2);
-            color: var(--bg);
-        }
+@media (hover: hover) {
+          .transcription-guide .quiz-restart:hover {
+              background: var(--accent-2);
+              color: var(--bg);
+          }
+}
 
         /* Platform cards */
         .transcription-guide .platforms {
@@ -413,15 +421,17 @@
 
         .transcription-guide .platform {
             background: var(--card-hover);
-            border-radius: 14px;
+            border-radius: var(--radius-card);
             padding: 18px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .transcription-guide .platform:hover {
-            border-color: var(--accent-1);
-        }
+@media (hover: hover) {
+          .transcription-guide .platform:hover {
+              border-color: var(--accent-1);
+          }
+}
 
         .transcription-guide .platform-top {
             display: flex;
@@ -475,7 +485,7 @@
             font-size: 0.85rem;
             padding: 10px;
             background: var(--accent-5)15;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             border-left: 3px solid var(--accent-5);
         }
 
@@ -543,10 +553,12 @@
             transition: all 0.3s ease;
         }
 
-        .transcription-guide .cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(244, 114, 182, 0.3);
-        }
+@media (hover: hover) {
+          .transcription-guide .cta:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 15px 40px rgba(244, 114, 182, 0.3);
+          }
+}
 
         @media (max-width: 600px) {
             .transcription-guide .hero { padding: 20px 0; }

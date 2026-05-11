@@ -64,13 +64,17 @@
   z-index: 2;
 }
 
-.viz-wrap:hover .viz-fullscreen-btn {
-  opacity: 1;
+@media (hover: hover) {
+  .viz-wrap:hover .viz-fullscreen-btn {
+    opacity: 1;
+  }
 }
 
-.viz-fullscreen-btn:hover {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.65);
+@media (hover: hover) {
+  .viz-fullscreen-btn:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+  }
 }
 
 .viz-hint {

@@ -178,7 +178,7 @@
 
         .start-page .info-box {
             background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 18px;
             margin: 15px 0;
             border-left: 4px solid var(--accent-2);
@@ -208,7 +208,9 @@
             border: 2px solid transparent;
         }
 
-        .start-page .task:hover { background: rgba(0, 255, 136, 0.05); }
+@media (hover: hover) {
+          .start-page .task:hover { background: rgba(0, 255, 136, 0.05); }
+}
 
         .start-page .task.done {
             border-color: var(--accent-1);
@@ -257,10 +259,12 @@
             border: 2px solid transparent;
         }
 
-        .start-page .quick-link:hover {
-            border-color: var(--accent-2);
-            transform: translateY(-2px);
-        }
+@media (hover: hover) {
+          .start-page .quick-link:hover {
+              border-color: var(--accent-2);
+              transform: translateY(-2px);
+          }
+}
 
         .start-page .quick-link.primary {
             background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
@@ -271,7 +275,7 @@
             width: 100%;
             padding: 15px;
             border: none;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             font-family: 'Fredoka', sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
@@ -282,10 +286,12 @@
             transition: all 0.3s ease;
         }
 
-        .start-page .complete-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-        }
+@media (hover: hover) {
+          .start-page .complete-btn:hover {
+              transform: scale(1.02);
+              box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+          }
+}
 
         .start-page .victory {
             display: none;

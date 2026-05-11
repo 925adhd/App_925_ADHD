@@ -18,21 +18,21 @@
     }
 
     .receipt-stacker .page-header h1 {
-      font-size: 22px;
+      font-size: var(--fs-xl);
       font-weight: 800;
       margin-bottom: 6px;
     }
 
     .receipt-stacker .page-header p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: var(--fs-13);
     }
 
     /* Progress Bar */
     .receipt-stacker .progress-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       padding: 14px;
       margin-bottom: 16px;
     }
@@ -45,7 +45,7 @@
     }
 
     .receipt-stacker .progress-header span {
-      font-size: 13px;
+      font-size: var(--fs-13);
       color: var(--muted);
     }
 
@@ -83,7 +83,7 @@
     .receipt-stacker .app-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       padding: 14px;
       display: flex;
       align-items: center;
@@ -92,9 +92,11 @@
       cursor: pointer;
     }
 
-    .receipt-stacker .app-card:hover {
-      border-color: rgba(255, 255, 255, 0.12);
-    }
+@media (hover: hover) {
+      .receipt-stacker .app-card:hover {
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+}
 
     .receipt-stacker .app-card.completed {
       opacity: 0.5;
@@ -117,7 +119,7 @@
       align-items: center;
       justify-content: center;
       transition: all 0.2s;
-      font-size: 14px;
+      font-size: var(--fs-sm);
       color: #000;
     }
 
@@ -144,25 +146,27 @@
       text-decoration: none;
     }
 
-    .receipt-stacker .app-name a:hover {
-      text-decoration: underline;
-    }
+@media (hover: hover) {
+      .receipt-stacker .app-name a:hover {
+        text-decoration: underline;
+      }
+}
 
     .receipt-stacker .app-earnings {
-      font-size: 12px;
+      font-size: var(--fs-xs);
       color: var(--green);
       font-weight: 600;
       white-space: nowrap;
     }
 
     .receipt-stacker .app-action {
-      font-size: 12px;
+      font-size: var(--fs-xs);
       color: var(--muted);
       margin-bottom: 6px;
     }
 
     .receipt-stacker .app-tip {
-      font-size: 11px;
+      font-size: var(--fs-xxs);
       color: var(--muted);
       background: rgba(255, 255, 255, 0.03);
       padding: 8px 10px;
@@ -173,7 +177,7 @@
     /* Celebration */
     .receipt-stacker .celebration {
       background: linear-gradient(135deg, var(--brand), var(--green));
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       padding: 16px;
       text-align: center;
       margin-bottom: 16px;
@@ -198,14 +202,14 @@
 
     .receipt-stacker .celebration h3 {
       color: #000;
-      font-size: 16px;
+      font-size: var(--fs-base);
       font-weight: 700;
       margin-bottom: 4px;
     }
 
     .receipt-stacker .celebration p {
       color: rgba(0, 0, 0, 0.7);
-      font-size: 12px;
+      font-size: var(--fs-xs);
     }
 
     /* Reset Button */
@@ -216,23 +220,25 @@
       color: var(--muted);
       padding: 12px;
       border-radius: 10px;
-      font-size: 13px;
+      font-size: var(--fs-13);
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
     }
 
-    .receipt-stacker .reset-btn:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text);
-    }
+@media (hover: hover) {
+      .receipt-stacker .reset-btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text);
+      }
+}
 
     /* Footer Tip */
     .receipt-stacker .footer-tip {
       text-align: center;
       padding: 16px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: var(--fs-xs);
       margin-top: 16px;
     }
     
@@ -241,19 +247,19 @@
       .receipt-stacker { max-width: 100%; padding: 10px; }
       .receipt-stacker .page-header { margin-bottom: 8px; }
       .receipt-stacker .page-header .emoji { display: none; }
-      .receipt-stacker .page-header h1 { font-size: 18px; margin-bottom: 2px; }
-      .receipt-stacker .page-header p { font-size: 12px; }
+      .receipt-stacker .page-header h1 { font-size: var(--fs-lg); margin-bottom: 2px; }
+      .receipt-stacker .page-header p { font-size: var(--fs-xs); }
 
       .receipt-stacker .progress-card { padding: 10px; margin-bottom: 8px; }
-      .receipt-stacker .progress-header span { font-size: 12px; }
+      .receipt-stacker .progress-header span { font-size: var(--fs-xs); }
       .receipt-stacker .progress-bar { height: 6px; }
 
       .receipt-stacker .apps-grid { gap: 6px; margin-bottom: 8px; }
       .receipt-stacker .app-card { padding: 10px; gap: 8px; }
-      .receipt-stacker .app-checkbox { width: 20px; height: 20px; border-radius: 4px; font-size: 12px; }
-      .receipt-stacker .app-name { font-size: 14px; }
-      .receipt-stacker .app-earnings { font-size: 11px; }
-      .receipt-stacker .app-action { font-size: 11px; margin-bottom: 4px; }
+      .receipt-stacker .app-checkbox { width: 20px; height: 20px; border-radius: 4px; font-size: var(--fs-xs); }
+      .receipt-stacker .app-name { font-size: var(--fs-sm); }
+      .receipt-stacker .app-earnings { font-size: var(--fs-xxs); }
+      .receipt-stacker .app-action { font-size: var(--fs-xxs); margin-bottom: 4px; }
 
       /* Hide non-essential tips to save vertical space */
       .receipt-stacker .app-tip { display: none; }
@@ -261,7 +267,7 @@
 
       .receipt-stacker .celebration { padding: 12px; margin-bottom: 8px; }
       .receipt-stacker .celebration .emoji { font-size: 24px; }
-      .receipt-stacker .celebration h3 { font-size: 14px; }
+      .receipt-stacker .celebration h3 { font-size: var(--fs-sm); }
 
-      .receipt-stacker .reset-btn { padding: 10px; font-size: 13px; border-radius: 8px; }
+      .receipt-stacker .reset-btn { padding: 10px; font-size: var(--fs-13); border-radius: var(--radius-sm); }
     }

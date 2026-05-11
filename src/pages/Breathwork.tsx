@@ -86,11 +86,13 @@ export default function Breathwork() {
   // ── Live session display ────────────────────────────────────────
   const [phaseText,      setPhaseText]      = useState('')
   const [phaseCount,     setPhaseCount]     = useState(0)
-  const [phaseDur,       setPhaseDur]       = useState(4)
-  const [circleExpanded, setCircleExpanded] = useState(false)
+  const [phaseAction,    setPhaseAction]    = useState<'inhale' | 'exhale' | 'hold'>('hold')
+  const [breathScale,    setBreathScale]    = useState(0) // 0 = contracted, 1 = expanded
   const [paused,         setPaused]         = useState(false)
   const [roundDisplay,   setRoundDisplay]   = useState(1)
   const [totalRoundsDisp,setTotalRoundsDisp]= useState(0)
+  // Ring tracks full-cycle progress (0 → 1 over one complete round)
+  const [cycleProgress,  setCycleProgress]  = useState(0)
 
   // ── Complete screen ─────────────────────────────────────────────
   const [doneRounds, setDoneRounds] = useState(0)
@@ -101,17 +103,27 @@ export default function Breathwork() {
   const pausedRef      = useRef(false)
   const exRef          = useRef('')
   const roundRef       = useRef(0)
-  const totalRoundsRef = useRef(0)     // ref — NOT state — so inner callbacks are always fresh
+  const totalRoundsRef = useRef(0)
   const startTimeRef   = useRef(0)
   const tickRef        = useRef<ReturnType<typeof setInterval> | null>(null)
-  const phaseLeftRef   = useRef(0)     // seconds remaining in the current phase
+  const phaseLeftRef   = useRef(0)
+  const phaseIdxRef    = useRef(0) // current phase index within the cycle
+  const breathTargetRef = useRef(0) // where the breath circle should be (0 or 1)
+  const breathDurRef   = useRef(4) // duration of current inhale/exhale for CSS transition
 
-  // runPhase is kept in a ref that re-assigns every render so it never captures
-  // stale values from state or other refs.
   const runPhaseRef = useRef<(phaseIdx: number) => void>(() => {})
 
   const stopTick = () => {
     if (tickRef.current) { clearInterval(tickRef.current); tickRef.current = null }
+  }
+
+  /** Compute how far through the full cycle we are (0 → 1) */
+  const getCycleProgress = (ex: Exercise, phaseIdx: number, secsLeftInPhase: number): number => {
+    const cycleTotal = ex.phases.reduce((s, p) => s + p.duration, 0)
+    let elapsed = 0
+    for (let i = 0; i < phaseIdx; i++) elapsed += ex.phases[i].duration
+    elapsed += ex.phases[phaseIdx].duration - secsLeftInPhase
+    return Math.min(1, elapsed / cycleTotal)
   }
 
   const finishSession = () => {
@@ -125,8 +137,7 @@ export default function Breathwork() {
     setScreen('complete')
   }
 
-  // Re-assign runPhaseRef every render — this is the standard React pattern for
-  // recursive timer callbacks that need always-fresh closure data.
+  // Re-assign runPhaseRef every render for always-fresh closures
   useEffect(() => {
     runPhaseRef.current = (phaseIdx: number) => {
       if (!activeRef.current) return
@@ -136,47 +147,60 @@ export default function Breathwork() {
 
       // --- Update display ---
       setPhaseText(phase.text)
-      setPhaseDur(phase.duration)
       phaseLeftRef.current = phase.duration
+      phaseIdxRef.current  = phaseIdx
       setPhaseCount(phase.duration)
+      setPhaseAction(phase.action)
 
-      // --- Drive the circle ---
-      // inhale → expand, exhale → contract, hold → leave as-is
-      if (phase.action === 'inhale') setCircleExpanded(true)
-      else if (phase.action === 'exhale') setCircleExpanded(false)
+      // --- Drive the breathing circle ---
+      // Only change target during inhale/exhale, hold keeps current position
+      if (phase.action === 'inhale') {
+        breathTargetRef.current = 1
+        breathDurRef.current = phase.duration
+        setBreathScale(1)
+      } else if (phase.action === 'exhale') {
+        breathTargetRef.current = 0
+        breathDurRef.current = phase.duration
+        setBreathScale(0)
+      }
+      // hold → don't change breathScale or breathDurRef
+
+      // --- Update cycle ring ---
+      setCycleProgress(getCycleProgress(ex, phaseIdx, phase.duration))
 
       stopTick()
       tickRef.current = setInterval(() => {
-        // Pause: interval keeps running but simply skips decrement.
-        // phaseLeftRef is not touched during pause, so countdown resumes
-        // exactly where it left off — no phase restart on resume.
         if (pausedRef.current) return
 
         phaseLeftRef.current -= 1
         setPhaseCount(Math.max(0, phaseLeftRef.current))
+
+        // Update ring progress smoothly each second
+        setCycleProgress(
+          getCycleProgress(ex, phaseIdxRef.current, phaseLeftRef.current)
+        )
 
         if (phaseLeftRef.current <= 0) {
           stopTick()
 
           const nextPhase = phaseIdx + 1
           if (nextPhase < ex.phases.length) {
-            // Advance to next phase in this round
             runPhaseRef.current(nextPhase)
           } else {
             // Round complete
             roundRef.current += 1
-            setRoundDisplay(roundRef.current + 1) // 1-indexed
+            setRoundDisplay(roundRef.current + 1)
 
             if (roundRef.current >= totalRoundsRef.current) {
               finishSession()
             } else {
-              runPhaseRef.current(0) // start next round
+              runPhaseRef.current(0)
             }
           }
         }
       }, 1000)
     }
-  }) // intentionally no dep array — always fresh
+  }) // intentionally no dep array
 
   // ── Start / repeat session ──────────────────────────────────────
   const beginSession = (exType = exercise, mins = duration) => {
@@ -185,28 +209,26 @@ export default function Breathwork() {
     const cycleTime = ex.phases.reduce((s, p) => s + p.duration, 0)
     const rounds    = Math.max(1, Math.floor((mins * 60) / cycleTime))
 
-    // Reset all refs
     exRef.current          = exType
     activeRef.current      = true
     pausedRef.current      = false
     roundRef.current       = 0
     totalRoundsRef.current = rounds
     startTimeRef.current   = Date.now()
+    breathTargetRef.current = 0
+    breathDurRef.current   = ex.phases[0].duration
 
-    // Reset display
     setTotalRoundsDisp(rounds)
     setRoundDisplay(1)
     setPaused(false)
-    setCircleExpanded(false)
+    setBreathScale(0)
+    setCycleProgress(0)
     setScreen('session')
 
-    // Small delay lets the session screen mount before the first phase triggers
     setTimeout(() => runPhaseRef.current(0), 350)
   }
 
   const togglePause = () => {
-    // Flip the ref; the interval will see it on the next tick.
-    // No need to restart anything — countdown resumes from phaseLeftRef.current.
     pausedRef.current = !pausedRef.current
     setPaused(pausedRef.current)
   }
@@ -220,12 +242,13 @@ export default function Breathwork() {
   // Cleanup on unmount
   useEffect(() => () => stopTick(), [])
 
-  // ── Progress ring offset (1 = full, 0 = empty) ──────────────────
-  const ringProgress = phaseDur > 0 ? phaseCount / phaseDur : 0
-  const dashOffset   = RING_C * (1 - ringProgress)
+  // ── Ring: tracks full cycle (0 → 1) ────────────────────────────
+  const dashOffset = RING_C * (1 - cycleProgress)
 
-  // For short phases (≤2s) use a quick snap, otherwise match phase duration
-  const circleDur = phaseDur <= 2 ? 0.6 : phaseDur
+  // ── Breathing circle: inline transition only changes on inhale/exhale ──
+  // Scale range: 0.7 (contracted) → 1.55 (expanded)
+  const circleScale = 0.7 + breathScale * 0.85
+  const circleTransitionDur = breathDurRef.current
 
   return (
     <div className="breathwork">
@@ -294,7 +317,7 @@ export default function Breathwork() {
           </div>
 
           <div className="bw-circle-wrap">
-            {/* Depleting progress ring */}
+            {/* Progress ring — tracks full cycle, not per-phase */}
             <svg className="bw-progress-svg" viewBox="0 0 220 220" aria-hidden="true">
               <circle className="bw-ring-track" cx="110" cy="110" r={RING_R} />
               <circle
@@ -305,10 +328,13 @@ export default function Breathwork() {
               />
             </svg>
 
-            {/* Breathing orb — expands on inhale, contracts on exhale */}
+            {/* Breathing orb — scale driven by breathScale state */}
             <div
-              className={`bw-breath-circle${circleExpanded ? ' expanded' : ''}`}
-              style={{ transitionDuration: `${circleDur}s` }}
+              className={`bw-breath-circle bw-action-${phaseAction}`}
+              style={{
+                transform: `translate(-50%, -50%) scale(${circleScale})`,
+                transitionDuration: `${circleTransitionDur}s`,
+              }}
             >
               <span className="bw-phase-text">{phaseText}</span>
               <span className="bw-phase-count">{phaseCount}</span>

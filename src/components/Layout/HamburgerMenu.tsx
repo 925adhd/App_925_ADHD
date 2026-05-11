@@ -1,17 +1,10 @@
-import { Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
-import { useNavigate } from 'react-router-dom'
+import { LogOut } from 'lucide-react'
 import ThemeToggle from '../ThemeToggle'
+import { NAV_SECTIONS } from '../../config/nav'
 
 const LOGO_URL = 'https://img1.wsimg.com/isteam/ip/e5c52ac6-7189-421d-9701-bbc6d6a027fc/SmartSelect_20241218_055052_Gallery.png'
-
-const MENU_ITEMS = [
-  { to: '/favorites',  label: 'Saved' },
-  { to: '/guides',     label: 'Guides' },
-  { to: '/adhd-hacks', label: 'ADHD Hacks' },
-  { to: '/playlist',   label: 'Motivation Playlist' },
-  { to: '/feedback',   label: 'Feedback' },
-]
 
 interface HamburgerMenuProps {
   open: boolean
@@ -45,18 +38,32 @@ export default function HamburgerMenu({ open, onClose }: HamburgerMenuProps) {
           <button className="top-close-btn" aria-label="Close menu" onClick={onClose}>✕</button>
         </div>
 
-        {/* Menu items */}
-        {MENU_ITEMS.map(({ to, label }) => (
-          <Link key={to} to={to} className="nav-item" onClick={onClose}>
-            <span>{label}</span>
-          </Link>
-        ))}
+        {/* Nav sections — "Main" is skipped on mobile because BottomNav covers those items */}
+        <nav className="hamburger-nav">
+          {NAV_SECTIONS.filter(s => s.label !== 'Main').map((section) => (
+            <div key={section.label} className="hamburger-section">
+              <span className="hamburger-section-label">{section.label}</span>
+              {section.items.map(({ to, icon: Icon, label }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`}
+                  onClick={onClose}
+                >
+                  <Icon size={18} />
+                  <span>{label}</span>
+                </NavLink>
+              ))}
+            </div>
+          ))}
+        </nav>
 
         <ThemeToggle variant="hamburger" />
 
-        <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.04)', margin: '10px 0' }} />
-
-        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>
+          <LogOut size={18} />
+          <span>Logout</span>
+        </button>
       </div>
     </div>
   )

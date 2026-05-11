@@ -44,16 +44,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: bwTitleShine 5s ease-in-out infinite;
-}
-
-@keyframes bwTitleShine {
-  0%, 100% { background-position: 0% 50%; }
-  50%       { background-position: 100% 50%; }
 }
 
 .breathwork .bw-subtitle {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
@@ -67,7 +61,7 @@
 .breathwork .bw-exercise-card {
   background: linear-gradient(145deg, #1c1c1f, #121214);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 20px 14px;
   text-align: center;
   cursor: pointer;
@@ -99,10 +93,12 @@
 .breathwork .bw-ex-energy { --ex-color: #F59E0B; }
 .breathwork .bw-ex-sleep  { --ex-color: #6366F1; }
 
-.breathwork .bw-exercise-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+@media (hover: hover) {
+  .breathwork .bw-exercise-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
 }
 .breathwork .bw-exercise-card:active { transform: scale(0.97); }
 
@@ -114,24 +110,24 @@
 }
 
 .breathwork .bw-ex-label {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--text);
 }
 
 .breathwork .bw-ex-pattern {
-  font-size: 11px;
+  font-size: var(--fs-xxs);
   color: var(--text-muted);
 }
 
 .breathwork .bw-ex-range {
-  font-size: 11px;
+  font-size: var(--fs-xxs);
   font-weight: 600;
   color: var(--ex-color);
 }
 
 .breathwork .bw-note {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   color: var(--text-muted);
   text-align: center;
   line-height: 1.5;
@@ -144,13 +140,13 @@
 }
 
 .breathwork .bw-setup-header h2 {
-  font-size: 22px;
+  font-size: var(--fs-xl);
   font-weight: 800;
   margin-bottom: 10px;
 }
 
 .breathwork .bw-setup-header p {
-  font-size: 13px;
+  font-size: var(--fs-13);
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -161,7 +157,7 @@
 
 .breathwork .bw-duration-label {
   display: block;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -181,7 +177,7 @@
   color: var(--text-muted);
   padding: 12px 8px;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: var(--fs-13);
   font-weight: 600;
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s;
@@ -194,16 +190,18 @@
   color: #0a0a0a;
 }
 
-.breathwork .bw-dur-btn:not(.selected):hover {
-  border-color: rgba(86, 195, 174, 0.4);
-  color: var(--text);
+@media (hover: hover) {
+  .breathwork .bw-dur-btn:not(.selected):hover {
+    border-color: rgba(86, 195, 174, 0.4);
+    color: var(--text);
+  }
 }
 
 /* ── Shared buttons ── */
 .breathwork .bw-btn {
   width: 100%;
   padding: 14px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
@@ -219,9 +217,11 @@
   box-shadow: 0 4px 16px rgba(86, 195, 174, 0.25);
 }
 
-.breathwork .bw-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(86, 195, 174, 0.35);
+@media (hover: hover) {
+  .breathwork .bw-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(86, 195, 174, 0.35);
+  }
 }
 
 .breathwork .bw-btn-secondary {
@@ -230,9 +230,11 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.breathwork .bw-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
+@media (hover: hover) {
+  .breathwork .bw-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+  }
 }
 
 .breathwork .bw-btn:active { transform: scale(0.98) !important; }
@@ -252,7 +254,7 @@
 }
 
 .breathwork .bw-session-rounds {
-  font-size: 13px;
+  font-size: var(--fs-13);
   color: var(--text-muted);
 }
 
@@ -302,10 +304,9 @@
 .breathwork .bw-deco-2 { width: 170px; height: 170px; }
 
 /* ── Breathing orb ──
-   Resting state: scale(0.7) — small, contracted
-   .expanded state: scale(1.55) — full inhale
-   transition-duration is set inline to match the exact phase duration
-   so the orb literally breathes in/out at the right pace.
+   Scale driven by inline style: scale(0.7) → scale(1.55)
+   transition-duration set inline to match the inhale/exhale duration.
+   During holds, neither scale nor duration changes — circle stays put.
 ── */
 .breathwork .bw-breath-circle {
   position: absolute;
@@ -315,13 +316,13 @@
   height: 110px;
   background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.25), var(--brand) 60%);
   border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
+  /* transform set inline */
   box-shadow:
     0 0 30px rgba(86, 195, 174, 0.3),
     0 0 60px rgba(86, 195, 174, 0.12);
   transition-property: transform, box-shadow;
   transition-timing-function: ease-in-out;
-  /* transition-duration set inline per-phase */
+  /* transition-duration set inline */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,15 +331,21 @@
   z-index: 2;
 }
 
-.breathwork .bw-breath-circle.expanded {
-  transform: translate(-50%, -50%) scale(1.55);
+/* Glow intensifies when expanded (larger scale) */
+.breathwork .bw-breath-circle.bw-action-inhale {
   box-shadow:
-    0 0 60px rgba(86, 195, 174, 0.5),
-    0 0 100px rgba(86, 195, 174, 0.2);
+    0 0 50px rgba(86, 195, 174, 0.45),
+    0 0 90px rgba(86, 195, 174, 0.18);
+}
+
+.breathwork .bw-breath-circle.bw-action-exhale {
+  box-shadow:
+    0 0 25px rgba(86, 195, 174, 0.25),
+    0 0 50px rgba(86, 195, 174, 0.1);
 }
 
 .breathwork .bw-phase-text {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 700;
   color: #0a0a0a;
   text-align: center;
@@ -355,7 +362,7 @@
 
 /* ── Paused state ── */
 .breathwork .bw-paused-label {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.08em;
@@ -378,16 +385,18 @@
   border: 1px solid rgba(255, 255, 255, 0.07);
   color: var(--text);
   padding: 14px;
-  border-radius: 12px;
-  font-size: 14px;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
   font-weight: 600;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s, color 0.15s;
   font-family: inherit;
 }
 
-.breathwork .bw-control-btn:hover {
-  border-color: rgba(86, 195, 174, 0.3);
+@media (hover: hover) {
+  .breathwork .bw-control-btn:hover {
+    border-color: rgba(86, 195, 174, 0.3);
+  }
 }
 
 .breathwork .bw-control-btn.resuming {
@@ -395,9 +404,11 @@
   color: var(--brand);
 }
 
-.breathwork .bw-end-btn:hover {
-  border-color: rgba(239, 68, 68, 0.3);
-  color: #ef4444;
+@media (hover: hover) {
+  .breathwork .bw-end-btn:hover {
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+  }
 }
 
 .breathwork .bw-control-btn:active { transform: scale(0.96); }
@@ -431,7 +442,7 @@
 }
 
 .breathwork .bw-complete-msg {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--text-muted);
   line-height: 1.65;
   max-width: 300px;
@@ -446,7 +457,7 @@
   margin-bottom: 32px;
   background: linear-gradient(145deg, #1c1c1f, #121214);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 14px;
+  border-radius: var(--radius-card);
   overflow: hidden;
 }
 
@@ -473,7 +484,7 @@
 }
 
 .breathwork .bw-stat-lbl {
-  font-size: 11px;
+  font-size: var(--fs-xxs);
   color: var(--text-muted);
   font-weight: 600;
   text-transform: uppercase;

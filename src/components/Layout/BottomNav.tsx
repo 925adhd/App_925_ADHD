@@ -1,17 +1,13 @@
 import { NavLink } from 'react-router-dom'
 
 const NAV_ITEMS = [
-  { to: '/dashboard', icon: '/images/home.png',  label: 'Home'   },
-  { to: '/earn',      icon: '/images/earn.png',  label: 'Earn'   },
-  { to: '/apps',      icon: '/images/apps.png',  label: 'Apps'   },
-  { to: '/tools',     icon: '/images/toolsicon.png', label: 'Tools'  },
+  { to: '/dashboard', icon: '/images/home.png',        label: 'Home'   },
+  { to: '/earn',      icon: '/images/earn.png',        label: 'Earn'   },
+  { to: '/guides',    icon: '/images/guidesicon.webp', label: 'Guides' },
+  { to: '/tools',     icon: '/images/toolsicon.png',   label: 'Tools'  },
 ]
 
-interface BottomNavProps {
-  onMenuOpen: () => void
-}
-
-export default function BottomNav({ onMenuOpen }: BottomNavProps) {
+export default function BottomNav() {
   return (
     <nav className="site-nav">
       <div className="nav-items">
@@ -25,15 +21,6 @@ export default function BottomNav({ onMenuOpen }: BottomNavProps) {
             <span>{label}</span>
           </NavLink>
         ))}
-
-        <button
-          className="nav-item nav-more"
-          onClick={onMenuOpen}
-          style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          <span className="nav-more-dots">···</span>
-          <span>More</span>
-        </button>
       </div>
     </nav>
   )

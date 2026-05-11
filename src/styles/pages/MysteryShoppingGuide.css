@@ -4,7 +4,7 @@
             text-align: center;
             padding: 25px 15px;
             background: linear-gradient(135deg, var(--accent-1)20, var(--accent-4)20);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             margin-bottom: 15px;
         }
 
@@ -34,7 +34,9 @@
             transition: all 0.3s ease;
         }
 
-        .mystery-shopping-guide .shop-type:hover { border-color: var(--accent-1); transform: translateY(-2px); }
+@media (hover: hover) {
+          .mystery-shopping-guide .shop-type:hover { border-color: var(--accent-1); transform: translateY(-2px); }
+}
         .mystery-shopping-guide .shop-type-icon { font-size: 1.5rem; margin-bottom: 5px; }
         .mystery-shopping-guide .shop-type-name { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 0.8rem; }
         .mystery-shopping-guide .shop-type-pay { color: var(--accent-3); font-size: 0.75rem; font-weight: 600; }
@@ -49,7 +51,7 @@
         .mystery-shopping-guide .stat {
             background: var(--card);
             padding: 12px;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             text-align: center;
         }
 
@@ -67,7 +69,7 @@
         .mystery-shopping-guide .section-header {
             background: var(--card);
             border: 2px solid transparent;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 14px;
             cursor: pointer;
             display: flex;
@@ -76,7 +78,9 @@
             transition: all 0.3s ease;
         }
 
-        .mystery-shopping-guide .section-header:hover { border-color: var(--accent-1); }
+@media (hover: hover) {
+          .mystery-shopping-guide .section-header:hover { border-color: var(--accent-1); }
+}
         .mystery-shopping-guide .section-header.open { border-color: var(--accent-3); border-radius: 12px 12px 0 0; }
 
         .mystery-shopping-guide .section-icon { font-size: 1.4rem; }
@@ -88,7 +92,7 @@
             background: var(--accent-2)22;
             color: var(--accent-2);
             padding: 3px 8px;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             font-size: 0.7rem;
             font-weight: 600;
         }
@@ -129,13 +133,15 @@
 
         .mystery-shopping-guide .company {
             background: var(--card-hover);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 12px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .mystery-shopping-guide .company:hover { border-color: var(--accent-1); }
+@media (hover: hover) {
+          .mystery-shopping-guide .company:hover { border-color: var(--accent-1); }
+}
 
         .mystery-shopping-guide .company-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
         .mystery-shopping-guide .company-name { font-family: 'Fredoka', sans-serif; font-size: 0.95rem; font-weight: 600; }
@@ -143,7 +149,7 @@
         .mystery-shopping-guide .company-badge {
             font-size: 0.65rem;
             padding: 3px 8px;
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             font-weight: 600;
             background: var(--accent-3)22;
             color: var(--accent-3);
@@ -168,7 +174,7 @@
             gap: 10px;
             padding: 10px;
             background: var(--card-hover);
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             margin: 6px 0;
             cursor: pointer;
             border: 2px solid transparent;
@@ -198,7 +204,7 @@
             background: linear-gradient(135deg, var(--accent-1), var(--accent-4));
             color: var(--bg);
             padding: 12px 24px;
-            border-radius: 24px;
+            border-radius: var(--radius-xl);
             text-decoration: none;
             font-family: 'Fredoka', sans-serif;
             font-weight: 600;
@@ -206,7 +212,9 @@
             transition: all 0.3s ease;
         }
 
-        .mystery-shopping-guide .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3); }
+@media (hover: hover) {
+          .mystery-shopping-guide .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3); }
+}
 
         @media (max-width: 600px) {
             .mystery-shopping-guide { padding: 10px; }

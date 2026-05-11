@@ -8,11 +8,12 @@
 .pf-card {
   background: linear-gradient(145deg, #1c1c1f, #121214);
   border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: clamp(24px, 5vw, 40px);
   position: relative;
   overflow: hidden;
   max-width: 860px;
+  margin: 0 auto;
 }
 
 .pf-card::before {
@@ -52,16 +53,9 @@
 
 .pf-gradient-text {
   background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, var(--brand) 50%, #A855F7 100%);
-  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: pfGradientShift 4s ease-in-out infinite;
-}
-
-@keyframes pfGradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50%       { background-position: 100% 50%; }
 }
 
 .pf-hero-subtitle {
@@ -81,15 +75,17 @@
   padding: 18px 48px;
   font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 700;
-  border-radius: 14px;
+  border-radius: var(--radius-card);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   font-family: inherit;
 }
 
-.pf-start-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(86,195,174,0.35);
+@media (hover: hover) {
+  .pf-start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(86,195,174,0.35);
+  }
 }
 
 .pf-start-btn:active {
@@ -99,7 +95,7 @@
 /* Progress */
 .pf-progress-wrap {
   max-width: 860px;
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   background: linear-gradient(145deg, #1c1c1f, #121214);
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 10px;
@@ -110,7 +106,7 @@
   width: 100%;
   height: 6px;
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: 6px;
 }
@@ -118,13 +114,13 @@
 .pf-progress-fill {
   height: 100%;
   background: linear-gradient(135deg, var(--brand) 0%, #A855F7 100%);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   transition: width 0.45s ease;
 }
 
 .pf-progress-label {
   text-align: center;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--text-muted);
 }
@@ -147,7 +143,7 @@
 
 .pf-q-desc {
   text-align: center;
-  font-size: 13px;
+  font-size: var(--fs-13);
   color: var(--text-muted);
   font-style: italic;
   margin-bottom: 24px;
@@ -168,7 +164,7 @@
 .pf-option {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 18px 14px;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
@@ -182,9 +178,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.pf-option:hover {
-  border-color: rgba(86,195,174,0.4);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .pf-option:hover {
+    border-color: rgba(86,195,174,0.4);
+    transform: translateY(-2px);
+  }
 }
 
 .pf-option.selected {
@@ -228,7 +226,7 @@
   color: #0a0a0a;
   border: none;
   padding: 12px 28px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
@@ -236,9 +234,11 @@
   font-family: inherit;
 }
 
-.pf-btn-primary:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(86,195,174,0.35);
+@media (hover: hover) {
+  .pf-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(86,195,174,0.35);
+  }
 }
 
 .pf-btn-primary:disabled {
@@ -252,7 +252,7 @@
   color: var(--text-muted);
   border: 1px solid var(--border);
   padding: 12px 20px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
@@ -260,9 +260,11 @@
   font-family: inherit;
 }
 
-.pf-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.09);
-  color: var(--text);
+@media (hover: hover) {
+  .pf-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: var(--text);
+  }
 }
 
 .pf-btn-restart {
@@ -270,7 +272,7 @@
   color: #0a0a0a;
   border: none;
   padding: 12px 24px;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
@@ -278,9 +280,11 @@
   font-family: inherit;
 }
 
-.pf-btn-restart:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(86,195,174,0.35);
+@media (hover: hover) {
+  .pf-btn-restart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(86,195,174,0.35);
+  }
 }
 
 /* Results */
@@ -303,7 +307,7 @@
 }
 
 .pf-results-header p {
-  font-size: 13px;
+  font-size: var(--fs-13);
   color: var(--text-muted);
   line-height: 1.5;
 }
@@ -320,7 +324,7 @@
 }
 
 .pf-category-title {
-  font-size: 13px;
+  font-size: var(--fs-13);
   font-weight: 700;
   color: var(--brand);
   margin-bottom: 12px;
@@ -337,14 +341,16 @@
 .pf-platform-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 16px;
   transition: border-color 0.2s, transform 0.2s;
 }
 
-.pf-platform-card:hover {
-  border-color: rgba(86,195,174,0.35);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .pf-platform-card:hover {
+    border-color: rgba(86,195,174,0.35);
+    transform: translateY(-2px);
+  }
 }
 
 .pf-platform-header {
@@ -356,7 +362,7 @@
 }
 
 .pf-platform-name {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--text);
   line-height: 1.3;
@@ -378,7 +384,7 @@
 .pf-badge--hard   { background: rgba(239,68,68,0.15);  color: #ef4444; }
 
 .pf-platform-desc {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   color: var(--text-muted);
   line-height: 1.4;
   margin-bottom: 10px;
@@ -394,13 +400,13 @@
 }
 
 .pf-earning {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 700;
   color: var(--brand);
 }
 
 .pf-time {
-  font-size: 11px;
+  font-size: var(--fs-xxs);
   color: var(--text-muted);
   font-style: italic;
 }
@@ -412,15 +418,17 @@
   text-align: center;
   text-decoration: none;
   padding: 9px 16px;
-  border-radius: 8px;
-  font-size: 12px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-xs);
   font-weight: 700;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.pf-platform-link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(86,195,174,0.3);
+@media (hover: hover) {
+  .pf-platform-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(86,195,174,0.3);
+  }
 }
 
 /* Animation */
@@ -431,17 +439,106 @@
 
 /* Responsive */
 @media (max-width: 600px) {
-  .pf-options-grid,
+  .passion-finder {
+    padding: 8px 6px 40px;
+  }
+
+  .pf-card {
+    padding: 16px 14px;
+  }
+
+  /* Title screen compact */
+  .pf-title-screen {
+    padding: 20px 0;
+  }
+
+  .pf-hero-subtitle {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+
+  .pf-start-btn {
+    padding: 14px 36px;
+  }
+
+  /* Progress bar compact */
+  .pf-progress-wrap {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Question compact */
+  .pf-question h2 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  .pf-q-desc {
+    margin-bottom: 14px;
+    font-size: var(--fs-xs);
+  }
+
+  /* Option cards: horizontal layout on mobile */
+  .pf-options-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .pf-option {
+    flex-direction: row;
+    text-align: left;
+    min-height: unset;
+    padding: 12px;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .pf-opt-emoji {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    width: 28px;
+    text-align: center;
+  }
+
+  .pf-opt-title {
+    font-size: 0.85rem;
+  }
+
+  .pf-opt-desc {
+    font-size: 0.72rem;
+  }
+
+  /* Skills grid: 2 columns on mobile since they're smaller */
   .pf-options-grid--wide {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
   }
 
-  .pf-platform-grid {
-    grid-template-columns: 1fr;
+  .pf-options-grid--wide .pf-option {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 6px;
+    gap: 3px;
   }
 
+  .pf-options-grid--wide .pf-opt-emoji {
+    width: auto;
+    font-size: 1.2rem;
+  }
+
+  .pf-options-grid--wide .pf-opt-title {
+    font-size: 0.75rem;
+  }
+
+  .pf-options-grid--wide .pf-opt-desc {
+    display: none;
+  }
+
+  /* Nav buttons */
   .pf-nav {
     flex-direction: column;
+    margin-top: 2px;
   }
 
   .pf-btn-primary,
@@ -450,6 +547,30 @@
     width: 100%;
     text-align: center;
     justify-content: center;
+    padding: 10px 20px;
+    font-size: var(--fs-13);
+  }
+
+  /* Results compact */
+  .pf-platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-results-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .pf-results-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .pf-category {
+    margin-bottom: 18px;
+  }
+
+  .pf-platform-card {
+    padding: 12px;
   }
 }
 
@@ -479,6 +600,8 @@ html.light .pf-btn-secondary {
   background: rgba(0,0,0,0.04);
 }
 
-html.light .pf-btn-secondary:hover {
-  background: rgba(0,0,0,0.08);
+@media (hover: hover) {
+  html.light .pf-btn-secondary:hover {
+    background: rgba(0,0,0,0.08);
+  }
 }

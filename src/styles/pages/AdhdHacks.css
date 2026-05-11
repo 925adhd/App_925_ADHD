@@ -17,55 +17,7 @@
 
     .adhd-hacks .page-header p {
       color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* Progress */
-    .adhd-hacks .progress-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--card);
-      padding: 12px 16px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      border: 1px solid var(--border);
-    }
-
-    .adhd-hacks .progress-bar .icon {
-      font-size: 20px;
-    }
-
-    .adhd-hacks .progress-info {
-      flex: 1;
-    }
-
-    .adhd-hacks .progress-info .label {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .adhd-hacks .progress-track {
-      height: 6px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-
-    .adhd-hacks .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--brand), var(--energy));
-      border-radius: 3px;
-      transition: width 0.4s ease;
-      width: 0%;
-    }
-
-    .adhd-hacks .progress-count {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--brand);
-      white-space: nowrap;
+      font-size: var(--fs-sm);
     }
 
     /* Filters */
@@ -88,17 +40,19 @@
       color: var(--muted);
       padding: 8px 16px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: var(--fs-13);
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
       transition: all 0.2s;
     }
 
-    .adhd-hacks .filter-btn:hover {
-      background: var(--card-hover);
-      color: var(--text);
-    }
+@media (hover: hover) {
+      .adhd-hacks .filter-btn:hover {
+        background: var(--card-hover);
+        color: var(--text);
+      }
+}
 
     .adhd-hacks .filter-btn.active {
       background: var(--brand);
@@ -115,32 +69,17 @@
 
     .adhd-hacks .hack-card {
       background: var(--card);
-      border-radius: 16px;
+      border-radius: var(--radius-lg);
       border: 1px solid var(--border);
       overflow: hidden;
       transition: border-color 0.2s;
     }
 
-    .adhd-hacks .hack-card:hover {
-      border-color: rgba(86, 195, 174, 0.3);
-    }
-
-    .adhd-hacks .hack-card.tried {
-      opacity: 0.7;
-    }
-
-    .adhd-hacks .hack-card.tried .hack-header::after {
-      content: '✓ Tried';
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: var(--energy);
-      color: #000;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
+@media (hover: hover) {
+      .adhd-hacks .hack-card:hover {
+        border-color: rgba(86, 195, 174, 0.3);
+      }
+}
 
     .adhd-hacks .hack-header {
       display: flex;
@@ -153,7 +92,7 @@
     .adhd-hacks .hack-img {
       width: 70px;
       height: 70px;
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       object-fit: cover;
       background: #222;
       flex-shrink: 0;
@@ -214,7 +153,7 @@
     }
 
     .adhd-hacks .hack-desc {
-      font-size: 13px;
+      font-size: var(--fs-13);
       color: var(--muted);
       line-height: 1.5;
       display: -webkit-box;
@@ -225,57 +164,32 @@
     }
 
     /* Try this week button */
-    .adhd-hacks .try-week-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--brand);
-      background: rgba(86, 195, 174, 0.1);
-      border: 1px solid rgba(86, 195, 174, 0.25);
-      border-radius: 8px;
-      padding: 6px 12px;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .adhd-hacks .try-week-btn:hover {
-      background: rgba(86, 195, 174, 0.2);
-      border-color: rgba(86, 195, 174, 0.5);
-    }
-
-    .adhd-hacks .try-week-btn.is-trying {
-      background: rgba(74, 222, 128, 0.12);
-      border-color: var(--energy);
-      color: var(--energy);
-    }
-
     .adhd-hacks .expand-indicator {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
-      padding: 10px 16px;
-      background: rgba(255, 255, 255, 0.02);
+      padding: 12px 16px;
+      background: transparent;
+      border: none;
       border-top: 1px solid var(--border);
-      font-size: 12px;
+      font-size: var(--fs-sm);
       color: var(--brand);
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
-      transition: background 0.2s;
+      width: 100%;
+      text-align: left;
+      transition: color 0.15s;
     }
 
-    .adhd-hacks .expand-indicator:hover {
-      background: rgba(86, 195, 174, 0.08);
-    }
+@media (hover: hover) {
+      .adhd-hacks .expand-indicator:hover {
+        color: #56bfaa;
+      }
+}
 
     .adhd-hacks .expand-indicator .arrow {
-      transition: transform 0.3s;
-    }
-
-    .adhd-hacks .hack-card.expanded .expand-indicator .arrow {
-      transform: rotate(180deg);
+      display: inline-block;
+      transition: transform 0.2s;
     }
 
     /* Expandable Steps */
@@ -289,7 +203,7 @@
     }
 
     .adhd-hacks .steps-content h4 {
-      font-size: 12px;
+      font-size: var(--fs-xs);
       color: var(--brand);
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -305,7 +219,7 @@
       display: flex;
       gap: 10px;
       margin-bottom: 10px;
-      font-size: 13px;
+      font-size: var(--fs-13);
       color: var(--text);
       line-height: 1.5;
     }
@@ -319,39 +233,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: var(--fs-xxs);
       font-weight: 700;
       flex-shrink: 0;
-    }
-
-    .adhd-hacks .tried-btn {
-      width: 100%;
-      padding: 12px;
-      background: transparent;
-      border: 2px dashed rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .adhd-hacks .tried-btn:hover {
-      border-color: var(--brand);
-      color: var(--brand);
-      background: var(--brand-dim);
-    }
-
-    .adhd-hacks .hack-card.tried .tried-btn {
-      background: rgba(74, 222, 128, 0.1);
-      border-color: var(--energy);
-      color: var(--energy);
-      border-style: solid;
     }
 
     /* Empty State */
@@ -368,14 +252,15 @@
 
     /* Quick Tips Banner */
     .adhd-hacks .quick-tip {
-      background: linear-gradient(135deg, rgba(86, 195, 174, 0.1), rgba(129, 140, 248, 0.08));
+      background: rgba(86, 195, 174, 0.05);
       border: 1px solid rgba(86, 195, 174, 0.2);
-      border-radius: 12px;
+      border-left: 3px solid var(--brand);
+      border-radius: var(--radius-md);
       padding: 14px 16px;
       margin-bottom: 20px;
-      font-size: 13px;
+      font-size: var(--fs-13);
       color: var(--text);
-      line-height: 1.8;
+      line-height: 1.65;
     }
 
     .adhd-hacks .quick-tip strong {
@@ -398,7 +283,7 @@
       }
 
       .adhd-hacks .hack-desc {
-        font-size: 14px;
+        font-size: var(--fs-sm);
         -webkit-line-clamp: 3;
       }
 

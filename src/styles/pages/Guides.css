@@ -13,7 +13,7 @@
       font-size: 20px;
       cursor: pointer;
       padding: 8px 10px;
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       backdrop-filter: blur(8px);
     }
     
@@ -25,13 +25,13 @@
     }
 
     .guides .page-title {
-      font-size: 18px;
+      font-size: var(--fs-lg);
       font-weight: 800;
       margin-bottom: 4px;
     }
 
     .guides .page-subtitle {
-      font-size: 13px;
+      font-size: var(--fs-13);
       color: rgba(255,255,255,.55);
       margin: 0 0 12px;
       line-height: 1.4;
@@ -43,7 +43,7 @@
       padding: 12px 14px;
       border-radius: 0 10px 10px 0;
       margin-bottom: 24px;
-      font-size: 13px;
+      font-size: var(--fs-13);
       color: rgba(255,255,255,.8);
       line-height: 1.5;
     }
@@ -76,10 +76,12 @@
       background: transparent !important;
     }
 
-    .guides .guide-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(0,0,0,.4);
-    }
+@media (hover: hover) {
+      .guides .guide-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(0,0,0,.4);
+      }
+}
 
     .guides .guide-card:active {
       transform: translateY(-1px);
@@ -103,9 +105,12 @@
       background: radial-gradient(ellipse at center, rgba(0,255,180,0.32) 0%, rgba(0,255,180,0.18) 60%, transparent 100%);
       filter: blur(24px);
     }
-    .guides .guide-card--start:hover {
-      box-shadow: 0 0 30px rgba(0,255,180,.18), 0 10px 28px rgba(0,0,0,.4);
-    }
+
+@media (hover: hover) {
+      .guides .guide-card--start:hover {
+        box-shadow: 0 0 30px rgba(0,255,180,.18), 0 10px 28px rgba(0,0,0,.4);
+      }
+}
 
     /* Opening feedback */
     .guides .guide-card--opening {
@@ -122,7 +127,7 @@
       justify-content: center;
       background: rgba(0,0,0,.55);
       color: #fff;
-      font-size: 13px;
+      font-size: var(--fs-13);
       font-weight: 600;
       letter-spacing: .3px;
       animation: guideFadeIn .2s ease;
@@ -143,7 +148,7 @@
     /* Caption styling */
     .guides .guide-card h3 {
       padding: 6px 8px 2px;
-      font-size: 11px;
+      font-size: var(--fs-xxs);
       font-weight: 700;
       line-height: 1.2;
       white-space: nowrap;
@@ -169,20 +174,21 @@
       box-shadow: none !important;
     }
 
-    .guides .guide-card,
-    .guides .guide-card--start,
-    .guides .guide-card--start:hover,
-    .guides .guide-card *,
-    .guides .guide-card::before,
-    .guides .guide-card::after {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
+      .guides .guide-card,
+      .guides .guide-card--start,
+      .guides .guide-card--start:hover,
+      .guides .guide-card *,
+      .guides .guide-card::before,
+      .guides .guide-card::after {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
 
     @media (max-width: 420px) {
       .guides .guide-card h3 {
-        font-size: 11px;
+        font-size: var(--fs-xxs);
         padding: 4px 6px 4px;
       }
 
@@ -191,13 +197,13 @@
       }
 
       .guides .page-title {
-        font-size: 16px;
+        font-size: var(--fs-base);
         margin-bottom: 4px;
         display: none;
       }
 
       .guides .page-subtitle {
-        font-size: 12px;
+        font-size: var(--fs-xs);
         margin-bottom: 8px;
       }
 
@@ -246,10 +252,12 @@
     .guides .nav-item.active {
       color: var(--brand);
     }
-    
-    .guides .nav-item:hover {
-      color: var(--text);
-    }
+
+@media (hover: hover) {
+      .guides .nav-item:hover {
+        color: var(--text);
+      }
+}
     
     .guides .nav-item .icon {
       font-size: 20px;
@@ -277,11 +285,11 @@
       }
 
       .guides .page-subtitle {
-        font-size: 14px;
+        font-size: var(--fs-sm);
       }
       
       .guides .pro-tip {
-        font-size: 14px;
+        font-size: var(--fs-sm);
       }
       
       .guides-grid {
@@ -289,12 +297,12 @@
       }
       
       .guides .guide-card h3 {
-        font-size: 14px;
+        font-size: var(--fs-sm);
         padding: 10px 14px 2px;
       }
 
       .guides .guide-card-sub {
-        font-size: 11px;
+        font-size: var(--fs-xxs);
         padding: 0 14px 12px;
       }
       
@@ -303,11 +311,11 @@
       }
       
       .guides .nav-item {
-        font-size: 11px;
+        font-size: var(--fs-xxs);
       }
       
       .guides .nav-item .icon {
-        font-size: 22px;
+        font-size: var(--fs-xl);
       }
     }
     

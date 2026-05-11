@@ -36,7 +36,7 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
-      <BottomNav onMenuOpen={() => setMenuOpen(true)} />
+      <BottomNav />
     </>
   )
 }

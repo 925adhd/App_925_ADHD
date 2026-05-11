@@ -94,9 +94,12 @@
   justify-content: center;
   transition: color 0.12s ease, background 0.12s ease;
 }
-.gfp-icon-btn:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.06);
+
+@media (hover: hover) {
+  .gfp-icon-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+  }
 }
 .gfp-icon-btn--active {
   color: var(--brand, #56C3AE) !important;
@@ -151,9 +154,12 @@
   transition: transform 0.15s ease, background 0.15s ease;
   margin: 0 auto;
 }
-.gfp-play-btn:hover {
-  transform: scale(1.07);
-  background: #4db8a3;
+
+@media (hover: hover) {
+  .gfp-play-btn:hover {
+    transform: scale(1.07);
+    background: #4db8a3;
+  }
 }
 
 /* ============================================================
@@ -179,9 +185,12 @@
   cursor: pointer;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
-.gfp-pill:hover {
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(255, 255, 255, 0.09);
-  transform: translateY(-1px);
+
+@media (hover: hover) {
+  .gfp-pill:hover {
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+    transform: translateY(-1px);
+  }
 }
 
 @media (min-width: 900px) {
@@ -194,6 +203,49 @@
 .gfp-pill-icon {
   color: var(--brand, #56C3AE);
   flex-shrink: 0;
+}
+
+/* ============================================================
+   DRAG-TO-DISMISS HINT (shown above pill while dragging down)
+   ============================================================ */
+.gfp-dismiss-hint {
+  position: fixed;
+  bottom: calc(var(--nav-h, 72px) + 60px);
+  right: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(14, 14, 16, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  z-index: 9991;
+  pointer-events: none;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+.gfp-dismiss-hint.active {
+  background: rgba(255, 88, 88, 0.18);
+  border-color: rgba(255, 88, 88, 0.45);
+  color: #ff8585;
+}
+@media (min-width: 900px) {
+  .gfp-dismiss-hint {
+    bottom: 84px;
+    right: 24px;
+  }
+}
+
+/* ============================================================
+   CLOSE BUTTON (red tint on hover)
+   ============================================================ */
+@media (hover: hover) {
+  .gfp-close-btn:hover {
+    color: #ff8585 !important;
+    background: rgba(255, 88, 88, 0.12) !important;
+  }
 }
 
 .gfp-pill-label {
@@ -218,8 +270,11 @@
   flex-shrink: 0;
   transition: transform 0.12s ease;
 }
-.gfp-pill-btn:hover {
-  transform: scale(1.1);
+
+@media (hover: hover) {
+  .gfp-pill-btn:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* Light theme */
@@ -233,7 +288,10 @@ html.light .gfp-title { color: #111; }
 html.light .gfp-time { color: rgba(0, 0, 0, 0.45); }
 html.light .gfp-track { background: rgba(0, 0, 0, 0.1); }
 html.light .gfp-icon-btn { color: rgba(0, 0, 0, 0.45); }
-html.light .gfp-icon-btn:hover { color: #111; background: rgba(0, 0, 0, 0.05); }
+
+@media (hover: hover) {
+  html.light .gfp-icon-btn:hover { color: #111; background: rgba(0, 0, 0, 0.05); }
+}
 html.light .gfp-pill-label { color: rgba(0, 0, 0, 0.75); }
 
 /* ============================================================

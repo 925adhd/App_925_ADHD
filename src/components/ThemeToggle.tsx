@@ -5,13 +5,18 @@ interface ThemeToggleProps {
   variant?: 'sidebar' | 'hamburger'
 }
 
+const CLASS_MAP = {
+  sidebar: 'sidebar-theme-btn',
+  hamburger: 'hamburger-theme-btn',
+}
+
 export default function ThemeToggle({ variant = 'sidebar' }: ThemeToggleProps) {
   const { theme, toggleTheme } = useTheme()
   const isDark = theme === 'dark'
 
   return (
     <button
-      className={variant === 'hamburger' ? 'hamburger-theme-btn' : 'sidebar-theme-btn'}
+      className={CLASS_MAP[variant]}
       onClick={toggleTheme}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >

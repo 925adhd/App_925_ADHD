@@ -4,7 +4,7 @@
         .social-media-guide .reality-banner {
             background: linear-gradient(135deg, var(--accent-4)22, var(--accent-5)22);
             border: 2px solid var(--accent-4);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 20px;
             margin-bottom: 20px;
             display: flex;
@@ -40,7 +40,7 @@
 
         .social-media-guide .income-tier {
             background: var(--card);
-            border-radius: 14px;
+            border-radius: var(--radius-card);
             padding: 18px;
             display: flex;
             align-items: center;
@@ -80,7 +80,7 @@
         .social-media-guide .section-header {
             background: var(--card);
             border: 2px solid transparent;
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 20px;
             cursor: pointer;
             display: flex;
@@ -89,7 +89,9 @@
             transition: all 0.3s ease;
         }
 
-        .social-media-guide .section-header:hover { border-color: var(--accent-1); }
+@media (hover: hover) {
+          .social-media-guide .section-header:hover { border-color: var(--accent-1); }
+}
         .social-media-guide .section-header.open { border-color: var(--accent-3); border-radius: 16px 16px 0 0; }
 
         .social-media-guide .section-icon { font-size: 1.8rem; }
@@ -122,7 +124,7 @@
 
         .social-media-guide .card {
             background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 18px;
             margin: 15px 0;
             border-left: 4px solid var(--accent-1);
@@ -142,13 +144,15 @@
 
         .social-media-guide .platform {
             background: var(--card-hover);
-            border-radius: 14px;
+            border-radius: var(--radius-card);
             padding: 18px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .social-media-guide .platform:hover { border-color: var(--accent-1); }
+@media (hover: hover) {
+          .social-media-guide .platform:hover { border-color: var(--accent-1); }
+}
 
         .social-media-guide .platform-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .social-media-guide .platform-name { font-family: 'Fredoka', sans-serif; font-size: 1.1rem; font-weight: 600; }
@@ -173,7 +177,7 @@
             margin-top: 12px;
             padding: 10px;
             background: var(--accent-1)10;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             border-left: 3px solid var(--accent-1);
         }
 
@@ -220,7 +224,9 @@
             transition: all 0.3s ease;
         }
 
-        .social-media-guide .cta:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(232, 121, 249, 0.3); }
+@media (hover: hover) {
+          .social-media-guide .cta:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(232, 121, 249, 0.3); }
+}
 
         @media (max-width: 600px) {
             .social-media-guide .income-tier { flex-direction: column; text-align: center; }

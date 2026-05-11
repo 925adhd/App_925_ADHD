@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Play, Pause, ChevronDown, Music2, SkipBack, SkipForward, BarChart2 } from 'lucide-react'
+import { Play, Pause, ChevronDown, Music2, SkipBack, SkipForward, BarChart2, X } from 'lucide-react'
 import { useBrainFMPlayer } from '../context/BrainFMPlayerContext'
 import Visualizer from './Visualizer'
 import '../styles/GlobalFocusPlayer.css'
@@ -11,13 +11,18 @@ const fmt = (s: number) => {
   return `${m}:${sec.toString().padStart(2, '0')}`
 }
 
+const DISMISS_THRESHOLD = 60
+
 export default function GlobalFocusPlayer() {
-  const { isPlaying, currentTime, duration, progress, hasBeenActivated, source, trackMeta, queueIndex, queueLength, audioContext, toggle, seek, nextTrack, prevTrack } =
+  const { isPlaying, currentTime, duration, progress, hasBeenActivated, source, trackMeta, queueIndex, queueLength, audioContext, toggle, seek, nextTrack, prevTrack, close } =
     useBrainFMPlayer()
   const [minimized, setMinimized] = useState(false)
   const [vizOn, setVizOn] = useState(false)
   const [toast, setToast] = useState(false)
+  const [dragY, setDragY] = useState(0)
   const toastFired = useRef(false)
+  const dragStartY = useRef(0)
+  const movedRef = useRef(false)
 
   useEffect(() => {
     if (!toastFired.current && source === 'brainfm' && currentTime >= 300) {
@@ -41,19 +46,62 @@ export default function GlobalFocusPlayer() {
 
   const panelTitle = source === 'brainfm' ? 'Geo Grooves' : trackMeta.title
 
+  const onPillTouchStart = (e: React.TouchEvent) => {
+    dragStartY.current = e.touches[0].clientY
+    movedRef.current = false
+  }
+  const onPillTouchMove = (e: React.TouchEvent) => {
+    const delta = e.touches[0].clientY - dragStartY.current
+    if (delta > 5) movedRef.current = true
+    if (delta > 0) setDragY(delta)
+  }
+  const onPillTouchEnd = () => {
+    if (dragY > DISMISS_THRESHOLD) {
+      close()
+    }
+    setDragY(0)
+  }
+  const onPillClick = () => {
+    if (movedRef.current) return
+    setMinimized(false)
+  }
+
+  const willDismiss = dragY > DISMISS_THRESHOLD
+
   if (minimized) {
     return (
-      <div className="gfp-pill" onClick={() => setMinimized(false)} role="button" aria-label="Expand player">
-        <Music2 size={13} className="gfp-pill-icon" />
-        <span className="gfp-pill-label">{pillLabel}</span>
-        <button
-          className="gfp-pill-btn"
-          onClick={(e) => { e.stopPropagation(); toggle() }}
-          aria-label={isPlaying ? 'Pause' : 'Play'}
+      <>
+        {dragY > 0 && (
+          <div className={`gfp-dismiss-hint${willDismiss ? ' active' : ''}`}>
+            {willDismiss ? 'Release to close' : 'Pull down to close'}
+          </div>
+        )}
+        <div
+          className="gfp-pill"
+          onClick={onPillClick}
+          onTouchStart={onPillTouchStart}
+          onTouchMove={onPillTouchMove}
+          onTouchEnd={onPillTouchEnd}
+          role="button"
+          aria-label="Expand player"
+          style={{
+            transform: dragY > 0 ? `translateY(${dragY}px)` : undefined,
+            opacity: dragY > 0 ? Math.max(0.4, 1 - dragY / 200) : undefined,
+            transition: dragY === 0 ? 'transform 220ms cubic-bezier(.2,.8,.2,1), opacity 220ms ease' : 'none',
+            touchAction: 'none',
+          }}
         >
-          {isPlaying ? <Pause size={13} /> : <Play size={13} />}
-        </button>
-      </div>
+          <Music2 size={13} className="gfp-pill-icon" />
+          <span className="gfp-pill-label">{pillLabel}</span>
+          <button
+            className="gfp-pill-btn"
+            onClick={(e) => { e.stopPropagation(); toggle() }}
+            aria-label={isPlaying ? 'Pause' : 'Play'}
+          >
+            {isPlaying ? <Pause size={13} /> : <Play size={13} />}
+          </button>
+        </div>
+      </>
     )
   }
 
@@ -94,6 +142,9 @@ export default function GlobalFocusPlayer() {
           </button>
           <button className="gfp-icon-btn" onClick={() => setMinimized(true)} aria-label="Minimize">
             <ChevronDown size={15} />
+          </button>
+          <button className="gfp-icon-btn gfp-close-btn" onClick={close} aria-label="Close player" title="Close">
+            <X size={15} />
           </button>
         </div>
       </div>

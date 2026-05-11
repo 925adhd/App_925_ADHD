@@ -26,7 +26,7 @@ export default function CryptoMadeSimple() {
   return (
     <div className="crypto-made-simple">
       <header className="page-header">
-        <h1>🪙 Crypto <span>Made Simple</span></h1>
+        <h1>Crypto <span>Made Simple</span></h1>
         <p>A beginner's guide that actually makes sense</p>
       </header>
 

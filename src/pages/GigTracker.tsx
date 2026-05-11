@@ -3,7 +3,7 @@ import '../styles/pages/GigTracker.css';
 
 interface HistoryItem {
   amount: number;
-  platform: string;
+  category: string;
   time: string;
 }
 
@@ -15,19 +15,16 @@ interface TrackerState {
   workTime: number;
   timerStart: number | null;
   timerRunning: boolean;
-  currentPlatform: string;
+  currentCategory: string;
   lastSave?: string;
 }
 
-const PLATFORMS: Record<string, { emoji: string; amounts: number[] }> = {
-  Surveys:    { emoji: '📋', amounts: [0.50, 1.00, 2.00, 5.00] },
-  Fiverr:     { emoji: '💻', amounts: [5.00, 15.00, 25.00, 50.00] },
-  Upwork:     { emoji: '📝', amounts: [10.00, 25.00, 50.00, 100.00] },
-  Testing:    { emoji: '🔬', amounts: [4.00, 10.00, 20.00, 60.00] },
-  Prolific:   { emoji: '🎯', amounts: [1.50, 3.00, 5.00, 8.00] },
-  Writing:    { emoji: '✍️', amounts: [5.00, 20.00, 40.00, 75.00] },
-  Interviews: { emoji: '🎤', amounts: [20.00, 50.00, 100.00, 200.00] },
-  Other:      { emoji: '✨', amounts: [1.00, 5.00, 10.00, 25.00] },
+const CATEGORIES: Record<string, { emoji: string; amounts: number[] }> = {
+  Surveys:   { emoji: '📋', amounts: [0.50, 1.00, 2.00, 5.00] },
+  Freelance: { emoji: '💻', amounts: [10.00, 25.00, 50.00, 100.00] },
+  Testing:   { emoji: '🔬', amounts: [4.00, 10.00, 20.00, 60.00] },
+  Local:     { emoji: '🚗', amounts: [5.00, 10.00, 20.00, 40.00] },
+  Other:     { emoji: '🔀', amounts: [1.00, 5.00, 10.00, 25.00] },
 };
 const DEFAULT_AMOUNTS = [0.50, 2.00, 5.00, 15.00];
 
@@ -39,7 +36,7 @@ const INITIAL_STATE: TrackerState = {
   workTime: 0,
   timerStart: null,
   timerRunning: false,
-  currentPlatform: '',
+  currentCategory: '',
 };
 
 function loadState(): TrackerState {
@@ -66,7 +63,6 @@ export default function GigTracker() {
   const [quickAmounts, setQuickAmounts] = useState<number[]>(DEFAULT_AMOUNTS);
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const platformTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showToast = useCallback((msg: string, type = 'success') => {
     setToast({ msg, type });
@@ -78,7 +74,6 @@ export default function GigTracker() {
     localStorage.setItem('925_gigtracker', JSON.stringify(toSave));
   }, []);
 
-  // Timer display updater
   const updateTimerDisplay = useCallback((s: TrackerState) => {
     let totalSeconds: number;
     if (s.timerRunning && s.timerStart) {
@@ -105,16 +100,10 @@ export default function GigTracker() {
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [state.timerRunning, state.timerStart, state.workTime, updateTimerDisplay, state]);
 
-  const checkMilestones = useCallback((newTotal: number, lastAmount: number) => {
-    const milestones = [1, 5, 10, 25, 50, 100];
-    const hit = milestones.find(m => newTotal >= m && newTotal - lastAmount < m);
-    if (hit) setTimeout(() => showToast(`🎉 $${hit} milestone! 🎉`, 'milestone'), 500);
-  }, [showToast]);
-
   const addEarning = useCallback((amount: number, currentState: TrackerState) => {
-    const platform = currentState.currentPlatform || 'Quick Add';
+    const category = currentState.currentCategory || 'Quick add';
     const newHistory = [
-      { amount, platform, time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) },
+      { amount, category, time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) },
       ...currentState.history,
     ].slice(0, 20);
 
@@ -125,11 +114,10 @@ export default function GigTracker() {
       history: newHistory,
     };
     saveState(newState);
-    checkMilestones(newState.total, amount);
-    showToast(`+$${amount.toFixed(2)} from ${platform}! 💰`, 'success');
+    showToast(`+$${amount.toFixed(2)} added`, 'success');
     if (navigator.vibrate) navigator.vibrate(50);
     return newState;
-  }, [saveState, checkMilestones, showToast]);
+  }, [saveState, showToast]);
 
   const handleAddEarning = (amount: number) => {
     setState(prev => addEarning(amount, prev));
@@ -143,16 +131,14 @@ export default function GigTracker() {
     }
   };
 
-  const handleSelectPlatform = (name: string) => {
-    setState(prev => ({ ...prev, currentPlatform: name }));
-    setQuickAmounts(PLATFORMS[name].amounts);
-    showToast(`${name} selected! 🎯`, 'success');
-
-    if (platformTimeoutRef.current) clearTimeout(platformTimeoutRef.current);
-    platformTimeoutRef.current = setTimeout(() => {
-      setState(prev => (prev.currentPlatform === name ? { ...prev, currentPlatform: '' } : prev));
-      setQuickAmounts(DEFAULT_AMOUNTS);
-    }, 30000);
+  const handleSelectCategory = (name: string) => {
+    setState(prev => ({
+      ...prev,
+      currentCategory: prev.currentCategory === name ? '' : name,
+    }));
+    setQuickAmounts(
+      state.currentCategory === name ? DEFAULT_AMOUNTS : CATEGORIES[name].amounts
+    );
   };
 
   const handleUndo = () => {
@@ -177,11 +163,11 @@ export default function GigTracker() {
         const elapsed = Math.round((Date.now() - (prev.timerStart || Date.now())) / 60000);
         const newState = { ...prev, workTime: prev.workTime + elapsed, timerRunning: false, timerStart: null };
         saveState(newState);
-        showToast(`Session ended! +${elapsed} min`, 'success');
+        showToast(`Session ended (+${elapsed} min)`, 'success');
         return newState;
       } else {
         const newState = { ...prev, timerRunning: true, timerStart: Date.now() };
-        showToast('Timer started! ⏱️', 'success');
+        showToast('Timer started', 'success');
         return newState;
       }
     });
@@ -195,29 +181,26 @@ export default function GigTracker() {
         saveState(newState);
         return newState;
       });
-      showToast(`Goal set to $${newGoal}! 🎯`, 'success');
     }
   };
 
   const handleExport = () => {
     const today = new Date().toLocaleDateString();
     const hourly = state.workTime > 0 ? (state.total / (state.workTime / 60)).toFixed(2) : '0.00';
-    const text = `💰 Gig Tracker Report - ${today}
+    const text = `Gig Tracker
+${today}
 
-SUMMARY:
-• Total Earned: $${state.total.toFixed(2)}
-• Tasks Completed: ${state.tasks}
-• Work Time: ${state.workTime} minutes
-• Hourly Rate: $${hourly}/hour
-• Goal Progress: ${Math.round((state.total / state.goal) * 100)}%
+Total: $${state.total.toFixed(2)}
+Tasks: ${state.tasks}
+Work time: ${state.workTime} min
+Hourly: $${hourly}/hr
+Goal progress: ${Math.round((state.total / state.goal) * 100)}%
 
-HISTORY:
-${state.history.map(h => `• ${h.time} - ${h.platform}: $${h.amount.toFixed(2)}`).join('\n') || '• No entries'}
-
----
-Generated by 925 ADHD Gig Tracker 🎯`;
+History:
+${state.history.map(h => `${h.time}  ${h.category}  $${h.amount.toFixed(2)}`).join('\n') || 'No entries'}
+`;
     navigator.clipboard.writeText(text).then(
-      () => showToast('Copied to clipboard! 📋', 'success'),
+      () => showToast('Copied', 'success'),
       () => showToast('Copy failed', 'error')
     );
   };
@@ -231,7 +214,7 @@ Generated by 925 ADHD Gig Tracker 🎯`;
     setQuickAmounts(DEFAULT_AMOUNTS);
     setState(newState);
     setShowModal(false);
-    showToast('All data reset! 🚀', 'milestone');
+    showToast('Reset', 'success');
   };
 
   const progress = Math.min((state.total / state.goal) * 100, 100);
@@ -240,17 +223,15 @@ Generated by 925 ADHD Gig Tracker 🎯`;
 
   return (
     <div className="gig-tracker">
-      {/* Toast */}
       {toast && (
         <div className={`toast show ${toast.type}`}>{toast.msg}</div>
       )}
 
-      {/* Reset Modal */}
       {showModal && (
         <div className="modal-overlay show">
           <div className="modal">
-            <h3>🗑️ Reset All Data?</h3>
-            <p>This will clear all earnings and history. Your goal setting will be preserved.</p>
+            <h3>Reset today's data?</h3>
+            <p>Clears earnings and history. Your goal stays.</p>
             <div className="modal-btns">
               <button className="modal-btn cancel" onClick={() => setShowModal(false)}>Cancel</button>
               <button className="modal-btn confirm" onClick={handleConfirmReset}>Reset</button>
@@ -259,43 +240,23 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         </div>
       )}
 
-      {/* Header */}
       <header className="page-header">
         <h1>Gig Tracker</h1>
-        <p>Track earnings from surveys, freelancing & gigs</p>
+        <p>Track today's earnings.</p>
       </header>
 
-      {/* Stats Grid */}
-      <div className="stats-grid">
-        <div className="stat-card">
-          <div className="stat-value">${state.total.toFixed(0)}</div>
-          <div className="stat-label">Earned</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-value">{state.tasks}</div>
-          <div className="stat-label">Tasks</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-value">${state.tasks > 0 ? (state.total / state.tasks).toFixed(0) : '0'}</div>
-          <div className="stat-label">Avg</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-value">${hourlyRate.toFixed(0)}</div>
-          <div className="stat-label">/Hour</div>
-        </div>
-      </div>
-
-      {/* Total Display */}
       <div className={`total-display${goalReached ? ' goal-reached' : ''}`}>
         <div className="total-amount">${state.total.toFixed(2)}</div>
         <div className="total-info">
           {goalReached
-            ? '🏆 GOAL REACHED! Outstanding!'
-            : `$${(state.goal - state.total).toFixed(2)} to goal • Keep going! 💪`}
+            ? 'Goal reached.'
+            : `$${(state.goal - state.total).toFixed(2)} to goal`}
+        </div>
+        <div className="total-sub">
+          {state.tasks} task{state.tasks !== 1 ? 's' : ''} · ${hourlyRate.toFixed(2)}/hr
         </div>
       </div>
 
-      {/* Progress */}
       <div className="progress-section">
         <div className="progress-header">
           <div className="goal-display">
@@ -315,10 +276,9 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         </div>
       </div>
 
-      {/* Timer */}
       <div className="timer-section">
         <div>
-          <div style={{ fontSize: '12px', color: 'var(--muted)', marginBottom: '2px' }}>⏱️ Work Session</div>
+          <div className="timer-label">Work session</div>
           <div className="timer-display">{timerDisplay}</div>
         </div>
         <button className={`timer-btn${state.timerRunning ? ' running' : ''}`} onClick={handleToggleTimer}>
@@ -326,14 +286,13 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         </button>
       </div>
 
-      {/* Platform Selection */}
-      <div className="section-title">💼 Select Platform</div>
-      <div className="platform-grid">
-        {Object.entries(PLATFORMS).map(([name, data]) => (
+      <h3 className="snap-label">Category</h3>
+      <div className="category-grid">
+        {Object.entries(CATEGORIES).map(([name, data]) => (
           <button
             key={name}
-            className={`platform-btn${state.currentPlatform === name ? ' active' : ''}`}
-            onClick={() => handleSelectPlatform(name)}
+            className={`category-btn${state.currentCategory === name ? ' active' : ''}`}
+            onClick={() => handleSelectCategory(name)}
           >
             <span className="emoji">{data.emoji}</span>
             <span className="name">{name}</span>
@@ -341,13 +300,12 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         ))}
       </div>
 
-      {/* Quick Add */}
-      <div className="section-title">⚡ Quick Add</div>
+      <h3 className="snap-label">Quick add</h3>
       <div className="quick-grid">
         {quickAmounts.map(amt => (
           <button
             key={amt}
-            className={`quick-btn${state.currentPlatform ? ' platform-active' : ''}`}
+            className={`quick-btn${state.currentCategory ? ' category-active' : ''}`}
             onClick={() => handleAddEarning(amt)}
           >
             ${amt.toFixed(2)}
@@ -355,7 +313,6 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         ))}
       </div>
 
-      {/* Manual Entry */}
       <div className="manual-section">
         <input
           type="number"
@@ -376,17 +333,16 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         </button>
       </div>
 
-      {/* History */}
+      <h3 className="snap-label">Today</h3>
       <div className="history-section">
-        <div className="section-title" style={{ marginBottom: '10px' }}>📜 Today's Earnings</div>
         <div className="history-list">
           {state.history.length === 0 ? (
-            <div className="empty-state">Start adding earnings to see your progress! 🎯</div>
+            <div className="empty-state">No entries yet.</div>
           ) : (
             state.history.map((h, i) => (
               <div key={i} className="history-item">
                 <div>
-                  <div className="history-platform">{h.platform}</div>
+                  <div className="history-category">{h.category}</div>
                   <div className="history-time">{h.time}</div>
                 </div>
                 <div className="history-amount">+${h.amount.toFixed(2)}</div>
@@ -396,13 +352,12 @@ Generated by 925 ADHD Gig Tracker 🎯`;
         </div>
       </div>
 
-      {/* Actions */}
       <div className="action-grid">
         <button className="action-btn undo" onClick={handleUndo} disabled={state.history.length === 0}>
           ↩ Undo
         </button>
-        <button className="action-btn export" onClick={handleExport}>📊 Export</button>
-        <button className="action-btn reset" onClick={() => setShowModal(true)}>🗑️ Reset</button>
+        <button className="action-btn export" onClick={handleExport}>Export</button>
+        <button className="action-btn reset" onClick={() => setShowModal(true)}>Reset</button>
       </div>
     </div>
   );

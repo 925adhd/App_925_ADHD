@@ -86,8 +86,6 @@ export default function SurveysGuide() {
 
   return (
     <div className="surveys-guide">
-      <div className="particles" id="particles" />
-
       <div className="xp-bar">
         <span className="level-badge">LVL {level}</span>
         <div className="xp-progress">

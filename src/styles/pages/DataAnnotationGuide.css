@@ -8,7 +8,7 @@
             text-align: center;
             padding: 40px 0;
             background: linear-gradient(135deg, var(--accent-1)15, var(--accent-2)15);
-            border-radius: 24px;
+            border-radius: var(--radius-xl);
             margin-bottom: 30px;
             border: 2px solid var(--accent-1)44;
         }
@@ -38,16 +38,18 @@
         .data-annotation-guide .stat-card {
             background: var(--card);
             padding: 20px;
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             text-align: center;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .data-annotation-guide .stat-card:hover {
-            border-color: var(--accent-2);
-            transform: translateY(-3px);
-        }
+@media (hover: hover) {
+          .data-annotation-guide .stat-card:hover {
+              border-color: var(--accent-2);
+              transform: translateY(-3px);
+          }
+}
 
         .data-annotation-guide .stat-value {
             font-family: 'Fredoka', sans-serif;
@@ -83,10 +85,12 @@
             border: 2px solid transparent;
         }
 
-        .data-annotation-guide .nav-pill:hover {
-            border-color: var(--accent-1);
-            background: var(--card-hover);
-        }
+@media (hover: hover) {
+          .data-annotation-guide .nav-pill:hover {
+              border-color: var(--accent-1);
+              background: var(--card-hover);
+          }
+}
 
         .data-annotation-guide .nav-pill.active {
             background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
@@ -101,7 +105,7 @@
             width: 100%;
             background: var(--card);
             border: 2px solid transparent;
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 20px;
             cursor: pointer;
             display: flex;
@@ -112,9 +116,11 @@
             color: var(--text);
         }
 
-        .data-annotation-guide .section-toggle:hover {
-            border-color: var(--accent-1);
-        }
+@media (hover: hover) {
+          .data-annotation-guide .section-toggle:hover {
+              border-color: var(--accent-1);
+          }
+}
 
         .data-annotation-guide .section-toggle.open {
             border-color: var(--accent-3);
@@ -176,7 +182,7 @@
         /* Info boxes */
         .data-annotation-guide .box {
             background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             padding: 18px;
             margin: 15px 0;
             border-left: 4px solid var(--accent-1);
@@ -212,16 +218,18 @@
 
         .data-annotation-guide .platform {
             background: var(--card-hover);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: 20px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .data-annotation-guide .platform:hover {
-            border-color: var(--accent-1);
-            transform: translateX(5px);
-        }
+@media (hover: hover) {
+          .data-annotation-guide .platform:hover {
+              border-color: var(--accent-1);
+              transform: translateX(5px);
+          }
+}
 
         .data-annotation-guide .platform-header {
             display: flex;
@@ -267,7 +275,7 @@
             font-size: 0.85rem;
             padding: 10px;
             background: var(--accent-1)15;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             border-left: 3px solid var(--accent-1);
         }
 
@@ -279,7 +287,9 @@
             font-weight: 600;
         }
 
-        .data-annotation-guide .platform-link:hover { color: var(--accent-5); }
+@media (hover: hover) {
+          .data-annotation-guide .platform-link:hover { color: var(--accent-5); }
+}
 
         /* Star rating */
         .data-annotation-guide .stars {
@@ -301,16 +311,18 @@
             gap: 15px;
             padding: 15px;
             background: var(--card-hover);
-            border-radius: 12px;
+            border-radius: var(--radius-md);
             margin: 10px 0;
             cursor: pointer;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
 
-        .data-annotation-guide .check-item:hover {
-            background: rgba(124, 58, 237, 0.1);
-        }
+@media (hover: hover) {
+          .data-annotation-guide .check-item:hover {
+              background: rgba(124, 58, 237, 0.1);
+          }
+}
 
         .data-annotation-guide .check-item.done {
             border-color: var(--accent-3);
@@ -354,15 +366,17 @@
             transition: all 0.3s ease;
         }
 
-        .data-annotation-guide .cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
-        }
+@media (hover: hover) {
+          .data-annotation-guide .cta:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+          }
+}
 
         /* Responsive */
         @media (max-width: 600px) {
             .data-annotation-guide { padding: 10px; }
-            .data-annotation-guide .hero { padding: 16px 0; margin-bottom: 18px; border-radius: 16px; }
+            .data-annotation-guide .hero { padding: 16px 0; margin-bottom: 18px; border-radius: var(--radius-lg); }
             .data-annotation-guide .hero-icon { font-size: 3rem; margin-bottom: 10px; }
             .data-annotation-guide .subtitle { font-size: 0.95rem; }
             .data-annotation-guide .quick-stats { grid-template-columns: 1fr; gap: 8px; }

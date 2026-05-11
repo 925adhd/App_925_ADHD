@@ -4,136 +4,91 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/immy0sOGu8FJH0lgD7VN.png',
     link: 'https://www.prolific.com/participants',
     rate: '$8–$18/hr',
-    description: 'High-paying academic studies.',
+    description: 'Paid college studies. Guaranteed pay, fast PayPal.',
     category: 'surveys',
-    tldr: '**What it is:** Take academic surveys and AI tasks for real universities (Stanford, Yale, Google) from home.\n\n**The pay:** $8–$18/hr via PayPal. Minimum £5 (~$6) cashout. No disqualifications mid-survey—if you start, you get paid.\n\n**Why it\'s better:** Real money (not gift cards), guaranteed minimum pay (£6/hr), and tasks from legitimate researchers. Short structured tasks with frequent dopamine boosts. Check Tuesdays & Fridays for cashout.',
-    intro: '',
+    tldr: '**What it is:** Short studies from real universities (Stanford, Yale) and AI labs (Google, OpenAI). Surveys, click tasks, rate chatbots.\n\n**The pay:** $8 to $18/hr. PayPal only. £5 (~$6) minimum cashout. If you start a study, you get paid even if you bomb it.\n\n**Why it\'s better:** Pay is in cash, not points. Tasks are short. You see pay and time before you click in.',
     whyAdhd: [
-      'Short, structured tasks = less mental chaos',
-      'You choose when to work—no strict deadlines or pressure',
-      'Frequent dopamine boosts from study completions',
-      'Instant feedback, timers, and visible progress keep you engaged',
-      'Tasks often change up daily = less boredom, more novelty'
+      'Tasks are short. Most run 2 to 15 minutes.',
+      'Pay and time are shown up front. No guessing.',
+      'Lots of variety. Surveys one day, rating AI the next.',
+      'Work when you feel like it. No schedule.',
+      'You finish, you get paid. Quick dopamine.'
     ],
-    standOut: [
-      'Trusted by elite universities and AI teams',
-      'Transparent upfront info: know pay, time, and task before you start',
-      'Lightning-fast onboarding—get verified in ~15 minutes',
-      'Wide task variety: from simple surveys to helping train AI',
-      'No app required—clean web interface that works great on desktop and mobile',
-      'Ethical standards: minimum guaranteed pay of £6/hour (~$8)'
+    pros: [
+      'Real cash via PayPal, not points',
+      'Guaranteed £6/hr floor on every study',
+      'No mid-study screen-outs',
+      'Fast 15-minute signup',
+      'Web only, no app to install'
     ],
-    importantNotes: [
-      'Your answers *must* align with your profile—mismatches can get you flagged',
-      'Attention checks are everywhere—miss too many, and you risk getting strikes',
-      'Prolific uses a three-strike system for dishonesty or poor-quality responses',
-      'Some studies are first-come, first-served—check in frequently or enable notifications',
-      'You\'ll need to complete your demographic profile before unlocking most studies',
-      'Tasks range from 2-minute surveys to longer AI labeling sessions',
-      'Not always high volume—some days are busier than others'
+    cons: [
+      'Studies fill fast, you have to watch alerts',
+      'Profile mismatches get you flagged',
+      'Three-strike system for sloppy answers',
+      '£5 minimum cashout',
+      'Volume varies day to day'
     ],
-    payoutInfo: [
-      'Payments via PayPal only—no gift cards or points',
-      'Minimum cashout threshold: £5 (~$6)',
-      'Cashout days: Tuesdays and Fridays (GMT)',
-      'After 4 cashouts, you unlock instant withdrawals',
-      'No fees charged by Prolific for withdrawals',
-      'Researchers must approve submissions first (can take up to 22 days, but usually faster)'
-    ],
-    taskTypes: [
-      'Surveys – Quick academic or opinion-based questions',
-      'Behavioral studies – Puzzle tasks or reaction-time games',
-      'AI data work – Rate chatbot responses, label data, etc.',
-      'Tech tool testing – Try out new apps or give UX feedback'
-    ],
-    finalTake: '**Prolific** is the gold standard for paid research studies. Unlike most survey sites that waste your time with disqualifications and pennies, Prolific guarantees fair pay and actually values your input. It\'s not a "get rich quick" gig, but for consistent, ethical side income from your couch? It\'s hard to beat.',
+    payout: {
+      'Pay method': 'PayPal only',
+      'Minimum cashout': '£5 (~$6)',
+      'Cashout days': 'Tuesdays and Fridays (GMT)',
+      'Instant withdrawals': 'Unlocked after 4 cashouts',
+      'Currency': 'GBP / USD'
+    },
+    finalTake: 'The least scammy survey site you can sign up for. Pay is real, tasks are short, and you do not get screened out 5 minutes in. It will not replace a job, but as a couch gig it is one of the few that actually pays what it says.',
     idealFor: [
-      'Side hustlers who want reliable, ethical survey income',
-      'ADHD folks who need variety and short, structured tasks',
-      'Students or remote workers with flexible schedules',
-      'Anyone tired of scammy survey sites that pay in "points"'
+      'People who want survey money in PayPal, not points',
+      'ADHD brains that need short tasks with clear pay',
+      'Anyone burned by sites that disqualify you after 10 minutes',
+      'Students and remote workers with odd-hour gaps to fill'
     ]
   },
   
   'clearvoice': {
     name: 'ClearVoice',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/clearvoice.png',
     link: 'https://www.clearvoice.com/',
     rate: '$0.10–$1.00+/word',
-    description: 'Premium content marketing platform connecting freelance writers with enterprise brands — owned by Fiverr, no race-to-the-bottom pricing.',
+    description: 'Brands come to you for content. No bidding wars.',
     category: 'freelance',
-    tldr: 'Premium freelance writing platform (now owned by Fiverr) connecting 4,000+ vetted writers with enterprise clients like Intuit, Carfax & Esurance. Set your own rates — top writers earn $0.20–$1.00/word. Escrow system means guaranteed payment via PayPal upon approval. No bidding wars. Opportunities matched to your profile — you can\'t browse open jobs. Better for experienced writers with strong portfolios.',
-    intro: '<strong>ClearVoice</strong> was founded in 2014 in Phoenix, Arizona and acquired by Fiverr in 2019 — but operates independently as their premium content brand. It connects freelance writers, editors, and content strategists with mid-market and enterprise clients.\n\nUnlike Fiverr\'s race-to-the-bottom marketplace, ClearVoice maintains quality standards and fair pay. They vet all writers, match you with appropriate clients, and use an escrow system so you\'re guaranteed payment. No competitive bidding — prices are set upfront.',
+    tldr: '**What it is:** Vetted writing platform owned by Fiverr (operates separately). 4,000+ writers, enterprise clients (Intuit, Carfax, Esurance).\n\n**The pay:** You set per-word rates. Average ~$0.10/word. Top writers $0.20 to $1.00+/word. PayPal payout within 24 hours to 10 days of approval.\n\n**The catch:** You cannot browse jobs. Algorithm matches you. Only 10% of applicants get in. Work can be silent for weeks.',
     whyAdhd: [
-      'No bidding wars or client chasing',
-      'Opportunities pushed to you via email',
-      'Set your minimum rate — only see matching jobs',
-      'Escrow system = no chasing invoices',
-      'In-app messaging for all projects',
-      'Long-term client relationships possible',
-      'Work on topics that interest YOU'
+      'No bidding. Jobs come to you.',
+      'Email pings when a project fits.',
+      'Set your minimum rate. Filter out low-pay matches.',
+      'Escrow means you do not chase invoices.',
+      'Long-term clients build over time.'
     ],
-    standOut: [
-      'Owned by Fiverr but operates independently',
-      '4,000+ vetted writers in Talent Network',
-      '200+ industry categories',
-      'Enterprise clients (Intuit, Carfax, Esurance)',
-      'Set your own per-word rates',
-      'Escrow system — funds secured before work starts',
-      'No race-to-the-bottom bidding',
-      'PayPal payment upon approval (often within 24 hrs)',
-      'Free CV Portfolio to showcase work',
-      'Built-in messaging system',
-      'Responsive support team',
-      'Long-term "house account" relationships possible'
+    pros: [
+      'No bidding wars',
+      'Escrow protects payment',
+      'Set your own per-word minimum',
+      'House accounts can become steady work',
+      'PayPal often hits within 24 hours'
     ],
-    importantNotes: [
-      'Can\'t browse open jobs — must wait for matches',
-      'Algorithm matches you based on profile strength',
-      'Only ~10% of applicants accepted to Talent Network',
-      'Strong portfolio required to get opportunities',
-      'May go weeks/months without receiving matches',
-      'Clients can also search profiles directly',
-      '4% payment processing fee (paid by client)',
-      'Work can be inconsistent — not a sole income source',
-      'House accounts are key to steady work',
-      'Profile laser-focus on niches gets more matches',
-      'PayPal required for payment'
+    cons: [
+      'Cannot apply to jobs, only wait',
+      '10% acceptance into network',
+      'Long quiet stretches between matches',
+      'Need a strong portfolio to get in',
+      'Not for beginners with no published work'
     ],
-    payoutInfo: [
-      'You set your own per-word minimum rate',
-      'Average: ~$0.10/word',
-      'Top writers: $0.20–$0.50+/word',
-      'Experts: up to $1.00+/word',
-      'Beginners: $0.05–$0.08/word',
-      'Example: $200–$400 for 700-word blog post',
-      'Realistic hourly: $50–$100/hr (depending on speed)',
-      'Payment: PayPal upon assignment approval',
-      'Typically paid within 24 hrs–10 days of approval',
-      '4% processing fee covered by client'
-    ],
-    taskTypes: [
-      'Blog posts and articles',
-      'SEO content',
-      'Website copy',
-      'eBooks and guides',
-      'Case studies',
-      'Email newsletters',
-      'Social media content',
-      'White papers',
-      'Product descriptions',
-      'Content strategy',
-      'Editing and proofreading',
-      'Graphic design (limited)'
-    ],
-    finalTake: '<strong>ClearVoice is the "anti-content-mill" content mill</strong> — fair pay, no bidding wars, and escrow protection. The catch? You can\'t actively hunt for work. You build a killer profile, set your rates, and wait for the algorithm to match you with clients. Some writers land steady house accounts paying $0.20+/word, others wait months for scraps. Best approach: Treat it as ONE channel in your freelance toolkit, not your only income source. Strong niche focus + published portfolio = more matches.',
+    payout: {
+      'Pay method': 'PayPal',
+      'Your rate': 'You set per-word minimum',
+      'Beginner range': '$0.05 to $0.08/word',
+      'Top writers': '$0.20 to $0.50+/word',
+      'Experts': '$1.00+/word',
+      'Example': '$200 to $400 for a 700-word blog post',
+      'Payment timing': '24 hours to 10 days after approval'
+    },
+    finalTake: 'No-bidding writing platform with real enterprise clients. Catch is the wait. Some writers land steady $0.20/word house accounts, others wait months. Use it as one of several channels, not your only income.',
     idealFor: [
-      'Intermediate to expert freelance writers',
-      'Writers with established portfolios and bylines',
-      'Content specialists in specific industries',
-      'Freelancers who hate bidding wars and rate negotiations',
-      'Those seeking long-term client relationships',
-      'NOT for beginners with no published work'
+      'Experienced writer with published bylines',
+      'Niche specialist (tech, finance, health)',
+      'Hate bidding and rate negotiation',
+      'Want long-term client relationships',
+      'Not for beginners with no portfolio'
     ]
   },
 
@@ -142,52 +97,43 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/ir5Usfji0u0VtJf8iXTn.png',
     link: 'https://dscout.com/participate-in-research-studies',
     rate: '$25–$250/mission',
-    description: 'Video diaries, app testing, and live interviews for top brands.',
+    description: 'Video diaries and app tests for big brands.',
     category: 'surveys',
-    tldr: '**What it is:** Complete "missions" (research studies) for major brands like Nike, Google, Spotify via video diaries, app testing, or live interviews.\n\n**The pay:** $25–$250 per mission (~$1/min). PayPal only, paid within 15 days after approval.\n\n**The catch:** Competitive—you apply to missions and must get selected. Need to be comfortable on camera for most tasks. Not constant work, but pays well when you land one.',
-    intro: '',
+    tldr: '**What it is:** "Missions" for big brands (Nike, Google, Spotify). Record short videos, test apps, do live interviews.\n\n**The pay:** $25 to $250 per mission, roughly $1/minute. PayPal only. Paid within 15 days.\n\n**The catch:** You apply and get picked. Most missions need you on camera. Not steady work.',
     whyAdhd: [
-      'Variety of tasks — missions include video responses, app testing, in-person visits, and more',
-      'Structured but flexible — missions are broken into parts, so you always know what to do next',
-      'High pay-per-minute — often around $1/minute, which keeps motivation high',
-      'Mobile app-based — easy to complete tasks on the go',
-      'Creative expression — video responses let you talk through thoughts instead of typing'
+      'Pay per minute is high. Less time, more money.',
+      'Missions are broken into parts. You know what comes next.',
+      'You talk through ideas on video instead of typing.',
+      'Phone-based. You can knock it out from the couch.',
+      'Different mission every time. No grind.'
     ],
-    standOut: [
-      'Works with major brands (Nike, Google, Spotify, Meta)',
-      'Higher pay than typical survey sites ($25–$250 per mission)',
-      'Engaging formats: diary studies, live interviews, usability tests',
-      'App handles everything—scheduling, submissions, and payments',
-      'Multi-day missions offer sustained engagement and bigger payouts'
+    pros: [
+      'Big brand research (Nike, Google, Spotify, Meta)',
+      'Roughly $1 per minute of work',
+      'No minimum cashout',
+      'Talk through ideas instead of typing',
+      'Multi-day missions stack into bigger paydays'
     ],
-    importantNotes: [
-      'Competitive selection — you must apply to missions; not everyone gets picked',
-      'Not constant work — availability depends on your demographics and researcher needs',
-      'Video responses required for most missions — comfort on camera is important',
-      'Requires the dscout mobile app (iOS/Android) for participation',
-      'Screeners can be tough — detailed, thoughtful applications improve your chances',
-      'Acceptance rate is low — expect to apply to many missions before landing one'
+    cons: [
+      'You apply and have to get picked',
+      'Most missions need you on camera',
+      'Phone app only, no desktop',
+      'Strict screeners',
+      'Work is not steady'
     ],
-    payoutInfo: [
-      'Payments via PayPal only — no gift cards or other options',
-      'No minimum withdrawal threshold — cash out after any completed mission',
-      'Payments typically arrive within 15 days of mission completion',
-      'Researchers must approve your submissions before payment is released',
-      'Some missions have 7-day payment holds for quality review'
-    ],
-    taskTypes: [
-      'Diary missions — capture daily moments, routines, or experiences over multiple days',
-      'Live interviews — 30–60 minute video calls with researchers',
-      'Express missions — quick surveys with video/photo responses',
-      'Usability tests — test apps, websites, or prototypes and share feedback',
-      'Media surveys — answer questions with photos, videos, and screen recordings'
-    ],
-    finalTake: 'Dscout is one of the best-paying and most engaging research platforms out there. It\'s not a constant source of work—you have to apply and get selected—but when you land a mission, the pay and experience are worth it. If you\'re comfortable on camera and want meaningful, well-paid research gigs, dscout beats traditional survey apps by miles.',
+    payout: {
+      'Pay method': 'PayPal',
+      'Minimum cashout': 'None',
+      'Payment timing': 'Within 15 days of approval',
+      'Quality hold': 'Some missions have a 7-day review hold',
+      'Pay range': '$25 to $250+ per mission'
+    },
+    finalTake: 'When you land a Dscout mission the pay is great. Getting picked is the hard part. Treat it as bonus money, not a paycheck. Strongest fit if you do not hate talking on camera.',
     idealFor: [
-      'People comfortable with video responses and speaking on camera',
-      'ADHD creatives who enjoy variety and storytelling',
-      'Those who want engaging, well-paid side gigs over boring surveys',
-      'Users looking for flexible, remote opportunities with real impact'
+      'People who do not freeze up on camera',
+      'Creatives who would rather talk than type',
+      'Anyone tired of $0.50 surveys',
+      'Side hustlers stacking a few platforms for variety'
     ]
   },
   'respondentio': {
@@ -195,296 +141,223 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/tHrBfm7B9TRyDq7uZh73.png',
     link: 'https://www.respondent.io/signup',
     rate: '$50–$250+/study',
-    description: 'High-paying research studies for professionals.',
+    description: 'Big-pay studies if you have a real job or skill.',
     category: 'surveys',
-    tldr: '**What it is:** Video interviews and studies for professionals with industry expertise (marketers, developers, healthcare, etc.) from startups to Fortune 500 companies.\n\n**The pay:** $50–$250+ per study (30–90 min sessions). Paid via Tremendous virtual gift card in 7–10 days. 5% fee ($1 min) deducted.\n\n**The catch:** Must apply and get selected—not constant work. LinkedIn verification required. High competition for popular studies.',
-    intro: '',
+    tldr: '**What it is:** Video interviews with companies who want to talk to people in your field. Marketers, devs, nurses, finance, you name it.\n\n**The pay:** $50 to $250+ per study. 30 to 90 minute sessions. Tremendous gift card or PayPal, 7 to 10 days. 5% fee taken off.\n\n**The catch:** You apply, you wait. Most days no studies fit you. Requires real LinkedIn.',
     whyAdhd: [
-      'Fewer, higher-paying gigs — no grind of tiny $0.50 surveys',
-      'Flexible sign-ups — apply only to studies that interest you',
-      'Structured sessions (often interviews) with clear expectations',
-      'Exciting variety — topics range from consumer products to enterprise tech',
-      'Most studies are scheduled calls — external accountability helps you show up'
+      'One hour, real money. No grind.',
+      'Scheduled calls force you to show up.',
+      'You only apply to topics you actually know.',
+      'Interview format means you talk, not type.',
+      'Each study is a different topic. No repeat.'
     ],
-    standOut: [
-      'Premium pay rates ($50–$250+ per study is common)',
-      'LinkedIn verification ensures quality participants and researchers',
-      'Focus on professionals — great for B2B, tech, healthcare, finance expertise',
-      '3M+ verified participants in 150+ countries',
-      'Built-in scheduling, messaging, and NDA tools',
-      'Referral program pays $20–$50 for successful referrals'
+    pros: [
+      '$50 to $250+ per study is normal',
+      'Scheduled calls force you to show up',
+      'LinkedIn vetting keeps quality high',
+      'B2B and pro topics pay well',
+      'Real backed company (3M+ users)'
     ],
-    importantNotes: [
-      'Not constant work — you must apply, and selection isn\'t guaranteed',
-      'Many studies require professionals (marketers, developers, executives, healthcare workers)',
-      'High competition for popular consumer studies',
-      'ID/LinkedIn verification required to ensure participant quality',
-      '5% fulfillment fee ($1 minimum) deducted from each payout',
-      'Researchers control payment timing — can take 7–10 business days after completion'
+    cons: [
+      'Not steady work',
+      'Most studies want professionals only',
+      'Popular consumer studies fill in minutes',
+      '5% fee on every payout',
+      'Real LinkedIn required'
     ],
-    payoutInfo: [
-      'Payments via Tremendous virtual gift card (Visa prepaid, Amazon, etc.)',
-      'PayPal option available in some regions through Tremendous',
-      'No minimum balance — paid per completed study',
-      '5% fulfillment fee ($1 minimum) deducted from incentive',
-      'Typical payment timeline: 7–10 business days after researcher confirms attendance',
-      'Check "My Projects" dashboard to track payment status'
-    ],
-    taskTypes: [
-      'One-on-one interviews — video calls with researchers (30–90 minutes)',
-      'Focus groups — group discussions with multiple participants',
-      'Unmoderated surveys — complete on your own time',
-      'Usability tests — test websites, apps, or prototypes',
-      'Multi-day studies — diary-style research over several days'
-    ],
-    finalTake: 'Respondent.io is the go-to platform for high-paying professional research. It\'s not a daily grind—you apply, get selected (or don\'t), and get paid well when you do. If you have expertise in any industry, you can earn $100+ for a single hour-long interview. Worth having in your rotation.',
+    payout: {
+      'Pay method': 'Tremendous (Visa prepaid, Amazon, others)',
+      'PayPal': 'Available in some regions',
+      'Minimum cashout': 'None (paid per study)',
+      'Fee': '5%, $1 minimum',
+      'Payment timing': '7 to 10 business days after the call'
+    },
+    finalTake: 'If you have a real job, this is the best-paying research site you can sign up for. One landed call beats a week of surveys. Just do not count on it as steady income.',
     idealFor: [
-      'Professionals (marketers, developers, executives, healthcare workers)',
-      'People with niche expertise who want premium pay for their knowledge',
-      'Participants who prefer scheduled interviews over grinding surveys',
-      'Those looking for occasional but lucrative side income'
+      'People with a job title (marketer, dev, nurse, finance, etc.)',
+      'Niche skills you can talk about for 30 minutes',
+      'Anyone who prefers one call a week over daily surveys',
+      'Side income, not main income'
     ]
   },
   'surveyjunkie': {
     name: 'Survey Junkie',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/surveyjunkie.jpg',
     link: 'https://www.surveyjunkie.com/',
     rate: '$0.50–$3/survey',
-    description: 'One of the most popular survey sites with fast PayPal payouts.',
+    description: 'Steady survey pay. One of the most trusted apps.',
     category: 'surveys',
-    tldr: '**What it is:** Complete 10–20 min surveys for major brands. One of the most trusted sites (20M+ members, BBB accredited).\n\n**The pay:** $0.50–$3 per survey (100 points = $1). $5 min cashout via PayPal (under 24 hrs) or instant gift cards. Expect $30–$50/month max.\n\n**The reality:** You\'ll get disqualified from some surveys (normal). Points expire after 12 months inactivity. Only US, Canada, Australia.',
-    intro: '',
+    tldr: '**What it is:** Short surveys, 10 to 20 minutes each. Big trusted name with 20M+ users.\n\n**The pay:** $0.50 to $3 per survey. 100 points = $1. Cash out at $5 to PayPal (under 24 hours) or instant gift cards. Expect $30 to $50/month at most.\n\n**The reality:** You will get screened out of some surveys. Normal. Points expire after 12 months of doing nothing. US, Canada, and Australia only.',
     whyAdhd: [
-      'Short surveys — most take 10–20 minutes',
-      'Low cashout threshold — $5 minimum means quick wins',
-      'Still earn points even when you don\'t qualify for a survey',
-      'Simple interface — no confusing menus or hidden tasks',
-      'Mobile app available — take surveys from anywhere'
+      'Surveys are 10 to 20 minutes. No long sits.',
+      'Cashout is $5. Quick wins keep you going.',
+      'You still earn small points if you do not qualify.',
+      'Plain interface. Nothing to figure out.',
+      'Works on the phone. Knock them out anywhere.'
     ],
-    standOut: [
-      'One of the most trusted survey sites (BBB accredited, 4.2 stars on Trustpilot)',
-      'Fast PayPal payouts — often within 24 hours',
-      'Low $5 minimum cashout (500 points)',
-      '20M+ members — proven track record',
-      'Adaptive profiling — better surveys as you complete more',
-      'Points don\'t expire for 12 months of inactivity'
+    pros: [
+      'Trusted brand (BBB, 4.2 Trustpilot)',
+      '$5 cashout is fast',
+      'PayPal in under 24 hours',
+      'Still earn small points on screen-outs',
+      'Plain interface'
     ],
-    importantNotes: [
-      'You will get disqualified from some surveys — it\'s normal',
-      'Earning potential is modest — expect $30–$50/month max',
-      'Some surveys are tedious or repetitive',
-      'Points expire after 12 months of inactivity',
-      'Only available in US, Canada, and Australia',
-      'Focus groups and product testing are rare opportunities'
+    cons: [
+      'Caps around $30 to $50/month for most',
+      'Some surveys repeat',
+      'Points expire after 12 months of no activity',
+      'US, Canada, and Australia only',
+      'Plenty of screen-outs'
     ],
-    payoutInfo: [
-      'Points system: 100 points = $1',
-      'Minimum cashout: $5 (500 points)',
-      'PayPal payments process in under 24 hours',
-      'Bank transfers take 3–4 business days',
-      'Gift cards (Amazon, Target, Walmart, Starbucks, etc.) delivered instantly',
-      'No hidden fees on cashouts'
-    ],
-    taskTypes: [
-      'Online surveys — 10–20 minute questionnaires on products, brands, habits',
-      'Profile surveys — earn points while helping them match you to better surveys',
-      'Focus groups — online or in-person sessions ($25–$150, rare)',
-      'Product testing — try products and give feedback (limited availability)',
-      'Phone surveys — occasional phone interview opportunities'
-    ],
-    finalTake: 'Survey Junkie is the solid, reliable choice for survey side hustles. It won\'t make you rich — realistically you\'re looking at $30–$50/month — but it\'s trustworthy, pays fast, and has a low cashout threshold. Perfect for killing time on your phone while earning a little pocket money.',
+    payout: {
+      'Pay method': 'PayPal, bank, or gift cards',
+      'Conversion': '100 points = $1',
+      'Minimum cashout': '$5 (500 points)',
+      'PayPal timing': 'Under 24 hours',
+      'Bank timing': '3 to 4 days',
+      'Gift cards': 'Instant (Amazon, Target, Walmart)'
+    },
+    finalTake: 'The reliable starter survey app. Not big money, but pay lands fast and you trust where it is going. Good for filling 15 minutes on the couch.',
     idealFor: [
-      'Beginners looking for a trustworthy first survey site',
-      'People who want fast PayPal payouts with no hassle',
-      'Anyone in the US, Canada, or Australia with spare time',
-      'Side hustlers who want low-commitment extra cash'
+      'New to survey sites and want a safe pick',
+      'Want PayPal money, not points',
+      'US, Canada, or Australia',
+      'Killing time on the phone for pocket cash'
     ]
   },
   'usertesting': {
     name: 'UserTesting',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/usertesting.png',
     link: 'https://www.usertesting.com/get-paid-to-test',
     rate: '$4–$120/test',
-    description: 'Test websites and apps while speaking your thoughts aloud.',
+    description: 'Test sites and apps with your voice and screen. Pays well.',
     category: 'testing',
-    tldr: '**What it is:** Test websites/apps for Fortune 100 companies while speaking your thoughts aloud (screen + voice recorded).\n\n**The pay:** $4 (5–7 min), $10 (15–20 min), $30–$120 (live 30–60 min calls). PayPal only, paid 7 days after completion.\n\n**The catch:** Must pass unpaid practice test first. Tests fill fast—notifications required. Rating affects future test availability. Competitive.',
-    intro: '',
+    tldr: '**What it is:** Click around a website or app and say what you think out loud. Your screen and voice get recorded for the company.\n\n**The pay:** $4 for 5 to 7 min, $10 for 15 to 20 min, $30 to $120 for live 30 to 60 min calls. PayPal only, paid 7 days after the test.\n\n**The catch:** You have to pass an unpaid practice test first. Tests fill in minutes. Your rating decides how many you see next month.',
     whyAdhd: [
-      'Talk instead of type — speak your thoughts aloud rather than writing essays',
-      'Short tasks — most tests are 5–20 minutes',
-      'Engaging format — actually interact with websites and apps, not just click bubbles',
-      'Variety — different companies, different products, different tasks each time',
-      'Flexible schedule — tests available daily, do them when you have energy'
+      'You talk, not type. Easier for most ADHD brains.',
+      'Most tests run 5 to 20 minutes.',
+      'You are clicking through real sites, not picking bubbles.',
+      'Every test is a different product. No grind.',
+      'Do them whenever a notification fires.'
     ],
-    standOut: [
-      'One of the most established and trusted UX testing platforms',
-      'Works with Fortune 100 companies (real brands, not sketchy startups)',
-      'Live Conversation interviews pay $30–$120 for 30–60 minutes',
-      'Tests available on desktop, iOS, and Android',
-      'Fast 7-day payment cycle via PayPal',
-      'No minimum payout threshold'
+    pros: [
+      'Real Fortune 100 brands',
+      'Live Conversation calls pay $30 to $120',
+      'Desktop, iPhone, and Android',
+      'Paid 7 days after each test',
+      'No minimum cashout'
     ],
-    importantNotes: [
-      'Must pass a practice test to get approved — not everyone makes it',
-      'Need a working microphone (built-in is fine)',
-      'Tests fill up fast — speed matters when grabbing opportunities',
-      'Customers can request refunds if unhappy with your test quality',
-      'Your rating affects how many tests you receive',
-      'Payment sent 7 days after test completion',
-      'Practice test is unpaid'
+    cons: [
+      'Unpaid practice test to start',
+      'Tests fill in minutes',
+      'Customers can refund a sloppy test',
+      'Rating decides future volume',
+      'You handle your own taxes'
     ],
-    payoutInfo: [
-      'PayPal only — no other payment options',
-      'Short tests (5–7 min): $4',
-      'Standard tests (15–20 min): $10',
-      'Live Conversations (30–60 min): $30–$120',
-      'Payments processed daily for tests completed 7 days prior',
-      'No minimum payout — get paid for every completed test',
-      'You handle your own taxes — no withholding'
-    ],
-    taskTypes: [
-      'Unmoderated tests — navigate a website/app while thinking aloud (recorded)',
-      'Live Conversations — video calls with researchers asking questions in real-time',
-      'Prototype testing — test unreleased designs and give feedback',
-      'Mobile app testing — same concept but on your phone via their app',
-      'Written follow-ups — up to 4 short written questions after some tests'
-    ],
-    finalTake: 'UserTesting is the gold standard for UX testing side gigs. The pay is fair ($10 for 20 minutes = $30/hr equivalent), tests are genuinely interesting, and you\'re helping real companies improve real products. The catch? Competition for tests is fierce — you need to grab them fast. Keep notifications on and check often.',
+    payout: {
+      'Pay method': 'PayPal only',
+      'Short test (5 to 7 min)': '$4',
+      'Standard test (15 to 20 min)': '$10',
+      'Live call (30 to 60 min)': '$30 to $120',
+      'Payment timing': '7 days after test approval',
+      'Minimum cashout': 'None'
+    },
+    finalTake: 'The pay rate is real ($30/hr if you can land tests) and the brands are real. Catch is speed: tests vanish in minutes. Keep the app pinned and check often. Good as a stack with one or two other testing sites.',
     idealFor: [
-      'People who prefer talking over typing',
-      'Detail-oriented users who notice UX issues naturally',
-      'Anyone comfortable speaking their thoughts aloud on camera',
-      'Side hustlers who can check for new tests frequently'
+      'OK talking out loud while you click around',
+      'You notice broken stuff on websites without trying',
+      'Can check your phone for test pings during the day',
+      'Want a higher-paying gig than survey grinding'
     ]
   },
   'playtestcloud': {
     name: 'PlaytestCloud',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/playtestcloud.webp',
     link: 'https://www.playtestcloud.com/',
     rate: '$9/test',
-    description: 'Get paid to play and review unreleased mobile, PC, and console games for developers.',
+    description: 'Play new games before they launch and share what you think.',
     category: 'testing',
-    tldr: '**What it is:** Play unreleased mobile/PC/console games for studios like Zynga, Ubisoft, Gameloft while talking through your thoughts (recorded).\n\n**The pay:** $9 for 15–30 min ($18–36/hr rate). Paid within 3–7 days via Tremendous (PayPal, Venmo, gift cards). No minimum payout.\n\n**The catch:** Inconsistent—expect 1–2 tests/month average. Must pass unpaid qualification test. Tests fill fast (first-come basis). Need headphones and quiet space.',
-    intro: '',
+    tldr: '**What it is:** Play unreleased games from Zynga, Ubisoft, Gameloft and talk through what you think. Mobile, PC, console.\n\n**The pay:** $9 for 15 to 30 min ($18 to $36/hr). Paid in 3 to 7 days via Tremendous (PayPal, Venmo, gift cards). No minimum.\n\n**The catch:** Roughly 1 or 2 tests a month. Pass an unpaid trial test first. Invites fill fast.',
     whyAdhd: [
-      'Actually fun — you\'re literally playing games',
-      'Short sessions — 15–30 minutes per test',
-      'No commitment — test when invites come',
-      'Variety — different games keep it interesting',
-      'No threshold — get paid after every single test'
+      'Tests are a game. Not work that feels like work.',
+      'Sessions run 15 to 30 minutes.',
+      'No commitment. You play when an invite shows up.',
+      'Different game every time.',
+      'Paid per test, no threshold.'
     ],
-    standOut: [
-      'Major clients: Zynga, Ubisoft, Gameloft',
-      'No minimum payout — paid per test',
-      'Fast payment — within 3–7 days via PayPal',
-      'Payments processed 3x per week',
-      '1.5 million testers in their panel',
-      'Test mobile, PC, and console games',
-      'Multiple reward options: PayPal, gift cards, Venmo',
-      'Free to join — no fees ever'
+    pros: [
+      'Real studio clients (Zynga, Ubisoft, Gameloft)',
+      '$18 to $36/hr equivalent rate',
+      'No minimum cashout',
+      'PayPal, Venmo, or gift cards',
+      'Phone, PC, and console tests'
     ],
-    importantNotes: [
-      'Inconsistent work — expect 1–2 tests per month average',
-      'Must pass unpaid qualification test first',
-      'First-come, first-served — invites fill fast',
-      'Must speak thoughts aloud while playing (recorded)',
-      'Best opportunities for US, UK, Canada testers',
-      'Test availability depends on your gaming profile/devices',
-      'Can retake qualification test if you fail',
-      'Need headphones and quiet space for recording',
-      'High-quality feedback = more test invites'
+    cons: [
+      '1 to 2 tests a month is normal',
+      'Unpaid trial test required',
+      'Invites fill fast',
+      'Need a quiet room to record voice',
+      'Best volume only in US, UK, Canada'
     ],
-    payoutInfo: [
-      'Standard tests: ~$9 for 15–30 minutes',
-      'Longer/complex tests: up to $28.50+',
-      'Hourly equivalent: ~$18–$36/hr',
-      'No minimum payout threshold',
-      'Payment via Tremendous: PayPal, Venmo, gift cards, bank cards',
-      'Paid within 3–7 days of test approval',
-      'Payments processed 3x weekly',
-      'PayPal may charge small fee (~$0.25)'
-    ],
-    taskTypes: [
-      'Single session playtests — play and give feedback',
-      'Multi-session tests — return to game over days/weeks',
-      'Longitudinal studies — track experience over time',
-      'Concept testing — evaluate game ideas/prototypes',
-      'Post-test surveys — detailed written feedback',
-      'Moderated playtests — live interviews (higher pay)',
-      'Released game testing — evaluate launched games'
-    ],
-    finalTake: 'PlaytestCloud is one of the best "fun money" opportunities out there. The pay rate is excellent ($9 for 15–30 min = $18–36/hr equivalent), payments are fast, and you\'re literally getting paid to play games. The only catch is inconsistency — you might get several tests one month and zero the next. Sign up, pass the qualification test, and treat it as bonus income when invites arrive.',
+    payout: {
+      'Pay method': 'Tremendous (PayPal, Venmo, gift cards)',
+      'Standard test': '~$9 for 15 to 30 min',
+      'Longer tests': 'Up to $28.50+',
+      'Payment timing': '3 to 7 days after approval',
+      'Pay frequency': '3 days a week',
+      'Minimum cashout': 'None'
+    },
+    finalTake: 'Best paying "fun money" gig if you like games. Rate is real. The only thing in your way is invite volume. Sign up, pass the trial, treat invites as bonus money when they land.',
     idealFor: [
-      'Gamers who enjoy mobile, PC, or console games',
-      'People comfortable talking through their thoughts aloud',
-      'Side hustlers who want fun, low-commitment work',
-      'Anyone who doesn\'t need consistent weekly income',
-      'Testers in US, UK, or Canada (most opportunities)'
+      'You actually like playing games',
+      'OK talking out loud while you play',
+      'Want fun money, not a paycheck',
+      'In the US, UK, or Canada'
     ]
   },
   'trymata': {
     name: 'Trymata',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/trymata.jpg',
     link: 'https://app.trymata.com/tester/signup',
     rate: '$10/test',
-    description: 'Get paid to test websites and apps while speaking your thoughts aloud.',
+    description: 'Test new apps on your own time. Easy to start.',
     category: 'testing',
-    tldr: '**What it is:** Test websites/apps while speaking thoughts aloud (screen + voice recorded). Complete tasks and share feedback.\n\n**The pay:** $10 for 15–25 min, up to $30 for longer tests ($20–30/hr rate). PayPal only, paid daily Mon–Fri after approval.\n\n**The catch:** Must pass unpaid qualification test. Limited availability. Low client ratings (2★ or less) = no payment. Tests fill quickly.',
-    intro: '',
+    tldr: '**What it is:** Click around websites and apps while talking out loud. Screen and voice get recorded.\n\n**The pay:** $10 for 15 to 25 min ($20 to $30/hr). Longer tests up to $30. Paid daily on weekdays via PayPal.\n\n**The catch:** Unpaid qualification test to start. Tests fill fast. A 2-star rating from the client means no pay for that test.',
     whyAdhd: [
-      'Short tests — 10–25 minutes average',
-      'Just be yourself — no expertise required',
-      'Variety — test different websites and apps',
-      'Fast payments — daily PayPal payouts on weekdays',
-      'No minimum payout — get paid per test'
+      'Tests run 10 to 25 minutes.',
+      'You just say what you think. No expertise needed.',
+      'Different site every test.',
+      'PayPal hits the next weekday.',
+      'No minimum to cash out.'
     ],
-    standOut: [
-      'Daily payments (weekday PayPal payouts)',
-      'No minimum payout threshold',
-      '$10 flat rate per standard test',
-      'Longer tests pay up to $30',
-      'Over 1 million tests completed',
-      'Desktop and mobile testing available',
-      'Founded 2010 — established company',
-      'Free to join'
+    pros: [
+      'Daily weekday PayPal payouts',
+      '$10 flat standard rate, up to $30 for longer tests',
+      '1M+ tests run on the platform',
+      'Desktop and phone tests',
+      'Around since 2010'
     ],
-    importantNotes: [
-      'Must pass unpaid qualification test first',
-      'Test availability varies — not steady income',
-      'Low ratings from clients = no payment for that test',
-      'Must speak thoughts clearly throughout entire test',
-      'PayPal required — no alternative payment methods',
-      'Mobile app has reliability issues (desktop works better)',
-      'Some reports of rate cuts without notice',
-      'Tests fill quickly — act fast when notified',
-      'Written survey component adds time beyond video recording'
+    cons: [
+      'Unpaid qualification test',
+      'Volume is not steady',
+      'A 2-star rating kills your pay for that test',
+      'Mobile app is buggy',
+      'Invites disappear fast'
     ],
-    payoutInfo: [
-      'Standard tests: $10 for 15–25 minutes',
-      'Longer/complex tests: up to $30',
-      'Hourly equivalent: ~$20–$30/hr',
-      'No minimum payout threshold',
-      'PayPal only — daily payments (Mon–Fri)',
-      'Payment sent after test is approved',
-      'Most tests approved within few days',
-      'Poor ratings (2 stars or less) = no payment'
-    ],
-    taskTypes: [
-      'Website usability testing — navigate and give feedback',
-      'Mobile app testing — test iOS/Android apps',
-      'Prototype testing — evaluate designs before launch',
-      'Task completion — follow specific instructions',
-      'Post-test surveys — written feedback after recording',
-      'Live moderated tests — real-time sessions (higher pay)',
-      'Focus groups — interactive discussions ($20–$50)'
-    ],
-    finalTake: 'Trymata offers solid pay ($10 for ~20 min = $30/hr equivalent) with fast daily payouts — better than most testing platforms. The catch is limited test availability and the qualification test barrier. Once approved, grab tests quickly when they appear. Use desktop over mobile for reliability. Good as a secondary income source alongside other testing platforms.',
+    payout: {
+      'Pay method': 'PayPal',
+      'Standard test (15 to 25 min)': '$10',
+      'Longer tests': 'Up to $30',
+      'Frequency': 'Daily on weekdays',
+      'Payment timing': 'After client approves the test',
+      'Minimum cashout': 'None'
+    },
+    finalTake: 'Pay rate is fair and the cashout is fast. Test volume is the bottleneck. Best as a second testing site stacked with UserTesting or PlaytestCloud.',
     idealFor: [
-      'People comfortable thinking out loud while browsing',
-      'Side hustlers who want fast PayPal payments',
-      'Anyone interested in UX and website design',
-      'Testers who prefer desktop over mobile testing',
-      'Those who can respond quickly to test notifications'
+      'OK talking out loud while you click',
+      'Want PayPal money the next weekday',
+      'Like UX and noticing broken websites',
+      'Can grab tests within minutes of a notification'
     ]
   },
   'methinks': {
@@ -492,266 +365,179 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/alNW7pxDjaH7vy1c9gwt.png',
     link: 'https://www.methinks.io/thinker',
     rate: '$5–$100+/gig',
-    description: 'Video interviews, app testing, and surveys for product research.',
+    description: 'Video interviews and app tests for product research.',
     category: 'surveys',
-    tldr: '**What it is:** Video interviews, app testing, and surveys for companies like Samsung and Hyundai. Qualitative research via 1-on-1 video calls.\n\n**The pay:** $5–$100+ per gig ($50 for 30-min video call common). PayPal or Amazon gift cards, paid weekly on Fridays. No minimum.\n\n**The catch:** Mobile app required. Must pass screeners—not guaranteed selection. Limited gigs (2–3 available at a time). Competitive. Need camera and quiet space.',
-    intro: '',
+    tldr: '**What it is:** Video interviews, app tests, and surveys for companies like Samsung and Hyundai. Mostly 1-on-1 video calls.\n\n**The pay:** $5 to $100+ per gig. $50 for a 30-minute call is normal. PayPal or Amazon gift cards. Paid every Friday.\n\n**The catch:** Phone app only, no desktop. You apply, you might not get picked. 2 or 3 gigs open at a time.',
     whyAdhd: [
-      'Varied tasks — not just surveys; video interviews, app tests, and multi-day studies',
-      'Higher pay than typical survey apps — $20–$100 for video interviews is common',
-      'Flexible participation — pick gigs that match your energy and schedule',
-      'Short tasks available — quick surveys when you want bite-sized work',
-      'Interactive format — talking to researchers is more engaging than clicking bubbles'
+      'Mix of video calls, app tests, and short surveys.',
+      'Pay per gig is high. One call is $50.',
+      'Pick the gigs that fit your day.',
+      'Talking to a researcher beats clicking bubbles.',
+      'Done in one sitting most times.'
     ],
-    standOut: [
-      'Above-market pay ($5–$100+ per gig)',
-      'Video interviews feel more personal and engaging than text surveys',
-      'Works with major companies (Samsung, Hyundai, startups)',
-      '400K+ Thinker community worldwide',
-      'No minimum payout — get paid weekly on Fridays',
-      'Available globally, not just US'
+    pros: [
+      '$5 to $100+ per gig',
+      'Big-name companies (Samsung, Hyundai)',
+      'Weekly Friday payouts',
+      'No minimum cashout',
+      'Works in most countries'
     ],
-    importantNotes: [
-      'Mobile app required — can\'t participate from desktop',
-      'Must pass screener questionnaires — no guaranteed selection',
-      'Limited gig availability — typically only 2–3 available at a time',
-      'Video interviews require camera-capable device and quiet space',
-      'Selection based on demographics — some profiles get more gigs than others',
-      'Under 18 requires parental permission form'
+    cons: [
+      'Phone app only, no desktop',
+      'Screeners decide who gets in',
+      'Only 2 to 3 gigs open at a time',
+      'Video calls need camera and quiet room',
+      'Under 18 needs parental form'
     ],
-    payoutInfo: [
-      'Payments via PayPal or Amazon gift cards',
-      'No minimum payout threshold',
-      'Payments processed weekly on Fridays',
-      'Payment method varies by project — check before applying',
-      'Contact support if preferred payment method unavailable'
-    ],
-    taskTypes: [
-      'Video interviews — live 1-on-1 or focus group calls with researchers (30–60 min)',
-      'App testing — try products for days/weeks and provide feedback',
-      'Surveys — shorter questionnaires without video calls',
-      'Product tests — use physical products and report back',
-      'Longitudinal studies — multi-day or multi-week research projects'
-    ],
-    finalTake: 'methinks pays **really well** when you land a gig — $50 for a 30-minute video call is common. The catch? Gigs are limited and competitive. You might apply to several before getting selected. It\'s not consistent income, but it\'s one of the higher-paying options for video-based research. Worth keeping the app installed and checking regularly.',
+    payout: {
+      'Pay method': 'PayPal or Amazon gift cards',
+      'Minimum cashout': 'None',
+      'Frequency': 'Weekly (Fridays)',
+      'Method varies': 'Each gig sets its own method',
+      'Pay range': '$5 to $100+ per gig'
+    },
+    finalTake: 'When you land a Methinks gig the pay is great. The hard part is landing one. Keep the app installed, check it a few times a week, apply fast when gigs open. Treat it as bonus money.',
     idealFor: [
-      'People comfortable with video calls and speaking on camera',
-      'Those who prefer interactive research over boring text surveys',
-      'Anyone looking for occasional high-paying side gigs',
-      'Users who don\'t mind applying and waiting for selection'
+      'OK with video calls',
+      'Like interactive research over typed surveys',
+      'Want occasional bigger paydays, not steady work',
+      'Patient enough to apply and wait'
     ]
   },
   'mturk': {
     name: 'Amazon MTurk',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/mturk.png',
     link: 'https://www.mturk.com/worker',
     rate: '$2–$6/hr avg',
-    description: 'Amazon\'s massive microtask marketplace with endless small jobs; median earnings ~$2/hr, experienced workers $6–15/hr.',
+    description: 'Amazon\'s giant pile of tiny tasks. Slow start, but it builds up.',
     category: 'microtasks',
-    tldr: '**What it is:** Amazon\'s microtask marketplace. Do HITs (surveys, data entry, image labeling, transcription, etc.) owned by Amazon since 2005.\n\n**The pay:** Median ~$2/hr, experienced workers $6–15/hr. Most HITs pay $0.01–$0.50. $1 minimum withdrawal. US: bank transfer, Non-US: Amazon.com gift cards only.\n\n**The reality:** Very low pay. 10-day probation (no withdrawals, 100 HIT/day limit). Need 1000 approved HITs to unlock better work. Requesters can reject work without explanation. Browser extensions essential. Work has decreased—more competition.',
-    intro: '',
+    tldr: '**What it is:** Amazon\'s microtask marketplace. Do HITs (surveys, data entry, image labels, transcription) for any company that posts them.\n\n**The pay:** Median ~$2/hr. Experienced workers hit $6 to $15/hr. Most HITs pay $0.01 to $0.50. $1 minimum cashout.\n\n**The catch:** Low pay until you grind 1,000+ HITs to unlock the good work. 10-day probation. Requesters can reject your work with no reason. Outside the US you get Amazon.com gift cards, not cash.',
     whyAdhd: [
-      'Flexible schedule — work anytime',
-      'Short tasks reduce burnout',
-      'Varied tasks help maintain interest'
+      'Work whenever you want.',
+      'Tiny tasks. Quick wins.',
+      'Different HIT every time.',
+      'You can stop after one.',
+      '$1 minimum cashout.'
     ],
-    standOut: [
-      'Owned by Amazon — legitimate and reliable',
-      'Launched 2005 — oldest crowdsourcing platform',
-      '500K+ workers across 190+ countries',
-      'Thousands of new HITs posted daily',
-      'US workers: direct bank deposit available',
-      'No approval process — start immediately',
-      '$1 minimum withdrawal',
-      'Daily transfer option available',
-      'Masters qualification unlocks premium HITs',
-      'Strong Reddit community (r/mturk) for tips'
+    pros: [
+      'Run by Amazon since 2005',
+      'Thousands of new HITs every day',
+      'US workers can get direct bank deposit',
+      'Daily transfer schedule available',
+      '$1 minimum cashout'
     ],
-    importantNotes: [
-      'Very low pay — median ~$2/hr, most HITs pay pennies',
-      '10-day probation period for new workers (no withdrawals)',
-      '100 HIT/day limit during probation',
-      '1000 approved HITs often required to unlock better work',
-      'Requesters can reject work without explanation (no pay)',
-      'Approval rating critical — low rating = fewer opportunities',
-      'Non-US workers paid in Amazon.com gift cards only',
-      'Gift cards only work on Amazon.com (not local Amazon sites)',
-      'Unpaid time spent searching, qualifying, learning',
-      'Browser extensions (TurkerView, MTurk Suite) essential for efficiency',
-      'Work has decreased in recent years — more competition'
+    cons: [
+      '$2/hr median for most workers',
+      '10-day probation with no cashouts',
+      'Need 1,000+ approved HITs for better work',
+      'Requesters can reject work with no reason',
+      'International workers only get Amazon.com gift cards'
     ],
-    payoutInfo: [
-      'Most HITs: $0.01–$0.50 each',
-      'Surveys: $0.25–$5.00 typically',
-      'Batch work: Pennies per task, volume-based',
-      'Average earnings: $2–$6/hr (varies widely)',
-      'Experienced workers with Masters: up to $15–20/hr',
-      'Minimum withdrawal: $1',
-      'US workers: Bank transfer or Amazon gift card',
-      'International: Amazon.com gift cards (25 countries can use Hyperwallet for bank transfer)',
-      'Transfer schedule: Every 3, 7, 14, or 30 days (your choice)',
-      'Bonuses possible from generous requesters'
-    ],
-    taskTypes: [
-      'Surveys — academic research, market studies',
-      'Image labeling — tag objects, faces, emotions',
-      'Data entry — transcribe receipts, forms, business cards',
-      'Audio transcription — convert speech to text',
-      'Content moderation — flag inappropriate content',
-      'Sentiment analysis — rate tone of text',
-      'Search evaluation — rate search results quality',
-      'Writing — short descriptions, reviews, summaries',
-      'Categorization — sort products, data, images',
-      'Verification — confirm data accuracy'
-    ],
-    finalTake: 'MTurk is the OG of microtask platforms with unmatched task volume, but the pay is genuinely terrible for most workers. Studies confirm median earnings of ~$2/hour. To make it worthwhile, you need to grind through 1,000+ HITs to unlock better work, use browser extensions religiously, and treat it as a long-term side hustle — not quick cash. Best for: patient people who enjoy variety and don\'t mind the learning curve.',
+    payout: {
+      'Pay method': 'Bank (US) or Amazon gift card (international)',
+      'Most HITs': '$0.01 to $0.50',
+      'Surveys': '$0.25 to $5',
+      'Average earnings': '$2 to $6/hr',
+      'With Masters qualification': '$15 to $20/hr',
+      'Minimum cashout': '$1'
+    },
+    finalTake: 'The original microtask site. Pay is bad until you climb the qualification ladder. Treat it as a long grind, use the browser extensions, and do not expect quick cash.',
     idealFor: [
-      'People who enjoy varied microtasks',
-      'Those building toward milestone qualifications (500/1000 HITs)',
-      'US workers who want bank deposit option',
-      'Patient grinders willing to learn the system',
-      'Anyone wanting Amazon credit for purchases'
+      'Like variety and short tasks',
+      'OK grinding 1,000+ HITs before pay improves',
+      'US-based and want bank deposit',
+      'Want Amazon credit for shopping'
     ]
   },
   'lionbridge': {
     name: 'Lionbridge',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/lionbridge.png',
     link: 'https://careers.lionbridge.com/lionbridge-ai',
     rate: '$10–$15/hr',
-    description: 'AI training, data annotation, and search evaluation for major tech companies.',
+    description: 'Language and AI tasks from a big company.',
     category: 'data',
-    tldr: '**What it is:** Rate search results, annotate data, train AI for Google, Facebook, Microsoft, Apple. Part-time remote work (10–20 hrs/week).\n\n**The pay:** $10–$15/hr. Paid monthly NET-45 (45 days after work). Direct deposit or PayPal depending on role.\n\n**The catch:** Must pass qualification exam (difficult, unpaid). Limited hours. Long payment delays. Some roles require specific demographics or languages. Work availability varies.',
-    intro: '',
+    tldr: '**What it is:** Rate search results, label data, train AI for Google, Facebook, Microsoft, and Apple. Part-time remote, 10 to 20 hours a week.\n\n**The pay:** $10 to $15/hr. Paid monthly, 45 days after the work (NET-45). Bank or PayPal.\n\n**The catch:** You have to pass an unpaid exam first (6 to 12 hours, 85% accuracy). Hours are capped. Pay arrives slow.',
     whyAdhd: [
-      'Flexible schedule — work when you want within weekly hour limits',
-      'No phone calls or customer interaction — just you and your tasks',
-      'Varied task types — search rating, image annotation, content review',
-      'Work from anywhere — 100% remote, no commute',
-      'Clear guidelines — detailed instructions for every task type'
+      'Work whenever within your weekly hours.',
+      'No phone calls or customers.',
+      'Each task type has a clear rule sheet.',
+      '100% remote, no commute.',
+      'Mix of search rating, image labeling, content review.'
     ],
-    standOut: [
-      'Work for major tech companies (Google, Facebook, Microsoft, Apple)',
-      'Higher pay than most crowdsourcing platforms ($10–$15/hr)',
-      'Forbes recognized as one of America\'s Best Large Employers',
-      'FlexJobs #1 company for remote jobs (2021)',
-      'Available in 26+ countries with 350+ languages',
-      'Some positions offer W-2 employment with 401k eligibility',
-      'Legitimate company operating for 20+ years'
+    pros: [
+      'Real clients (Google, Facebook, Microsoft, Apple)',
+      '$10 to $15/hr beats most crowdsourcing',
+      'Around for 20+ years',
+      'Works in 26+ countries, 350+ languages',
+      'Some roles are W-2 with 401k'
     ],
-    importantNotes: [
-      'Must pass a qualification exam — can take 6–12 hours, 85%+ accuracy required',
-      'Exam and training are unpaid',
-      'Work hours are capped — typically 10–20 hours/week, max 100–150/month',
-      'Payment is slow — NET-45 (January work paid mid-March)',
-      'Task availability fluctuates — not always enough work',
-      'Quality reviews are ongoing — must maintain 80%+ accuracy or risk termination',
-      'Some roles are independent contractor (1099), others are W-2',
-      'Pay varies significantly by country'
+    cons: [
+      'Qualification exam takes 6 to 12 hours unpaid',
+      'Training is unpaid',
+      'Hours capped at 10 to 20/week',
+      'NET-45 payment delay',
+      '80%+ accuracy required or you lose the role'
     ],
-    payoutInfo: [
-      'Hourly pay: $10–$15/hr (US), varies by country and project',
-      'Raters in US typically earn ~$14/hr',
-      'Payment via direct bank transfer or PayPal',
-      'Minimum payout threshold: $20',
-      'Payment cycle: NET-45 (45 days after month end)',
-      'US Raters paid bi-weekly on Fridays',
-      'International contractors paid monthly around 15th'
-    ],
-    taskTypes: [
-      'Search Engine Evaluator / Internet Assessor — rate relevancy of search results',
-      'Social Media Evaluator — rate social media and YouTube content',
-      'Map Analyst — verify map data accuracy (addresses, pins, business names)',
-      'Data Annotator — label images, text, audio for AI training',
-      'Content Moderator / Safety Evaluator — review potentially offensive content',
-      'Transcription — convert audio to text',
-      'Usability Tester — test websites and apps for UX issues'
-    ],
-    finalTake: 'Lionbridge is one of the best options for AI training and data work — legitimate, well-paying (for the industry), and fully remote. The catch? You need to pass a tough unpaid exam, work is part-time with fluctuating availability, and payments come 45+ days late. Great as a flexible side gig, but don\'t count on it for consistent full-time income.',
+    payout: {
+      'Pay method': 'Direct deposit or PayPal',
+      'US raters': '~$14/hr',
+      'Pay cycle': 'NET-45 monthly',
+      'US bi-weekly': 'Fridays once they start',
+      'Minimum cashout': '$20',
+      'Hour cap': '10 to 20/week, 100 to 150/month'
+    },
+    finalTake: 'One of the better-paying AI training gigs. Pass the exam, follow the rules sheet, and you have a steady part-time side income. Just plan for the 45-day pay delay.',
     idealFor: [
-      'Detail-oriented people who can follow complex guidelines',
-      'Anyone comfortable with unpaid qualification exams',
-      'Remote workers who want flexible hours without phone calls',
-      'People interested in AI/ML who want hands-on experience',
-      'International workers — available in 26+ countries'
+      'Detail brain that can follow long rule sheets',
+      'OK with an unpaid 8-hour exam',
+      'Want remote work with no phone calls',
+      'Outside the US (works in 26+ countries)'
     ]
   },
   'justanswer': {
     name: 'JustAnswer',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/justanswer.png',
     link: 'https://www.justanswer.com/info/how-to-become-an-expert',
     rate: '$2–$50+/answer',
-    description: 'Get paid to answer questions in your professional field — law, medicine, tech, auto repair, veterinary, and 150+ more categories.',
+    description: 'Get paid to answer questions if you\'re an expert in something.',
     category: 'freelance',
-    tldr: '**What it is:** Answer questions in your professional field (law, medicine, tech, auto, vet, appra isals,150+ categories). Must have credentials/experience. Founded 2003, 12,000+ experts.\n\n**The pay:** $2–$50+ per answer (see pay before accepting). Top earners: $7,000–$15,000/month. $40 min monthly payout via PayPal/Payoneer/direct deposit.\n\n**The catch:** Must verify credentials (4-7 days US, 2-4 weeks international). Brutal quality control—secret shoppers, algorithm monitoring, expert flagging. Poor ratings = removal. Competitive—first to answer often wins.',
-    intro: '',
+    tldr: '**What it is:** Answer real questions from real people in your field. Law, medicine, vet, tech, auto, 150+ categories. Needs credentials.\n\n**The pay:** $2 to $50+ per answer. Top earners hit $7,000 to $15,000/month. $40 minimum payout via PayPal, Payoneer, or direct deposit.\n\n**The catch:** Verification takes 4 to 7 days in the US, 2 to 4 weeks internationally. Quality is policed by secret shoppers, algorithm checks, and other experts.',
     whyAdhd: [
-      'See pay upfront — no guessing or negotiating',
-      'Skip questions that do not interest you',
-      'Short bursts of focused work',
-      'Variety of topics within your specialty',
-      'No client management or invoicing',
-      'Answer from phone app anywhere',
-      'No minimum hours or schedules'
+      'You see the pay before you take a question.',
+      'Skip the topics that bore you.',
+      'Short bursts. One question at a time.',
+      'No invoices or client chasing.',
+      'Answer from the phone app anywhere.'
     ],
-    standOut: [
-      '150+ expert categories available',
-      'See exact pay before accepting questions',
-      'Phone calls pay more than text answers',
-      'Tips allowed on top of base pay',
-      'Charles Schwab on the board (legit company)',
-      '$50.7M in funding, 700+ employees',
-      'Mobile app for answering on-the-go',
-      'Secret shoppers ensure quality (keeps platform credible)',
-      'Advisory boards review answers'
+    pros: [
+      '150+ professional categories',
+      'Pay shown up front before you accept',
+      'Phone calls pay more than text',
+      'Customers can tip on top',
+      'Real company since 2003 with Schwab on the board'
     ],
-    importantNotes: [
-      'Must be verified expert with credentials/experience',
-      'Verification takes 4-7 days (US/Canada), 2-4 weeks (international)',
-      'Need degree, certification, or 2-5+ years experience',
-      'Quality algorithm monitors your performance',
-      'Poor ratings can get you removed',
-      'Other experts can flag your answers',
-      'Secret shoppers test you periodically',
-      'Competitive — first expert to answer often wins',
-      '$40 minimum balance to withdraw',
-      'Monthly payouts (end of month)'
+    cons: [
+      'Need real credentials to even apply',
+      'Verification takes 4 to 7 days (US), 2 to 4 weeks international',
+      'First expert to answer wins',
+      'Bad ratings can get you removed',
+      'Secret shoppers test you with fake questions'
     ],
-    payoutInfo: [
-      'Per-answer pay: $2-$50+ (you see before accepting)',
-      'Phone calls: Pay more than text',
-      'Tips: Customers can add extra',
-      'Top categories (monthly averages):',
-      '— Appraisals: $8,457/month',
-      '— Tech support: $7,612/month',
-      '— Homework help: $6,200/month',
-      '— Legal: $2,000-$7,000/month',
-      'Lowest: Wellness $1,167, General $614',
-      'Top individual earners: $10,000-$15,000/month',
-      'Payout: Monthly, $40 minimum',
-      'Methods: PayPal, Payoneer, direct deposit'
-    ],
-    taskTypes: [
-      'Legal questions — contracts, disputes, rights',
-      'Medical questions — symptoms, medications, second opinions',
-      'Veterinary — pet health, behavior, emergencies',
-      'Auto mechanics — diagnostics, repairs, maintenance',
-      'Tech support — computers, phones, software',
-      'Appraisals — antiques, art, collectibles',
-      'Tax and accounting questions',
-      'Home improvement and repair',
-      'Appliance troubleshooting',
-      'Mental health and counseling',
-      'RV and boat mechanics',
-      'Homework and tutoring help'
-    ],
-    finalTake: '<strong>Legit platform with real earning potential for credentialed professionals.</strong> Top earners (appraisers, mechanics, tech support) make $7,000-$15,000/month. The catch: brutal quality control. Secret shoppers, algorithm monitoring, expert flagging, and customer ratings all determine if you stay. Best for professionals with niche expertise who can answer quickly and accurately. Not for beginners — you need real credentials to get verified.',
+    payout: {
+      'Pay method': 'PayPal, Payoneer, or direct deposit',
+      'Pay per answer': '$2 to $50+',
+      'Phone calls': 'Pay more than text answers',
+      'Top categories': 'Appraisals $8,457, Tech $7,612, Homework $6,200',
+      'Top individual earners': '$10,000 to $15,000/month',
+      'Cashout': 'Monthly, $40 minimum'
+    },
+    finalTake: 'Real money for licensed pros. If you have a credential and can type fast, this beats most side gigs in raw pay. Quality control is tight. Not a fit if you do not have verifiable expertise.',
     idealFor: [
-      'Licensed professionals (lawyers, doctors, vets)',
-      'Certified technicians (ASE mechanics, IT certs)',
-      'Experts with 2-5+ years verifiable experience',
-      'Those who want short Q&A bursts, not long projects',
-      'People who hate proposals and client hunting',
-      'NOT for beginners without credentials'
+      'Licensed pros (lawyers, doctors, vets, CPAs)',
+      'Certified techs (ASE mechanics, IT certs)',
+      '2 to 5+ years of provable experience in a field',
+      'Hate proposals and client hunting',
+      'Not for beginners without credentials'
     ]
   },
   'pineconeresearch': {
@@ -759,697 +545,495 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
     link: 'https://www.pineconeresearch.com/',
     rate: '$1–$3/survey',
-    description: 'High-paying invite-only surveys from Nielsen.',
+    description: 'Pays well for surveys and product tests. Invite only.',
     category: 'surveys',
-    tldr: '**What it is:** Exclusive survey panel owned by Nielsen since 1998. Small selective panel means fewer surveys but higher pay ($3 each, 15–20 min).\n\n**The pay:** $3 per survey (300 points). $3 min cashout via bank transfer or gift cards. Expect 2–3 surveys/month max. Points expire after 12 months inactivity.\n\n**The catch:** Was invite-only, now open but selective—not everyone accepted. PayPal no longer available. Less consistent than before. No mobile app—email/website only.',
-    intro: '',
+    tldr: '**What it is:** Small Nielsen survey panel. Fewer surveys than other sites, but each one pays a flat $3.\n\n**The pay:** $3 per survey (15 to 20 min). $3 minimum cashout. Bank transfer or gift cards. Expect 2 to 3 surveys a month.\n\n**The catch:** Used to be invite only, now open but selective. PayPal got removed. No phone app, all email and web.',
     whyAdhd: [
-      'Higher pay per survey than most sites ($3 vs typical $0.50–$1)',
-      'Fewer disqualifications — they pre-match you to surveys you qualify for',
-      'Short surveys — most take 15–20 minutes',
-      'Product testing opportunities — try real products at home',
-      'Low commitment — only 2–3 surveys per month'
+      'Flat $3 per survey. Worth your time.',
+      'Almost no mid-survey screen-outs.',
+      'Surveys run 15 to 20 minutes.',
+      'Low commitment. Only 2 to 3 a month.',
+      'Free product tests show up sometimes.'
     ],
-    standOut: [
-      'One of the highest-paying survey panels ($3 per survey)',
-      'Owned by Nielsen — legitimate and trustworthy',
-      'Rarely disqualified mid-survey (they screen upfront)',
-      'Product testing with free products to try',
-      'Super low $3 minimum cashout — cash out after one survey',
-      'Sweepstakes entries for $500 and $4,500 prizes'
+    pros: [
+      '$3 flat per survey, one of the highest rates',
+      'Owned by Nielsen',
+      'Pre-screens you to avoid screen-outs',
+      'Free product tests show up',
+      '$3 minimum cashout, lowest of any panel'
     ],
-    importantNotes: [
-      'Was invite-only, now open but still selective — not everyone gets accepted',
-      'Low survey frequency — expect 2–3 per month max',
-      'Points expire after 12 months of inactivity',
-      'PayPal no longer available — bank transfer only for most members',
-      'Recent changes have made pay less consistent than before',
-      'No mobile app — surveys via email and website only',
-      'Some users report qualification issues despite invitations'
+    cons: [
+      'Not everyone gets accepted',
+      '2 to 3 surveys/month max for most',
+      'Points expire after 12 months of no activity',
+      'No more PayPal',
+      'No phone app'
     ],
-    payoutInfo: [
-      'Points system: 100 points = $1',
-      'Most surveys pay 300 points ($3)',
-      'Minimum cashout: $3 (can cash out after one survey)',
-      'Payment via bank transfer (Wallet by Rewards on Demand)',
-      'Also available: Amazon gift cards, Visa prepaid, other gift cards',
-      'Points post 3–5 days after survey completion',
-      'Bank transfers take 3–5 business days'
-    ],
-    taskTypes: [
-      'Online surveys — 15–20 minute questionnaires about products and brands',
-      'Product testing — receive free products to test at home and review',
-      'Profile surveys — complete demographic profiles to qualify for more studies',
-      'Screener quizzes — short qualifying questions for upcoming surveys'
-    ],
-    finalTake: 'Pinecone Research used to be the gold standard for paid surveys — $3 guaranteed, fast PayPal, no disqualifications. It\'s still legitimate and pays well, but recent changes (bank transfer only, less consistency) have dimmed its shine. Worth joining if you can get in, but don\'t expect steady income — it\'s more like a nice $6–$9/month bonus.',
+    payout: {
+      'Pay method': 'Bank transfer or gift cards (Amazon, Visa prepaid)',
+      'Conversion': '100 points = $1',
+      'Per survey': 'Most pay 300 points ($3)',
+      'Minimum cashout': '$3',
+      'Bank transfer timing': '3 to 5 business days',
+      'PayPal': 'No longer available'
+    },
+    finalTake: 'Used to be the best survey site, period. Still pays well per survey but volume is lower than it was. Sign up if they let you in. Plan on $6 to $9 a month, not real income.',
     idealFor: [
-      'People who hate getting disqualified from surveys',
-      'Those who prefer fewer, higher-paying surveys over grinding',
-      'Anyone interested in product testing opportunities',
-      'Side hustlers who want a low-maintenance survey panel'
+      'Hate getting screened out',
+      'Want fewer, better-paying surveys',
+      'Want to try free products',
+      'OK with bank transfer instead of PayPal'
     ]
   },
   'toluna': {
     name: 'Toluna',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/toluna.png',
     link: 'https://www.toluna.com/',
     rate: '$0.25–$2/survey',
-    description: 'Global survey community with polls, games, and product testing.',
+    description: 'Surveys plus polls and games. More fun than most.',
     category: 'surveys',
-    tldr: '**What it is:** Global survey community (21M+ users, 50 countries) with surveys, polls, games, discussions, product testing.\n\n**The pay:** $0.25–$2 per survey. 30,000–60,000 points ($10–$20) minimum cashout depending on method. PayPal requires more points than gift cards. Still earn 70–100 points when disqualified.\n\n**The reality:** Takes a while to build points. High PayPal cashout threshold. Mobile app available. Points expire after 12 months inactivity. Available in 50 countries.',
-    intro: '',
+    tldr: '**What it is:** Big survey site (21M+ users in 50 countries) with surveys, polls, games, and product tests.\n\n**The pay:** $0.25 to $2 per survey. Cashout starts at $10 in gift cards, $20 in PayPal. You still earn 70 to 100 points when you get screened out.\n\n**The catch:** Takes a while to hit cashout. PayPal threshold is double gift cards. Pay rate is about $2 to $3.50/hr.',
     whyAdhd: [
-      'Variety of tasks — surveys, polls, games, discussions (not just endless surveys)',
-      'Short surveys available — filter by "Quick Surveys" for faster tasks',
-      'Community features — interact with other users, which adds novelty',
-      'Mobile app — take surveys on the go when you have spare moments',
-      'Still earn points when disqualified (70–100 points per attempt)'
+      'Surveys, polls, games, and discussions in one app.',
+      'Use the "Quick Surveys" filter for short tasks.',
+      'Phone app works anywhere.',
+      'You still earn points if you do not qualify.',
+      'Free products to test sometimes.'
     ],
-    standOut: [
-      'Massive global platform — 21M+ members in 50 countries',
-      'Multiple earning methods — surveys, polls, games, referrals, product testing',
-      'Community features — discussions, content creation, monthly contests',
-      'Product testing opportunities — try real products at home',
-      'Charitable donations option — donate points to plant trees or feed children',
-      '500-point welcome bonus + 100 points per profile survey'
+    pros: [
+      '21M+ users in 50 countries',
+      'Mix of surveys, polls, games, and product tests',
+      '500-point welcome bonus',
+      'Charity donation option',
+      'Sweepstakes for bigger prizes'
     ],
-    importantNotes: [
-      'Points take a while to build up — most surveys pay 2,000–4,000 points',
-      'High disqualification rate — may not qualify for many surveys',
-      'Points expire after 16 months of earning',
-      'PayPal requires more points than gift cards (65,000 vs 30,000 for $10–$20)',
-      'Rewards can take up to 3 weeks to process',
-      'Some users report account terminations near payout thresholds',
-      'Mixed reviews on payment reliability'
+    cons: [
+      'Most surveys pay 2,000 to 4,000 points (slow)',
+      'High screen-out rate',
+      'Points expire 16 months after earning',
+      'PayPal costs 2x gift card threshold',
+      'Cashouts take up to 3 weeks'
     ],
-    payoutInfo: [
-      'Points system: ~3,000 points = $1',
-      'Gift cards: 30,000 points = $10 (Amazon, Target, Walmart, Starbucks, etc.)',
-      'PayPal: 65,000 points = $20 (higher threshold than gift cards)',
-      'Bitcoin option available (114,000 points = $30)',
-      'Rewards take up to 3 weeks to process',
-      'Points expire 16 months after earning'
-    ],
-    taskTypes: [
-      'Paid surveys — 5–20 minutes, most pay 2,000–4,000 points',
-      'Quick surveys — shorter surveys for faster points',
-      'Premium surveys — longer surveys with higher payouts',
-      'Polls — quick votes for 15 points each',
-      'Community discussions — share opinions (no points but builds engagement)',
-      'Games — scratch cards and mini-games for bonus points',
-      'Product testing — occasional free products to test and review'
-    ],
-    finalTake: 'Toluna is a legitimate survey site with decent variety, but it requires patience. Earning $10 takes time, and PayPal cashouts need even more points than gift cards. The community features and product testing add some novelty, but the pay rate (~$2–$3.50/hour) is average at best. Good as a backup panel, not a primary earner.',
+    payout: {
+      'Pay method': 'Gift cards, PayPal, or Bitcoin',
+      'Conversion': '~3,000 points = $1',
+      'Gift cards minimum': '30,000 points ($10)',
+      'PayPal minimum': '65,000 points ($20)',
+      'Bitcoin minimum': '114,000 points ($30)',
+      'Processing time': 'Up to 3 weeks'
+    },
+    finalTake: 'Real site, real pay, but slow. Stick to gift cards because PayPal costs double. Good as a backup panel after Prolific and Survey Junkie, not a primary earner.',
     idealFor: [
-      'People who want variety beyond just surveys (polls, games, community)',
-      'International users — available in 50+ countries',
-      'Those interested in occasional product testing',
-      'Patient users who don\'t mind slower point accumulation'
+      'Want polls and games mixed in with surveys',
+      'Outside the US (50+ countries supported)',
+      'Free product tests interest you',
+      'OK building points slowly'
     ]
   },
   'lifepoints': {
     name: 'LifePoints',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/lifepoints.png',
     link: 'https://www.lifepointspanel.com/',
     rate: '$0.25–$5/survey',
-    description: 'Global survey panel backed by Lightspeed research.',
+    description: 'Steady survey pay. Works great on your phone.',
     category: 'surveys',
-    tldr: '**What it is:** Global survey panel by Lightspeed Research (since 1946). Merged MySurvey + GlobalTestMarket. 5M+ members, 45 countries, $22M+ paid annually.\n\n**The pay:** $0.25–$5 per survey (10–20 min). $5 min cashout (550 points). PayPal, Venmo, gift cards. Expect $20–$50/month (US/UK). Rewards take up to 10 days.\n\n**The catch:** Points expire fast—inactive 30 days after signup OR 90 days anytime = points gone. High disqualification rate. Survey frequency varies by country. Must be 14+ (16+ some countries).',
-    intro: '',
+    tldr: '**What it is:** Global survey panel from Lightspeed Research. 5M+ users in 45 countries.\n\n**The pay:** $0.25 to $5 per survey, 10 to 20 min. $5 minimum cashout (550 points). PayPal, Venmo, gift cards. US and UK users see $20 to $50/month.\n\n**The catch:** Points expire fast. Inactive 30 days after signup, or 90 days anytime, and they vanish. High screen-out rate.',
     whyAdhd: [
-      'Short surveys — most take 10–20 minutes',
-      'Low cashout threshold — $5 minimum gets you quick wins',
-      'Mobile app — take surveys anywhere when you have spare moments',
-      'Still earn points when disqualified (2–3 LPs per attempt)',
-      'Variety of topics — lifestyle, products, ads, current events'
+      'Most surveys run 10 to 20 minutes.',
+      '$5 cashout is fast.',
+      'Phone app works anywhere.',
+      'Still earn a few points if you do not qualify.',
+      'Mix of lifestyle, brand, and current event topics.'
     ],
-    standOut: [
-      'Backed by Lightspeed — one of the oldest research companies (since 1946)',
-      'Available in 45 countries worldwide',
-      'Low $5 minimum cashout (550 points)',
-      'Paid $22+ million to members in the last year',
-      '5M+ member community',
-      'Mobile app for iOS and Android',
-      'Sweepstakes entries for up to $250 in daily/monthly drawings'
+    pros: [
+      'Backed by Lightspeed (around since 1946)',
+      'Available in 45 countries',
+      '$5 minimum cashout',
+      'Paid $22M+ to users last year',
+      'iOS and Android app'
     ],
-    importantNotes: [
-      'Points expire quickly — inactive for 30 days after signup OR 90 days anytime = points gone',
-      'Survey frequency varies by country — US/UK get more than others',
-      'High disqualification rate on some surveys',
-      'Rewards take up to 10 days to process',
-      'Some users report account deactivations near payout thresholds',
-      'PayPal email must match your LifePoints account email',
-      'Must be 14+ to join (16+ in some countries)'
+    cons: [
+      'Points expire after 30 or 90 days of inactivity',
+      'US and UK get the most surveys',
+      'High screen-out rate',
+      'Cashouts take up to 10 days',
+      'Some users report account closures near cashout'
     ],
-    payoutInfo: [
-      'Points system: 550 LPs = $5',
-      'Minimum cashout: $5 (550 points)',
-      'PayPal cash — deposited to your account',
-      'Gift cards — Amazon, Target, Walmart, Best Buy, Starbucks, etc.',
-      'Venmo option available in some regions',
-      'Charity donations — donate to Special Olympics',
-      'Rewards issued within 10 days of request'
-    ],
-    taskTypes: [
-      'Online surveys — 10–20 minutes on products, brands, lifestyle',
-      'Mini-polls — quick opinion questions',
-      'Profile surveys — earn points while improving survey matching',
-      'Product testing — occasional free products to test',
-      'Social media giveaways — prizes like Amazon vouchers, Apple Watches, gaming consoles'
-    ],
-    finalTake: 'LifePoints is a solid, legitimate survey panel backed by a research giant. The low $5 cashout is great for quick wins, and US/UK users can realistically earn $20–$50/month. The big catch? Points expire fast if you\'re inactive (30–90 days), so you need to stay on top of it. Good as part of a multi-panel strategy.',
+    payout: {
+      'Pay method': 'PayPal, Venmo, or gift cards',
+      'Conversion': '550 LPs = $5',
+      'Minimum cashout': '$5',
+      'Gift cards': 'Amazon, Target, Walmart, Best Buy, Starbucks',
+      'Venmo': 'Available in some regions',
+      'Processing time': 'Up to 10 days'
+    },
+    finalTake: 'A real survey panel with a low cashout. The point-expiry rule is the trap. Keep the app on your phone and tap something every few weeks or you lose the balance.',
     idealFor: [
-      'International users — available in 45 countries',
-      'People who want low cashout thresholds ($5)',
-      'Anyone who can stay active to avoid point expiration',
-      'Mobile users who prefer taking surveys on an app'
+      'Outside the US (45 countries supported)',
+      'Want a $5 cashout, not a $20 wait',
+      'Will actually open the app once a month',
+      'Take surveys on your phone, not a desktop'
     ]
   },
   'paidviewpoint': {
     name: 'PaidViewpoint',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/paidviewpoint.png',
     link: 'https://paidviewpoint.com/',
     rate: '$0.03–$2/survey',
-    description: 'Short surveys with no disqualifications and a unique TraitScore system.',
+    description: 'Short surveys. Still pays you even if you don\'t qualify.',
     category: 'surveys',
-    tldr: '**What it is:** Survey site with zero disqualifications. Every survey you see, you can complete. Ultra-short (2–5 min, ~10 questions max). Run by AYTM market research.\n\n**The pay:** $0.03–$2/survey. TraitScore system—answer consistently, score goes up = higher pay. First cashout $15 (slow), then $10, then $5. PayPal/Venmo within 72 hrs.\n\n**The catch:** Pay starts very low (pennies) until you build TraitScore. Need 9000+ score to be top 10% earners. Earnings "unvested" until cashout. Changing PayPal/phone can zero balance. Limited survey frequency.',
-    intro: '',
+    tldr: '**What it is:** Survey site where you never get screened out. Every survey you see, you finish. About 10 questions, 2 to 5 minutes each.\n\n**The pay:** $0.03 to $2 per survey. The more you do, the higher your TraitScore goes, the more pay you get. First cashout is $15, then $10, then $5 after.\n\n**The catch:** Pay starts in pennies until your score climbs. The first $15 takes a while. Surveys are spaced out on purpose.',
     whyAdhd: [
-      'Ultra-short surveys — most are 5–10 questions, done in 2–3 minutes',
-      'No disqualifications — every survey you see, you can complete',
-      'Simple questions — no long essays or complex matrices',
-      'Gamified progression — TraitScore gives you a goal to work toward',
-      'Low cognitive load — questions limited to 120 characters, Twitter-style'
+      'Surveys are 5 to 10 questions. Done in 2 minutes.',
+      'No screen-outs. If you see it, you get paid.',
+      'Questions are short. No matrix grids.',
+      'TraitScore climbs over time. Gives you a goal.',
+      'Low effort. You can do them half-zoned.'
     ],
-    standOut: [
-      'Zero disqualifications — if you see it, you can take it',
-      'Surveys capped at ~10 questions max',
-      'TraitScore system rewards consistency with higher pay',
-      'Get paid even for basic demographic questions',
-      'After first cashout, threshold drops to just $5',
-      'Mobile app available (iOS and Android)',
-      'Generous referral program — 20% of referrals\' earnings'
+    pros: [
+      'Zero disqualifications',
+      'Surveys capped around 10 questions',
+      'TraitScore raises your per-survey pay over time',
+      'Profile questions still earn money',
+      'iOS and Android app'
     ],
-    importantNotes: [
-      'First cashout requires $15 — can take months to reach',
-      'Pay starts very low ($0.03–$0.10) until you build TraitScore',
-      'Need TraitScore of 9000+ to be in top 10% earners',
-      'Earnings are "unvested" until you cash out — can be forfeited',
-      'Changing PayPal email or phone number can zero your balance',
-      'Inactive for 6+ months = account may be closed',
-      'Survey frequency is intentionally limited to prevent burnout'
+    cons: [
+      'First cashout is $15 and takes months',
+      'Starting pay is $0.03 to $0.10 per survey',
+      'Changing PayPal or phone can wipe balance',
+      'Account closes after 6 months of no activity',
+      'They cap how many surveys you see'
     ],
-    payoutInfo: [
-      'PayPal or Virtual Incentives (gift cards)',
-      'Venmo option available',
-      'First cashout: $15 minimum',
-      'Second cashout: $10 minimum',
-      'All subsequent cashouts: $5 minimum',
-      'Payments processed within 72 hours',
-      'PayPal email must match your PaidViewpoint account'
-    ],
-    taskTypes: [
-      'Trait surveys — short personal questions that build your TraitScore ($0.03–$0.10)',
-      'Research surveys — actual market research, pay varies by TraitScore ($0.10–$2+)',
-      'Demographic updates — get paid to update your profile info'
-    ],
-    finalTake: 'PaidViewpoint is the anti-frustration survey site — no disqualifications, short surveys, simple questions. The catch? Pay starts painfully low (pennies per survey) and the first $15 cashout takes a while. But once you build your TraitScore and hit that first payout, it becomes a nice low-effort earner. Perfect for people who hate getting disqualified from surveys.',
+    payout: {
+      'Pay method': 'PayPal, Venmo, or gift cards',
+      'First cashout': '$15',
+      'Second cashout': '$10',
+      'All after': '$5',
+      'Payment timing': 'Within 72 hours',
+      'PayPal email': 'Must match account email'
+    },
+    finalTake: 'The least frustrating survey site you can join. No screen-outs is huge. Just know the first cashout takes a while to hit. Once you are past it, this becomes a quiet $5 every couple of weeks.',
     idealFor: [
-      'People frustrated by constant survey disqualifications',
-      'Anyone who prefers short, simple surveys over long ones',
-      'Patient users willing to build TraitScore over time',
-      'Those who want guaranteed pay for every survey taken'
+      'Tired of getting screened out 5 minutes in',
+      'Want short surveys with simple questions',
+      'OK waiting a few months for the first $15',
+      'Stacking this with Prolific or Survey Junkie'
     ]
   },
   'appen': {
     name: 'Appen (CrowdGen)',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/appen.jpg',
     link: 'https://crowdgen.com/',
     rate: '$10–$20/hr',
-    description: 'Global AI data company offering search evaluation, data annotation, transcription, and more.',
+    description: 'Label data to help train AI models.',
     category: 'data',
-    tldr: '**What it is:** AI training platform since 1996 (publicly traded ASX:APX). Search evaluation, social media rating, transcription, data annotation for Google, Facebook, Microsoft, Apple. 1M+ contributors, 180+ languages. Paid $157M+ in 2022.\n\n**The pay:** $10–$14/hr average (US), domain experts $20–25/hr. $5 min. PayPal/Payoneer/Airtm/bank. Paid monthly by 14th of following month.\n\n**The catch:** Difficult unpaid qualification exams (time-consuming). Monthly payments only. Work availability fluctuates. Can be removed from projects without warning. Slow/unresponsive support. Hours often capped 20–29/week.',
-    intro: '',
+    tldr: '**What it is:** Big AI training platform since 1996. Rate search results, label data, transcribe audio for Google, Facebook, Microsoft, and Apple.\n\n**The pay:** $10 to $14/hr (US), domain experts $20 to $25/hr. PayPal, Payoneer, Airtm, or bank. $5 minimum, monthly cashout.\n\n**The catch:** Qualification exams are long and unpaid. Work comes and goes. Payments are monthly only. You can get pulled off a project with no notice.',
     whyAdhd: [
-      'Flexible hours — work when you want (most projects)',
-      'Variety of task types to keep things interesting',
-      'No minimum hours for most projects',
-      'Work from anywhere — 100% remote',
-      'Clear project guidelines and study materials'
+      'Work when you want for most projects.',
+      'Different task types stop the grind.',
+      '100% remote.',
+      'Each project has a clear rule sheet.',
+      'Long projects exist (3 to 12 months) if you want stability.'
     ],
-    standOut: [
-      'Established company — publicly traded (ASX: APX) since 1996',
-      'Major clients: Google, Facebook, Microsoft, Apple',
-      'Paid $157M+ to contributors in 2022',
-      '1M+ contributors in 180+ languages',
-      'Multiple payment options: PayPal, Payoneer, Airtm, bank transfer',
-      'Long-term projects available (3–12 months)',
-      'Ranked #1 by FlexJobs for remote work (2020)'
+    pros: [
+      'Publicly traded since 1996',
+      'Real clients (Google, Facebook, Microsoft, Apple)',
+      'Paid $157M+ in 2022',
+      '180+ languages supported',
+      'Multiple payment options'
     ],
-    importantNotes: [
-      'Monthly payments only — paid by 14th of following month',
-      'Qualification exams required for most projects (unpaid)',
-      'Exams are notoriously difficult and time-consuming',
-      'Work availability fluctuates significantly',
-      'Can be suddenly removed from projects without warning',
-      'Support/communication is often slow or unresponsive',
-      'Training time is typically unpaid',
-      'Hours often capped at 20–29/week per project',
-      'Pay rates vary significantly by country'
+    cons: [
+      'Monthly pay cycle only',
+      'Tough unpaid qualification exams',
+      'Work volume swings hard',
+      'Can get cut from a project with no notice',
+      'Slow support'
     ],
-    payoutInfo: [
-      'Most projects: $10–$14/hr (US rates)',
-      'Domain experts: $20–$25/hr',
-      'Payments processed monthly (by 14th of following month)',
-      'Minimum payout: $5',
-      'Payment via PayPal, Payoneer, Airtm, bank transfer',
-      'PayPal/Payoneer may charge fees ($1–3%)',
-      'Must submit invoice at beginning of each month',
-      'US/UK get one free bank transfer per month'
-    ],
-    taskTypes: [
-      'Search engine evaluation — rate relevance of Google/Bing results',
-      'Social media evaluation — rate Facebook/Instagram content relevance',
-      'Map quality analysis — verify business locations and map data',
-      'Data annotation — label images, video, audio, text',
-      'Transcription — convert audio to text',
-      'Translation — convert content between languages',
-      'Content moderation — review and flag inappropriate content',
-      'AI chatbot testing — evaluate AI responses',
-      'Voice/video recording — provide speech/image data',
-      'Fact-checking — verify claims on social media'
-    ],
-    finalTake: 'Appen is a legitimate, well-established platform with real opportunities — but it requires patience. The qualification exams are tough, work availability is unpredictable, and monthly payments mean waiting a long time for your money. Best for people who can pass the exams and don\'t need consistent weekly income. Consider it alongside other platforms rather than relying on it alone.',
+    payout: {
+      'Pay method': 'PayPal, Payoneer, Airtm, or bank transfer',
+      'US rates': '$10 to $14/hr',
+      'Domain experts': '$20 to $25/hr',
+      'Cashout schedule': 'Monthly (by the 14th)',
+      'Minimum payout': '$5',
+      'US/UK perk': 'One free bank transfer per month'
+    },
+    finalTake: 'Real company with real work, just not steady. Pass the exam, get on a long project, and you have a part-time income. Plan around the monthly pay cycle.',
     idealFor: [
-      'People comfortable with difficult qualification exams',
-      'Those who don\'t need weekly payments',
-      'Multilingual workers (180+ languages supported)',
-      'Anyone seeking long-term project stability',
-      'Side hustlers who can wait for irregular work'
+      'OK with long unpaid exams',
+      'Do not need weekly pay',
+      'Speak more than one language',
+      'Want longer-running projects, not one-off HITs'
     ]
   },
   'clickworker': {
     name: 'Clickworker',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/clickworker.png',
     link: 'https://www.clickworker.com/clickworker/',
     rate: '$3–$15/hr',
-    description: 'German microtasking platform with access to UHRS jobs for AI training and data labeling.',
+    description: 'Small writing and labeling tasks. Easy to start.',
     category: 'data',
-    tldr: '**What it is:** German microtask platform since 2005. Surveys, data entry, writing, web research, AI training. Main draw: UHRS access (Microsoft\'s microtask platform) + in-store photo gigs.\n\n**The pay:** $0.02–$7 per task, expect $4–$10/hr realistically. In-store photos $44–$88 per gig. $10 min weekly PayPal/Payoneer (Wed–Fri).\n\n**The catch:** Pay varies wildly. UHRS work inconsistent—batches dry up without warning. Must pass assessments. Some tasks pay extremely low. Account suspensions possible for quality issues.',
-    intro: '',
+    tldr: '**What it is:** German microtask site. Surveys, data entry, writing, web research, AI training. Big draw: UHRS (Microsoft\'s microtask platform) and in-store photo gigs.\n\n**The pay:** $0.02 to $7 per task. Expect $4 to $10/hr most days. In-store photo gigs pay $44 to $88. $10 minimum, weekly PayPal or Payoneer.\n\n**The catch:** Pay swings hard. UHRS batches dry up with no warning. Tasks need assessments to unlock.',
     whyAdhd: [
-      'Bite-sized tasks — most take minutes, not hours',
-      'No commitment — work when you want, skip when you don\'t',
-      'Variety of task types to prevent boredom',
-      'Mobile app for working on the go',
-      'Weekly payouts — faster than many competitors'
+      'Tasks run a few minutes each.',
+      'Skip the ones that pay too little.',
+      'Different task type every time.',
+      'Phone app works on the go.',
+      'Weekly payouts.'
     ],
-    standOut: [
-      'Access to UHRS — one of the largest microtask sources',
-      'Weekly PayPal/Payoneer payments (Wed–Fri)',
-      'Low $10 minimum payout',
-      'In-store photo gigs pay $44–$88',
-      '24/7 helpdesk support',
-      'Mobile app for Android and iOS',
-      'Over 15 years in business',
-      'No fees to join or withdraw (PayPal may charge)'
+    pros: [
+      'UHRS access without separate signup',
+      'Weekly PayPal or Payoneer payouts',
+      'Low $10 minimum',
+      'In-store photo gigs pay $44 to $88',
+      '24/7 helpdesk'
     ],
-    importantNotes: [
-      'UHRS earnings have 39-day payment delay',
-      'Many tasks pay just pennies — check hourly rate before starting',
-      'UHRS requires passing qualification tests',
-      'Task availability varies significantly by location',
-      'Quality matters — rejected work wastes your time',
-      'UHRS can ban you from tasks for low accuracy',
-      'Must provide SSN or EIN (US) to get paid',
-      'Earnings paid in EUR regardless of location',
-      'Survey partner sites often lead to disqualifications'
+    cons: [
+      'UHRS pay has a 39-day delay',
+      'Many tasks pay pennies',
+      'UHRS qualifications can be revoked',
+      'Task volume depends on your location',
+      'Earnings show in EUR regardless'
     ],
-    payoutInfo: [
-      'Regular tasks: $0.02–$7 per task',
-      'UHRS tasks: $0.02–$0.80 per HIT',
-      'In-store photo gigs: $44–$88',
-      'Minimum payout: $10 (PayPal/ACH) or $20 (Payoneer)',
-      'PayPal/Payoneer: Weekly, Wed–Fri',
-      'SEPA (Europe): Bi-weekly (1st–3rd and 15th–17th)',
-      'UHRS earnings: 39-day delay before becoming payable',
-      'ACH transfers: 5–7 business days after bill run'
-    ],
-    taskTypes: [
-      'UHRS microtasks — search evaluation, content moderation, AI training',
-      'Data categorization — sort and label information',
-      'Image/video tagging — identify objects, people, scenes',
-      'Text creation — write product descriptions, reviews',
-      'Web research — find and verify information',
-      'Surveys — partner sites like Peanut Labs',
-      'Voice/video recording — provide speech data',
-      'In-store visits — photograph products and stores',
-      'App testing — test mobile applications',
-      'Proofreading — check text for errors'
-    ],
-    finalTake: 'Clickworker is best for two things: UHRS access and in-store photo gigs. The native microtasks often pay poorly (think $3–5/hr), but UHRS can boost that to $8–15/hr if you find good HITs. The 39-day UHRS payment delay is annoying, but weekly payouts on regular tasks help. Don\'t rely on it for consistent income — treat it as spare-time money when good tasks appear.',
+    payout: {
+      'Pay method': 'Weekly PayPal or Payoneer (Wed to Fri)',
+      'Regular tasks': '$0.02 to $7',
+      'UHRS HITs': '$0.02 to $0.80',
+      'In-store photo gigs': '$44 to $88',
+      'PayPal/ACH minimum': '$10',
+      'Payoneer minimum': '$20',
+      'UHRS hold': '39 days before payable'
+    },
+    finalTake: 'The two reasons to use this site are UHRS and the in-store photo gigs. Native microtasks pay $3 to $5/hr, UHRS can hit $8 to $15/hr. Weekly cashout helps. Bonus money, not a paycheck.',
     idealFor: [
-      'People who want UHRS access without multiple platform signups',
-      'Side hustlers willing to do in-store photo gigs',
-      'Anyone comfortable with variable, unpredictable earnings',
-      'Those who can spot high-value tasks among low-paying ones',
-      'Workers who prefer weekly payouts over monthly'
+      'Want UHRS access without separate signups',
+      'OK driving to do in-store photo gigs',
+      'Can spot the high-paying tasks in a low-paying list',
+      'Like weekly cashouts'
     ]
   },
   'neevo': {
     name: 'Neevo',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/neevo.png',
     link: 'https://www.neevo.ai/',
     rate: '$10–$15/hr',
-    description: 'AI training platform for speech, text, image annotation, and data validation tasks.',
+    description: 'Simple text, image, and audio tasks for AI training.',
     category: 'data',
-    tldr: 'Simple AI training tasks — transcription, image tagging, speech validation. Claims $10–15/hr average but work is sporadic (2–3 projects/year). PayPal only, $3 minimum, but payments can take weeks to months after job completion.',
-    intro: 'Neevo (by DefinedCrowd) is a crowdsourcing platform that helps train AI for major companies like Mastercard, Yahoo Japan, and BMW. Tasks focus on speech and language AI — think verifying transcriptions, recording your voice, annotating text, and tagging images.\n\nThe platform is legitimate and has been around since the late 2010s. It\'s best suited for quick bursts of work when projects are available rather than steady income, as jobs come in waves and availability varies significantly by location.',
+    tldr: '**What it is:** AI training site by DefinedCrowd. Transcribe audio, tag images, validate speech for Mastercard, Yahoo Japan, and BMW.\n\n**The pay:** They claim $10 to $15/hr. PayPal only, $3 minimum cashout.\n\n**The catch:** 2 or 3 projects a year is typical. Payments take 2 to 6 weeks, sometimes months. Tasks that miss quality go unpaid.',
     whyAdhd: [
-      'Short tasks — work in 10–15 minute chunks',
-      'Mobile app — complete tasks anywhere',
-      'Simple work — no complex thinking required',
-      'No minimum hours or commitments',
-      'Low payout threshold ($3) — cash out small amounts'
+      'Tasks run 10 to 15 minutes.',
+      'Phone app works anywhere.',
+      'Simple work. No complex thinking.',
+      'No minimum hours.',
+      '$3 cashout.'
     ],
-    standOut: [
-      'Major clients: Mastercard, Yahoo Japan, BMW',
-      'Mobile app for Android and iOS',
-      'Low $3 minimum payout',
-      'Tasks are genuinely simple — no coding needed',
-      'Claims $10–15/hr average earnings',
-      'Chat support available on website',
-      'Free to join — no fees'
+    pros: [
+      'Real clients (Mastercard, Yahoo Japan, BMW)',
+      'iOS and Android apps',
+      'Low $3 minimum cashout',
+      'Simple tasks, no complex thinking',
+      'Free to join'
     ],
-    importantNotes: [
-      'Work is very sporadic — maybe 2–3 projects per year',
-      'Payment delays are common (2–6 weeks, sometimes months)',
-      'Must wait for entire job to complete before payment',
-      'High rejection rate — tasks not meeting quality standards go unpaid',
-      'PayPal only — must be 18+ and verified',
-      'Must pass language/skills tests before accessing most work',
-      'App can be buggy according to reviews',
-      'Payments split into multiple small amounts — hard to track',
-      'Job availability depends heavily on your location'
+    cons: [
+      'Work is rare (a few projects a year)',
+      'Payments take 2 to 6 weeks',
+      'High rejection rate',
+      'PayPal only',
+      'App has bugs'
     ],
-    payoutInfo: [
-      'Pay varies by task difficulty — pennies to dollars per task',
-      'Average: $10–$15/hr (company claim)',
-      'Minimum payout: $3',
-      'PayPal only — must be verified',
-      'Payment after job closes + validation (2+ weeks typical)',
-      'Can take 40+ days in some cases',
-      'Partial payments possible for long-running jobs',
-      'Must manually request cashout'
-    ],
-    taskTypes: [
-      'Speech validation — verify if transcriptions match audio',
-      'Audio transcription — convert speech to text',
-      'Voice recording — record phrases for AI training',
-      'Text annotation — tag entities, sentiment, intent',
-      'Image annotation — draw bounding boxes, label objects',
-      'Video tasks — tag and validate video content',
-      'Dialogue collection — have conversations to train chatbots',
-      'Data validation — verify accuracy of existing data'
-    ],
-    finalTake: 'Neevo is best as a "check occasionally" platform rather than a regular income source. When projects align with your profile, the work is genuinely simple and pays reasonably. The catch? Jobs are rare, payment delays are frustrating, and rejection rates can be high. Sign up, complete the skills tests, and check back periodically — but don\'t rely on it for consistent earnings.',
+    payout: {
+      'Pay method': 'PayPal only',
+      'Pay per task': 'Pennies to dollars',
+      'Average rate (per company)': '$10 to $15/hr',
+      'Minimum cashout': '$3',
+      'Payment timing': '2+ weeks after job closes',
+      'Cashout': 'Manual request'
+    },
+    finalTake: 'Sign up and check back. When a project fits you, the work is easy and pay is fine. Just do not count on it for regular money.',
     idealFor: [
-      'People who want occasional extra cash, not steady income',
-      'Those comfortable with long payment delays',
-      'Workers who prefer mobile-friendly tasks',
-      'Anyone interested in speech/language AI work',
-      'Side hustlers with patience for sporadic availability'
+      'Want occasional bonus cash',
+      'OK with long payment delays',
+      'Prefer phone-friendly tasks',
+      'Interested in speech and language AI'
     ]
   },
   'outlier': {
     name: 'Outlier',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/outlier.png',
     link: 'https://outlier.ai/',
     rate: '$15–$50/hr',
-    description: 'Train AI models with your expertise in writing, coding, math, science, and more.',
+    description: 'Help train AI by rating its answers. Pays well.',
     category: 'data',
-    tldr: 'Use your expertise to train AI — write prompts, evaluate outputs, fact-check responses. Pay ranges from $15/hr (generalists) to $50+/hr (STEM experts). Weekly PayPal payments. Work is inconsistent and training is often unpaid.',
-    intro: 'Outlier (owned by Scale AI) connects subject matter experts with companies building AI models. Your job? Help make AI smarter by writing prompts, ranking outputs, correcting responses, and providing expert knowledge in your field.\n\nThey\'ve paid out over $100 million to 1M+ contributors and work with major AI labs. If you have expertise in coding, math, science, law, writing, or other specialized fields, you can earn significantly more than basic data annotation work.',
+    tldr: '**What it is:** Use your skills to make AI smarter. Write prompts, rate AI answers, fact-check, fix code. Run by Scale AI.\n\n**The pay:** $15 to $25/hr generalist. $30 to $60/hr if you have coding, math, science, or law skills. Weekly PayPal. $10 minimum.\n\n**The catch:** Training is usually unpaid (2 to 10 hours per project). Work comes and goes. Support is bad.',
     whyAdhd: [
-      'Flexible schedule — work when you want, no minimum hours',
-      'Intellectually engaging — use your real expertise, not mindless clicking',
-      'Variety of tasks — prompts, evaluations, fact-checking, coding challenges',
-      'Work from anywhere — 100% remote',
-      'Weekly payments — faster than most platforms'
+      'You actually use your brain, not just click.',
+      'No minimum hours.',
+      'Mix of prompts, ratings, fact-checks, code.',
+      '100% remote.',
+      'Paid weekly.'
     ],
-    standOut: [
-      'Higher pay for specialized expertise ($30–$60/hr for STEM, coding, etc.)',
-      'Owned by Scale AI — legitimate, well-funded company',
-      'Featured in Forbes, TIME for AI training work',
-      'Paid out $100M+ to contributors',
-      'Weekly payments via PayPal, Airtm, or ACH',
-      'Low $10 minimum payout threshold',
-      'No contracts or commitments — work as much or little as you want'
+    pros: [
+      'Owned by Scale AI',
+      'High pay for STEM or coding skills',
+      'Paid out $100M+ to workers',
+      'Weekly payouts',
+      'No commitment or hours'
     ],
-    importantNotes: [
-      'Work availability is inconsistent — can go weeks without tasks',
-      'Training and assessments are often unpaid (2–10 hours per project)',
-      'Must pass qualification tests for each project',
-      'Quality reviews are strict — can be removed from projects suddenly',
-      'Poor communication and support reported by many users',
-      'Pay can be less than advertised due to time tracking issues',
-      'ID verification required',
-      'Not a reliable primary income source'
+    cons: [
+      'Work disappears for weeks at a time',
+      'Training and assessments are unpaid (2 to 10 hrs)',
+      'Each project has its own qualification test',
+      'Strict quality checks can get you cut',
+      'Slow support'
     ],
-    payoutInfo: [
-      'Generalist tasks: $15–$25/hr',
-      'Specialized expertise (coding, STEM, law): $30–$60/hr',
-      'Payments processed weekly on Tuesdays',
-      'Payment via PayPal, Airtm, or ACH bank transfer',
-      'Minimum payout: $10',
-      'PayPal payments usually arrive within 24 hours',
-      'Bank transfers take 3–5 business days'
-    ],
-    taskTypes: [
-      'Prompt engineering — write questions that challenge AI models',
-      'Response evaluation — rate and rank AI outputs for quality',
-      'Fact-checking — verify accuracy of AI-generated content',
-      'Response editing — improve AI outputs for clarity and correctness',
-      'Coding tasks — review code, solve programming challenges',
-      'Math/science problems — create and evaluate complex reasoning tasks',
-      'Domain expertise — apply specialized knowledge (law, medicine, finance)'
-    ],
-    finalTake: 'Outlier offers some of the best pay rates in AI training — especially if you have STEM, coding, or specialized expertise. The catch? Work is unpredictable, unpaid training eats into earnings, and support is notoriously poor. Great as a side hustle when projects align with your skills, but don\'t count on consistent income. Check it regularly and grab good projects when they appear.',
+    payout: {
+      'Pay method': 'PayPal, Airtm, or ACH',
+      'Generalist rate': '$15 to $25/hr',
+      'Coding, STEM, law': '$30 to $60/hr',
+      'Pay cycle': 'Weekly on Tuesdays',
+      'Minimum cashout': '$10',
+      'PayPal speed': 'Within 24 hours'
+    },
+    finalTake: 'Best pay in AI training if you have a real skill. Catch is the unpaid training and the on-again off-again work. Sign up, grab projects when they fit, treat it as bonus money.',
     idealFor: [
-      'Subject matter experts (coding, math, science, law, writing)',
-      'People who want intellectually engaging remote work',
-      'Side hustlers comfortable with inconsistent task availability',
-      'Anyone who prefers weekly payments over monthly'
+      'Skills in coding, math, science, law, or writing',
+      'Want a remote gig that uses your brain',
+      'OK with weeks of no work between projects',
+      'Like weekly payouts'
     ]
   },
   'gigspot': {
     name: 'GigSpot',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/gigspot.jpg',
     link: 'https://gigspot.com/',
     rate: '$10–$75/job',
-    description: 'Aggregator app connecting shoppers with dozens of mystery shopping companies.',
+    description: 'One app to find mystery shopping gigs from many companies.',
     category: 'fun',
-    tldr: 'Job board aggregating mystery shopping and market research gigs from dozens of companies into one app. Pay $10–$75 per job (some experienced shoppers report $45–$75/hr on phone shops). GigSpot doesn\'t pay you — each company has its own payment policy. Great for consolidating opportunities.',
-    intro: 'GigSpot is a free aggregator platform that connects you with mystery shopping and market research companies through a single app. Instead of signing up separately with dozens of providers, you manage one profile and access thousands of jobs from multiple companies.\n\nDeveloped by ResearchMetrics (which also powers ShopMetrics), GigSpot consolidates opportunities so companies compete for your service. You see compensation, reimbursement, dates, and distance before accepting any job.',
+    tldr: '**What it is:** One app that pulls mystery shopping gigs from dozens of companies. One profile, one dashboard, thousands of jobs.\n\n**The pay:** $10 to $75 per job. Phone mystery shops can hit $45 to $75/hr for experienced shoppers. Free to use.\n\n**The catch:** GigSpot itself does not pay you. Each company pays on its own schedule. Payment timing ranges from same week to 8 weeks. App is buggy.',
     whyAdhd: [
-      'One app instead of juggling 20+ company accounts',
-      'Push notifications for new jobs — fewer emails',
-      'Map-based job search shows nearby opportunities',
-      'See pay and requirements before committing',
-      'Phone mystery shops available (faster, less travel)',
-      'Complete certifications within the app'
+      'One login instead of 20+ company accounts.',
+      'Push notifications when new jobs hit.',
+      'Map view shows jobs near you.',
+      'You see pay, distance, and rules before accepting.',
+      'Phone shops mean no driving.'
     ],
-    standOut: [
-      'Access dozens of mystery shopping companies in one place',
-      'Tens of thousands of job opportunities',
-      'Single profile across all companies',
-      'Free to use — no fees',
-      'iOS and Android apps available',
-      'Web access also works (no smartphone required)',
-      'Push notifications reduce email clutter',
-      'Blue dot marks new jobs',
-      'Experienced shoppers report $45–$75/hr on phone shops',
-      'Works with ShopMetrics platform companies'
+    pros: [
+      'Dozens of mystery shopping companies in one app',
+      'Tens of thousands of jobs',
+      'Free to use',
+      'iOS, Android, and web',
+      'Phone shops can hit $45 to $75/hr'
     ],
-    importantNotes: [
-      'GigSpot doesn\'t pay you — each company pays directly',
-      'Payment timelines vary (some same week, others 8+ weeks)',
-      'Most companies use PayPal; some offer direct deposit',
-      'App is slow/glitchy according to many reviews',
-      'Can\'t add photos after starting report (must use PC)',
-      'Some jobs require specific skills or certifications',
-      'Companies using GigSpot may not list all jobs there',
-      'Can\'t use same email for both GigSpot and MobiAudit',
-      'Job availability depends heavily on location',
-      'Search function is limited/buggy'
+    cons: [
+      'GigSpot does not pay you (each company does)',
+      'Payment timing ranges from same week to 8 weeks',
+      'App is slow and crashes',
+      'Cannot add photos after starting a report',
+      'Job volume depends on your location'
     ],
-    payoutInfo: [
-      'Typical jobs: $10–$40',
-      'Higher-end jobs: up to $75+',
-      'Phone mystery shops: faster, pay slightly less',
-      'Experienced shoppers: $45–$75/hr possible',
-      'Reimbursements for purchases (varies by job)',
-      'Payment methods: PayPal most common, some offer direct deposit',
-      'Payment timing: Varies by company (days to 8 weeks)',
-      'No payout threshold — paid per completed job'
-    ],
-    taskTypes: [
-      'In-store mystery shops — retail, restaurants',
-      'Phone mystery shops — call evaluations (faster)',
-      'Market research gigs — surveys, feedback',
-      'Video mystery shops — recorded evaluations',
-      'Restaurant evaluations — dine and report',
-      'Odd jobs — various tasks beyond typical mystery shopping',
-      'Certification-required assignments — specialized shops'
-    ],
-    finalTake: 'GigSpot solves the biggest mystery shopping headache — managing accounts with dozens of companies. One profile, one app, thousands of jobs. The catch: the app itself is notoriously slow and glitchy (reviews complain for years with no fix). Payment varies wildly since each company handles it differently. Best for experienced shoppers who want to consolidate opportunities, but be prepared for app frustrations.',
+    payout: {
+      'Pay method': 'Each company pays on its own (mostly PayPal)',
+      'Typical jobs': '$10 to $40',
+      'Higher-end jobs': '$75+',
+      'Phone shops (experienced)': '$45 to $75/hr',
+      'Reimbursements': 'Vary by job',
+      'Minimum payout': 'None (paid per job)'
+    },
+    finalTake: 'Solves the biggest mystery shopping headache: dozens of separate company accounts. One app, lots of jobs. App is buggy but the time it saves is worth it. Plan for uneven payment timing.',
     idealFor: [
-      'Experienced mystery shoppers wanting one dashboard',
-      'People tired of managing multiple company accounts',
-      'Those who prefer phone mystery shops (faster work)',
-      'Shoppers in major cities with more opportunities',
-      'Anyone comfortable with varying payment timelines'
+      'Already a mystery shopper and tired of juggling accounts',
+      'Prefer phone shops over driving',
+      'Live in a city with lots of jobs',
+      'OK with each company paying on its own clock'
     ]
   },
   'testbirds': {
     name: 'Testbirds',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/testbirds.jpeg',
     link: 'https://nest.testbirds.com/home',
     rate: '€10–€50/test',
-    description: 'German crowdtesting platform paying testers to find bugs and test usability.',
+    description: 'Test sites and apps. Get paid per test, plus $1 for each bug you find.',
     category: 'testing',
-    tldr: 'Find bugs and test websites/apps for €10–€50 per test (plus €1 per bug found). German company, pays in Euros via PayPal or bank transfer. Must pass entry test first. Test availability varies by location — best for EU testers.',
-    intro: 'Testbirds is a German crowdtesting company founded in 2011 that connects software testers with businesses needing real-world feedback. As a "Testbird," you\'ll hunt for bugs, test usability, and provide feedback on websites, apps, games, and IoT devices.\n\nWith over 1 million testers across 193 countries and clients like BMW, Audi, and Deutsche Telekom, Testbirds is one of the largest crowdtesting platforms in Europe. They offer both bug-hunting (functional testing) and usability testing opportunities.',
+    tldr: '**What it is:** German testing platform. Hunt bugs and test usability on apps, sites, games, and smart devices.\n\n**The pay:** €10 to €50 per test, plus €1 per approved bug. Pays in Euros via PayPal or bank (SEPA). €10 minimum cashout.\n\n**The catch:** Pass an entry test first. Test volume is best inside the EU. Outside the EU you get fewer invites.',
     whyAdhd: [
-      'Variety of test types — bugs, usability, games',
-      'Detective-style work — hunting for problems is engaging',
-      'Tests typically 15–30 minutes',
-      'Work on phone, tablet, or computer',
-      'No set schedule — test when invited',
-      'Experience points gamify the process'
+      'Bug hunting feels like detective work.',
+      'Mix of bugs, usability, and games keeps it fresh.',
+      'Tests run 15 to 30 minutes.',
+      'Work on phone, tablet, or computer.',
+      'Experience points unlock better tests over time.'
     ],
-    standOut: [
-      'Founded 2011 — established European company',
-      '1M+ testers across 193 countries',
-      'Major clients: BMW, Audi, Deutsche Telekom, Allianz',
-      '€5 bonus for completing entry test',
-      'Pays per bug found (€1 each) plus base rate',
-      'Experience points unlock better opportunities',
-      'Both PayPal and direct bank transfer (SEPA)',
-      'No prior IT experience required',
-      'Game and IoT testing available'
+    pros: [
+      'Real clients (BMW, Audi, Deutsche Telekom, Allianz)',
+      'Around since 2011',
+      '€5 entry test bonus',
+      'Bug bounty stacks on top of base pay',
+      'PayPal or SEPA bank transfer'
     ],
-    importantNotes: [
-      'Must pass entry test to receive real invitations',
-      'Test availability varies heavily by location (EU preferred)',
-      'Invitations based on devices registered and demographics',
-      '€10 minimum balance required for payout',
-      'Payments processed twice monthly (mid-month and end of month)',
-      'EU testers need to provide Tax ID (TIN) for payment',
-      'Quality matters — poor reports reduce Experience Points',
-      'Accepting invitation is binding commitment',
-      'Competition for test slots — respond quickly to invites'
+    cons: [
+      'Must pass entry test to see real invites',
+      'Best invite volume only in the EU',
+      '€10 minimum cashout',
+      'EU testers need a Tax ID',
+      'Accepting an invite is binding'
     ],
-    payoutInfo: [
-      'Usability tests: €10–€50 per test',
-      'Bug bounty: €1 per approved bug found',
-      'Entry test bonus: €5',
-      'Average: €15–€20 per test',
-      'Complex/professional tests: €50+',
-      'Minimum payout: €10',
-      'Payment methods: PayPal or SEPA bank transfer',
-      'Payout schedule: Twice monthly (request-based)',
-      'Processing time: ~2 weeks after approval'
-    ],
-    taskTypes: [
-      'Bug hunting — find and report software errors',
-      'Usability testing — evaluate ease of use',
-      'Website testing — test functionality and design',
-      'Mobile app testing — iOS and Android',
-      'Game testing — browser and mobile games',
-      'IoT testing — smart devices and wearables',
-      'Remote interviews — moderated video sessions (higher pay)',
-      'Prototype testing — pre-release products'
-    ],
-    finalTake: 'Testbirds is a solid option for European testers with good pay rates (€15–20 average) and the bonus of earning extra per bug found. The Experience Points system rewards quality work with more opportunities. Main drawbacks are inconsistent test availability (especially outside EU) and the €10 minimum payout. Best used alongside other testing platforms.',
+    payout: {
+      'Pay method': 'PayPal or SEPA bank transfer',
+      'Usability tests': '€10 to €50',
+      'Bug bounty': '€1 per approved bug',
+      'Entry test bonus': '€5',
+      'Minimum cashout': '€10',
+      'Pay frequency': 'Twice a month, processing ~2 weeks'
+    },
+    finalTake: 'Solid pick if you live in the EU. Pay is fair (€15 to €20 a test average) and bug bounty stacks. Outside the EU expect thin invite volume. Stack it with another testing site.',
     idealFor: [
-      'EU-based testers (SEPA payments, more opportunities)',
-      'Detail-oriented bug hunters',
-      'People with multiple devices to register',
-      'Testers who enjoy gamified progression systems',
-      'Those comfortable with German company processes'
+      'In the EU and want SEPA payouts',
+      'Like spotting broken stuff on websites',
+      'Own a few devices to test on (phone, tablet, laptop)',
+      'OK with German company process'
     ]
   },
   'bestmark': {
     name: 'BestMark',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/bestmark.jpg',
     link: 'https://www.bestmark.com/become-a-mystery-shopper/',
     rate: '$5–$25/shop',
-    description: 'One of the largest mystery shopping companies with nationwide assignments.',
+    description: 'Mystery shopping at lots of stores and restaurants.',
     category: 'fun',
-    tldr: 'Visit stores, restaurants, and businesses undercover to evaluate customer service. Pay is $5–$25 per shop plus reimbursements for purchases. Payments via PayPal, direct deposit, or gift card between 15th–20th monthly. Huge variety but recent payment delay complaints.',
-    intro: 'BestMark is one of the oldest and largest mystery shopping companies in the United States, featured on the Oprah Show and Essence Magazine. With an A+ BBB rating, they connect independent contractors with businesses wanting real customer feedback.\n\nAs a mystery shopper, you\'ll visit retail stores, restaurants, car dealerships, banks, and other businesses while posing as a regular customer. You\'ll evaluate things like cleanliness, employee behavior, wait times, and product quality — then submit a detailed report within 24 hours.',
+    tldr: '**What it is:** Walk into a store, restaurant, or dealership undercover. Watch how staff treats you. File a short report.\n\n**The pay:** $5 to $25 per shop plus reimbursement for what you buy. Paid 15th to 20th of the month after the shop. PayPal, direct deposit, or gift card.\n\n**The catch:** Recent reviews show payment waits of 2+ months. Reports due by 10am Central the next day. One mistake can dock pay.',
     whyAdhd: [
-      'Get out of the house — real-world activities',
-      'Variety of shop types keeps it interesting',
-      'Short tasks — most shops take 15–30 minutes',
-      'Free food/services — many shops include reimbursements',
-      'No fixed schedule — work when you want',
-      'Detective vibes — observe without being noticed'
+      'Gets you out of the house.',
+      'Most shops take 15 to 30 minutes.',
+      'Free food and services through the reimbursement.',
+      'Pick the shops you want.',
+      'Mild detective work, no two shops the same.'
     ],
-    standOut: [
-      'One of the largest US mystery shopping companies',
-      'A+ BBB rating — established since 1986',
-      'Featured on Oprah, Essence Magazine',
-      'Shops available across US and Canada',
-      'Three payment options: PayPal, direct deposit, gift card',
-      'Free meals, car washes, services with many shops',
-      'No fee to join — free registration',
-      'Three assignment types: mystery shops, intercept interviews, compliance audits',
-      'Wide variety of industries: retail, automotive, hospitality, banking'
+    pros: [
+      'Around since 1986, A+ BBB rating',
+      'Shops across US and Canada',
+      'PayPal, direct deposit, or gift card',
+      'Free meals, car washes, services included',
+      'Free to join'
     ],
-    importantNotes: [
-      'Recent payment delay complaints — some waiting months',
-      'Reports due by 10am CT the day after your shop',
-      'Strict requirements — small mistakes can dock pay',
-      'Payment 15th–20th of month for previous month\'s work',
-      'Reimbursements are modest ($5–$25 typically)',
-      'Must pay upfront for purchases — reimbursed later',
-      'Shops fill quickly — check frequently',
-      'Detailed profile questions required to qualify for shops',
-      'Can\'t exceed reimbursement amount (tax included)',
-      'Blown cover = no payment'
+    cons: [
+      'Users report payment waits of 2+ months',
+      'Reports due by 10am Central the next morning',
+      'Small mistakes dock your pay',
+      'You pay upfront for purchases',
+      'Blow cover = no pay'
     ],
-    payoutInfo: [
-      'Shop fees: $5–$25 per assignment',
-      'Some shops: Reimbursement only (no cash fee)',
-      'Better shops: $35+ for specialty assignments',
-      'Experienced shoppers: $5,000–$10,000/year possible',
-      'Payment methods: PayPal, direct deposit, gift card',
-      'Payment schedule: 15th–20th of each month',
-      'For previous month\'s approved work',
-      'Processing time: 3–4 weeks after shop completion',
-      'Hourly equivalent: ~$7–$20/hr for new shoppers'
-    ],
-    taskTypes: [
-      'Restaurant shops — dine and evaluate service/food',
-      'Retail evaluations — assess store cleanliness, staff',
-      'Car dealership visits — evaluate sales experience',
-      'Bank/financial shops — test teller interactions',
-      'Car wash shops — free wash + fee',
-      'Phone shops — call businesses from home',
-      'Intercept interviews — survey customers leaving stores',
-      'Compliance audits — check pricing, displays, procedures',
-      'Service shops — salons, spas, auto repair'
-    ],
-    finalTake: 'BestMark offers solid variety with nationwide coverage and multiple payment options — better than many mystery shopping companies. However, recent reviews show significant payment delays (some waiting 2+ months), which is a major red flag. The pay itself is modest ($5–$25 + reimbursements). Best approach: treat it as subsidized shopping for things you\'d buy anyway, and don\'t rely on timely payment.',
+    payout: {
+      'Pay method': 'PayPal, direct deposit, or gift card',
+      'Shop fee': '$5 to $25',
+      'Specialty shops': '$35+',
+      'Some shops': 'Reimbursement only, no cash fee',
+      'Pay schedule': '15th to 20th for the previous month',
+      'Experienced shoppers': '$5,000 to $10,000/year'
+    },
+    finalTake: 'Pay is modest. Treat it as a way to get free meals and services at places you would go anyway. The recent payment delays are a red flag. Use it as one of several mystery shopping accounts, not your main one.',
     idealFor: [
-      'People who enjoy dining out and shopping',
-      'Stay-at-home parents wanting flexible income',
-      'Detail-oriented observers',
-      'Those who want free meals/services',
-      'Anyone comfortable with undercover scenarios'
+      'Like eating out and shopping anyway',
+      'Want flexible local work',
+      'Detail brain that can fill out a strict form',
+      'OK paying upfront and waiting for reimbursement'
     ]
   },
   'carecom': {
@@ -1457,551 +1041,455 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/5I3e2N4NAjdUE4PJqfKY.dat',
     link: 'https://www.care.com',
     rate: '$20-$35/hr',
-    description: 'Babysitting, elder care, special needs support, flexible compassionate work.  ',
+    description: 'Babysitting, elder care, and more. Flexible hours.',
     category: 'care',
-    intro: '**Care.com** connects people who need care—with people who care. Whether you’re offering babysitting, elder care, pet sitting, or help with special needs, this platform helps you find paying gigs in your area or remotely (think: tutoring or virtual companionship).  \n\nInstead of job boards filled with spam or one-off gigs, Care.com creates a central hub for ongoing, often meaningful work—especially for empathetic folks who want flexible hours and feel-good impact.\n\nIt’s like LinkedIn... but for people who’d rather read bedtime stories than attend Zoom meetings.',
-    whyAdhd: ['Flexible work—set your own schedule', 'Real human connection = dopamine + purpose', 'Every job is a little different, so it rarely feels repetitive', 'Short bursts of engagement (childcare, pet walks, tutoring)', 'Great for those who thrive with *in-person* or active tasks'],
-    standOut: ['Covers a wide range of gigs: childcare, elder care, tutoring, housekeeping, pet care', 'Lets *you* choose your rates, availability, and services', 'In-app messaging and scheduling = less chaos', 'Clients can find *you*—no constant gig chasing', 'Local focus, but some remote roles too (like virtual tutoring)', 'Free basic plan + optional paid upgrade for visibility and background checks'],
-    importantNotes: [],
-    payoutInfo: [],
-    taskTypes: [],
-    finalTake: 'If you\'re someone who thrives on human connection and variety, **Care.com** might be your ADHD sweet spot. It’s not instant cash, but it *is* a powerful way to build reliable income doing meaningful work. Think of it as a platform where kindness meets cash flow.',
-    idealFor: ['Empathetic ADHDers who love helping others', 'People who want local, flexible gigs without a desk', 'Anyone who prefers in-person tasks or physical movement', 'Freelancers who want to build relationships with repeat clients']
+    tldr: '**What it is:** Job site for childcare, elder care, pet care, housekeeping, and tutoring. Clients in your area find you.\n\n**The pay:** $20 to $35/hr depending on the work and your area. You set your own rate. Pay handled outside the platform (cash, Venmo, checks).\n\n**The catch:** Free profile works but a paid upgrade gets you more visibility and a background check badge. Steady work takes time. Be ready to message back fast when a client reaches out.',
+    whyAdhd: [
+      'Set your own schedule.',
+      'Real human contact, not a screen.',
+      'Every job is a little different.',
+      'Short bursts (a 3-hour sit, a dog walk).',
+      'Active work, not desk work.'
+    ],
+    pros: [
+      'Childcare, elder care, tutoring, housekeeping, pet care all on one site',
+      'You pick your rates and availability',
+      'In-app messaging and scheduling',
+      'Clients find you',
+      'Free plan works'
+    ],
+    cons: [
+      'Steady clients take time to build',
+      'Pay handled outside the platform',
+      'Paid background check',
+      'Have to reply fast or lose the gig',
+      'Better visibility behind a paid upgrade'
+    ],
+    payout: {
+      'Pay method': 'Cash, Venmo, or check (you handle)',
+      'You set hourly rate': 'Yes',
+      'Typical babysitting': '$15 to $25/hr (more in cities)',
+      'Elder care': '$15 to $30/hr',
+      'Background check': 'Paid extra',
+      'Platform fee': 'None on free plan'
+    },
+    finalTake: 'Not instant cash. But once you land a regular family, it becomes steady weekly income. Best fit if you actually like being around kids, pets, or older folks.',
+    idealFor: [
+      'Like helping people in person',
+      'Want local work, no desk',
+      'Prefer being active to sitting',
+      'Want to build repeat-client relationships'
+    ]
   },
   'rover': {
     name: 'Rover',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/rover.png',
     link: 'https://www.rover.com/become-a-sitter/',
     rate: '$15–$75+/service',
-    description: 'The largest pet care marketplace — dog walking, pet sitting, boarding, daycare, and drop-in visits.',
+    description: 'Dog walking and pet sitting. Like Airbnb for pets.',
     category: 'services',
-    tldr: 'Top pet care app with millions of pet owners. Set your own rates for walking ($15-30), sitting ($25-50/night), boarding ($35-75/night). Rover takes 20% of every booking. Free background check. $1M liability coverage. Weekly payouts via Stripe. Build repeat clients, keep 100% of tips.',
-    intro: '<strong>Rover</strong> is the nation\'s largest network of pet sitters and dog walkers. They connect pet owners with local caregivers for dog walking, pet sitting, boarding, daycare, and drop-in visits.\n\nAs a Rover sitter, you\'re an independent contractor who sets your own rates, schedule, and which pets you accept. Rover handles booking, payments, and provides $1M in liability coverage.',
+    tldr: '**What it is:** Largest pet care app in the US. Walks, sitting, boarding, daycare, drop-in visits.\n\n**The pay:** You set rates. Walking $15 to $30, sitting $25 to $50/night, boarding $35 to $75/night. Rover takes 20% of every booking. Weekly Friday payout via Stripe. Tips are yours.\n\n**The catch:** 20% fee is steep. Reviews take time to build. App can glitch.',
     whyAdhd: [
-      'Set your own schedule — work when you want',
-      'Choose which pets to care for',
-      'Work outside — walks are active, not desk-bound',
-      'Build relationships with regular clients',
-      'Variety of services keeps it interesting',
-      'Photos and updates make it engaging'
+      'Set your own schedule.',
+      'Pick the pets you want.',
+      'Walks get you outside.',
+      'Repeat clients = steady income.',
+      'Phone updates and pet photos make it feel good.'
     ],
-    standOut: [
-      'Largest pet care marketplace',
-      '5-star network of sitters',
-      'Set your own rates',
+    pros: [
+      'Biggest pet care app, most clients',
+      'You set your own rates',
       'Free background check',
-      '$1M liability coverage included',
-      'Rover Guarantee for vet emergencies',
-      '24/7 support available',
-      'Keep 100% of tips',
-      'Weekly Friday payouts',
-      'GPS-tracked walks via Rover Cards'
+      '$1M liability coverage',
+      'Keep 100% of tips'
     ],
-    importantNotes: [
-      'Rover takes 20% of every booking',
-      'California: Different fee structure (25% marketplace + 11% booking)',
-      'Background check required (free)',
-      'Must pass pet care safety quiz',
-      'Competition varies by location',
-      'Building reviews takes time',
-      'Pet owners can see your profile before booking',
-      'Technical glitches reported with app',
-      'Holiday seasons are busiest (and competitive)',
-      'You\'re responsible for your own taxes (1099)'
+    cons: [
+      '20% fee on every booking',
+      'California pays 25% + 11%',
+      'Reviews take time to build',
+      'Competition varies by city',
+      '1099, you handle taxes'
     ],
-    payoutInfo: [
-      'Dog walking: $15–$30 per 30-min walk',
-      'Drop-in visits: $15–$25 per visit',
-      'Doggy daycare: $25–$45 per day',
-      'Overnight sitting: $25–$50 per night',
-      'Boarding: $35–$75 per night',
-      'Rover fee: 20% of every booking',
-      'Tips: Keep 100%',
-      'Payment: Weekly (Fridays) via Stripe',
-      'Instant Pay: 3% extra fee'
-    ],
-    taskTypes: [
-      'Dog walking — 20, 30, or 60-minute walks',
-      'Drop-in visits — feeding, playtime, potty breaks',
-      'Doggy daycare — daytime care at your home',
-      'Overnight boarding — pet stays at your home',
-      'House sitting — stay at pet owner\'s home',
-      'Cat care — visits and sitting',
-      'Multiple pet discounts'
-    ],
-    finalTake: '<strong>Rover is the go-to platform for pet care side hustles.</strong> The 20% fee is significant but you get a massive client base, insurance coverage, and payment protection. Best strategy: Start with competitive rates to build reviews, then raise prices. Many sitters earn $500-1,000+/month part-time. Full-time is possible but requires building a strong reputation and repeat clients.',
+    payout: {
+      'Pay method': 'Weekly Friday Stripe payout',
+      'Dog walking (30 min)': '$15 to $30',
+      'Drop-in visit': '$15 to $25',
+      'Daycare': '$25 to $45',
+      'Overnight': '$25 to $50',
+      'Boarding': '$35 to $75',
+      'Platform fee': '20% (25% + 11% in CA)',
+      'Instant Pay fee': '3% extra'
+    },
+    finalTake: 'The pet care app. 20% fee hurts but the client base is huge. Start with low rates to build reviews, then raise. $500 to $1,000/month part-time is realistic. Full-time is doable but takes a year of repeat-client building.',
     idealFor: [
-      'Animal lovers who want flexible work',
-      'People with homes suitable for boarding',
-      'Those who enjoy outdoor activity (walking)',
-      'Side hustlers wanting extra income',
-      'Anyone comfortable with the 20% platform fee'
+      'Like dogs and cats',
+      'Have a home that works for boarding (or want to walk only)',
+      'Enjoy being outside',
+      'Want flexible side income',
+      'OK with the 20% cut'
     ]
   },
   'wag': {
     name: 'Wag!',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/wag.png',
     link: 'https://wagwalking.com/dog-walker',
     rate: '$9–$33/service',
-    description: 'On-demand dog walking and pet care app — grab available walks nearby, but Wag takes 40% of your earnings.',
+    description: 'Quick dog walks and drop in visits. Fast bookings.',
     category: 'services',
-    tldr: 'On-demand dog walking app. 20-min walk: $9-12, 30-min: $13-17, 60-min: $20-25 (after Wag\'s 40% cut). $49.95 application fee. Background check required. Walks assigned via app — first to accept gets it. Weekly Friday payouts. Good for flexible work, but steep fees.',
-    intro: '<strong>Wag!</strong> is an on-demand dog walking app that works like Uber for pets. When dog owners request a walk, nearby walkers get notified and can accept the job. First to accept gets it.\n\nUnlike Rover where you build ongoing client relationships, Wag! is more transactional — you grab available walks when you want. Wag provides GPS tracking, lockbox access, and handles payments.',
+    tldr: '**What it is:** On-demand dog walking. Owner requests a walk, nearby walkers get a ping, first to accept gets it. Like Uber for pet care.\n\n**The pay:** 20-min walk: $9. 30-min: $13. 60-min: $20. All after Wag\'s 40% cut. Weekly Friday payout. Keep 100% of tips.\n\n**The catch:** 40% fee is brutal (Rover takes 20%). $49.95 application fee. You do not set prices, Wag does.',
     whyAdhd: [
-      'Ultimate flexibility — walk when you want',
-      'No client management — just grab and go',
-      'Get outside and stay active',
-      'Quick tasks — 20-60 minute walks',
-      'App handles everything',
-      'Instant job notifications'
+      'Walk when you want. No client management.',
+      'Grab a walk, do it, get out.',
+      'Gets you outside.',
+      'Walks are 20 to 60 minutes.',
+      'Push notification when a walk is up.'
     ],
-    standOut: [
-      'On-demand — walk available dogs nearby',
-      'GPS tracking for safety',
-      'Lockbox access (no owner needed)',
+    pros: [
+      'On-demand. No relationship building.',
+      'GPS tracking on every walk',
+      'Lockbox access (owner does not need to be home)',
       'Background check included',
-      '$1M insurance coverage',
-      'Keep 100% of tips',
-      'Weekly Friday payouts',
-      'App handles scheduling and payments',
-      'Wag Pro option for more features'
+      'Keep 100% of tips'
     ],
-    importantNotes: [
-      '⚠️ Wag takes 40% of every walk (you keep 60%)',
-      'Application fee: $49.95 (covers background check)',
-      'Wag Pro: $149 one-time fee for extra perks',
-      'You don\'t set prices — Wag sets rates',
-      'Some cities: $15 for 20-min, $22 for 30-min, $33 for 60-min (before 40% cut)',
-      'After Wag\'s cut: ~$9 for 20-min, ~$13 for 30-min, ~$20 for 60-min',
-      'Jobs are first-come, first-served',
-      'Poor reviews from walkers on pay/support',
-      'Glassdoor: 2.5/5 rating',
-      'Coupons reduce walker pay further'
+    cons: [
+      'Wag takes 40% (vs Rover\'s 20%)',
+      '$49.95 application fee',
+      'You do not set prices',
+      'First walker to accept wins',
+      'Owner coupons can cut your pay further'
     ],
-    payoutInfo: [
-      '20-min walk: ~$9 (after 40% fee)',
-      '30-min walk: ~$13 (after 40% fee)',
-      '60-min walk: ~$20 (after 40% fee)',
-      'Wag takes 40% of base rate',
-      'Tips: Keep 100%',
-      'Sitting/boarding rates vary',
-      'Payment: Weekly (Fridays) via Stripe',
-      'Instant Pay: 3% extra fee',
-      'Referral bonus: $50 per new client'
-    ],
-    taskTypes: [
-      'Express walks — 20 minutes',
-      'Standard walks — 30 minutes',
-      'Deluxe walks — 60 minutes',
-      'Drop-in visits — check on pets',
-      'Pet sitting — overnight care',
-      'Boarding — pet stays with you',
-      'Training — if qualified'
-    ],
-    finalTake: '<strong>Wag pays less than Rover but offers more flexibility.</strong> The 40% fee is brutal (vs Rover\'s 20%), but you don\'t need to manage clients or bookings — just grab walks when they\'re available. Best for: people who want truly on-demand work without commitment. Many walkers use both Rover AND Wag.',
+    payout: {
+      'Pay method': 'Weekly Friday Stripe',
+      '20-min walk': '~$9 after fee',
+      '30-min walk': '~$13',
+      '60-min walk': '~$20',
+      'Platform cut': '40% of base rate',
+      'Tips': '100% kept',
+      'Instant Pay fee': '3% extra'
+    },
+    finalTake: 'Pays less than Rover. Trade-off is zero client management. Just grab walks. Most pet walkers stack Rover and Wag together. Use Wag for filler walks, Rover for steady money.',
     idealFor: [
-      'People wanting ultimate flexibility',
-      'Those who prefer grab-and-go over client management',
-      'Dog lovers who want quick walks between activities',
-      'Side hustlers supplementing other income',
-      'NOT for those who want to maximize earnings'
+      'Want grab-and-go work',
+      'Hate client messaging',
+      'Already walking a dog and want filler gigs',
+      'OK trading higher pay for less commitment'
     ]
   },
   'taskrabbit': {
     name: 'TaskRabbit',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/taskrabbit.jpg',
     link: 'https://www.taskrabbit.com/become-a-tasker',
     rate: '$25–$75+/hr',
-    description: 'On-demand local tasks and services — furniture assembly, moving, cleaning, handyman work, and more.',
+    description: 'Cleaning, moving, IKEA assembly, and errands.',
     category: 'services',
-    tldr: 'On-demand task marketplace (owned by IKEA). Set your own hourly rates ($25-100+). No platform fee on your earnings — you keep 100%. Clients pay 15% service fee. $25 registration fee. Background check required. Best for handyman skills, furniture assembly, moving help. Major metro areas only.',
-    intro: '<strong>TaskRabbit</strong> connects local "Taskers" with people who need help with everyday tasks — furniture assembly, moving, cleaning, delivery, and more. Founded in 2008 and acquired by IKEA in 2017.\n\nUnlike most gig platforms, TaskRabbit doesn\'t take a cut of your earnings. You set your hourly rate and keep 100%. Clients pay a separate 15% service fee to TaskRabbit. Available in 70+ cities across US, UK, Canada, Germany, and more.',
+    tldr: '**What it is:** Local task marketplace owned by IKEA. Furniture assembly, moving, cleaning, handyman work, errands.\n\n**The pay:** You set your hourly rate. Average $25 to $75/hr. Handyman work hits $100+/hr. TaskRabbit takes 0% from you. Clients pay a separate 15% fee.\n\n**The catch:** $25 signup fee. Cities only. New Taskers start with low visibility until reviews build up.',
     whyAdhd: [
-      'Variety of tasks keeps it interesting',
-      'Set your own rates and schedule',
-      'Short, defined tasks with clear endpoints',
-      'Physical work — not sitting at a desk',
-      'Immediate results (task done = satisfaction)',
-      'Choose tasks that match your skills'
+      'Mix of task types.',
+      'You set your rate and schedule.',
+      'Short jobs with a clear end.',
+      'Physical work, not desk work.',
+      'Pick tasks that match your skills.'
     ],
-    standOut: [
-      'No platform fee — keep 100% of your rate + tips',
-      'Set your own hourly rates',
-      'Choose which tasks to accept',
+    pros: [
+      'You keep 100% of your rate plus tips',
+      'You set your own hourly rates',
+      'Owned by IKEA, steady assembly work',
       '700+ service categories',
-      'IKEA partnership (lots of furniture assembly)',
-      'Happiness Pledge for client satisfaction',
-      '$1M+ liability coverage',
-      'Repeat client relationships possible',
-      'Mobile app for job management'
+      '$1M liability coverage'
     ],
-    importantNotes: [
-      '$25 registration fee (covers background check)',
-      'Clients pay 15% Trust & Support fee (not from your pay)',
-      'Background check required',
-      'Major metro areas only — limited rural coverage',
-      'Can\'t contact clients before accepting task',
-      'Newer Taskers start with lower visibility',
-      'Reviews heavily impact getting jobs',
-      'Must provide your own tools for many tasks',
-      'Self-employed — handle your own taxes',
-      'Some categories have pre-set rates (Task-Based Earning)'
+    cons: [
+      '$25 signup fee',
+      'Cities only',
+      'Cannot message clients before accepting',
+      'New Taskers show up lower in search',
+      'You bring your own tools'
     ],
-    payoutInfo: [
-      'Average Tasker rate: $25–$75/hr',
-      'Furniture assembly: $40–$60/hr typical',
-      'Moving help: $35–$50/hr typical',
-      'Cleaning: $25–$45/hr typical',
-      'Handyman work: $50–$100+/hr',
-      'You keep 100% of your rate + tips',
-      'Clients pay 15% service fee separately',
-      'Payment via direct deposit',
-      '1099 independent contractor'
-    ],
-    taskTypes: [
-      'Furniture assembly — IKEA and all brands',
-      'Moving help — loading, unloading, packing',
-      'Mounting — TVs, shelves, artwork',
-      'Cleaning — home, move-out, deep clean',
-      'Handyman — repairs, installations',
-      'Delivery and errands',
-      'Yard work and outdoor tasks',
-      'Personal assistant tasks',
-      'Event help — setup, serving'
-    ],
-    finalTake: '<strong>TaskRabbit is one of the best gig platforms for skilled workers.</strong> No platform fee means you keep everything you earn. The $25 registration is minimal, and IKEA partnership means steady furniture assembly work. Best earners: handymen, movers, and assemblers who can command $50-100+/hr. Build reviews quickly, raise rates, and you can earn serious money.',
-    idealFor: ['Handy people with practical skills', 'Those who enjoy physical, varied work', 'Anyone in major metro areas', 'People who want to set their own rates', 'Side hustlers or full-time giggers']
+    payout: {
+      'Pay method': 'Direct deposit',
+      'Average Tasker': '$25 to $75/hr',
+      'Furniture assembly': '$40 to $60/hr',
+      'Moving help': '$35 to $50/hr',
+      'Cleaning': '$25 to $45/hr',
+      'Handyman': '$50 to $100+/hr',
+      'Platform cut from you': '0% (client pays 15% separately)'
+    },
+    finalTake: 'One of the best gig sites if you have a real skill. No platform cut means more in your pocket than Rover or Wag. Handymen and assemblers can hit $5,000+/month part-time in a city. Build reviews fast and raise your rate.',
+    idealFor: [
+      'Handy with tools',
+      'Like physical work',
+      'Live in a city',
+      'Want to set your own rates',
+      'OK with no client messaging before you accept'
+    ]
   },
   'papa': {
     name: 'Papa',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/OdxfBWuzWg2E3ANzr6ua.jpg',
     link: 'papa.com',
     rate: '$13–$20/hr',
-    description: 'Senior companionship, errands, light household help, rides, friendly conversation.  ',
+    description: 'Hang out with seniors. Errands and friendly chats.',
     category: 'care',
-    tldr: 'Local "companion" gigs helping seniors and families — flexible, non-medical, social-first work that pays roughly $13–$20/hr.',
-    intro: '**Papa** connects older adults and families with vetted companions ("Papa Pals") who provide social support, rides, errands, and light household help. It’s positioned as non-medical companionship—help with everyday life rather than clinical care. Many gigs come through benefit programs, health plans, or family referrals, so availability can vary by region.',
+    tldr: '**What it is:** Visit older adults as a "Papa Pal." Drive them to appointments, grab groceries, talk. Non-medical.\n\n**The pay:** $13 to $20/hr depending on your area. Tips are common. Paid weekly or biweekly by direct deposit.\n\n**The catch:** Volume depends on benefit-program partnerships in your region. You drive your own car. Mileage is not always reimbursed.',
     whyAdhd: [
-      'Short, predictable visits that fit into fragmented schedules',
-      'Highly social work — rewarding for people who like one-on-one interaction',
-      'Clear, bounded tasks (ride, errand, conversation) reduce cognitive load',
-      'Flexible shifts — pick times that match your energy and focus windows',
-      'Routine and structure are provided by visit checklists and family instructions'
+      'Short visits. Easy to fit into your day.',
+      'One-on-one conversation, not group chaos.',
+      'Each visit has a checklist or family note. Less guessing.',
+      'Pick shifts that match your energy.',
+      'Different person every visit.'
     ],
-    standOut: [
-      'Focus on companionship and practical help rather than medical tasks',
-      'Platform often works with insurers/benefit programs (regional variability)',
-      'Background checks and basic onboarding increase client trust',
-      'Great fit for students, retirees, and people seeking meaningful, local work'
+    pros: [
+      'Non-medical work, no license required',
+      'Partnered with insurers and benefit programs',
+      'Background check and onboarding included',
+      'Steady weekly visits possible',
+      'Tips are common'
     ],
-    importantNotes: [
-      'Not a substitute for medical or licensed caregiving — scope is non-medical',
-      'May require background checks, ID verification, or basic training',
-      'Expect in-person work, travel time, and occasional errands (mileage not always reimbursed)',
-      'Availability varies by region and by partnerships with benefit programs'
+    cons: [
+      'Not medical care, do not provide clinical help',
+      'Background check, ID, and basic training required',
+      'Mileage not always reimbursed',
+      'Availability varies by region',
+      '1099 contractor'
     ],
-    payoutInfo: [
-      '$13–$20/hr typical depending on market and client',
-      'Tips are common and often appreciated',
-      'Payments and cadence depend on Papa policies — often weekly or biweekly via direct deposit',
-      'You are generally an independent contractor (tax responsibilities apply)'
-    ],
-    taskTypes: [
-      'Friendly visits and companionship',
-      'Accompanied errands and grocery runs',
-      'Transportation to appointments or social outings',
-      'Light household help and organizing',
-      'Tech help (phone/video calls), medication reminders (non-medical)'
-    ],
-    finalTake: 'Papa is an excellent option if you want flexible, social, and meaningful in-person work that doesn\'t require medical certification. It plays to strengths like empathy, conversational energy, and punctual reliability — ideal for ADHD workers who prefer short, relational shifts over long, repetitive tasks.',
-    idealFor: ['People who enjoy meaningful one-on-one interactions', 'Students or part-timers wanting flexible daytime work', 'Care-minded neighbors who prefer non-medical support roles', 'Workers who value variety and real-world connection over remote gig work']
+    payout: {
+      'Pay method': 'Direct deposit',
+      'Hourly rate': '$13 to $20/hr',
+      'Tips': 'Common',
+      'Pay cycle': 'Weekly or biweekly',
+      'Contract type': '1099',
+      'Mileage': 'Not always reimbursed'
+    },
+    finalTake: 'Best fit if you actually enjoy talking to older folks. The work is short, real, and meaningful. Pay is OK, not great, but tips and repeat visits build up.',
+    idealFor: [
+      'Like one-on-one conversation',
+      'Want flexible daytime shifts',
+      'Prefer in-person to remote work',
+      'Have a reliable car'
+    ]
   },
   'trustedhousesitters': {
     name: 'Trusted Housesitters',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/jIeyGBhuLLHKbK542yIO.png',
     link: 'trustedhousesitters.com',
-    rate: '$149–$299/yr',
-    description: 'Pet and house sitting, worldwide travel exchange, annual membership required.  ',
+    rate: 'Free lodging',
+    description: 'Sit pets and houses while owners travel. Lodging is the pay.',
     category: 'care',
-    tldr: 'Membership-based pet & house-sitting marketplace — trade pet care for lodging or paid gigs; annual membership required for access.',
-    intro: '**TrustedHousesitters** connects pet owners with vetted sitters who stay in homes to care for animals and property while owners travel. It primarily operates as a membership-based exchange: members find stays in exchange for pet and home care. Availability and payment models vary—many sitters accept lodging instead of direct pay, though paid opportunities and local arrangements do exist.',
+    tldr: '**What it is:** Pet and house sitting around the world. Owners are away, you stay in their home and care for the pets.\n\n**The pay:** Not cash. You get free lodging in exchange for care. Annual membership: $149 to $299/yr to access listings.\n\n**The catch:** Lodging is the pay. Cash gigs are rare. Annual fee is real money before you book a single sit.',
     whyAdhd: [
-      'Short-to-medium length stays with clear daily tasks',
-      'Low cognitive load — routines like feeding and walking pets',
-      'Great for people who like hands-on, animal-focused work',
-      'Opportunities to travel affordably and change scenery often'
+      'Clear daily routine: feed, walk, check the house.',
+      'Pets give you structure.',
+      'Different city or country every sit.',
+      'Hands-on, animal work.',
+      'Long enough stays to settle in.'
     ],
-    standOut: [
-      'Global network with thousands of listings',
-      'Strong review system and sitter verification',
-      'Travel + work trade model — often free lodging in exchange for care',
-      'Ideal for long-form stays rather than micro-gigs'
+    pros: [
+      'Thousands of listings worldwide',
+      'Strong review and ID verification',
+      'Trade work for travel',
+      'Long stays let you settle in',
+      'Pets give your day structure'
     ],
-    importantNotes: [
-      'Requires annual membership (owner and sitter membership tiers)',
-      'Many opportunities are lodging-for-care, not direct pay',
-      'Expect host expectations — cleanliness, reliability, and trust matter',
-      'Insurance/coverage varies by region — read terms carefully'
+    cons: [
+      'Annual membership before any sits',
+      'Most sits are lodging only, no cash',
+      'Hosts expect cleanliness and reliability',
+      'Insurance varies by region',
+      'Not real income'
     ],
-    payoutInfo: [
-      'Listed rate shown earlier reflects membership price ranges ($149–$299/yr)',
-      'Sitters often receive lodging instead of hourly pay; some hosts offer payment or tips',
-      'Not primarily a high-cash gig platform — financials depend on host arrangements'
-    ],
-    taskTypes: [
-      'Pet feeding and walking',
-      'House checks and light maintenance',
-      'Mail and package handling',
-      'Plant care and garden watering',
-      'Basic home security routines (lights, locks)'
-    ],
-    finalTake: 'If you love animals and travel, TrustedHousesitters is one of the most ADHD-friendly ways to earn or trade for free lodging. It leans toward longer stays and reliable routines rather than quick cash gigs.',
-    idealFor: ['Animal lovers who enjoy routine and responsibility', 'Digital nomads seeking free/low-cost travel stays', 'People who prefer longer, predictable assignments over micro-gigs', 'Those comfortable with in-person responsibility and trust-based exchanges']
+    payout: {
+      'Pay method': 'Free lodging (not cash)',
+      'Membership cost': '$149 to $299/yr',
+      'Cash gigs': 'Rare. Some hosts tip or pay extras.',
+      'Real value': 'Save on travel, not earn',
+      'Coverage': 'Insurance varies by region'
+    },
+    finalTake: 'Not a side hustle for cash. A travel hack for animal lovers. If you can sit a few times a year, the membership pays for itself in lodging savings.',
+    idealFor: [
+      'Love animals and want to travel cheap',
+      'Digital nomad or remote worker',
+      'OK with longer commitments (1+ weeks)',
+      'Want lodging, not paychecks'
+    ]
   },
   'neighbor': {
     name: 'Neighbor',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/N6RhLYI5sYTjDX1HUQYO.png',
     link: 'neighbor.com',
     rate: '$50–$600/month',
-    description: 'Rent storage spaces, garages, driveways, earn passive monthly income.  ',
+    description: 'Rent out your garage, attic, or driveway for storage.',
     category: 'care',
-    tldr: 'Peer-to-peer storage rental marketplace — list unused garages, sheds, or driveways for monthly passive income ($50–$600/mo).',
-    intro: '**Neighbor.com** helps people rent out unused storage and parking spaces—garages, sheds, driveways, and RV spots—to neighbors in need of affordable, local storage. It resembles Airbnb for storage and is aimed at people who have extra space and want predictable monthly income.',
+    tldr: '**What it is:** Airbnb for storage. List a garage, shed, driveway, or RV spot. Renters pay you monthly to store their stuff.\n\n**The pay:** $50 to $600/month depending on space and location. Monthly ACH or direct deposit.\n\n**The catch:** Earnings vary a lot by city. Check HOA rules and your lease before listing.',
     whyAdhd: [
-      'Low-effort listing and hands-off management',
-      'Predictable monthly payouts reduce financial stress',
-      'Minimal daily task load — mostly communication and occasional meetups',
-      'Good for people who prefer asynchronous work and passive income'
+      'List once, get paid monthly.',
+      'Almost no daily work.',
+      'Just messaging and a meetup or two.',
+      'Steady money you can plan around.'
     ],
-    standOut: [
-      'Passive, recurring income with low day-to-day effort',
-      'Local, flexible durations (short-term to monthly)',
-      'Simple listing flow and built-in renter communication tools'
+    pros: [
+      'True passive income',
+      'Local, short or long term',
+      'Easy listing flow',
+      'Built-in messaging with renters',
+      'No daily work after listing'
     ],
-    importantNotes: [
-      'Check local zoning, HOA rules, and lease agreements before listing',
-      'Security and insurance considerations — read Neighbor\'s coverage terms',
-      'May require occasional in-person handoffs or supervision',
-      'Earnings vary widely by location and space type'
+    cons: [
+      'Check zoning, HOA, and your lease first',
+      'Insurance terms need reading',
+      'Occasional in-person handoffs',
+      'Earnings vary by city',
+      'Neighbor takes a platform fee'
     ],
-    payoutInfo: [
-      'Typical earnings: $50–$600/month depending on space and location',
-      'Neighbor collects platform fees — review payout schedule in your dashboard',
-      'Payments typically monthly via ACH or direct deposit'
-    ],
-    taskTypes: [
-      'List and describe available space',
-      'Coordinate drop-off and pick-up with renters',
-      'Occasional on-site checks or meet-and-greets',
-      'Handle basic communication and scheduling'
-    ],
-    finalTake: 'Neighbor is a top pick for low-effort, steady side income if you have underused space. It\'s especially ADHD-friendly because once listed, it requires little maintenance and provides predictable monthly payouts.',
-    idealFor: ['Homeowners with spare garages or sheds', 'People with driveways or RV parking to rent', 'Minimalists who prefer passive income with little overhead', 'Those who can handle occasional in-person coordination']
+    payout: {
+      'Pay method': 'Monthly ACH or direct deposit',
+      'Typical earnings': '$50 to $600/month',
+      'Platform fee': 'Yes, varies',
+      'Frequency': 'Monthly',
+      'Listing fee': 'None'
+    },
+    finalTake: 'Best low-effort gig on this whole site if you actually have space. List it, forget it, collect monthly. Real money if you have a city garage or an RV-friendly driveway.',
+    idealFor: [
+      'Have a spare garage or shed',
+      'Have a driveway big enough for an RV or boat',
+      'Want passive income with almost no upkeep',
+      'OK meeting a renter a few times a year'
+    ]
   },
   'chewy': {
     name: 'Chewy',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/QNRVyClen6pxcHI6ygv0.png',
     link: 'https://careers.chewy.com/us/en/c/customer-service-jobs',
     rate: '$16/hr–$19.50/hr',
-    description: 'Remote-friendly company offering flexible, ADHD-supportive jobs helping pets thrive.',
+    description: 'Remote customer service. Pet friendly company culture.',
     category: 'care',
-    tldr: 'Large pet e-commerce employer offering remote/hybrid roles (customer service, ops, tech); typical pay $16–$19.50/hr.',
-    intro: '**Chewy.com** operates both as a leading pet e-commerce retailer and a sizable employer offering remote and hybrid roles across customer service, operations, logistics, tech, and more. Roles vary from shift-based customer support to salaried tech positions; hiring and schedules depend on the specific team.',
+    tldr: '**What it is:** Real W-2 jobs at Chewy (the pet store). Mostly remote customer service. Also warehouse, ops, and tech roles.\n\n**The pay:** Customer service starts at $16 to $19.50/hr. Tech and ops roles pay salary bands. Benefits, 401k, paid time off.\n\n**The catch:** Not a side hustle. This is an actual job application with interviews. Support roles include night and weekend shifts.',
     whyAdhd: [
-      'Many roles provide structure, clear process, and repeatable workflows',
-      'Remote/hybrid options reduce commute stress and sensory load',
-      'Mission-driven work (pets) can improve focus and motivation',
-      'Shift-based roles offer predictable routines for planning focus blocks'
+      'Clear process and repeatable workflows.',
+      'Remote means no commute, no office sensory mess.',
+      'Working with pets makes the job feel like it matters.',
+      'Shifts are predictable. You can plan your focus blocks around them.'
     ],
-    standOut: [
-      'Large company with benefits and established HR processes',
-      'Variety of roles from entry-level support to technical positions',
-      'Pet-focused mission that many employees find motivating'
+    pros: [
+      'W-2 job with real benefits',
+      'Mostly remote',
+      'Pet-friendly culture',
+      'Steady hours and a paycheck',
+      'Tech and salaried roles available too'
     ],
-    importantNotes: [
-      'Customer-service roles may require night or weekend shifts',
-      'Hiring windows and pay bands vary by region and team',
-      'Expect structured performance metrics and shift schedules in support roles'
+    cons: [
+      'Not a side hustle. Full job commitment.',
+      'Night and weekend shifts on support',
+      'Hiring bands depend on your state',
+      'Performance metrics on support roles'
     ],
-    payoutInfo: [
-      'Typical hourly range (support): $16–$19.50/hr',
-      'Salaried/tech roles follow company compensation bands and benefits',
-      'Benefits and cadence depend on role and location'
-    ],
-    taskTypes: [
-      'Customer service and support (phone/chat/email)',
-      'Warehouse and fulfillment (onsite roles)',
-      'Technical and engineering roles (remote/hybrid)',
-      'Content, design, and marketing positions'
-    ],
-    finalTake: 'Chewy is a reliable employer for people who want structured, mission-aligned work in the pet space. It offers roles that can support ADHD needs via routine, remote options, and clear responsibilities.',
-    idealFor: ['People who want stable hourly or salaried roles with predictable schedules', 'Animal lovers who want meaningful company mission alignment', 'Workers who benefit from structure and standard HR support']
+    payout: {
+      'Pay method': 'Bi-weekly W-2 paycheck (direct deposit)',
+      'Support hourly': '$16 to $19.50/hr',
+      'Tech / salaried': 'Standard market bands',
+      'Benefits': '401k, paid time off, pet care discounts',
+      'Schedule': 'Shifts assigned, includes nights and weekends'
+    },
+    finalTake: 'Real employer, not a gig. If you want a remote W-2 paycheck with benefits and you actually like pets, this is one of the better support jobs on the market. Not the fit if you want flexible hours.',
+    idealFor: [
+      'Want a real paycheck, not gig money',
+      'Like working remote with structured hours',
+      'Animal lover',
+      'OK with night or weekend shifts'
+    ]
   },
   
   'scripted': {
     name: 'Scripted',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/scripted.png',
     link: 'https://www.scripted.com/',
     rate: '$0.05–$0.10/word',
-    description: 'Content marketplace connecting vetted freelance writers with business clients — strict application, tier-based pay system.',
+    description: 'Pick the writing jobs you want. No bidding.',
     category: 'freelance',
-    tldr: 'San Francisco-based content mill (founded 2011) connecting vetted writers with business clients. Only 2% of applicants accepted. Tier system: Bronze (lowest pay, 20% commission) → Platinum (best pay, no commission). Minimum ~$24.50 per 400-word article. Kill fee if client rejects but you met requirements. Ghostwriting only — no bylines. Pay via PayPal (international) or Bill.com (US). Work has reportedly dried up due to AI focus.',
-    intro: '<strong>Scripted</strong> is a content creation marketplace founded in 2011 and based in San Francisco. It connects businesses with freelance writers for blog posts, articles, white papers, and more.\n\nUnlike open platforms, Scripted is highly selective — only about 2% of applicants pass their English proficiency test and writing samples. Once accepted, you\'re placed in a tier system that determines your pay rates, commission fees, and job access. The platform handles client relationships and provides a kill fee if work is rejected unfairly.',
+    tldr: '**What it is:** Vetted writing site since 2011. Blogs, articles, white papers for businesses.\n\n**The pay:** ~$24.50 minimum per 400-word post. Most jobs are $0.05 to $0.10/word. Tiers: Bronze (20% commission) up to Platinum (0% commission). PayPal or Bill.com.\n\n**The catch:** Only 2% of applicants get in. Work has dried up since they pivoted to AI. Bronze tier pay is close to minimum wage.',
     whyAdhd: [
-      'Jobs matched to your specialties via SmartMatch',
-      'Clear deadlines and requirements upfront',
-      'Message directly with editors and clients',
-      'Kill fee protects you from unfair rejections',
-      'Work on topics you\'re expert in',
-      'Weekly PayPal payments (Fridays)'
+      'SmartMatch sends jobs that fit your niches.',
+      'Deadlines and requirements shown up front.',
+      'Message editors and clients directly.',
+      'Kill fee covers you if a client rejects your work.',
+      'Weekly Friday PayPal at higher tiers.'
     ],
-    standOut: [
-      'Only 2% acceptance rate — vetted writers only',
-      'Tier system rewards consistent work',
-      'Minimum $24.50 per 400-word article',
-      '50% kill fee if rejected unfairly',
-      'Direct messaging with editors/clients',
-      'Transparency — you see what client pays',
-      'Weekly payments (Fridays)',
-      'Scripted pays PayPal fees',
-      'Can pitch topics directly to clients',
-      '80,000+ writer pool',
-      'Enterprise clients available'
+    pros: [
+      'Vetted, no race-to-the-bottom bidding',
+      'Minimum job pay of $24.50',
+      'Kill fee protects you',
+      'Real brand clients',
+      'Direct editor and client messaging'
     ],
-    importantNotes: [
-      'Highly selective — 2% acceptance rate',
-      'English proficiency test required (30 min)',
-      'Writing test with blog post + product description',
-      'Ghostwriting only — no bylines',
-      'Bronze tier: 20% commission + lowest pay',
-      'Gold/Platinum: No commission + weekly pay',
-      'Lower tiers paid twice monthly only',
-      'Work has significantly decreased (AI focus)',
-      'Rates have dropped, deadlines shortened',
-      'Editors may not be subject-matter experts',
-      'Can be removed without warning',
-      'US, Canada, and parts of Europe only'
+    cons: [
+      'Bronze tier pay is close to minimum wage',
+      'Work volume has dropped since AI shift',
+      'Tier climb is slow',
+      'Ghost only (no portfolio bylines)',
+      'Can be cut from the platform without notice'
     ],
-    payoutInfo: [
-      'Minimum: ~$24.50 per 400-word article',
-      'Average: $0.05–$0.10/word',
-      'Standard blog post (500 words): $25–$50',
-      'White papers: Up to 25,000 words',
-      'Bronze/Silver tier: 20% commission fee',
-      'Gold/Platinum tier: 0% commission',
-      'Lower tiers: Paid twice monthly',
-      'Higher tiers: Paid weekly (Fridays)',
-      'US writers: Bill.com (check or direct deposit)',
-      'International: PayPal (Scripted covers fees)',
-      'Tips possible from impressed clients',
-      'Kill fee: 50% if unfairly rejected'
-    ],
-    taskTypes: [
-      'Blog posts (400–2,000+ words)',
-      'Articles and web content',
-      'White papers (up to 25,000 words)',
-      'Email newsletters',
-      'Social media posts',
-      'Product descriptions',
-      'Video scripts',
-      'eBooks',
-      'Press releases',
-      'Q&A content',
-      'Content tune-ups/editing',
-      'Ad copy'
-    ],
-    finalTake: '<strong>Scripted was once a solid option for vetted writers — but recent reports suggest the platform is struggling.</strong> Work availability has dropped significantly as they\'ve pivoted toward AI, rates have decreased, and deadlines have shortened. The 2% acceptance rate means you\'re competing with quality writers, but the reward isn\'t what it used to be. Best approach: Apply if you want portfolio-building experience, but don\'t rely on it as a primary income source. The tier system takes time to climb, and Bronze-level pay barely covers minimum wage.',
+    payout: {
+      'Pay method': 'Bill.com (US) or PayPal (international)',
+      'Minimum per job': '~$24.50 (400-word)',
+      'Average rate': '$0.05 to $0.10/word',
+      'Bronze / Silver commission': '20%',
+      'Gold / Platinum commission': '0%',
+      'Cashout': 'Twice monthly (lower tiers), weekly Fridays (higher tiers)',
+      'Kill fee': '50% if unfairly rejected'
+    },
+    finalTake: 'Was a top vetted writing site. Now thin on work after the AI shift. Apply if you want portfolio practice but do not count on it for steady income. Climb to Gold or Platinum or the math does not work.',
     idealFor: [
-      'Writers who can pass a strict application process',
-      'Specialists with expertise in specific niches',
-      'Those who prefer assigned work over pitching',
-      'Writers comfortable with ghostwriting (no bylines)',
-      'People building portfolios for better-paying gigs',
-      'NOT for those seeking reliable full-time income'
+      'Strong writer who can pass a vetting test',
+      'Niche expertise (tech, finance, medical)',
+      'OK ghostwriting (no bylines)',
+      'Want assigned work, not pitching',
+      'Building a portfolio for better gigs'
     ]
   },
   'writeraccess': {
     name: 'WriterAccess',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/writeraccess.png',
     link: 'https://www.writeraccess.com/',
     rate: '$0.02–$0.10+/word',
-    description: 'AI-powered content marketplace connecting vetted writers with 40,000+ brands — star rating system determines pay and job access.',
+    description: 'Rated by stars. Higher rating means better pay.',
     category: 'freelance',
-    tldr: 'Boston-based content marketplace (founded 2010, acquired by Rock Content 2022) connecting 15,000+ vetted writers with 40,000+ clients including Microsoft, AAA & DraftKings. Star rating system (2–6 stars) determines pay: 2-star = $0.028/word, 6-star = $0.10+/word. Writers keep 70%, platform takes 30%. Twice-monthly PayPal payments. Native English speakers only (US, UK, Canada, Australia, Ireland, NZ, South Africa). AI disruption has reduced job availability.',
-    intro: '<strong>WriterAccess</strong> was founded in 2010 in Boston and acquired by Rock Content in 2022. It\'s one of the largest content marketplaces, connecting 15,000+ freelance writers with over 40,000 brands and agencies.\n\nThe platform uses an AI-powered matching system and star ratings (2–6 stars) to connect writers with appropriate jobs. Your star level determines both your per-word rate and which jobs you can access. Higher-rated writers get priority access to better-paying gigs through the "MatchMeUp" system.',
+    tldr: '**What it is:** Content marketplace since 2010. 15,000 writers, 40,000+ brand clients (Microsoft, AAA, DraftKings).\n\n**The pay:** Star rating decides your rate. 2-star: $0.028/word. 6-star: $0.10+/word. Platform takes 30%, you keep 70%. Twice-monthly PayPal.\n\n**The catch:** Native English speakers only (US, UK, Canada, AU, NZ, Ireland, SA). One-time assessment decides your starting star. AI has cut job volume hard since 2023.',
     whyAdhd: [
-      'AI matches you with relevant jobs',
-      'Star system shows clear progression path',
-      'Multiple job types: Crowd, MatchMeUp, Casting Calls',
-      'Direct messaging with clients',
-      'Forum community for support (limited now)',
-      'WriterAccess Academy for skill building',
-      'Variety of content types to keep it interesting'
+      'AI matches you with jobs that fit your niches.',
+      'Star ladder gives you a clear goal.',
+      'Different content types stop the grind.',
+      'Direct messaging with clients.',
+      'Built-in training resources.'
     ],
-    standOut: [
-      '15,000+ vetted writers, 40,000+ clients',
-      'Big-name clients: Microsoft, AAA, DraftKings, MGM',
-      'AI-powered writer matching system',
-      'Star rating system (2–6 stars)',
-      '"Elite" badge for industry specialists',
-      'Multiple job types: Crowd, MatchMeUp, Casting Calls',
-      'Copyscape plagiarism check on all content',
-      'Money-back guarantee for clients',
-      'WriterAccess Academy training resources',
-      'On-demand withdrawal available',
-      'ID verification for all writers',
-      'Content Marketing Conference (CMC) access'
+    pros: [
+      'Real enterprise clients',
+      'Clear ladder from 2-star to 6-star',
+      'Multiple job formats',
+      'On-demand withdrawals',
+      'Pre-funded escrow protects payment'
     ],
-    importantNotes: [
-      'Platform takes 30% commission',
-      'Writers keep 70% of per-word rate',
-      'Native English speakers only (US, UK, Canada, AU, NZ, Ireland, SA)',
-      'Star levels can go DOWN based on performance',
-      'Algorithm tracks approvals, reviews, editor ratings',
-      'One-time assessment — can\'t retake if you score low',
-      'AI has significantly reduced job availability since 2023',
-      'Fierce competition for limited jobs',
-      'Low-star writers may earn below minimum wage',
-      'AI content checker causing writer frustration',
-      'Video interview required during application',
-      'PayPal account required'
+    cons: [
+      'Platform takes 30%',
+      'AI cut job volume hard',
+      '2-star pay is below minimum wage',
+      'One-shot assessment',
+      'Star level can drop on a bad review'
     ],
-    payoutInfo: [
-      '2-star: $0.028/word (~$28 per 1,000 words)',
-      '3-star: $0.04/word',
-      '4-star: $0.06/word',
-      '5-star: $0.08/word',
-      '6-star: $0.10+/word (up to $2+)',
-      'Pro marketplace: Negotiate flat rates or hourly',
-      'Writers receive 70% of displayed rate',
-      'Payment: Twice monthly via PayPal',
-      'Deadline: Usually by 7th–10th of month',
-      'On-demand withdrawals available',
-      'Clients must pre-fund escrow before work starts'
-    ],
-    taskTypes: [
-      'Blog posts and articles',
-      'Website copy',
-      'Product descriptions',
-      'Press releases',
-      'Email newsletters',
-      'Social media content',
-      'White papers',
-      'eBooks',
-      'Case studies',
-      'SEO content',
-      'Editing and proofreading',
-      'Translation (21 languages)',
-      'Content strategy'
-    ],
-    finalTake: '<strong>WriterAccess is a legitimate platform with real enterprise clients — but the 30% commission and star-gated pay make it challenging.</strong> At 2-star level, you\'re earning ~$2.80/hour if you write 100 words per hour. The math only works at higher star levels, which require consistent performance and client approval. AI disruption hit this platform hard in 2023 — jobs have decreased significantly. Best approach: Apply, nail the assessment to start at a higher star level, and use it as one income stream alongside direct clients.',
+    payout: {
+      'Pay method': 'PayPal',
+      '2-star': '$0.028/word (~$28 per 1,000 words)',
+      '3-star': '$0.04/word',
+      '4-star': '$0.06/word',
+      '5-star': '$0.08/word',
+      '6-star': '$0.10+/word (up to $2+)',
+      'Platform cut': '30% (you keep 70%)',
+      'Cashout': 'Twice monthly or on-demand'
+    },
+    finalTake: 'Real platform with real clients. The math only works at 5-star or higher. Nail the assessment, start as high as you can, and use it as one of several income streams. Not a fit if you cannot pass a strict writing test.',
     idealFor: [
-      'Native English speakers in approved countries',
-      'Writers with strong portfolios who can pass assessment',
-      'Those with industry expertise (legal, medical, finance, tech)',
-      'Freelancers seeking variety in content types',
-      'Writers building experience with enterprise brands',
-      'NOT for those seeking high hourly rates immediately'
+      'Native English speaker in approved countries',
+      'Strong portfolio you can show in the assessment',
+      'Niche expertise (legal, medical, finance, tech)',
+      'Want variety in content types',
+      'Already freelancing, want another channel'
     ]
   },
   'fiverr': {
@@ -2009,719 +1497,454 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/Tji9gPHOWc8JX0Fr7lI6.png',
     link: 'https://fiverr.com/',
     rate: '$5–$10,000+/gig',
-    description: 'Create fixed-price gigs and let clients come to you. No bidding required.',
+    description: 'List your service. Clients come find you. No bidding.',
     category: 'freelance',
-    tldr: 'Create "gigs" with fixed prices — clients buy directly, no bidding. You keep 80% (Fiverr takes 20%). 3.6M+ buyers, 700+ categories. 14-day payment clearance.',
-    intro: '<strong>Fiverr</strong> flipped freelancing. Create service listings with set prices, clients buy directly. No proposals, no negotiations.\\n\\n3.6M active buyers, 160+ countries. $5 quick tasks to $10K+ projects. Fiverr Pro tier for vetted premium freelancers.',
+    tldr: '**What it is:** Create "gigs" at set prices. Clients buy directly. No proposals or bidding.\n\n**The pay:** You keep 80%, Fiverr takes 20%. Gigs range from $5 quick tasks to $10,000+ projects. 14-day clearance before you can cash out.\n\n**The catch:** New sellers start invisible. Building reviews takes time. Some categories are flooded.',
     whyAdhd: [
-      'No bidding or proposals — clients buy directly',
+      'No proposal writing. Just list and wait.',
+      'You set the price and what is included.',
+      'Work when an order shows up.',
+      'List different gigs for different services.',
+      'Fixed scope means no scope creep mid-job.'
+    ],
+    pros: [
+      'No bidding. Clients come to you.',
       'Set your own prices and packages',
-      'Work when orders come in',
-      'Create multiple gigs for different services',
-      'Clear scope prevents scope creep',
-      'Repeat buyers = passive income potential'
+      'Repeat buyers turn into passive income',
+      'Escrow protects payment',
+      '700+ categories to find your fit'
     ],
-    standOut: [
-      'No proposal writing — gigs sell themselves',
-      'Fixed pricing = no negotiations',
-      '700+ service categories',
-      'Mobile app for management',
-      'Fiverr Pro tier for premium freelancers',
-      'Payment held in escrow until delivery',
-      'Level system unlocks more features'
+    cons: [
+      '20% platform cut',
+      '14-day cashout wait',
+      'New sellers stay invisible until reviews build',
+      'Some niches are flooded',
+      'One bad review can sink you'
     ],
-    importantNotes: [
-      '⚠️ Fiverr takes 20% of every sale (including tips)',
-      '14-day clearing period before withdrawal',
-      'New sellers start with limited visibility',
-      'Rating system is make-or-break',
-      'Some categories extremely saturated',
-      'Race-to-bottom pricing in some niches',
-      'Withdraw via PayPal, bank transfer, Payoneer'
-    ],
-    payoutInfo: [
-      'You keep 80% of each sale',
-      'Fiverr takes 20% commission (flat)',
-      '14-day clearance before withdrawal',
-      'Withdraw via PayPal, bank, Payoneer',
-      'All earnings in USD'
-    ],
-    taskTypes: [],
-    finalTake: '<strong>Ideal if you hate writing proposals and want clients to come to you.</strong> 20% fee is steep but you are paying for traffic. New sellers struggle until they build reviews — niche down, price low at first, raise rates once established.',
+    payout: {
+      'Pay method': 'PayPal, bank transfer, or Payoneer',
+      'Your share': '80% of each sale',
+      'Platform cut': '20% (flat)',
+      'Clearance': '14 days before withdrawal',
+      'Currency': 'USD'
+    },
+    finalTake: 'Best if you hate writing proposals and want clients to come to you. 20% cut is steep but you are paying for traffic. Niche down, start low, build reviews, then raise rates.',
     idealFor: [
-      'Designers and creatives',
-      'Writers and translators',
-      'Video/audio creators',
-      'Developers (small projects)',
-      'Anyone who hates proposals',
-      'Side hustlers testing skills'
+      'Designers, writers, video editors',
+      'Hate proposals',
+      'Want clients to find you',
+      'Testing a new service or skill',
+      'Build reviews now, raise rates later'
     ]
   },
   'toptal': {
     name: 'Toptal',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/toptal.png',
     link: 'https://www.toptal.com/',
     rate: '$60–$200+/hr',
-    description: 'Elite freelance network that only accepts the top 3% of applicants — high pay, premium clients, but extremely difficult to get in.',
+    description: 'Top tier freelance work. Hard to get in, pays a lot.',
     category: 'freelance',
-    tldr: 'Premium freelance network (founded 2010, fully remote company). Only 3% of applicants accepted after brutal 4-step screening. Set your own rate ($60-200+/hr), keep 100% — no platform fees taken from freelancers. Toptal adds markup on client side. Best for experienced developers, designers, finance experts, and PMs. Not for beginners.',
-    intro: '<strong>Toptal</strong> is the Ivy League of freelance platforms. The name literally means "Top Talent" and they\'re serious about it — only ~3% of applicants make it through their multi-week screening process.\n\nFounded in 2010 by Taso Du Val and Breanden Beneschott. Fully remote company with no headquarters. $200M+ annual revenue. Clients include Microsoft, Airbnb, Pfizer, and Salesforce. If you get in, you get access to premium projects at premium rates.',
+    tldr: '**What it is:** Vetted freelance network for the top 3% in tech, design, finance, and PM. Clients include Microsoft, Airbnb, Pfizer.\n\n**The pay:** Set your own rate, $60 to $200+/hr. Toptal takes 0% from you (they mark up on the client side). Hyperwallet payouts on a steady schedule.\n\n**The catch:** Only ~3% of applicants pass the 4-step screening. Takes 2 to 5 weeks. Need 2+ years of solid experience. Tech, design, finance, and PM only.',
     whyAdhd: [
-      'Set your own schedule and hours',
-      'No bidding wars — matched to projects',
-      'Toptal handles all client acquisition',
-      'Payment guaranteed and on time',
-      'Long-term engagements common',
-      'Work with interesting clients/projects'
+      'Set your own schedule.',
+      'No bidding. Toptal matches you to projects.',
+      'Client acquisition is handled for you.',
+      'Payment is automated and on time.',
+      'Long-term engagements mean less hunting.'
     ],
-    standOut: [
-      'Only accepts top 3% of applicants',
-      'No platform fees for freelancers',
-      'You set your own rate',
-      'Toptal handles invoicing and billing',
-      'Full-time, part-time, or hourly options',
-      'Trial period protects both sides',
-      '93% client satisfaction with first match',
-      'Global network — work from anywhere'
+    pros: [
+      'Real enterprise clients',
+      'Zero platform fees from your rate',
+      'No bidding or client hunting',
+      'Long engagements common',
+      'Toptal handles invoicing'
     ],
-    importantNotes: [
-      '⚠️ Extremely difficult to get accepted',
-      '4-step screening takes 2-5 weeks',
-      'Step 1: English/communication interview (26.4% pass)',
-      'Step 2: Timed technical skills test (7.4% pass)',
-      'Step 3: Live coding/problem-solving screen (3.6% pass)',
-      'Step 4: Test project 1-3 weeks (3.2% pass)',
-      'Need 2-3+ years professional experience minimum',
-      'Limited fields: developers, designers, finance, PM only',
-      'No creatives like writers, photographers, video editors',
-      'Toptal reviews/approves your rate changes',
-      'Some reviews mention opaque markup (up to 50%)',
-      'Can reapply if rejected (waiting period required)'
+    cons: [
+      '4-step screening takes weeks',
+      'Limited to tech, design, finance, PM',
+      'Need 2+ years of solid experience',
+      'Toptal markup is opaque',
+      'Not a fit for beginners'
     ],
-    payoutInfo: [
-      'You set your own hourly rate',
-      'Typical rates: $60–$200+/hour',
-      'Top freelancers: $50K–$234K+/year',
-      'Toptal takes $0 from your rate',
-      'Clients pay Toptal rate (your rate + markup)',
-      'Payment via Hyperwallet',
-      'Automated billing — always paid on time',
-      'Full-time (40 hrs), part-time (20 hrs), or hourly'
-    ],
-    categories: [
-      'Software developers/engineers',
-      'UI/UX designers',
-      'Finance experts',
-      'Project managers',
-      'Product managers',
-      'Management consultants'
-    ],
-    finalTake: '<strong>Toptal is the gold standard for high-earning freelancers — if you can get in.</strong> The screening is brutal (only 3% make it), but once you\'re in, you get premium clients, set your own rate, keep 100% of earnings, and Toptal handles all the business headaches. Not for beginners or anyone outside tech/design/finance. If you have 3+ years of solid experience and can pass algorithm tests under pressure, it\'s absolutely worth applying.',
+    payout: {
+      'Pay method': 'Hyperwallet (bank, PayPal, Payoneer, etc.)',
+      'Typical rate': '$60 to $200+/hr',
+      'Top freelancers': '$50K to $234K+/year',
+      'Platform cut from you': '$0',
+      'Engagement types': 'Full-time (40 hrs), part-time (20 hrs), or hourly'
+    },
+    finalTake: 'If you can get in, this beats every other freelance platform on raw pay. Catch is the screening. If you have 3+ years in dev, design, finance, or PM, spend the week to apply.',
     idealFor: [
-      'Experienced developers (2-3+ years)',
-      'Senior designers with strong portfolios',
-      'Finance professionals',
-      'Project/product managers',
-      'Anyone who wants premium rates without client hunting',
-      'NOT for beginners or career changers'
+      'Developers with 2+ years experience',
+      'Senior designers with portfolios',
+      'Finance pros',
+      'Project or product managers',
+      'Want top rates without client hunting'
     ]
   },
   'freelancer': {
     name: 'Freelancer.com',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/freelancer.png',
     link: 'https://www.freelancer.com/',
     rate: 'Varies by project',
-    description: 'Massive bidding marketplace — post proposals on projects and compete for work. High volume, but race-to-bottom pricing is common.',
+    description: 'Lots of projects, but you have to bid against others.',
     category: 'freelance',
-    tldr: 'World\'s largest freelance marketplace by users (84M+ registered). Bid on projects, compete on price. You keep 90% (10% fee) or less with membership. Free members get limited bids. Contest feature lets you submit work speculatively. High volume but brutal competition.',
-    intro: '<strong>Freelancer.com</strong> is pure bidding warfare. Clients post jobs, freelancers submit proposals with price quotes, lowest bidder often wins. 84M+ users across 247 countries, 2,000+ skill categories.\n\nAustralian company (founded 2009, Sydney HQ). Publicly traded on ASX. Owns Escrow.com for payment security. Top categories: IT/software (34%), design (31%), writing (13%).',
+    tldr: '**What it is:** World\'s biggest freelance bidding marketplace. 84M+ users across 247 countries. Clients post jobs, you write proposals with a price, lowest bidder often wins.\n\n**The pay:** You keep 90%. 10% commission (or $5 minimum). PayPal, bank, or Skrill.\n\n**The catch:** Brutal price race. Freelancers in low-cost-of-living countries undercut everything. Free accounts get a small bid quota per month.',
     whyAdhd: [
-      'Huge variety of project types',
-      'Work when you want',
-      'Small and large projects available',
-      'Contest mode = submit work, maybe win',
-      'Mobile app for bidding on-the-go',
-      'Milestone payments protect you'
+      'Lots of project types.',
+      'Work when you want.',
+      'Small and large projects.',
+      'Contest mode lets you submit work for prize money.',
+      'Phone app for bidding.'
     ],
-    standOut: [
-      '84M+ registered users worldwide',
-      '2,000+ skill categories',
-      'Contest feature for design work',
-      'Escrow payment protection',
-      'Preferred Freelancer program (top 3%)',
-      'Time tracker for hourly work',
-      'Enterprise plan for steady work'
+    pros: [
+      'Huge project volume',
+      'Variety of categories',
+      'Escrow protects payment',
+      'Contest mode pays winners directly',
+      'Beginner-friendly entry'
     ],
-    importantNotes: [
-      '⚠️ 10% commission on earnings (or $5 min)',
-      'Free account = limited bids per month',
-      'Paid memberships for more bids/features',
-      'Brutal price competition — race to bottom',
-      'Many low-quality/scam postings to wade through',
-      'Contest work is speculative (might not win)',
-      'Disputes cost $5 or 5% per side',
-      'Upgrades (Featured, Urgent, NDA) add up fast',
-      'Reviews cite fake profiles and ghosting'
+    cons: [
+      'Price race to the bottom',
+      'Free account is hobbled',
+      'Lots of scam posts',
+      'Memberships pile on upgrade fees',
+      'Reviews flag fake profiles and ghosting'
     ],
-    payoutInfo: [
-      'You keep 90% (10% fee or $5 min)',
-      'Clients pay 3% fee on their end',
-      'Contest winners: 10% fee or $5',
-      'Milestone payments via escrow',
-      'Withdraw via PayPal, bank, Skrill',
-      'Paid memberships reduce fees slightly',
-      'XP rewards system (paid members only)'
-    ],
-    membershipTiers: [
-      'Free: Limited bids, basic features',
-      'Basic ($4.95/mo): 50 bids, basic skills',
-      'Plus ($9.95/mo): 100 bids, more features',
-      'Professional ($29.95/mo): 300 bids, priority',
-      'Premier ($59.95/mo): 1500 bids, lowest fees'
-    ],
-    categories: [
-      'IT & Software Development',
-      'Design & Creative',
-      'Writing & Content',
-      'Data Entry & Admin',
-      'Sales & Marketing',
-      'Engineering & Science',
-      'Legal & Finance'
-    ],
-    finalTake: '<strong>High volume but exhausting.</strong> You\'ll spend significant time writing proposals and competing on price with freelancers from lower cost-of-living countries. Best for: building initial portfolio, finding small quick gigs, or if you\'re willing to grind through the noise. The Preferred Freelancer program (top 3%) is worth aiming for — reduces the bidding chaos significantly.',
+    payout: {
+      'Pay method': 'PayPal, bank, or Skrill',
+      'Your share': '90% (10% fee or $5 minimum)',
+      'Client fee': '3% on their side',
+      'Milestone payments': 'Held in escrow until release',
+      'Free tier bids': 'Limited per month',
+      'Paid memberships': '$4.95 to $59.95/mo for more bids and lower fees'
+    },
+    finalTake: 'High volume, exhausting work. You spend hours writing proposals to lose to a $5 bid. Best for new freelancers building a portfolio. If you want better rates, aim for Preferred Freelancer status or use Fiverr/Toptal instead.',
     idealFor: [
-      'Beginners building a portfolio',
-      'Those willing to compete on price',
-      'Freelancers in lower-cost regions',
-      'People who like variety',
-      'NOT for those wanting premium rates'
+      'Beginner building a portfolio',
+      'Willing to compete on price',
+      'Outside the US with lower cost of living',
+      'Want variety in project types',
+      'Not the right fit if you want top rates'
     ]
   },
   'amazonhandmade': {
     name: 'Amazon Handmade',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/amazonhandmade.png',
     link: 'https://sell.amazon.com/programs/handmade',
     rate: 'You set prices (keep 85%)',
-    description: 'Amazon\'s marketplace for artisans. 15% referral fee per sale, but NO listing fees and NO monthly fee for approved sellers. Access to 300M+ Amazon shoppers.',
+    description: 'Sell crafts on Amazon. Huge customer reach.',
     category: 'creative',
-    tldr: 'Sell handcrafted products to Amazon\'s 300M+ customers. Flat 15% fee per sale — no listing fees, no monthly subscription (waived for approved sellers, saving $480/year). Stricter than Etsy: application required, handmade only (no vintage, no digital, no print-on-demand). Can use FBA for fulfillment. Higher fee than Etsy but simpler structure and massive audience.',
-    intro: '<strong>Amazon Handmade</strong> gives artisans access to Amazon\'s enormous customer base while keeping the marketplace exclusive to genuine handcrafted goods. Unlike regular Amazon, you must apply and be approved — this filters out mass-produced competition.\n\nThe 15% fee is higher than Etsy\'s ~10%, but there are no listing fees, no payment processing fees, and no monthly subscription. One simple fee structure. Best for artisans who can produce consistent inventory and want Prime-eligible exposure.',
+    tldr: '**What it is:** Amazon\'s store for handmade goods. Application required. Genuine handmade only.\n\n**The pay:** Flat 15% fee per sale. No listing fees, no payment processing fees, no monthly fee (waived after approval). You keep 85%.\n\n**The catch:** Higher fee than Etsy (10%) but simpler. No digital, vintage, or print-on-demand allowed. Need 40%+ profit margins to make sense.',
     whyAdhd: [
-      'ONE fee (15%) — no mental math juggling multiple charges',
-      'No listing fees = list as many items as you want',
-      'FBA option = Amazon handles shipping/returns',
-      'Huge built-in traffic — less marketing work',
-      'Customizable storefront to tell your story',
-      'Application process filters out competition',
-      'Prime badge attracts impulse buyers'
+      'One simple 15% fee. No mental math.',
+      'No listing fees. List as many items as you want.',
+      'FBA option means Amazon handles shipping and returns.',
+      'Huge built-in traffic. Less marketing work.',
+      'Application keeps out mass-produced junk.'
     ],
-    standOut: [
-      '300+ million Amazon customers',
-      'Flat 15% fee — no listing or payment fees',
-      '$39.99/month subscription WAIVED for approved sellers',
-      'FBA (Fulfillment by Amazon) available',
-      'Prime eligibility for faster sales',
-      'Artisan-only marketplace (strict approval)',
-      'Customizable maker profile and storefront',
-      'Sponsored ads and marketing tools',
-      'Global expansion to other Amazon regions'
+    pros: [
+      'Single flat 15% fee',
+      'Massive Amazon traffic',
+      'Prime eligibility',
+      'No listing or payment fees',
+      'FBA fulfillment option'
     ],
-    importantNotes: [
-      'Application required — must prove items are handmade',
-      '15% referral fee on total sale (including shipping)',
-      'Minimum $1 fee per item',
-      'NO digital products allowed',
-      'NO vintage items allowed',
-      'NO print-on-demand allowed',
-      'Must be made by you or your small team',
-      'First month $39.99, then waived after approval',
-      'FBA adds additional fees if used',
-      'Higher margins needed (~40%+) to be profitable'
+    cons: [
+      'Application gates entry',
+      'No digital, vintage, or POD allowed',
+      '15% is higher than Etsy',
+      'Need 40%+ margins to be profitable',
+      'FBA fees stack on top'
     ],
-    payoutInfo: [
-      'Referral fee: 15% of total sale price',
-      'Minimum fee: $1 per item',
-      'NO listing fees (unlimited free listings)',
-      'NO payment processing fees',
-      'NO monthly fee (waived after approval)',
-      'Example $50 item + $8 shipping = $8.70 fee',
-      'You keep: ~85% of each sale',
-      'FBA fees: Additional if you use fulfillment',
-      'Payment: 3-5 days after shipment confirmation',
-      'Deposits to bank account'
-    ],
-    taskTypes: [
-      'Handcrafted jewelry',
-      'Handmade home décor',
-      'Artisan clothing and accessories',
-      'Custom/personalized items (via Amazon Custom)',
-      'Hand-altered or upcycled products',
-      'Handmade beauty and personal care',
-      'Artwork and sculptures',
-      'Handcrafted furniture'
-    ],
-    finalTake: '<strong>Best for artisans who want massive exposure and can handle 15% fees.</strong> The fee is higher than Etsy, but the structure is simpler (one fee, no listing costs) and you get access to 300M+ Amazon shoppers. The application process keeps out mass-produced junk. NOT for digital products, vintage, or print-on-demand — strictly handmade only. Works best for products priced $25-75+ with healthy margins. Consider using both Amazon Handmade AND Etsy for maximum reach.',
+    payout: {
+      'Pay method': 'Bank deposit',
+      'Referral fee': '15% of total sale (includes shipping)',
+      'Minimum fee': '$1 per item',
+      'Listing fees': 'None',
+      'Payment processing': 'None',
+      'Monthly subscription': 'Waived after approval',
+      'Payment timing': '3 to 5 days after shipment'
+    },
+    finalTake: 'Best for makers who can produce consistent inventory and want Prime exposure. Higher fee than Etsy but simpler. Run both Amazon Handmade and Etsy for max reach.',
     idealFor: [
-      'Artisans making genuine handcrafted products',
-      'Sellers who want Prime badge and FBA fulfillment',
-      'Those who can maintain 40%+ profit margins',
-      'Makers with consistent, repeatable product lines',
-      'NOT for digital products or downloads',
-      'NOT for vintage or craft supplies',
-      'NOT for print-on-demand sellers'
+      'Real handmade artisans',
+      'Want Prime badge and FBA',
+      'Can hold 40%+ margins',
+      'Have repeatable products',
+      'Not a fit for digital, vintage, or POD'
     ]
   },
   'shopify': {
     name: 'Shopify',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/shopify.png',
     link: 'https://www.shopify.com/',
     rate: 'You keep 97-100% (minus fees)',
-    description: 'Build your own online store. Monthly plans from $5-$399. Transaction fees 2.4-2.9% + 30¢ with Shopify Payments. Full control over branding and customer experience.',
+    description: 'Build your own online store. No marketplace fees.',
     category: 'creative',
-    tldr: 'Build and own your own ecommerce store. Plans: Starter $5/mo (social selling only), Basic $39/mo (full store), Grow $105/mo, Advanced $399/mo. Credit card fees: 2.4-2.9% + 30¢ depending on plan. NO transaction fees if using Shopify Payments. Extra fees if using third-party payment processors (0.6-2%). 3-day free trial, then $1/mo for first 3 months. You own your store, your brand, your customer list.',
-    intro: '<strong>Shopify</strong> lets you build your own branded online store instead of selling on someone else\'s marketplace (like Etsy or Amazon). You control everything: design, pricing, customer data, marketing.\n\nThe tradeoff: you have to drive your own traffic. No built-in audience like Etsy. But you keep more profit, own your customer relationships, and aren\'t subject to marketplace algorithm changes. Best for serious sellers ready to build a brand.',
+    tldr: '**What it is:** Build your own branded online store. You own everything: design, pricing, customer list, brand.\n\n**The pay:** Plans $5 to $399/mo. Card fees 2.4 to 2.9% + 30¢. No marketplace cut. First 3 months are $1/mo.\n\n**The catch:** No built-in audience. You drive your own traffic through ads, social media, and SEO.',
     whyAdhd: [
-      'Drag-and-drop store builder — no coding needed',
-      'Tons of templates to start with',
-      'Integrates with print-on-demand (Printify, Printful)',
-      'One dashboard for everything',
-      'Can automate a LOT with apps',
-      'Shopify handles hosting, security, payments',
-      '$1/month for first 3 months = low risk to try',
-      'Mobile app to manage store on the go'
+      'Drag-and-drop store builder.',
+      'Templates to start with.',
+      'Integrates with print-on-demand (Printify, Printful).',
+      'One dashboard for everything.',
+      'Apps automate most of the boring work.',
+      '$1/mo for 3 months means low risk to try.'
     ],
-    standOut: [
-      'Own your store and brand completely',
-      'Own your customer list and data',
-      'No marketplace fees eating into profits',
-      'Professional checkout (15% better conversion than competitors)',
-      'Sell everywhere: website, social, in-person (POS)',
-      'Massive app ecosystem (8,000+ apps)',
-      'Print-on-demand integrations built in',
-      'Dropshipping friendly',
-      'Scale from side hustle to enterprise'
+    pros: [
+      'Own your brand and customer data',
+      'No marketplace commission',
+      'Massive app ecosystem',
+      'Sells on web, social, and in-person',
+      '$1/mo promo for 3 months'
     ],
-    importantNotes: [
-      'Monthly fee required (starts $5, full store $39)',
-      'YOU drive traffic — no built-in marketplace audience',
-      'Credit card fees: 2.4-2.9% + 30¢ per transaction',
-      'Extra 0.6-2% fee if NOT using Shopify Payments',
-      'Shopify Payments not available in all countries',
-      'Apps can add up fast ($10-100+/mo each)',
-      'Premium themes cost $100-350 (free themes available)',
-      'Domain costs extra (~$14/year)',
-      'Learning curve for beginners'
+    cons: [
+      'No built-in audience',
+      'You pay monthly even with no sales',
+      'Card fees on every transaction',
+      'Apps can stack up quickly',
+      'Requires marketing skill to succeed'
     ],
-    payoutInfo: [
-      'Starter: $5/mo (social selling only, 5% transaction fee)',
-      'Basic: $39/mo (2.9% + 30¢ online, 2% third-party fee)',
-      'Grow: $105/mo (2.6% + 30¢ online, 1% third-party fee)',
-      'Advanced: $399/mo (2.4% + 30¢ online, 0.6% third-party fee)',
-      'Plus: $2,300+/mo (enterprise)',
-      'NO transaction fees with Shopify Payments',
-      'Annual billing = 25% discount',
-      'First 3 months = $1/month promo',
-      'Payouts: 1-3 business days with Shopify Payments'
-    ],
-    taskTypes: [
-      'Physical products (handmade, wholesale, dropship)',
-      'Digital products and downloads',
-      'Print-on-demand merchandise',
-      'Dropshipping business',
-      'Subscription boxes',
-      'Services and bookings',
-      'In-person sales (Shopify POS)',
-      'B2B wholesale'
-    ],
-    finalTake: '<strong>Best for building a real brand you own — but requires marketing effort.</strong> Unlike Etsy/Amazon, you\'re not renting space in someone else\'s marketplace. You own everything: store, customers, data. The flip side: you must drive your own traffic through ads, social media, SEO, etc. Monthly fees + credit card fees are reasonable. Great for serious sellers who want control and are willing to learn marketing. Start with the $1/month promo to test it out.',
+    payout: {
+      'Pay method': 'Bank deposit (Shopify Payments)',
+      'Starter plan': '$5/mo (social selling only)',
+      'Basic plan': '$39/mo',
+      'Grow plan': '$105/mo',
+      'Advanced plan': '$399/mo',
+      'Card fees': '2.4% to 2.9% + 30¢',
+      'Marketplace cut': 'None',
+      'Payout timing': '1 to 3 business days'
+    },
+    finalTake: 'Best for building a real brand you own. Catch is the marketing work. If you already have an audience or you are willing to learn ads and SEO, this beats every marketplace long-term. Start with the $1/mo promo.',
     idealFor: [
-      'Sellers wanting to build their own brand',
-      'Print-on-demand and dropshipping businesses',
-      'Those already with an audience (social media, YouTube)',
-      'Serious sellers who will invest in marketing',
-      'NOT for those wanting instant traffic',
-      'NOT ideal if you hate marketing/advertising',
-      'NOT for testing ideas (use Etsy first)'
+      'Want to build a brand, not rent space',
+      'Print-on-demand or dropshipping business',
+      'Already have an audience (Instagram, YouTube)',
+      'Willing to learn marketing',
+      'Not the right fit if you want instant traffic'
     ]
   },
   'bigcartel': {
     name: 'Big Cartel',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/ewYZW2h7UsgFBwovET4X.png',
     link: 'https://www.bigcartel.com/',
-    rate: 'Free up to 5 products; paid plans expand listings (small monthly fee)',
-    description: 'Tiny, artist-focused storefronts for creators who want a simple, low-cost site without the complexity of bigger platforms.',
+    rate: 'Free up to 5 products',
+    description: 'Simple shop for artists. Free for up to 5 products.',
     category: 'handmade',
-    tldr: 'Artist-friendly storefronts — minimal features, minimal fuss. Great for small catalogs and creators who want a lightweight shop.',
-    intro: '**Big Cartel** is a simple e-commerce platform made for artists and small creators who want to sell their work online. Think of it like a tiny art gallery where you get your own wall to hang things up.  \nIt’s designed for makers, musicians, and indie brands who want an easy, low-cost way to sell without the complexity of bigger platforms like Shopify.',
+    tldr: '**What it is:** The anti-Shopify. Made for artists, makers, and small sellers. Simple and cheap.\n\n**The pay:** Free forever for up to 5 products. Paid plans: $9.99/mo (50 products), $19.99/mo (500 products). Big Cartel takes 0% from sales. You only pay Stripe or PayPal processing.\n\n**The catch:** No built-in audience, you drive your own traffic. Limited features compared to Shopify. You will outgrow it eventually.',
     whyAdhd: [
-      'Extremely simple setup — get selling quickly',
-      'Less to configure reduces overwhelm',
-      'Good for small catalogs and occasional sellers',
-      'Clean UI makes managing orders straightforward'
+      'Dead simple. Set up in minutes.',
+      'Free plan actually works, not just a trial.',
+      'Less to configure means less to break.',
+      'Clean UI for managing orders.'
     ],
-    standOut: [
-      'Free tier for tiny shops (up to 5 products)',
-      'Minimal UI and straightforward pricing',
-      'Designed specifically for artists and indie brands',
-      'No heavy app ecosystem to wade through'
+    pros: [
+      'Free plan is real, not a trial',
+      'Zero platform commission',
+      'Simple setup',
+      'Made for artists',
+      'Cheap paid plans ($9.99 to $19.99)'
     ],
-    importantNotes: [
-      'Limited features compared to Shopify (no app marketplace)',
-      'Free plan restricts number of listings',
-      'You must drive your own traffic — no marketplace exposure',
-      'Not ideal if you plan to scale rapidly'
+    cons: [
+      'No built-in traffic',
+      'No app ecosystem',
+      'Limited customization',
+      'You outgrow it past 500 products'
     ],
-    payoutInfo: [
-      'Payments handled via Stripe or PayPal depending on setup',
-      'No marketplace commission — you pay payment processor fees only',
-      'Billing cadence depends on chosen payment gateway'
-    ],
-    taskTypes: [
-      'Listing a small number of handmade items',
-      'Order management and simple fulfillment',
-      'Occasional marketing via social or email'
-    ],
-    finalTake: 'Big Cartel is perfect as a tiny, low-maintenance shop for artists who don\'t want to manage lots of apps or complex settings. Use it when you have a small catalog and prefer simplicity over features.',
-    idealFor: ['Artists selling a handful of pieces', 'Makers who prioritize simplicity', 'Bands and creators selling limited-run merchandise']
-  },
-  'big-cartel': {
-    name: 'Big Cartel',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
-    link: 'https://www.bigcartel.com/',
-    rate: 'You keep 100% (minus payment fees)',
-    description: 'Simple, affordable store builder for artists and makers. FREE plan for up to 5 products. No transaction fees — only pay Stripe/PayPal processing. Paid plans $9.99-$19.99/mo.',
-    category: 'creative',
-    tldr: 'The simplest, cheapest way for artists to sell online. FREE forever plan (5 products). Paid plans: Platinum $9.99/mo (50 products), Diamond $19.99/mo (500 products). NO platform transaction fees — Big Cartel never takes a cut. You only pay payment processor fees (Stripe 2.9% + $0.30 or PayPal 2.99% + $0.49). 20 years old, $2.5B+ in sales processed. Built by artists, for artists.',
-    intro: '<strong>Big Cartel</strong> is the anti-Shopify — designed for artists, makers, and small sellers who want simple and cheap, not powerful and complex. No marketplace fees, no transaction fees, no hidden costs.\n\nThe free plan actually lets you sell (unlike most "free trials"). Perfect for testing an idea, selling merch, or running a small art shop without the overhead of bigger platforms. You will outgrow it eventually, but it\'s the best starting point for creators on a budget.',
-    whyAdhd: [
-      'Dead simple — minimal features means less overwhelm',
-      'FREE plan that actually works (not just a trial)',
-      'Set up a store in minutes, not hours',
-      'No complex dashboards or settings',
-      'Mobile app to manage orders on the go',
-      'Flat monthly fee = predictable costs',
-      'No inventory tracking stress on free plan (manual)',
-      'Built for artists, not tech people'
-    ],
-    standOut: [
-      'FREE forever plan (5 products)',
-      'NO platform transaction fees ever',
-      'Flat monthly pricing — no surprises',
-      'Built by artists for artists (20 years)',
-      '$2.5 billion+ in sales processed',
-      'All themes are free',
-      'Mobile POS for in-person sales (markets, events)',
-      'Supports Stripe, PayPal, Venmo, Afterpay',
-      'Abandoned cart recovery (paid plans)',
-      'Discounted shipping labels'
-    ],
-    importantNotes: [
-      'Gold (Free): 5 products, 1 image per product, no custom domain',
-      'Platinum ($9.99/mo): 50 products, 5 images, custom domain, inventory tracking',
-      'Diamond ($19.99/mo): 500 products, priority support',
-      'Payment processing: Stripe 2.9% + $0.30 or PayPal 2.99% + $0.49',
-      'YOU drive traffic — no built-in marketplace',
-      'Limited features compared to Shopify',
-      'No app store — what you see is what you get',
-      'Free plan lacks Google Analytics, discount codes, inventory tracking',
-      'Limited theme customization without coding'
-    ],
-    payoutInfo: [
-      'Gold (Free): $0/month, 5 products',
-      'Platinum: $9.99/month, 50 products',
-      'Diamond: $19.99/month, 500 products',
-      'Annual discount available (~$12/mo Platinum, ~$24/mo Diamond)',
-      'NO Big Cartel transaction fees on any plan',
-      'Stripe: 2.9% + $0.30 per transaction',
-      'PayPal: 2.99% + $0.49 per transaction',
-      'Example $1,000 in sales (20 orders): ~$35 total fees',
-      'Payouts through Stripe/PayPal (1-3 days)'
-    ],
-    taskTypes: [
-      'Art prints and original artwork',
-      'Handmade goods and crafts',
-      'Clothing and apparel',
-      'Jewelry and accessories',
-      'Band merchandise',
-      'Limited edition drops',
-      'Stickers and small goods',
-      'In-person sales at markets/events'
-    ],
-    finalTake: '<strong>Best free/cheap option for artists who want simple.</strong> Big Cartel won\'t scale to a massive business, but that\'s not the point. It\'s for creators who want to sell a few things without complexity or high fees. The free plan is genuinely usable (rare!). Platinum at $9.99/mo is the sweet spot — unlocks everything most small sellers need. No transaction fees means you keep more than on Etsy. You\'ll eventually outgrow it, but it\'s the perfect starting point for artists testing the waters.',
+    payout: {
+      'Pay method': 'Stripe or PayPal direct to your account',
+      'Free plan': 'Up to 5 products',
+      'Platinum': '$9.99/mo (50 products)',
+      'Diamond': '$19.99/mo (500 products)',
+      'Platform cut': '0%',
+      'Stripe fee': '2.9% + 30¢',
+      'PayPal fee': '2.99% + 49¢'
+    },
+    finalTake: 'Best starting shop for an artist with under 50 products and no budget. Free, no commission, no complexity. Start here. Move to Shopify if you outgrow it.',
     idealFor: [
-      'Artists selling prints, originals, or merchandise',
-      'Makers with small product catalogs',
-      'Musicians selling band merch',
-      'Creators who want simple over powerful',
-      'Side hustlers testing product ideas',
-      'NOT for large catalogs (500+ products)',
-      'NOT for complex businesses needing integrations',
-      'NOT if you need built-in marketplace traffic'
+      'Artist with a small catalog',
+      'Want simple over powerful',
+      'No marketing budget yet',
+      'Selling limited-run merch (bands, indie brands)'
     ]
   },
   'folksy': {
     name: 'Folksy',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/folksy.png',
     link: 'https://folksy.com/selling',
     rate: 'You set prices (keep ~90%)',
-    description: 'UK\'s largest handmade marketplace — British-made crafts only, no vintage or reselling allowed.',
+    description: 'UK handmade shop with a small market feel.',
     category: 'creative',
-    tldr: 'UK-only handmade marketplace with 200K+ monthly visitors. Free to join, 3 free listings, then £0.18/listing + 7.2% commission (inc. VAT). Folksy Plus: £7.50/mo for unlimited listings. PayPal or Stripe payments. Supportive community, no mass-produced competition. Best for UK-based artisans and makers.',
-    intro: '<strong>Folksy</strong> is the UK\'s largest online marketplace dedicated exclusively to handmade and original craft. Founded in 2008 in Sheffield, it hosts over 13,000 independent designers and makers.\n\nUnlike Etsy, Folksy doesn\'t allow vintage items or reselling — everything must be handmade or designed by UK-based sellers. This keeps the marketplace focused and free from mass-produced competition.',
+    tldr: '**What it is:** UK\'s biggest handmade-only marketplace. UK sellers only, real handmade or designed-in-UK items.\n\n**The pay:** First 3 listings free. After that £0.18 + VAT per listing. 7.2% commission. Folksy Plus is £7.50/mo for unlimited listings.\n\n**The catch:** Less traffic than Etsy. UK only. No digital products, no vintage, no resale.',
     whyAdhd: [
-      'Simple shop setup — get started quickly',
-      'Supportive community with forums and Facebook groups',
-      'No overwhelming competition from mass-produced items',
-      'Set your own prices and schedule',
-      'Instant payments to your PayPal/Stripe',
-      'Listings last 4 months (longer than Etsy)'
+      'Simple shop setup.',
+      'No mass-produced imports to compete with.',
+      'Listings last 4 months (longer than Etsy).',
+      'Set your own prices.',
+      'Friendly community.'
     ],
-    standOut: [
-      'UK-only sellers — no international competition',
-      'Handmade only — no vintage or reselling',
-      '200,000+ monthly visitors',
-      '50K+ newsletter subscribers',
-      '440K+ social media followers',
-      'Free seller handbook and "Make It Sell" course',
-      'Trusted Suppliers Directory for materials',
-      'Local Teams and community support',
-      'Payments go directly to your account'
+    pros: [
+      'Handmade only, no fakes',
+      '7.2% commission is fair',
+      'Friendly UK maker community',
+      'Listings last 4 months',
+      'Simple setup'
     ],
-    importantNotes: [
-      'UK-based sellers only',
-      'First 3 listings free, then £0.18 + VAT per listing',
-      '6% + VAT commission (7.2% total) on all sales',
-      'Folksy Plus: £7.50/mo or £75/year for unlimited listings',
-      'Commission still applies on Plus plan',
-      'PayPal processing: 2.9% + 30p per transaction',
-      'Stripe processing: 1.4-2.9% + 20p per transaction',
-      'Less traffic than Etsy — more marketing effort needed',
-      'Listings expire after 120 days (4 months)',
-      'No promoted listings or advertising options'
+    cons: [
+      'UK sellers only',
+      'Lower traffic than Etsy',
+      'No paid ads or promoted listings',
+      'No digital products allowed'
     ],
-    payoutInfo: [
-      'Listing fee: £0.18 + VAT (per item quantity)',
-      'Commission: 6% + VAT (7.2% total) on sale price',
-      'Folksy Plus: £7.50/mo (unlimited listings)',
-      'Annual Plus: £75/year (2 months free)',
-      'PayPal fee: 2.9% + 30p per transaction',
-      'Stripe fee: 1.4-2.9% + 20p per transaction',
-      'Total fees ~10-13% per sale (keep ~87-90%)',
-      'Monthly billing on 1st of each month',
-      'Bills under £2 roll over to next month'
-    ],
-    taskTypes: [
-      'Handmade goods — jewellery, ceramics, textiles',
-      'Original art — paintings, prints, illustrations',
-      'Craft supplies — materials for other makers',
-      'Custom/personalized items',
-      'Designed products (UK-designed)',
-      'NO vintage, NO reselling, NO digital products'
-    ],
-    finalTake: '<strong>Folksy is the UK\'s answer to Etsy — smaller but more focused.</strong> The handmade-only policy means no competing with mass-produced imports. Fees are competitive (~10-13% total), and the community is genuinely supportive. The catch: less traffic means you\'ll need to drive your own customers. Best as a complement to Etsy or your own website, not your only sales channel.',
+    payout: {
+      'Pay method': 'PayPal or Stripe direct',
+      'Listing fee': '£0.18 + VAT',
+      'Commission': '6% + VAT (7.2% total)',
+      'Folksy Plus': '£7.50/mo (unlimited listings)',
+      'PayPal fee': '2.9% + 30p',
+      'Stripe fee': '1.4 to 2.9% + 20p'
+    },
+    finalTake: 'UK answer to Etsy. Smaller traffic, friendlier community, no mass-produced imports. Best as a second channel alongside Etsy or your own site, not your only shop.',
     idealFor: [
-      'UK-based makers and artisans',
-      'Crafters wanting a supportive community',
-      'Sellers tired of competing with mass-produced items',
-      'Anyone wanting to "shop local" positioning',
-      'NOT for non-UK sellers or vintage/resale'
+      'UK maker or artisan',
+      'Tired of competing with mass-produced imports',
+      'Want "shop local" positioning',
+      'Already on Etsy and want another channel'
     ]
   },
   'etsy': {
     name: 'Etsy',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/etsy.jpg',
     link: 'https://www.etsy.com/sell',
     rate: 'You set prices (keep ~80-87%)',
-    description: 'Marketplace for handmade, vintage, and digital products. ~97M active buyers. Fees: $0.20 listing + 6.5% transaction + ~3.25% payment processing.',
+    description: 'Sell handmade, vintage, or craft goods to a global crowd.',
     category: 'creative',
-    tldr: 'Sell handmade goods, vintage items, digital downloads, and print-on-demand products to 97M+ buyers. Fees total ~10-13% per sale: $0.20 listing fee + 6.5% transaction fee + 3% + $0.25 payment processing. Offsite Ads fee (12-15%) kicks in if ads drive your sale. No monthly fee required. Listings last 4 months then auto-renew ($0.20). Digital products = near-zero cost, pure profit after fees.',
-    intro: '<strong>Etsy</strong> is the go-to marketplace for handmade, vintage, craft supplies, and digital downloads. Unlike creating your own store, you get instant access to 97 million active buyers already searching for unique products.\n\nFees are straightforward but add up: expect to keep ~80-87% of each sale after all fees. Digital products (printables, templates, fonts) have the highest margins since there\'s no shipping or material cost.',
+    tldr: '**What it is:** Biggest marketplace for handmade, vintage, digital, and POD. 97M+ active buyers.\n\n**The pay:** $0.20 per listing + 6.5% transaction fee + 3% + $0.25 payment processing. Total ~10 to 13% per sale. Digital products have the best margins.\n\n**The catch:** Offsite Ads fee (12 to 15%) kicks in when an ad drives your sale. Mandatory once you earn $10K+/year. Listings auto-renew at $0.20 every 4 months.',
     whyAdhd: [
-      'Sell digital products = make once, sell forever',
-      'No need to build your own website',
-      'Buyers come to YOU (built-in traffic)',
-      'Can start with just one listing',
-      'Print-on-demand = no inventory to manage',
-      'Dopamine hit every time you make a sale',
-      'Creative outlet that pays',
-      'Work on your own schedule'
+      'Digital products = make once, sell forever.',
+      'No website to build.',
+      'Buyers come to you.',
+      'Start with one listing.',
+      'POD means no inventory.',
+      'Sales notifications give quick dopamine.'
     ],
-    standOut: [
-      '97 million active buyers',
-      'Built-in search traffic (no marketing required to start)',
-      'Digital products allowed (instant delivery)',
-      'Print-on-demand integrations (Printful, Printify)',
-      'No monthly fee to sell',
-      'Trusted platform = buyer confidence',
-      'Global marketplace',
-      'Low barrier to entry ($0.20 to list)'
+    pros: [
+      'Built-in traffic, no marketing needed to start',
+      'Low barrier ($0.20 to list)',
+      'Digital products = best margins',
+      'POD-friendly',
+      'Trusted by buyers'
     ],
-    importantNotes: [
-      'Listing fee: $0.20 per listing (lasts 4 months)',
-      'Transaction fee: 6.5% of sale + shipping',
-      'Payment processing: 3% + $0.25 (US)',
-      'Offsite Ads: 12-15% if ad drives sale (mandatory if earning $10K+/year)',
-      'Fees apply to shipping charges too',
-      'Listings auto-renew at $0.20 every 4 months',
-      'Each sale from multi-quantity listing = another $0.20',
-      'High competition — SEO and photos matter',
-      'Etsy Plus optional: $10/mo for extra features'
+    cons: [
+      '~10 to 13% in total fees per sale',
+      'Offsite Ads fee can sting',
+      'Average seller earns only ~$1,236/yr',
+      'Heavy competition in popular categories',
+      'Listing auto-renew nickel-and-dimes you'
     ],
-    payoutInfo: [
-      'You keep: ~80-87% after all fees',
-      'Listing fee: $0.20 per item',
-      'Transaction fee: 6.5% of total order',
-      'Payment processing (US): 3% + $0.25',
-      'Example $100 sale: ~$9.95 in fees, you keep ~$90',
-      'Offsite Ads fee: 15% (under $10K/yr) or 12% (over $10K/yr)',
-      'Currency conversion: 2.5% if applicable',
-      'Deposits: Automatic to bank account',
-      'Average seller income: ~$1,236/year (2024)'
-    ],
-    taskTypes: [
-      'Handmade products (jewelry, art, crafts)',
-      'Digital downloads (printables, templates, fonts)',
-      'Vintage items (20+ years old)',
-      'Craft supplies',
-      'Print-on-demand products',
-      'Custom/personalized items',
-      'Patterns and tutorials',
-      'Digital art and graphics'
-    ],
-    finalTake: '<strong>Best marketplace for creative products with built-in buyers.</strong> You don\'t have to drive traffic — 97M buyers are already there. Fees (~10-13%) are reasonable for the exposure. Digital products have the best margins (no shipping, no materials). Competition is fierce, so good photos and SEO matter. Great for ADHD because you can start small, work your own schedule, and get instant feedback from sales.',
+    payout: {
+      'Pay method': 'Bank deposit',
+      'Listing fee': '$0.20 per item (4-month listing)',
+      'Transaction fee': '6.5% of sale + shipping',
+      'Payment processing (US)': '3% + $0.25',
+      'Offsite Ads fee': '12% above $10K/yr, 15% below',
+      'Your keep': '~80% to 87% per sale',
+      'Example': '$100 sale = ~$9.95 fees, you keep ~$90'
+    },
+    finalTake: 'Best place to start selling creative products. 97M buyers are already there. Fees stack up but the exposure is worth it. Digital products have the best margins. Stack with Amazon Handmade and your own Shopify site to reduce platform risk.',
     idealFor: [
-      'Artists and crafters selling handmade goods',
-      'Designers selling digital downloads',
-      'Anyone with print-on-demand products',
-      'Vintage collectors and resellers',
-      'Creators who want built-in traffic',
-      'NOT for those wanting passive income without effort',
-      'NOT ideal if you hate photography/listing optimization'
+      'Artist or crafter with handmade goods',
+      'Designer selling digital downloads',
+      'POD seller',
+      'Vintage collector or reseller',
+      'Want built-in traffic to start'
     ]
   },
   'printify': {
     name: 'Printify',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/printify.png',
     link: 'https://printify.com/',
     rate: 'You set prices (aim for 40%+ margin)',
-    description: 'Print-on-demand platform — create custom products, they handle printing and shipping. Free plan available. No inventory, no upfront costs. Pay only when you sell.',
+    description: 'Design shirts and goods. They print and ship for you.',
     category: 'creative',
-    tldr: 'Design custom products (t-shirts, mugs, hoodies, etc.) and sell them — Printify handles printing, packing, and shipping. FREE plan with all features. Premium ($29/mo) gives 20% off all products. No inventory, no upfront costs. You pay base product cost + shipping only AFTER a sale. Aim for 40-50% profit margins. Integrates with Etsy, Shopify, Amazon, eBay, etc.',
-    intro: '<strong>Printify</strong> lets you create and sell custom products without inventory, equipment, or shipping headaches. You design it, they make it and ship it directly to your customer.\n\nIt\'s truly zero upfront cost — you only pay when someone orders. Product costs range from ~$7-27 for t-shirts depending on quality/provider. The key to profitability is pricing correctly: aim for 40%+ profit margins after all costs.',
+    tldr: '**What it is:** Print-on-demand platform. You design, they print, they ship. No inventory, no upfront cost.\n\n**The pay:** Free plan with all features. Premium $29/mo gives 20% off all products. You pay base cost + shipping only after a sale. Aim for 40 to 50% margin.\n\n**The catch:** You also pay your sales platform (Etsy, Shopify) fees on top. Quality varies by print provider. Order samples first.',
     whyAdhd: [
-      'ZERO inventory to manage — nothing to store or ship',
-      'No upfront costs — pay only when you make a sale',
-      'Quick to start — design and list products in minutes',
-      'Multiple print providers = flexibility if one is slow',
-      'Integrates with stores you already use (Etsy, Shopify)',
-      'Mockup generator makes products look professional instantly',
-      'Can test ideas without financial risk',
-      'Automates the boring stuff (fulfillment, shipping)'
+      'Zero inventory. Nothing to store.',
+      'Zero upfront cost. Pay only after a sale.',
+      'Design and list in minutes.',
+      'Multiple print providers per product.',
+      'Plugs into Etsy, Shopify, Amazon.',
+      'Mockup generator makes products look real instantly.'
     ],
-    standOut: [
-      'FREE plan with full features',
-      '900+ customizable products',
-      'Multiple print providers per product (compare prices/quality)',
-      'Up to 20% product discounts with Premium ($29/mo)',
-      'Integrates with Etsy, Shopify, Amazon, eBay, WooCommerce',
-      'Global print network = faster shipping worldwide',
-      'AI design tools and mockup generator',
-      'Automatic order routing',
-      'Express shipping options'
+    pros: [
+      'Zero inventory or upfront cost',
+      'Free plan is real',
+      '900+ products',
+      'Multiple provider choice per product',
+      'Plugs into every major marketplace'
     ],
-    importantNotes: [
-      'You pay: Base product cost + shipping per order',
-      'T-shirts typically $7-27 depending on brand/provider',
-      'Shipping costs vary by location and speed',
-      'Sales platform fees are separate (Etsy, Shopify, etc.)',
-      'Quality varies by print provider — order samples first',
-      'Aim for 40-50% profit margin minimum',
-      'Premium plan ($29/mo) = 20% off all products',
-      'You handle customer service and marketing',
-      'Printify doesn\'t print directly — uses partner network'
+    cons: [
+      'Margins are modest unless you price right',
+      'Quality varies by provider',
+      'Slower shipping than Amazon Prime',
+      'You also pay marketplace fees',
+      'Premium ($29/mo) only pays for itself at volume'
     ],
-    payoutInfo: [
-      'Free plan: $0/month, all features included',
-      'Premium plan: $29/month (or $24.99/mo annual)',
-      'Premium benefit: Up to 20% off all products',
-      'Enterprise: Custom pricing for high volume',
-      'Product costs: ~$7-27 for t-shirts',
-      'You set retail price and keep the difference',
-      'Example: $10 shirt cost + $5 shipping = $15 cost',
-      'Sell at $30 = $15 profit (50% margin)',
-      'Payments: Through your sales channel (Etsy, Shopify, etc.)'
-    ],
-    taskTypes: [
-      'Custom t-shirts and apparel',
-      'Mugs and drinkware',
-      'Phone cases',
-      'Home décor (pillows, blankets, posters)',
-      'Bags and accessories',
-      'Stickers and labels',
-      'All-over print products',
-      'Embroidered items'
-    ],
-    finalTake: '<strong>Best free way to start selling custom products with zero inventory risk.</strong> You design, they print and ship. The free plan has everything you need to start. Premium ($29/mo) is worth it once you\'re making consistent sales — 20% off products adds up fast. Key to success: order samples to check quality, price for 40%+ margins, and remember you\'re also paying your sales platform (Etsy, Shopify, etc.) fees on top. Great for testing product ideas without financial commitment.',
+    payout: {
+      'Pay method': 'Through your sales channel (Etsy, Shopify, etc.)',
+      'Free plan': '$0/mo, all features',
+      'Premium plan': '$29/mo (20% off all products)',
+      'T-shirt product cost': '$7 to $27',
+      'Target margin': '40% to 50%',
+      'Example': '$10 shirt + $5 shipping = $15 cost; sell at $30 = $15 profit'
+    },
+    finalTake: 'Best way to test product ideas with zero risk. Order samples first to avoid quality surprises. Price for 40%+ margins. Premium is worth it once sales are steady. Stack with Etsy or Shopify for distribution.',
     idealFor: [
-      'Designers who want to sell physical products',
-      'Content creators monetizing their brand/audience',
-      'Anyone wanting passive income from custom merch',
-      'Side hustlers testing product ideas',
-      'NOT for those wanting instant high profits (margins are modest)',
-      'NOT ideal if you need ultra-fast shipping (POD takes time)'
+      'Designer who wants to sell physical merch',
+      'Creator monetizing an audience',
+      'Testing product ideas without buying inventory',
+      'OK with slower POD shipping'
     ]
   },
   'pressplay': {
     name: 'PressPlay',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/WUBBxNlrGzQLgbYSo2ns.png',
     link: 'https://us.mypressplay.com',
-    rate: '🎁 $0.60–$5/hr',
-    description: 'Watch unreleased shows & share your opinion as a test audience.',
+    rate: '$0.60–$5/hr',
+    description: 'Watch movie trailers for Amazon credit. Fun if you love movies.',
     category: 'fun',
-    tldr: '**What it is:** Watch unreleased movies and TV shows before they\'re released, then share your opinion for Amazon vouchers.\n\n**The reality:** Low pay ($0.60–$5/hr equivalent), but fun if you love movies. Some screenings use your webcam to track facial reactions while you watch.\n\n**Run by DiO** — a legit film industry research company. Your feedback helps studios understand what audiences actually think. Invitations are tailored to your interests, so participation is flexible and pressure-free.',
-    intro: '',
+    tldr: '**What it is:** Watch unreleased movies, TV shows, and trailers. Share your opinion. Run by DiO, a real film industry research company.\n\n**The pay:** $0.60 to $5/hr equivalent. Amazon vouchers only. No cash.\n\n**The catch:** Some screenings track your face on webcam. Invites come and go. Not steady work.',
     whyAdhd: [
-      'Flexible participation — watch as much or as little as you want',
-      'No pressure — invitations are tailored to your interests',
-      'Quick, engaging surveys that reward you for honest feedback',
-      'Feel involved in something creative and new without long commitments',
-      'Novelty factor — see content before it\'s released to the public'
+      'Watch as much or little as you want.',
+      'Invitations match your interests.',
+      'Quick surveys after each screening.',
+      'See movies before the public does.',
+      'No pressure or schedule.'
     ],
-    standOut: [
-      'Exclusive early access to unreleased movies and TV content',
-      'Your feedback actually influences creative decisions',
-      'Run by legitimate film industry research company (DiO)',
-      'Works with major studios and production companies',
-      'Points system lets you accumulate rewards over time'
+    pros: [
+      'See movies before anyone else',
+      'Fun if you love film and TV',
+      'Easy quick surveys',
+      'No commitment'
     ],
-    importantNotes: [
-      'Some screenings require camera access to monitor facial expressions while you watch',
-      'Your data stays private — creators only see demographic trends, not your personal info',
-      'No sharing allowed — screenings are under strict anti-piracy policies',
-      'Rewards depend on building your profile and participating in surveys',
-      'You\'ll need to confirm your email to start participating',
-      'Invitation frequency varies — not constant work',
-      'Pay equivalent is low compared to other survey platforms'
+    cons: [
+      'Pay is very low ($0.60 to $5/hr)',
+      'No cash, only Amazon vouchers',
+      'Some screenings track your face',
+      'Invitations are sporadic'
     ],
-    payoutInfo: [
-      'Rewards via Amazon vouchers (gift cards)',
-      'Points-based system — earn points for profile completion, screenings, and surveys',
-      'Redeem points in "Points & Rewards" section of dashboard',
-      'Can also donate rewards to Medicinema charity',
-      'No direct cash payout option'
-    ],
-    taskTypes: [
-      'Trailer screenings — watch and rate movie trailers (under 2 mins each)',
-      'Full content screenings — watch unreleased films or episodes',
-      'Post-viewing surveys — answer questions about what you watched',
-      'Profile surveys — build your profile to get better-matched invitations'
-    ],
-    finalTake: 'PressPlay is more of a fun perk than a real income stream. The pay equivalent is low, but if you love movies and want exclusive early access to unreleased content, it\'s a cool way to feel like an industry insider. Just know that some screenings require webcam access for facial tracking — that\'s the trade-off for the sneak peeks.',
+    payout: {
+      'Pay method': 'Amazon gift cards',
+      'Earning system': 'Points for profile completion, screenings, surveys',
+      'Cashout': 'Redeem in "Points & Rewards" dashboard',
+      'Cash option': 'None'
+    },
+    finalTake: 'Fun perk, not income. If you love movies and TV, you get to see them early in exchange for short surveys. Pay is pocket change. Skip if you want real money.',
     idealFor: [
-      'Movie and TV fans who want early access to unreleased content',
-      'People who enjoy giving feedback and shaping entertainment',
-      'Anyone looking for low-effort ways to earn Amazon gift cards',
-      'Those who appreciate flexible, no-pressure online gigs'
+      'Movie and TV fans',
+      'Like giving feedback on entertainment',
+      'Want Amazon credit',
+      'OK with low-effort, low-pay'
     ]
   },
   'slicethepie': {
@@ -2729,257 +1952,178 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/N5HyBECr8SGscfvrXhHs.jpg',
     link: 'https://www.slicethepie.com/',
     rate: '$1–$8/hr',
-    description: 'Paid reviews on music, fashion, and commercials.',
+    description: 'Get paid to review music, ads, and fashion clips.',
     category: 'fun',
-    tldr: 'Write 60+ word reviews on music tracks, fashion items, and ads for $0.02–$0.20 each. Fun for music lovers, but very low pay. You need to grind a lot of reviews to hit the $10 PayPal minimum.',
-    intro: '**Slicethepie** is one of the world\'s largest **paid review platforms**, where you earn money by writing short reviews on music, fashion, commercials, and brands. Since 2007, it\'s paid out over $8.5M to reviewers worldwide.\n\nYour feedback goes directly to unsigned artists, record labels, and designers—helping them decide what to release. It\'s simple: listen, watch, or look at something, write what you think, and get paid.',
+    tldr: '**What it is:** Write short reviews on music, fashion, ads, and brands. Around since 2007. Paid out $8.5M+ to reviewers.\n\n**The pay:** $0.03 to $0.20 per review. $10 minimum cashout. PayPal, Revolut, Airtm, or gift cards.\n\n**The catch:** Most people earn $1 to $4/hr. Reviews must be 60+ words and at least 90 seconds of listening.',
     whyAdhd: [
-      'Quick, bite-sized tasks — each review takes 2–3 minutes',
-      'Novelty factor — discover new music and fashion you\'d never find otherwise',
-      'Immediate feedback — see your earnings update after each review',
-      'No commitments — review whenever you want, stop whenever you want',
-      'Creative expression — share your real opinions instead of clicking bubbles'
+      'Each review takes 2 to 3 minutes.',
+      'Discover new music you would not hear otherwise.',
+      'Earnings update after every review.',
+      'No commitment.',
+      'You write real opinions, not clicking bubbles.'
     ],
-    standOut: [
-      'One of the oldest and most established review platforms (since 2007)',
-      'Wide variety: music, fashion, commercials, branding, mobile accessories',
-      'Feedback actually reaches artists and designers',
-      'Low $10 minimum payout threshold',
-      'Available to teens (age 13+)',
-      'Multiple payout options: PayPal, Revolut, Airtm, or gift cards'
+    pros: [
+      'Real cash, not points',
+      'Low $10 cashout',
+      'Quick 2 to 3 minute reviews',
+      'Teen-friendly (13+)',
+      'No grind required'
     ],
-    importantNotes: [
-      'Pay is very low — most reviews earn $0.03–$0.10 each',
-      'Must listen to at least 90 seconds per song before reviewing',
-      'Reviews must be minimum 60 words — no lazy one-liners',
-      'Your star rating affects pay — better reviews = more money',
-      'Some users report accounts being locked unexpectedly',
-      'Music genres sent may not match your preferences',
-      '$10 minimum to cash out — takes many reviews to reach'
+    cons: [
+      'Pay is bad ($1 to $4/hr realistic)',
+      '60-word minimum on every review',
+      'Random account locks reported',
+      'Music genres you receive can be anywhere'
     ],
-    payoutInfo: [
-      'Payments via PayPal, Revolut, Airtm, or gift cards',
-      'Minimum payout: $10',
-      'Cashout requests processed on Tuesdays and Fridays',
-      'Payments arrive within 2–5 days',
-      'PayPal email must match your Slicethepie account email',
-      'All payments in USD regardless of location'
-    ],
-    taskTypes: [
-      'Music reviews — listen to 90+ seconds, rate and review unsigned artists',
-      'Fashion reviews — view clothing/accessories and share your opinions',
-      'Commercial reviews — watch ads and rate them using a slider as you watch',
-      'Brand reviews — evaluate logos, audio branding, and marketing materials',
-      'Surveys — opinion surveys on various topics'
-    ],
-    finalTake: 'Slicethepie is **legit but low-paying**. Most people earn $1–4/hour at best. It\'s not a real income stream—it\'s more like a fun distraction that pays pocket change. If you love discovering new music and don\'t mind writing short reviews, it beats doomscrolling. But if you\'re looking for actual money, look elsewhere.',
+    payout: {
+      'Pay method': 'PayPal, Revolut, Airtm, or gift cards',
+      'Per review': '$0.03 to $0.20',
+      'Minimum cashout': '$10',
+      'Cashout days': 'Tuesdays and Fridays',
+      'Payment timing': '2 to 5 days',
+      'Currency': 'USD'
+    },
+    finalTake: 'Legit but low pay. If you love new music and writing short opinions, it beats doomscrolling. Not real income. Pocket change with a side of discovery.',
     idealFor: [
-      'Music and fashion lovers who enjoy sharing opinions',
-      'Teens looking for their first online earning opportunity',
-      'People who want a productive alternative to social media scrolling',
-      'Reviewers who don\'t mind low pay for a fun, easy task'
+      'Love music or fashion',
+      'First-time online earner (teen 13+)',
+      'Want something better than doomscrolling',
+      'OK with pocket-change pay'
     ]
   },
-  
+
   'influenster': {
     name: 'Influenster',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/4A7UA3KtSXUkc9ueckJH.png',
     link: 'https://www.influenster.com/',
-    rate: '🎁 Free products',
-    description: 'Get free full-sized products to test and review.',
+    rate: 'Free products',
+    description: 'Test products and keep them. Free stuff, no cash.',
     category: 'fun',
-    tldr: 'Get free full-sized products (VoxBoxes) from brands like L\'Oréal, YSL, and Marc Jacobs in exchange for honest reviews and social posts. No cash — just free stuff. Higher social media following = more boxes.',
-    intro: '**Influenster** is a product testing and review platform that sends you **free products (VoxBoxes)** in exchange for honest reviews and social media sharing. Think of it like being a micro-influencer for brands—your reward is free stuff, not cash.\n\nWith over 7 million members, Influenster partners with major brands to send out thousands of VoxBoxes monthly containing everything from prestige beauty products to pet supplies and snacks.',
+    tldr: '**What it is:** Free product boxes (VoxBoxes) from brands like L\'Oreal, YSL, Marc Jacobs in exchange for reviews and social posts.\n\n**The pay:** Free products only. No cash. VoxBoxes can hold $50 to $200+ of stuff.\n\n**The catch:** Higher social media following = more boxes. Not everyone gets selected. Frequency is unpredictable.',
     whyAdhd: [
-      'No pressure — you\'re not paid by the hour, just test and review when you can',
-      'Novelty factor — surprise VoxBoxes give fun dopamine hits',
-      'Simple structure — try product → review → share → done',
-      'Gamified scoring — higher Impact Scores increase your chances of more products',
-      'Creative outlet — reviews and social shares can be a fun way to express yourself'
+      'Test products on your own time.',
+      'Surprise VoxBox arrivals give dopamine.',
+      'Simple flow: try, review, share, done.',
+      'Higher Impact Score unlocks more boxes.'
     ],
-    standOut: [
-      'Completely free to join and participate',
-      'Full-sized products, not just tiny samples',
-      'Major brands: L\'Oréal, YSL, Marc Jacobs, Estee Lauder, SK-II',
-      '7M+ member community for product Q&A and discovery',
-      'Flexible sharing — post on Instagram, blog, Facebook, or just review on the app',
-      'Categories for everyone: beauty, pets, parenting, food, electronics'
+    pros: [
+      'Full-sized products, not samples',
+      'Real brand-name stuff',
+      'No pressure to perform',
+      'Fun surprise factor',
+      'Free to join'
     ],
-    importantNotes: [
-      'No cash payouts — rewards are free products only',
-      'Selection is competitive — not everyone gets VoxBoxes',
-      'Higher social media following (Impact Score) = better chances',
-      'Must complete campaign tasks (reviews, posts) to keep receiving boxes',
-      'Pre-qualification surveys must be answered quickly to be considered',
-      'Frequency varies — could be monthly or months between boxes',
-      'Must disclose that products were received for free'
+    cons: [
+      'No cash at all',
+      'Selection is competitive',
+      'Need social following to get more boxes',
+      'Box frequency is unpredictable',
+      'You spend time posting for "pay" in product'
     ],
-    payoutInfo: [
-      'No cash payments — compensation is free products',
-      'VoxBoxes can contain $50–$200+ worth of full-sized products',
-      'Products are yours to keep after reviewing',
-      'Option to donate to charity campaigns in some cases',
-      'Some campaigns include discount codes to share with followers'
-    ],
-    taskTypes: [
-      'VoxBox campaigns — receive and review free product boxes',
-      'Product reviews — write reviews on products you already own',
-      'Snaps — quick profile questions to match you with campaigns',
-      'Social sharing — post about products on Instagram, TikTok, blogs',
-      'Community Q&A — answer questions about products you\'ve tried',
-      'Pre-surveys — qualify for upcoming VoxBox campaigns'
-    ],
-    finalTake: 'Influenster is a **fun freebie platform**, not a money-maker. If you love trying new products (especially beauty) and don\'t mind posting reviews and social content, it\'s a great way to get full-sized products worth hundreds of dollars for free. Just don\'t expect consistent boxes — it\'s more like surprise gifts than steady income.',
+    payout: {
+      'Pay method': 'Free physical products (no cash)',
+      'VoxBox value': '$50 to $200+ in products',
+      'Keep policy': 'Products are yours after reviewing',
+      'Charity option': 'Some campaigns let you donate'
+    },
+    finalTake: 'Fun freebie platform, not a money-maker. If you love trying new products and have a social account, it is a way to get free brand-name stuff. Do not count it as income.',
     idealFor: [
-      'Beauty lovers, foodies, and product junkies who love trying new things',
-      'People active on social media who don\'t mind posting reviews',
-      'ADHD users who enjoy novelty and surprise rewards',
-      'Anyone who wants free stuff, not extra income'
+      'Beauty lover or foodie',
+      'Active on social media',
+      'Like surprise rewards',
+      'Want free stuff, not cash'
     ]
   },
   
   'isecretshop': {
     name: 'iSecretShop',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/isecretshop.jpg',
     link: 'https://www.isecretshop.com/register',
     rate: '$10–$50/shop',
-    description: 'Mobile-first mystery shopping platform aggregating jobs from 1,000+ providers.',
+    description: 'Mystery shopping you can do from your phone.',
     category: 'fun',
-    tldr: 'Job board aggregating mystery shopping assignments from dozens of providers in one app. Pay $10–$50 per shop plus reimbursements. iSecretShop itself doesn\'t pay — each Mystery Shopping Provider (MSP) has its own payment policy. Great for travelers since you can search shops anywhere.',
-    intro: 'iSecretShop is a mobile-first mystery shopping platform that aggregates opportunities from over 1,000 Mystery Shopping Providers (MSPs) into one app. Instead of signing up with dozens of individual companies, you access multiple providers\' assignments through a single interface.\n\nWith over 1 million registered shoppers, iSecretShop pioneered the smartphone-based mystery shopping approach. You can complete assignments entirely from your phone — from accepting the job to submitting photos and reports on-site.',
+    tldr: '**What it is:** Mystery shopping app that pulls jobs from 1,000+ providers (MSPs) into one place.\n\n**The pay:** $10 to $50 per shop plus reimbursement. Each MSP pays on its own schedule.\n\n**The catch:** iSecretShop does not pay you. The MSP does. Some pay in days, some in 45+. New shoppers are limited to 3 jobs until your reputation climbs.',
     whyAdhd: [
-      'All-in-one app — no juggling multiple platforms',
-      'Complete reports on-site — no homework later',
-      'Map view shows nearby shops visually',
-      'Work while traveling — search any location',
-      'Variety from 1,000+ providers',
-      'Reputation system gamifies progress'
+      'One app, no juggling 20+ accounts.',
+      'Fill out the report on-site, not later.',
+      'Map view shows shops near you.',
+      'Search any city. Works for travelers.',
+      '1,000+ providers means lots of variety.'
     ],
-    standOut: [
-      '1,000+ Mystery Shopping Providers in one place',
-      'Over 1 million registered shoppers',
-      'Mobile-first — complete everything on phone',
-      'Works on iOS, Android, and desktop',
-      'Search shops anywhere (great for travelers)',
-      'No smartphone required — web access works too',
-      'Free to register and use',
-      'Photo uploads, geo-tags, timestamps built-in',
-      'Certification courses available to unlock more opportunities',
-      'Reputation rank increases assignment limits'
+    pros: [
+      '1,000+ Mystery Shopping Providers in one app',
+      '1M+ registered shoppers',
+      'iOS, Android, and web',
+      'Search shops in any city',
+      'Free to register'
     ],
-    importantNotes: [
-      'iSecretShop doesn\'t pay you — MSPs do directly',
-      'Each MSP has different payment schedules (days to monthly)',
-      'Payment policies shown before accepting assignments',
-      'Most MSPs pay via PayPal',
-      'Limited to 3 assignments at first (increases with reputation)',
-      'Optional $10 verification to boost trust with MSPs',
+    cons: [
+      'iSecretShop does not pay you, the MSP does',
+      'Payment schedules range from days to 45+ days',
+      'New shoppers limited to 3 jobs at a time',
       'Some certifications cost money',
-      'Assignment availability varies heavily by location',
-      'Intrusive profile questions (banking, politics) for matching',
-      'Mixed reviews on payment disputes'
+      'Job volume depends on your city'
     ],
-    payoutInfo: [
-      'Shop compensation: $10–$50 per assignment',
-      'Reimbursements for purchases (varies by shop)',
-      'Bonuses for hard-to-fill or deadline shops',
-      'Gift cards available for some assignments',
-      'Payment timing: Varies by MSP (days to 45+ days)',
-      'Most MSPs use PayPal',
-      'Must review each MSP\'s payment policy before accepting',
-      'Payments processed after shop is reviewed/approved'
-    ],
-    taskTypes: [
-      'Restaurant evaluations — dine and report',
-      'Retail shops — assess customer service',
-      'Hotel stays — evaluate room service, amenities',
-      'Cell phone store visits — common assignment type',
-      'Phone shops — call businesses from home',
-      'Web shops — online purchase evaluations',
-      'Gym/fitness evaluations — membership inquiries',
-      'Grocery store shops — product checks',
-      'Product scanning — inventory counts (Costco, etc.)'
-    ],
-    finalTake: 'iSecretShop is the best "one-stop-shop" for mystery shopping — access hundreds of providers without juggling multiple accounts. The mobile app makes on-the-go shopping seamless. However, since each MSP handles their own payments, you\'re dealing with dozens of different policies and timelines. Best for serious mystery shoppers who want maximum variety and don\'t mind tracking payments across multiple sources.',
+    payout: {
+      'Pay method': 'Most MSPs pay through PayPal',
+      'Shop pay': '$10 to $50',
+      'Reimbursement': 'Varies by job',
+      'Bonuses': 'On hard-to-fill shops',
+      'Payment timing': 'Days to 45+ days (depends on the MSP)',
+      'Verification': 'Optional $10 boost'
+    },
+    finalTake: 'Best one-stop-shop for mystery shopping. Mobile-first makes on-site reporting fast. Downside is tracking payments across dozens of MSPs. Use it if you are serious about mystery shopping, not just dabbling.',
     idealFor: [
-      'Travelers who want to shop in different cities',
-      'People who prefer mobile-first apps',
-      'Serious mystery shoppers wanting variety',
-      'Those in major cities with more opportunities',
-      'Shoppers who want one app instead of many accounts'
+      'Travel and want to shop in other cities',
+      'Prefer phone apps over desktop',
+      'Already doing mystery shopping and want more variety',
+      'OK tracking payments from many companies'
     ]
   },
   'marketforce': {
     name: 'Market Force',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/marketforce.png',
     link: 'https://www.marketforce.com/',
     rate: '$3–$20/shop',
-    description: 'Major mystery shopping company specializing in restaurants and movie theaters.',
+    description: 'Visit stores or restaurants, fill out a quick form. Free food perk.',
     category: 'fun',
-    tldr: 'One of the largest mystery shopping companies (since 1972) with 400K+ shoppers. Focus on fast food, restaurants, and movie theaters. Pay $3–$20/shop plus meal reimbursements. Monthly payments via direct deposit or PayPal on the 20th. Very strict on instructions — small errors = no pay.',
-    intro: 'Market Force Information is one of the oldest and largest mystery shopping companies, operating since 1972 with over 400,000 shoppers across North America and Europe. They specialize in customer experience research for restaurants, retail, theaters, and other consumer businesses.\n\nAs a Market Force shopper, you\'ll visit fast food chains, casual dining restaurants, movie theaters, and retail stores. You evaluate service quality, cleanliness, food preparation, and employee behavior — then submit detailed reports within 8 hours of your visit.',
+    tldr: '**What it is:** Big mystery shopping company since 1972. Fast food, casual dining, movie theaters, retail.\n\n**The pay:** $3 to $20 per shop plus meal reimbursement. Paid monthly on the 20th by direct deposit or PayPal.\n\n**The catch:** Famous for rejecting shops over tiny errors. Wrong photo angle = no pay, and you eat the cost of the meal. Reports due within 8 hours.',
     whyAdhd: [
-      'Free food — many shops include meal reimbursements',
-      'Movie theater shops — get paid to watch movies',
-      'Map-based shop finder makes browsing easy',
-      'Negotiate pay — "Make An Offer" button available',
-      'Short visits — most shops under an hour',
-      'Mobile app for on-the-go access'
+      'Free meals on most shops.',
+      'Movie theater shops pay you to watch a movie.',
+      'Map view shows nearby shops.',
+      'Most shops take under an hour.',
+      'Phone app works on the go.'
     ],
-    standOut: [
-      'Established 1972 — one of the oldest companies',
-      '400,000+ registered shoppers',
-      'Available in US, Canada, UK, Ireland, Spain, Italy, France',
-      'Two portals: Blue (mystery shops) and Purple (audits/merchandising)',
-      'Direct deposit or PayPal payment options',
-      'Can negotiate shop fees with "Make An Offer"',
-      'Mobile app available',
-      'Schedulers may offer bonuses for urgent shops',
-      'Theater shops don\'t require upfront purchases'
+    pros: [
+      'Around since 1972',
+      '400,000+ shoppers worldwide',
+      'US, Canada, UK, Ireland, Spain, Italy, France',
+      'Direct deposit or PayPal',
+      '"Make An Offer" button to negotiate pay'
     ],
-    importantNotes: [
-      'Very strict instructions — any deviation = no payment',
-      'Reports due within 8 hours of shop completion',
-      'Level 1 shoppers must upgrade within 90 days to get paid',
-      'Need SSN/SIN to reach Level 2 and receive payment',
-      'Many reports of shops rejected for minor issues',
-      'Payment takes 45+ days (monthly on 20th for previous month)',
-      'Post-pandemic reimbursements reduced without lower requirements',
-      'Some location blocking — shops may not show near your home',
-      'Long, detailed reports required (up to 7 pages)',
-      'Call ahead to verify location is open',
-      'No children allowed on most shops'
+    cons: [
+      'Strict rules. Any miss = no pay AND no reimbursement.',
+      'Reports due within 8 hours',
+      'New shoppers must upgrade to Level 2 in 90 days',
+      'Pay arrives 45+ days after the shop',
+      'No kids allowed on most shops'
     ],
-    payoutInfo: [
-      'Shop fees: $3–$20 typically (some higher)',
-      'Meal reimbursements: $12–$15 common (varies)',
-      'Fast food shops: ~$8 + meal for two',
-      'Theater shops: Often reimbursement only',
-      'Payment methods: Direct deposit or PayPal',
-      'Payment schedule: 20th of month following shop',
-      'Must submit tax info (SSN/SIN) to receive payment',
-      'Bonuses available for hard-to-fill shops',
-      'Can negotiate fees via "Make An Offer" button'
-    ],
-    taskTypes: [
-      'Fast food evaluations — McDonald\'s, Burger King, etc.',
-      'Casual dining restaurants — full service meals',
-      'Movie theater audits — concessions, cleanliness, experience',
-      'Retail store evaluations — customer service, displays',
-      'Wireless store shops — T-Mobile, etc.',
-      'Gas station evaluations',
-      'Bank/financial services shops',
-      'Grocery store checks',
-      'Merchandising audits (Purple portal)',
-      'Lobby checks and patron counts'
-    ],
-    finalTake: 'Market Force has major name recognition and tons of restaurant/theater shops, but recent reviews paint a frustrating picture. They\'re infamous for rejecting shops over tiny errors (wrong photo angle, missing detail) — leaving you out both pay AND the money you spent. The $200/month some shoppers report is achievable, but expect a learning curve and strict attention to 4-page instruction documents. Best for experienced mystery shoppers who follow directions precisely.',
+    payout: {
+      'Pay method': 'Direct deposit or PayPal',
+      'Shop fee': '$3 to $20',
+      'Meal reimbursement': '$12 to $15 typical',
+      'Fast food shops': '~$8 + meal for two',
+      'Theater shops': 'Usually reimbursement only',
+      'Pay schedule': '20th of the month after the shop'
+    },
+    finalTake: 'Big name, lots of shops, but the rejection rate scares off most beginners. $200/month is doable if you read every line of the 4-page instruction sheet. Not your first mystery shopping account.',
     idealFor: [
-      'Detail-obsessed shoppers who follow instructions exactly',
-      'People who love fast food and movie theaters',
-      'Experienced mystery shoppers (not beginners)',
-      'Those who can wait 45+ days for payment',
-      'Shoppers comfortable with lengthy report requirements'
+      'Detail brain that reads every instruction',
+      'Love fast food and movies',
+      'Already mystery shopping somewhere else',
+      'OK waiting 45+ days for pay',
+      'Not a fit for beginners'
     ]
   },
   'prestoshopper': {
@@ -2987,1849 +2131,1344 @@ export const gigData: Record<string, any> = {
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
     link: 'https://prestomobilesurveys.com/become-a-mystery-shopper/',
     rate: '$10–$70/shop',
-    description: 'Mobile-first mystery shopping app from the makers of SASSIE with super-fast payments.',
+    description: 'Mystery shopping near you. Get paid the same day.',
     category: 'fun',
-    tldr: 'Mobile mystery shopping app from SASSIE (industry\'s #1 software). Three job types: InstaShops (instant self-assign), MysteryShops (apply first), and LiveShops (quick on-the-spot). Pay $10–$70+ per shop. Super fast payments — within days, not weeks. Works with 100+ partner companies.',
-    intro: 'PrestoShopper is a mobile mystery shopping app created by SurfMerchants, the makers of SASSIE — the world\'s most popular mystery shopping software used by over 150 companies. It\'s designed for fast, mobile-first mystery shopping with instant self-assignment and rapid payments.\n\nThe app serves as both a direct platform for quick "Insta-Shops" and an aggregator showing opportunities from SASSIE partner companies. You can see thousands of shops on a map at Prestomap.com and claim them without waiting for approval.',
+    tldr: '**What it is:** Mystery shopping app from SASSIE (the software 150+ companies already use). Three job types: InstaShops (claim instantly), MysteryShops (apply first), LiveShops (quick on-the-spot).\n\n**The pay:** $10 to $70+ per shop. Paid 1 to 3 days after approval. PayPal, Amazon gift cards, or Tango cards.\n\n**The catch:** App is buggy. Photo upload fails. Reviews have flagged it for years.',
     whyAdhd: [
-      'Instant self-assign — no waiting for approval',
-      'Fill out surveys on your phone while at location',
-      'Short surveys — just a few clicks, no long narratives',
-      'Super fast payment — days, not weeks',
-      'Map-based browsing shows nearby shops visually',
-      'Three job types for variety'
+      'Claim a shop instantly. No waiting for approval.',
+      'Fill out the report on your phone at the store.',
+      'Forms are short. No long write-ups.',
+      'Paid in days, not weeks.',
+      'Map view shows shops near you.'
     ],
-    standOut: [
-      'Made by SASSIE — #1 mystery shopping software',
-      'Access to 100+ SASSIE partner companies',
-      'Instant self-assign for Insta-Shops',
-      'Payment within 1–3 days after approval',
-      'Shops auto-approve if not reviewed in 72 hours',
-      'Payments processed twice weekly (Mon & Thu)',
-      'No threshold — get paid per completed shop',
-      'PayPal, Amazon gift cards, or Tango cards',
-      'One signup gives access to all partner companies',
-      'Available in US, Canada, and some UK locations'
+    pros: [
+      'Made by SASSIE (industry standard)',
+      'Access to 100+ partner companies through one app',
+      'Instant self-assign on InstaShops',
+      'Paid 1 to 3 days after approval',
+      'Twice-weekly payment runs'
     ],
-    importantNotes: [
-      'App is notoriously clunky/slow according to reviews',
-      'Photo upload issues reported — may need to use mobile browser backup',
-      'MysteryShops require signing up with partner companies separately',
-      'Some editors reject work based on subjective judgment',
-      'Timer issues — shop windows may not align with availability',
-      'Limited support access — hard to reach supervisors',
-      'Most opportunities concentrated in US/Canada',
-      'LiveShops pay in coupons or Amazon cards (not cash)',
-      'Must use same email as your PayPal account'
+    cons: [
+      'App is slow and crashes',
+      'Photo uploads fail (use mobile browser as backup)',
+      'MysteryShops still need separate signup',
+      'Some editors reject on judgment calls',
+      'LiveShops pay in coupons or Amazon cards, not cash'
     ],
-    payoutInfo: [
-      'InstaShops: $10–$30 typically',
-      'MysteryShops: $10–$70+ (more complex)',
-      'LiveShops: Coupons or Amazon gift cards',
-      'Reimbursements for required purchases',
-      'Payment methods: PayPal, Amazon cards, Tango cards',
-      'Tango cards work at 40+ retailers (Target, Apple, Starbucks)',
-      'Processing: Reviewed within 72 hours, auto-approve if not',
-      'Payments sent Mon & Thu — within 1–3 days of approval',
-      'No minimum payout threshold'
-    ],
-    taskTypes: [
-      'InstaShops — quick mobile shops, instant self-assign',
-      'MysteryShops — traditional shops via partner companies',
-      'LiveShops — quick evaluations at places you\'re already visiting',
-      'Restaurant evaluations — fast food chains like McDonald\'s',
-      'Retail store checks — Best Buy, etc.',
-      'Gas station shops — fuel up and evaluate',
-      'Audits and surveys — compliance checks',
-      'Phone mystery shops — call evaluations'
-    ],
-    finalTake: 'PrestoShopper stands out for speed — both in claiming shops (instant self-assign) and getting paid (days not weeks). Access to 100+ SASSIE partner companies through one app is genuinely convenient. The major downside is the app itself: reviews consistently complain about slowness, photo upload failures, and clunky interface. Best for shoppers who can tolerate tech frustrations in exchange for faster payments.',
+    payout: {
+      'Pay method': 'PayPal, Amazon gift cards, or Tango cards',
+      'InstaShops': '$10 to $30',
+      'MysteryShops': '$10 to $70+',
+      'LiveShops': 'Coupons or Amazon gift cards (not cash)',
+      'Reimbursements': 'Yes for required purchases',
+      'Pay schedule': 'Monday and Thursday',
+      'Auto-approval': '72 hours if not reviewed'
+    },
+    finalTake: 'Fastest paying mystery shopping app. Instant self-assign is the killer feature. App is rough. If you can stomach the bugs, the speed beats every other platform.',
     idealFor: [
-      'Mystery shoppers who hate waiting for payments',
-      'Those who want instant self-assign (no approval wait)',
-      'People already using SASSIE partner companies',
-      'Shoppers in US/Canada with good availability',
-      'Anyone who prefers mobile-first workflow'
+      'Tired of waiting 45+ days for mystery shopping pay',
+      'Want to claim a shop and just go',
+      'Already using SASSIE partner companies',
+      'In the US or Canada',
+      'OK with a buggy app for faster pay'
     ]
   },
   'preply': {
     name: 'Preply',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/preply.png',
     link: 'https://www.preply.com/',
     rate: '$5–$100+/hr',
-    description: 'Global language tutoring marketplace with 90,000+ tutors teaching 50+ languages to students in 175+ countries.',
+    description: 'Tutor anything to students worldwide.',
     category: 'freelance',
-    tldr: 'Ukrainian-founded language platform (2012, now HQ\'d in Massachusetts). 90,000+ tutors, 50+ languages, 175+ countries. Set your own rates. Brutal commission: 100% on trial lessons (you earn $0), then 33%→18% as you teach more hours. Withdraw via Wise, PayPal, Payoneer, or Skrill.',
-    intro: '<strong>Preply</strong> was founded in 2012 in Kyiv, Ukraine and is now headquartered in Brookline, Massachusetts. They\'ve raised $171M+ and employ 678+ people across offices in Barcelona, New York, London, and Kyiv.\n\nThe platform connects tutors with students globally via a subscription model — students buy lesson packages that auto-renew every 28 days. Preply provides the video classroom, handles payments, and offers AI-powered learning materials.',
+    tldr: '**What it is:** Language tutoring platform. 90,000+ tutors, 50+ languages, students in 175+ countries.\n\n**The pay:** Set your own rate. Commission starts at 33% and drops to 18% after 400 hours. Trial lessons pay you $0. Cashout via Wise, PayPal, Payoneer, or Skrill.\n\n**The catch:** Trial lessons earn nothing. High competition. $20/hr rate nets $13.40 at 33% commission.',
     whyAdhd: [
-      'Set your own schedule completely',
-      'Work from anywhere with internet',
-      'One-on-one lessons (not group classes)',
-      'Built-in video classroom — no extra software',
-      'Pre-made learning plans save prep time',
-      'Variety keeps things interesting'
+      'Set your own schedule.',
+      'Work from anywhere with internet.',
+      'One-on-one lessons.',
+      'Built-in video classroom.',
+      'Pre-made lesson plans save prep time.'
     ],
-    standOut: [
-      '90,000+ tutors, 50+ languages, 175+ countries',
-      'Preply Classroom: video, whiteboard, screen share, chat',
-      'Machine learning matches students to tutors',
-      'Students subscribe = recurring revenue potential',
-      'Free training webinars and Tutor Academy',
-      'Mobile app for iOS and Android',
-      '24/7 customer support'
+    pros: [
+      'Global student access',
+      'Subscription model = recurring lessons',
+      'Built-in video classroom',
+      'Commission drops with hours taught',
+      'Set your own rate'
     ],
-    importantNotes: [
-      '⚠️ Trial lessons = 100% commission (you earn $0)',
-      'Commission: 33% (new) → 18% (after 400 hrs)',
-      'Tiers: 0-20 hrs (33%), 21-50 hrs (28%), 51-200 hrs (25%), 201-400 hrs (22%), 400+ hrs (18%)',
-      'Students must confirm lessons before you get paid',
-      'Must submit government ID for verification',
-      'Need webcam, mic, stable internet',
-      'High competition — thousands of tutors per language'
+    cons: [
+      'Trial lessons unpaid',
+      'New tutors lose 33% of every lesson',
+      'High competition',
+      'Takes 400 hours to hit the lowest commission'
     ],
-    payoutInfo: [
-      'Set your own hourly rate',
-      'New tutors: $8–$15/hr recommended to start',
-      'Top earners: Up to $550/week',
-      'At 33% commission: $10/hr rate = $6.70 actual',
-      'At 18% commission: $10/hr rate = $8.20 actual',
-      'Withdraw via: Wise, PayPal, Payoneer, Skrill',
-      'Payoneer minimum: $20'
-    ],
-    taskTypes: [
-      'Language tutoring (English, Spanish, French, etc.)',
-      'ESL & Business English',
-      'Test prep (TOEFL, IELTS)',
-      'Academic subjects (math, science)',
-      'Music and hobby subjects'
-    ],
-    finalTake: '<strong>Preply is legit and global, but the commission structure hurts early on.</strong> Working trial lessons for $0 is rough, and 33% commission means a $20/hr rate nets you $13.40. Good news: it drops to 18% after 400 hours, and the subscription model means recurring students. Set rates low to start, collect reviews fast, then raise prices.',
+    payout: {
+      'Pay method': 'Wise, PayPal, Payoneer, or Skrill',
+      'Starting commission': '33% (0-20 hrs taught)',
+      'Lowest commission': '18% (400+ hrs taught)',
+      'Trial lessons': '100% commission (you earn $0)',
+      'New tutor rate': '$8 to $15/hr recommended',
+      'Top earners': 'Up to $550/week',
+      'Cashout minimum': '$20 (Payoneer)'
+    },
+    finalTake: 'Legit global platform. Commission hurts early. Trial lessons unpaid is the worst part. Set rates low to start, get reviews fast, climb the commission ladder.',
     idealFor: [
-      'Language teachers (especially English, Spanish, French)',
-      'Native speakers of in-demand languages',
-      'Tutors wanting global student access',
-      'NOT for those needing immediate high earnings'
+      'Language teacher (English, Spanish, French)',
+      'Native speaker of an in-demand language',
+      'Want global student access',
+      'OK working trial lessons unpaid to start'
     ]
   },
   'italki': {
     name: 'italki',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/italki.png',
     link: 'https://www.italki.com/',
     rate: '$5–$80+/hr',
-    description: 'Global language learning marketplace with 30,000+ teachers in 150+ languages — lower commission than Preply.',
+    description: 'Teach languages. You keep 85% of what you earn.',
     category: 'freelance',
-    tldr: 'Language tutoring platform with 30,000+ teachers and 10M+ students. Flat 15% commission — and unlike Preply, you actually get paid for trial lessons. Set your own rates ($5+ for community tutors, $10+ for professionals). Withdraw via PayPal or Payoneer.',
-    intro: '<strong>italki</strong> is Preply\'s main competitor — but with a key difference: they only take 15% commission and don\'t steal your trial lesson earnings.\n\nYou set your rates, pick your schedule, and teach via their built-in video classroom. Two tutor types: "Professional Teachers" (need credentials) and "Community Tutors" (just need to be fluent). Over 150 languages available.',
+    tldr: '**What it is:** Language tutoring site with 30,000+ teachers and 10M+ students. Two tiers: Professional Teachers (need credentials) and Community Tutors (just fluent).\n\n**The pay:** Flat 15% commission. Trial lessons pay full (no commission). You set your own rate. PayPal or Payoneer cashout, $30 minimum.\n\n**The catch:** Competition is heavy. Building students takes time.',
     whyAdhd: [
-      'Set your own schedule — no minimums',
-      'Work from anywhere with internet',
-      'One-on-one lessons (your style)',
-      'No mandatory lesson plans',
-      'Choose which students to accept',
-      'Instant lessons option for spontaneous work'
+      'Set your own schedule.',
+      'Work from anywhere with internet.',
+      'No mandatory lesson plans.',
+      'Pick which students to accept.',
+      'Instant lessons option for spontaneous work.'
     ],
-    standOut: [
-      '30,000+ teachers, 150+ languages, 10M+ learners',
-      'Lower commission than Preply (15% vs 33%)',
-      'No commission on trial lessons',
-      'Two tutor tiers: Professional & Community',
-      'italki Classroom: video, screen share, messaging',
-      'Package discounts to encourage repeat students',
-      'Mobile app for iOS and Android'
+    pros: [
+      'Friendly 15% commission',
+      'Trial lessons paid in full',
+      'You set your own rate',
+      '150+ languages',
+      'Real recurring students possible'
     ],
-    importantNotes: [
-      'Flat 15% commission on all regular lessons',
-      'Trial lessons: full pay (no commission)',
-      'Community Tutors: min $5/hr, no credentials needed',
-      'Professional Teachers: min $10/hr, credentials required',
-      'Must pass ID verification and quizzes',
-      '$30 minimum withdrawal balance',
-      'High competition — building clientele takes time'
+    cons: [
+      'High competition',
+      'Takes time to build students',
+      'Languages only, no other subjects',
+      '$30 minimum cashout'
     ],
-    payoutInfo: [
-      'Set your own hourly rate',
-      'Community Tutors: $5–$30/hr typical',
-      'Professional Teachers: $10–$80+/hr typical',
-      'Commission: Flat 15%',
-      'Trial lessons: 0% commission',
-      'Withdraw via: PayPal or Payoneer',
-      'Minimum withdrawal: $30'
-    ],
-    taskTypes: [
-      'Language tutoring (150+ languages)',
-      'Conversation practice',
-      'Test prep (IELTS, TOEFL, HSK, JLPT)',
-      'Business language skills',
-      'Group classes',
-      'Kids language lessons'
-    ],
-    finalTake: '<strong>italki\'s 15% commission and paid trial lessons make it friendlier than Preply.</strong> A $20/hr rate nets you $17 here vs $13.40 on Preply. Competition is fierce with 30,000+ teachers, so expect time building your student base. Start competitive, respond fast, convert trials to regulars.',
+    payout: {
+      'Pay method': 'PayPal or Payoneer',
+      'Commission': '15% flat',
+      'Trial lessons': '0% commission',
+      'Community Tutors': '$5 to $30/hr typical',
+      'Professional Teachers': '$10 to $80+/hr typical',
+      'Minimum withdrawal': '$30'
+    },
+    finalTake: 'Friendlier than Preply on every front. 15% commission vs 33%, plus you actually get paid for trial lessons. Still takes time to build a student base. Best language tutoring platform if you can pass the verification.',
     idealFor: [
-      'Language teachers and native speakers',
-      'Those who prefer lower, predictable commission',
-      'Tutors who don\'t want to work trials for free',
-      'NOT for teaching non-language subjects'
+      'Language teacher or native speaker',
+      'Want lower commission than Preply',
+      'Refuse to work trials for free',
+      'Not a fit for non-language subjects'
     ]
   },
   'cambly': {
     name: 'Cambly',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
+    logo: 'images/cambly.png',
     link: 'https://www.cambly.com/',
     rate: '$10.20–$12/hr',
-    description: 'On-demand English conversation platform — students call you instantly, no scheduling required. Low pay but zero barriers to entry.',
+    description: 'Just chat in English with students. No lesson planning.',
     category: 'freelance',
-    tldr: 'English-only conversation platform (founded 2012, San Francisco). Students video-call you on-demand — no scheduling needed. Flat rate: $0.17/min ($10.20/hr) for adults, $0.20/min ($12/hr) for Cambly Kids. No degree, no TEFL, no experience required. Paid weekly via PayPal. Great for beginners, but the pay is rough.',
-    intro: '<strong>Cambly</strong> is different from italki/Preply — it\'s on-demand conversation practice, not formal tutoring. Students open the app and instantly connect with whoever\'s online. You don\'t set your rates. You don\'t schedule lessons. You just... talk.\n\nZero barriers: no degree, no teaching certificate, no experience. Just be a native English speaker with a laptop and decent internet. The tradeoff? Lowest pay in the industry.',
+    tldr: '**What it is:** On-demand English conversation. Students video-call you live. No scheduling, no lesson plans, no prep.\n\n**The pay:** Flat $0.17/min ($10.20/hr) for adults, $0.20/min ($12/hr) for Cambly Kids. Weekly PayPal.\n\n**The catch:** Real hourly with gaps between calls is $5 to $8/hr. You cannot set your own rate. No raises ever.',
     whyAdhd: [
-      'Zero prep work — just conversation',
-      'No lesson plans required',
-      'Log on whenever you want',
-      'No minimum hours',
-      'Instant calls = no scheduling hassle',
-      'Variety of students keeps it interesting'
+      'Zero prep work. Just conversation.',
+      'No lesson plans required.',
+      'Log on whenever you want.',
+      'No minimum hours.',
+      'Instant calls. No scheduling.'
     ],
-    standOut: [
-      'On-demand format — students call you live',
-      'No degree or TEFL required',
-      'No interview or demo class',
-      'Cambly Kids option ($12/hr)',
-      'Available 24/7 globally',
-      'Get paid for no-shows (10 min wait)',
-      'Priority hour bonuses available',
-      'Weekly PayPal payments'
+    pros: [
+      'Easiest entry into English teaching',
+      'No prep, no lesson plans',
+      'No degree required',
+      'Weekly PayPal',
+      'Get paid for no-shows'
     ],
-    importantNotes: [
-      'Cambly: $0.17/min ($10.20/hr) — flat rate',
-      'Cambly Kids: $0.20/min ($12/hr) — flat rate',
-      'You cannot set your own rates',
-      'Must be native English speaker (US, UK, Canada, Australia)',
-      'Need laptop/desktop — no tablets or phones',
-      'Acceptance can take weeks or months',
-      'Effective hourly may be $5-8 with gaps between calls',
-      '$20 minimum to withdraw',
-      'No pay raises — ever'
+    cons: [
+      'Lowest pay in the industry',
+      'Cannot set your own rate',
+      'Pay rate never goes up',
+      'Idle time between calls eats your effective hourly',
+      'Laptop required, no phone'
     ],
-    payoutInfo: [
-      'Cambly: $0.17/min ($10.20/hr)',
-      'Cambly Kids: $0.20/min ($12/hr)',
-      'Paid weekly via PayPal',
-      'Also: Wise, direct deposit, wire transfer',
-      '$20 minimum withdrawal',
-      'Priority hour bonuses: up to 25% extra',
-      'No-show pay: get paid for 10 min wait',
-      'Referral bonus: $20 per tutor (+ $30 for Kids)'
-    ],
-    taskTypes: [
-      'Casual English conversation',
-      'IELTS/TOEFL exam practice',
-      'Business English',
-      'Job interview prep',
-      'Travel English',
-      'Cambly Kids (ages 4-15)'
-    ],
-    finalTake: '<strong>Cambly is the easiest way to start teaching English online — but the pay reflects that.</strong> $10.20/hr with gaps between calls means you might actually earn $5-8/hr. No prep, no lesson plans, no stress — just chat. Perfect as a side gig or stepping stone to better-paying platforms. Don\'t expect to live on it.',
+    payout: {
+      'Pay method': 'PayPal, Wise, direct deposit, or wire',
+      'Cambly rate': '$0.17/min ($10.20/hr)',
+      'Cambly Kids rate': '$0.20/min ($12/hr)',
+      'Frequency': 'Weekly',
+      'Minimum cashout': '$20',
+      'Priority hour bonus': 'Up to 25% extra',
+      'No-show pay': '10 min wait gets paid'
+    },
+    finalTake: 'Easiest way to start teaching English online. The pay reflects it. Use Cambly as a stepping stone to italki or Preply, not as your main income.',
     idealFor: [
-      'Native English speakers wanting easy entry',
-      'People who enjoy casual conversation',
-      'Those wanting zero-prep flexible work',
-      'Beginners building teaching experience',
-      'NOT for those needing real income'
+      'Native English speaker',
+      'Want zero-prep flexible work',
+      'Enjoy casual conversation',
+      'Beginner building teaching experience',
+      'Not the fit if you need real money'
     ]
   },
   'wyzant': {
     name: 'Wyzant',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/wyzant.jpg',
     link: 'https://www.wyzant.com/',
     rate: '$15–$485+/hr',
-    description: 'America\'s largest tutoring marketplace connecting 80,000+ tutors with students in 300+ subjects — set your own rates, online or in-person.',
+    description: 'Tutor school subjects and test prep. Pays well, US only.',
     category: 'freelance',
-    tldr: 'The largest tutoring marketplace in the US (founded 2005, owned by IXL Learning). 80,000+ tutors, 300+ subjects, 6 million monthly visitors. Set your own hourly rate ($15–$485+). Platform takes flat 25% fee. Students pay additional 9% service fee. Both online and in-person tutoring. No teaching certification required. Must pass subject proficiency quizzes. Referrals = 100% of your rate. US residents only. As of July 2025: Semimonthly payments only (1st & 15th).',
-    intro: '<strong>Wyzant</strong> was founded in 2005 in Chicago by Andrew Geant and Mike Weishuhn, making it the first digital marketplace connecting students with independent tutors. It was acquired by IXL Learning in 2021.\n\nWith over 80,000 tutors and 300+ subjects, Wyzant handles all marketing, payment processing, and provides a digital classroom platform (Learning Studio). You set your own rates, choose your schedule, and decide whether to tutor online, in-person, or both. The platform gets massive traffic — roughly 6 million visitors monthly.',
+    tldr: '**What it is:** Largest US tutoring marketplace. 80,000+ tutors, 300+ subjects, 6M monthly visitors. Online or in-person.\n\n**The pay:** You set your own hourly rate ($15 to $485+). Wyzant takes flat 25%. Most tutors charge $35 to $65/hr. Referrals you bring in pay you 100%.\n\n**The catch:** US residents only. July 2025 update: semi-monthly payments only (1st and 15th). Express pay is gone.',
     whyAdhd: [
-      'Set your own schedule completely',
-      'Choose subjects you\'re passionate about',
-      'Work online from home or in-person locally',
-      'One-on-one sessions (less overwhelming than groups)',
-      'Built-in Learning Studio with whiteboard',
-      'Direct messaging with students/parents',
-      'No lesson prep requirements from platform',
-      'Variety of subjects keeps it interesting'
+      'Set your own schedule.',
+      'Pick subjects you actually like.',
+      'Online or in-person.',
+      'One-on-one sessions, no group chaos.',
+      'Built-in classroom (video, whiteboard, code editor).',
+      'No required lesson prep from the platform.'
     ],
-    standOut: [
-      'Largest US tutoring marketplace (80,000+ tutors)',
-      '300+ subjects available',
-      '6 million monthly website visitors',
-      'Set your own hourly rate ($15–$485+)',
-      'Both online and in-person options',
-      'Learning Studio (video, whiteboard, code editor, file sharing)',
-      'Mobile app for iOS and Android',
-      'Referrals = 100% of rate (no commission)',
-      'No upfront costs to join',
-      'First-hour satisfaction guarantee for students',
-      'Background checks available ($15.99)',
-      'Integrations with IXL, Vocabulary.com, Rosetta Stone',
-      'Customer support 6 days/week',
-      'Partnership programs with schools/institutions'
+    pros: [
+      'Massive built-in traffic',
+      'You set your rate',
+      '300+ subjects, broad demand',
+      'Referrals are 100% yours',
+      'Solid digital classroom built in'
     ],
-    importantNotes: [
-      'Flat 25% platform fee on all lessons (since Jan 2019)',
-      'Students pay additional 9% service fee',
-      'US residents only (must have valid SSN)',
-      'Must be 18+ years old',
-      'Subject proficiency quizzes required (ONE attempt only)',
-      'Profile review takes 3–10 business days',
-      'Background check optional but highly recommended ($15.99)',
-      'Independent contractor — handle own taxes',
-      'Building clientele takes time (apply to 20+ jobs initially)',
-      '⚠️ July 2025: Express pay discontinued — semimonthly only now',
-      'Lessons must be submitted within 14 days',
-      'Cancellation fees still subject to 9% service fee'
+    cons: [
+      '25% platform cut',
+      'US only',
+      'One-shot quiz to qualify in your subjects',
+      'Express pay discontinued July 2025',
+      'Building students takes time'
     ],
-    payoutInfo: [
-      'Set your own rate: $15–$485+/hour',
-      'Most tutors charge: $35–$65/hour',
-      'You keep 75% (platform takes flat 25%)',
-      'Referrals: Keep 100% (no platform fee)',
-      '⚠️ NEW July 2025: Semimonthly payments only',
-      'Payments issued: 1st & 15th of each month',
-      'Lessons must be submitted 5 days before payment date',
-      'Express Direct Deposit discontinued July 2025',
-      'Average Indeed salary: ~$27/hour',
-      'Glassdoor reports: $35–$65/hour typical'
-    ],
-    taskTypes: [
-      'Math tutoring (algebra, calculus, geometry, statistics)',
-      'Science (biology, chemistry, physics, engineering)',
-      'Languages (Spanish, French, Chinese, Arabic, 50+ more)',
-      'English (writing, grammar, literature, ESL)',
-      'Test prep (SAT, ACT, GRE, GMAT, MCAT, LSAT)',
-      'Business (accounting, finance, economics, marketing)',
-      'Computer science & programming',
-      'Music lessons',
-      'Elementary & K-12 subjects',
-      'College-level courses',
-      'Professional certifications',
-      'Homeschool support'
-    ],
-    finalTake: '<strong>Wyzant remains the gold standard for independent tutors in 2025 — massive traffic, flexible rates, and a legitimate platform.</strong> The flat 25% commission stings, but they handle all marketing, payments, and provide a solid digital classroom. The math: If you charge $50/hour, you keep $37.50. To hit $1,000/week, you need ~27 hours of tutoring. Note the July 2025 change: Express pay is gone, so plan for semimonthly payments only. Building clientele takes patience — expect to apply to dozens of jobs before landing steady students. Best approach: Start competitive, collect reviews fast, then raise prices. Referrals let you keep 100%.',
+    payout: {
+      'Pay method': 'Semi-monthly direct deposit',
+      'Your rate': '$15 to $485+/hr (you set)',
+      'Typical rate': '$35 to $65/hr',
+      'Platform cut': '25%',
+      'Referral fee': '0% (you keep 100% on referrals you bring)',
+      'Payment days': '1st and 15th of each month',
+      'Submission deadline': '5 days before payment date'
+    },
+    finalTake: 'Best US tutoring platform. 25% cut hurts, but the traffic is real. Most tutors charge $50/hr and keep $37.50. To hit $1,000/week you need ~27 hours of tutoring. Build reviews fast, raise rates, and bring referrals to keep 100%.',
     idealFor: [
-      'Subject matter experts who enjoy teaching',
-      'Teachers looking for supplemental income',
-      'College students tutoring their major',
-      'Professionals sharing specialized knowledge',
-      'Anyone in the US with expertise in 300+ subjects',
-      'NOT for those outside the United States'
+      'Subject expert who likes teaching',
+      'Teacher wanting supplemental income',
+      'College student tutoring their major',
+      'US resident with valid SSN',
+      'Not the fit if you live outside the US'
     ]
   },
   'instagram': {
     name: 'Instagram',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/instagram.jpg',
     link: 'https://creators.instagram.com/',
     rate: '$0.01–$0.05/1K views',
-    description: 'Create Reels, build a following, earn from bonuses, brand deals, subscriptions, and affiliate marketing. Visual-first platform owned by Meta.',
+    description: 'Photos and reels for brand deals and affiliate links.',
     category: 'creative',
-    tldr: 'Visual platform with 2B+ users. Reels Play Bonus pays $0.01-$0.05 per 1,000 views (invite-only, mostly discontinued). Real money is brand deals and subscriptions. Need 10K followers for most monetization features. Subscriptions: $2.99-$99.99/month from fans. Brand deals pay $100-$1,000+ per post depending on following.',
-    intro: '<strong>Instagram</strong> does not pay you just for views like YouTube does. The Reels Play Bonus program is mostly discontinued (only Italy/Spain now). Real income comes from brand deals, subscriptions, and selling products.\n\nThink of Instagram as a portfolio and audience-builder, not a direct payout machine. 10K followers unlocks most monetization tools. Brand deals are where creators actually make money.',
+    tldr: '**What it is:** Visual platform with 2B+ users. Reels, Stories, Lives, posts.\n\n**The pay:** Reels Play Bonus is mostly dead. Real money is brand deals and subscriptions. Need 10K followers for most monetization features. Subscriptions: $2.99 to $99.99/mo (you keep 70%). Brand deals: $100 to $1,000+ per post.\n\n**The catch:** Instagram does not pay for views like YouTube. Think of it as a portfolio and audience-builder, not a paycheck.',
     whyAdhd: [
-      'Visual content — less writing, more creating',
-      'Reels are short and quick to make',
-      'Instant feedback via likes/comments',
-      'Stories disappear — less pressure for perfection',
-      'Can repurpose TikTok content easily',
-      'Variety of formats (Reels, Stories, Lives, Posts)',
-      'Strong for building personal brand'
+      'Visual content. Less writing, more creating.',
+      'Reels are short and quick to make.',
+      'Instant feedback in likes and comments.',
+      'Stories disappear. Less pressure to be perfect.',
+      'Repurpose TikTok content easily.'
     ],
-    standOut: [
-      '2+ billion monthly active users',
-      'Subscriptions let fans pay you monthly',
-      'Creator Marketplace connects you with brands',
-      'Instagram Shop for selling products',
-      'Live Badges — fans tip during livestreams',
-      'Affiliate tagging built into posts',
-      'Strong for fashion, beauty, lifestyle, fitness niches'
+    pros: [
+      'Massive audience',
+      'Multiple monetization paths',
+      'Visual format = less editing',
+      'Brand deals can pay $1,000+ per post',
+      'Free portfolio for fashion, beauty, fitness, lifestyle'
     ],
-    importantNotes: [
-      'Reels Play Bonus mostly discontinued (invite-only, limited regions)',
-      'Direct view payouts are tiny ($0.01-$0.05/1K views)',
-      'Need 10K followers for Subscriptions',
-      'Need 500+ followers for Gifts feature',
-      'Algorithm prioritizes Reels over static posts',
-      'Engagement rate matters more than follower count',
-      'Brand deals require negotiation skills',
-      'Owned by Meta — subject to their policy changes'
+    cons: [
+      'No real pay-per-view',
+      '10K follower minimum for most tools',
+      'Algorithm-dependent reach',
+      'Brand deals require pitching',
+      'Subject to Meta policy changes'
     ],
-    payoutInfo: [
-      'Reels Bonus (where available): $0.01-$0.05 per 1K views',
-      'Some creators report $1-$8 per 1K views (rare)',
-      '4 million views = ~$100 (one creator example)',
-      'Subscriptions: $2.99-$99.99/month (you keep 70%)',
-      'Live Badges: Fans tip during streams',
-      'Gifts: Viewers send Stars ($0.01 each)',
-      'Brand deals: $100-$1,000+ per post (varies wildly)',
-      'Affiliate commissions: Varies by product',
-      'Payment: Monthly, $25 minimum threshold'
-    ],
-    taskTypes: [
-      'Reels (short-form video)',
-      'Stories (24-hour content)',
-      'Live streams with Badges',
-      'Static posts and carousels',
-      'Brand partnerships and sponsored content',
-      'Affiliate product promotion',
-      'Subscription-exclusive content',
-      'Instagram Shop product sales'
-    ],
-    finalTake: '<strong>Instagram pays almost nothing for views directly — brand deals and subscriptions are the real income.</strong> The Reels Bonus is mostly dead. Think of Instagram as a storefront and portfolio, not a paycheck. Best for visual creators building a brand to monetize through partnerships, products, or subscriptions. Not for those expecting passive view-based income.',
+    payout: {
+      'Pay method': 'Bank deposit (monthly)',
+      'Reels Bonus': '$0.01 to $0.05 per 1K views (where available)',
+      'Subscriptions': '$2.99 to $99.99/mo (you keep 70%)',
+      'Live Badges': 'Fan tips during streams',
+      'Brand deals': '$100 to $1,000+ per post',
+      'Minimum payout': '$25'
+    },
+    finalTake: 'Instagram is a storefront, not a paycheck. Brand deals and subscriptions are the real income. Best for visual creators in fashion, beauty, fitness, or lifestyle who can build an audience and pitch brands.',
     idealFor: [
-      'Visual creators (fashion, beauty, fitness, lifestyle)',
-      'Those building a brand to monetize elsewhere',
-      'Creators who want subscription income from fans',
-      'People comfortable pitching to brands',
-      'NOT for those expecting pay-per-view income'
+      'Visual creator (fashion, beauty, fitness, lifestyle)',
+      'Building a personal brand',
+      'Want recurring subscription income from fans',
+      'Comfortable pitching brands',
+      'Not for those expecting pay-per-view'
     ]
   },
   'youtube': {
     name: 'YouTube',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/youtube.png',
     link: 'https://www.youtube.com/creators/',
     rate: '$3–$25/1K views',
-    description: 'Upload videos, build an audience, earn from ads, memberships, Super Chats, and brand deals. The OG creator economy platform.',
+    description: 'Make videos and earn from ads or sponsors.',
     category: 'creative',
-    tldr: 'World\'s largest video platform (founded 2005, acquired by Google for $1.65B in 2006). 2.7 billion monthly users. Join Partner Program at 500 subs + 3,000 watch hours (fan funding only) or 1,000 subs + 4,000 watch hours (full ad revenue). Creators keep 55% of ad revenue. Pay averages $3-25 per 1,000 views depending on niche. Top creators earn $1M+/year. Payment monthly via AdSense, $100 minimum.',
-    intro: '<strong>YouTube</strong> is the original creator economy — upload videos, build an audience, get paid. Founded in 2005 by three PayPal employees (Chad Hurley, Steve Chen, Jawed Karim), Google bought it for $1.65 billion in 2006. Now generates $36+ billion/year in ad revenue.\n\n2.7 billion people watch YouTube monthly. 500 hours of video uploaded every minute. If you can make content people want to watch, YouTube will pay you for it.',
+    tldr: '**What it is:** Largest video platform in the world. Owned by Google. 2.7B monthly users.\n\n**The pay:** Ad revenue split is 55% creator, 45% YouTube. Average CPM $3 to $25 per 1,000 views. Top niches (finance, tech) hit $30+ CPM. Monthly via AdSense, $100 minimum.\n\n**The catch:** Need 1,000 subs + 4,000 watch hours to fully monetize. Takes most creators 1 to 2 years to hit it. Niche decides your CPM.',
     whyAdhd: [
-      'Create on your own schedule',
-      'Hyperfocus-friendly — dive deep into topics you love',
-      'Variety of content formats (Shorts, long-form, live)',
-      'Immediate feedback via views/comments',
-      'Build once, earn passively forever',
-      'No boss, no meetings, no deadlines',
-      'Turn special interests into income'
+      'Create on your own schedule.',
+      'Hyperfocus-friendly. Dive into topics you love.',
+      'Mix of Shorts, long-form, and live.',
+      'Build once, earn for years.',
+      'Turn special interests into income.'
     ],
-    standOut: [
-      '2.7 billion monthly active users',
-      'Second most-visited website globally',
-      'Multiple revenue streams (ads, memberships, Super Chat, merch)',
-      'Shorts competes with TikTok (10M views = monetization)',
-      'YouTube Premium revenue share (bonus income)',
-      'Brand deals pay 10-50x more than ads alone',
-      'Content lives forever — videos earn for years',
-      'Available in 100+ countries, 80 languages'
+    pros: [
+      'Largest audience anywhere',
+      'Videos earn passively for years',
+      'Multiple revenue streams',
+      'Brand deals multiply ad revenue 10x to 50x',
+      'No boss, no schedule'
     ],
-    importantNotes: [
-      'Full monetization: 1,000 subs + 4,000 watch hours (or 10M Shorts views)',
-      'Fan funding tier: 500 subs + 3,000 watch hours (no ad revenue)',
-      'Takes ~1 month for application review',
-      'Must follow Community Guidelines (strikes block monetization)',
-      'Inactivity penalty: 6 months no uploads = monetization suspended',
-      'Algorithm favors consistency — irregular posting hurts growth',
-      'Copyright claims can demonetize or delete videos',
-      'CPM varies wildly by niche ($2 gaming vs $30 finance)',
-      'Building audience takes months/years for most creators'
+    cons: [
+      'Long ramp before real money',
+      'CPM varies wildly by niche',
+      'Copyright strikes are punishing',
+      'Algorithm favors consistency',
+      'Editing takes a lot of time'
     ],
-    payoutInfo: [
-      'Ad revenue split: You keep 55%, YouTube keeps 45%',
-      'Shorts revenue: 45% creator share (from ad pool)',
-      'Average CPM: $3-25 per 1,000 views',
-      'Top niches (finance, business, tech): $20-50 CPM',
-      'Low niches (gaming, entertainment): $2-5 CPM',
-      'Channel memberships: You keep 70%',
-      'Super Chat/Super Thanks: You keep 70%',
-      'YouTube Premium: Bonus based on watch time',
-      'Payment: Monthly via AdSense',
-      'Minimum payout: $100',
-      'Top earner MrBeast: $85M in 2024'
-    ],
-    taskTypes: [
-      'Long-form videos (8+ min for mid-roll ads)',
-      'YouTube Shorts (under 60 seconds)',
-      'Live streams with Super Chat',
-      'Educational/tutorial content',
-      'Entertainment and vlogs',
-      'Product reviews (affiliate potential)',
-      'Gaming and commentary',
-      'Music and creative arts',
-      'Podcasts and interviews'
-    ],
-    finalTake: '<strong>The ultimate long game.</strong> YouTube rewards consistency and patience — most creators spend 1-2 years building before meaningful income. But once you hit it, videos earn passively for years. Ad revenue alone is modest ($3-25/1K views), but brand deals multiply earnings 10-50x. Best for: people who genuinely enjoy creating video content and can commit to regular uploads. Not a quick money solution.',
+    payout: {
+      'Pay method': 'Monthly AdSense direct deposit',
+      'Revenue split': '55% creator, 45% YouTube',
+      'Shorts split': '45% creator (from ad pool)',
+      'Average CPM': '$3 to $25 per 1,000 views',
+      'Top niches CPM': '$20 to $50 (finance, business, tech)',
+      'Memberships': '70% creator',
+      'Super Chat': '70% creator',
+      'Minimum payout': '$100'
+    },
+    finalTake: 'The long game. 1 to 2 years before most creators see real money. Once you hit it, videos earn for years. Ad revenue alone is modest. Brand deals are the real income. Best for people who actually enjoy making video and can post weekly.',
     idealFor: [
-      'Content creators who love being on camera (or voice-over)',
-      'People with expertise worth sharing',
-      'Those who can commit to consistent uploads',
-      'Creators willing to learn editing and SEO',
-      'Anyone building a personal brand long-term',
-      'NOT for quick money seekers'
+      'OK on camera (or voice-over)',
+      'Have expertise worth sharing',
+      'Can commit to weekly uploads',
+      'Willing to learn editing and SEO',
+      'Not for quick money'
     ]
   },
   'tiktok': {
     name: 'TikTok',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/aUgg51uy2GH9tSe5bMN9.png',
     link: 'https://www.tiktok.com/',
-    rate: 'Varies — Creator Fund, tips, brand deals, and affiliates',
-    description: 'Short-form video platform focused on viral trends, creator monetization, and fast audience growth.',
-    tldr: 'Fast short-video reach — great for quick creative wins and rapid audience growth. Monetize via Creator Fund, tips, live gifts and brand deals; can be distracting and payouts per view are low.',
+    rate: '$50–$20,000+/post',
+    description: 'Short videos that can blow up fast.',
     category: 'social',
-    intro: '**TikTok** is a short-video platform for 15s–10min clips that can reach huge audiences quickly. It rewards trend-aware, authentic content and offers multiple monetization paths like Creator Fund, tips, live gifts, and brand partnerships.\nCreators who enjoy quick experiments, remixing trends, and fast feedback often do well.',
-    whyAdhd: ['Quick content cycles make it easy to iterate and learn fast', 'Immediate feedback (views/likes/comments) supports short attention workflows', 'Low barrier to entry for experimenting with ideas', 'Trends and templates reduce planning overhead and spur creativity'],
-    standOut: ['Powerful discovery algorithm that can surface new creators fast', 'Built-in editing tools and sound library speed production', 'High potential reach without large follower counts'],
-    importantNotes: ['Creator Fund has eligibility thresholds and low per-view payouts', 'Platform can be highly distracting — set strict limits', 'Trends move fast; consistency helps but burnout is possible', 'Brand deals require audience fit and negotiation skills'],
-    payoutInfo: ['Creator Fund (eligibility varies by region)', 'Brand deals and sponsorships — rates depend on niche and engagement', 'Gifts and tips during lives', 'Affiliate and direct product sales'],
-    taskTypes: ['Short-form videos', 'Duets and stitches', 'Trend-driven content', 'Sponsored content'],
-    finalTake: 'Excellent for ADHD creators who like fast cycles, trend play, and quick creative wins — but watch out for distraction and consistency demands.',
-    idealFor: ['Creators who enjoy short, creative bursts', 'People building a personal brand quickly', 'Those who prefer iterative, low-polish content', 'Anyone who can commit to regular posting without overdoing it']
+    tldr: '**What it is:** Short-video platform (15 seconds to 10 minutes). The algorithm can launch a new creator to millions of views overnight.\n\n**The pay:** Creator Fund pays pennies per view. Real money is brand deals ($50 to $20,000+ per post depending on following), live gifts, and affiliate sales.\n\n**The catch:** Per-view pay is bad. Trends move fast. Easy to burn out chasing them.',
+    whyAdhd: [
+      'Quick content cycles. Iterate fast.',
+      'Instant feedback from views and likes.',
+      'Low barrier to start.',
+      'Trends and templates cut planning time.',
+      'Short videos fit short attention spans.'
+    ],
+    pros: [
+      'Fastest growth platform anywhere',
+      'Short videos = quick to make',
+      'Trends provide content prompts',
+      'Brand deal pay scales fast with following'
+    ],
+    cons: [
+      'Pay per view is tiny',
+      'Distraction risk is real',
+      'Algorithm-dependent reach',
+      'Trends move daily, burnout common'
+    ],
+    payout: {
+      'Pay method': 'Bank deposit (varies by region)',
+      'Creator Fund': 'Eligibility and rates vary by region',
+      'Brand deals': '$50 to $20,000+ per post',
+      'Live gifts': 'Viewer tips, you keep ~50% after TikTok cut',
+      'Affiliate / shop': 'Set commission per product'
+    },
+    finalTake: 'Best growth platform if you can stomach the addictive scrolling and trend chasing. Per-view pay is bad. Brand deals are where real money lives. Pair with Instagram and YouTube Shorts for cross-posting.',
+    idealFor: [
+      'Like short, creative bursts',
+      'Want to grow fast',
+      'OK with low-polish content',
+      'Can post regularly without burning out'
+    ]
   },
   'facebook': {
     name: 'Facebook',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/facebook.png',
     link: 'https://www.facebook.com/creators',
     rate: '$1–$5/1K views',
-    description: 'Monetize videos and Reels through in-stream ads, bonuses, Stars, and subscriptions. Massive older audience, decent CPM.',
+    description: 'Sell in groups, run a page, or land brand deals.',
     category: 'creative',
-    tldr: 'Video monetization on the world\'s largest social network (3B+ users). In-stream ads pay $1-5 per 1,000 views. Reels bonus (ending Aug 2025) pays $0.04-$0.08/1K views. Need 10K followers + 600K watch minutes in 60 days. Stars = $0.01 each. New unified "Content Monetization" system coming. Payment monthly, $100 minimum.',
-    intro: '<strong>Facebook</strong> pays better per view than TikTok or Instagram, but requires bigger thresholds to qualify. In-stream ads on longer videos (3+ min) are the main earner. Reels have bonuses but the program is ending August 2025.\n\nThe audience skews older and has more spending power than TikTok. Good for repurposing YouTube/TikTok content to an additional platform. Not where you build from scratch — it is a distribution channel.',
+    tldr: '**What it is:** Video monetization on the biggest social network (3B+ users). Older audience than TikTok.\n\n**The pay:** In-stream ads on videos 3+ minutes: $1 to $5 per 1K views. Stars ($0.01 each) from fan tips. Subscriptions. Monthly payment around the 21st, $100 minimum.\n\n**The catch:** Need 10K followers + 600K watch minutes in 60 days to monetize. Reels Bonus ends August 2025.',
     whyAdhd: [
-      'Can repurpose content from other platforms',
-      'Older audience = less trend-chasing pressure',
-      'Multiple monetization options in one place',
-      'Longer videos (3+ min) mean less editing per minute',
-      'Stars give instant dopamine feedback',
-      'Less algorithm chaos than TikTok',
-      'Can schedule posts ahead of time'
+      'Repurpose content from other platforms.',
+      'Older audience means less trend chasing.',
+      'Longer videos (3+ min) = less editing per minute.',
+      'Stars give instant fan feedback.',
+      'Less algorithm chaos than TikTok.'
     ],
-    standOut: [
-      '3+ billion monthly active users',
-      'Higher CPM than TikTok ($1-5 vs $0.02-0.05)',
-      'In-stream ads on videos 3+ minutes',
-      'Stars system for fan tipping ($0.01 each)',
-      'Fan subscriptions for recurring income',
-      'Reels compete with TikTok/Instagram',
+    pros: [
+      'Better CPM than TikTok',
       'Older, higher-income audience',
-      'Cross-posting from Instagram is easy'
+      'Multiple revenue streams',
+      'Easy cross-post from Instagram',
+      'Scheduled posts work well'
     ],
-    importantNotes: [
-      'Monetization requires: 10K followers + 600K watch minutes in 60 days',
-      'Reels Play Bonus ending August 31, 2025',
-      'New "Content Monetization" system replacing old programs',
-      'In-stream ads only on videos 3+ minutes',
-      'CPM varies wildly by audience location (US = 10x more)',
-      'Algorithm favors native uploads over cross-posts',
-      'Reels earnings are unpredictable',
-      '$100 minimum payout threshold',
-      'Payment around 21st of each month'
+    cons: [
+      'High entry threshold (10K + 600K minutes)',
+      'Reels Bonus ending soon',
+      'Reels earnings unpredictable',
+      'Algorithm dislikes cross-posts',
+      'Audience skews older (good or bad depending on niche)'
     ],
-    payoutInfo: [
-      'In-stream ads: $1-5 per 1,000 views (avg $2-3)',
-      'Reels bonus: $0.04-$0.08 per 1,000 views',
-      'Reels bonus program ending Aug 2025',
-      '1 million views = $2,000-$5,000 (in-stream)',
-      '1 million Reels views = $40-$80',
-      'Stars: $0.01 per Star received',
-      'Subscriptions: You set price, keep majority',
-      'Revenue split: 55% creator / 45% Facebook',
-      'Payment: Monthly, around 21st, $100 minimum',
-      'US viewers pay ~10x more than developing countries'
-    ],
-    taskTypes: [
-      'Long-form videos (3+ min for in-stream ads)',
-      'Facebook Reels (short-form)',
-      'Live streams with Stars',
-      'Fan subscriptions with exclusive content',
-      'Branded content partnerships',
-      'Cross-posted content from YouTube/TikTok'
-    ],
-    finalTake: '<strong>Better CPM than TikTok but higher barriers to entry.</strong> Good as a secondary platform to repurpose content — not where most people build from scratch. The 10K follower + 600K watch minute requirement is steep. Reels bonus program ending Aug 2025, being replaced by new system. Best for creators who already have content elsewhere and want to tap Facebook\'s older, higher-spending audience.',
+    payout: {
+      'Pay method': 'Monthly bank deposit (around the 21st)',
+      'In-stream ads': '$1 to $5 per 1K views',
+      'Reels Bonus': '$0.04 to $0.08 per 1K (ending Aug 2025)',
+      'Stars': '$0.01 each (fan tips)',
+      'Revenue split': '55% creator, 45% Facebook',
+      'Minimum payout': '$100'
+    },
+    finalTake: 'Better pay per view than TikTok or Instagram, but higher bar to enter. Good as a second channel for creators already making 3+ minute video elsewhere. Not where you build from zero.',
     idealFor: [
-      'Creators repurposing YouTube/TikTok content',
-      'Those targeting older demographics (30+)',
-      'Video creators making 3+ minute content',
-      'People who already have a Facebook following',
-      'NOT for building from zero — high entry barrier'
+      'Already making YouTube or TikTok content',
+      'Target 30+ audience',
+      'Make 3+ minute video',
+      'Have an existing Facebook following',
+      'Not for building from zero'
     ]
   },
   'twitch': {
     name: 'Twitch',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/twitch.png',
     link: 'https://www.twitch.tv/creatorcamp',
-    rate: '$2.50–$3.50/sub',
-    description: 'Livestream gaming, creative content, or just chatting. Earn from subscriptions, Bits, ads, and donations. The OG streaming platform.',
+    rate: '$50–$5,000+/stream',
+    description: 'Live stream for tips, subs, and sponsors.',
     category: 'creative',
-    tldr: 'Livestreaming platform (owned by Amazon). Affiliate requires 50 followers + 3 avg viewers + 500 min streamed in 30 days. Standard 50/50 sub split = $2.50 per Tier 1 sub ($4.99). Bits = $0.01 each. Ads = ~$3.50 CPM. Plus Program: 60/40 split at 100 points, 70/30 at 300 points. Payment monthly, $100 minimum.',
-    intro: '<strong>Twitch</strong> is live-or-die streaming — no editing, no retakes, just you and chat in real-time. Dominated by gaming but expanding into Just Chatting, music, art, and IRL content.\n\nMoney comes from subs, Bits (tips), ads, and donations. You keep 50% of subs ($2.50 from a $4.99 sub). Building to full-time income takes months/years of consistent streaming. The grind is real.',
+    tldr: '**What it is:** Livestreaming platform owned by Amazon. Mostly gaming, but Just Chatting, art, music, and IRL streams work too.\n\n**The pay:** Subs (50/50 split = $2.50 per Tier 1 sub). Bits ($0.01 each). Ads (~$3.50 CPM). Plus Program: better splits at 100 and 300 points. Monthly payout, $100 minimum.\n\n**The catch:** Building to real income takes months or years. Standing out in gaming is hard. You have to show up live, repeatedly.',
     whyAdhd: [
-      'Live format — no editing required',
-      'Real-time chat interaction keeps you engaged',
-      'Immediate feedback and dopamine hits',
-      'Community building is social and rewarding',
-      'Can stream whatever interests you that day',
-      'Coworking/body doubling streams exist',
-      'Hyperfocus-friendly once you start'
+      'Live format. No editing.',
+      'Real-time chat keeps you engaged.',
+      'Immediate feedback.',
+      'Community building is social.',
+      'Stream whatever interests you that day.',
+      'Hyperfocus-friendly once you start.'
     ],
-    standOut: [
-      'All streamers now get access to monetization tools (2025 update)',
-      'Plus Program: Earn 60/40 or 70/30 splits based on performance',
-      'Bits let viewers tip in real-time',
-      'Prime Gaming subs = free sub for viewers (you still get paid)',
-      'Strong community culture',
-      'Raids help small streamers get discovered',
-      'Can multistream as Affiliate (not exclusive)'
+    pros: [
+      'No editing required',
+      'Real-time community feedback',
+      'Donations are 100% yours',
+      'Affiliate can multistream (not exclusive)',
+      'Hyperfocus-friendly format'
     ],
-    importantNotes: [
-      'Affiliate: 50 followers, 3 avg viewers, 500 min streamed, 7 days in 30',
-      'Partner: 75 avg viewers, much harder to achieve (<1% of streamers)',
-      'Standard sub split: 50/50 (you get $2.50 from $4.99 sub)',
-      'Plus Program: 100 points = 60/40 split, 300 points = 70/30 split',
-      'Must stream consistently — algorithm buries inactive channels',
-      'Oversaturated in gaming — standing out is hard',
-      'Ad revenue is tiny unless you have thousands of viewers',
-      '$100 minimum payout threshold'
+    cons: [
+      'Income builds slowly (months to years)',
+      'Gaming category is saturated',
+      'Sub split starts at 50/50',
+      'Have to show up consistently',
+      'Ad revenue is bad until you scale'
     ],
-    payoutInfo: [
-      'Tier 1 sub ($4.99): You get ~$2.50 (50/50 split)',
-      'Tier 2 sub ($9.99): You get ~$5.00',
-      'Tier 3 sub ($24.99): You get ~$12.50',
-      'Bits: $0.01 per Bit (100 Bits = $1)',
-      'Ads: ~$3.50 CPM (per 1,000 views)',
-      'Plus Program: 60/40 at 100 points, 70/30 at 300 points',
-      'Prime subs: Count same as paid subs',
-      'Donations: 100% yours (via PayPal/Streamlabs)',
-      'Payment: Monthly, $100 minimum',
-      'Small streamer example: 5 viewers = ~$65/month'
-    ],
-    taskTypes: [
-      'Gaming streams',
-      'Just Chatting streams',
-      'Creative/art streams',
-      'Music and DJ sets',
-      'IRL (in real life) streams',
-      'Coworking/study streams',
-      'Esports and competitive gaming',
-      'Watch parties'
-    ],
-    finalTake: '<strong>Twitch rewards consistency and community — not viral hits.</strong> Unlike YouTube/TikTok, you cannot just post and hope. You have to show up live, repeatedly, and build relationships with viewers. Small streamers (5 viewers) make ~$50-65/month. Mid-tier (1,000 subs) can hit $10K/month. Top streamers make $100K+/month. The path is long but the community aspect is rewarding if you enjoy live interaction.',
+    payout: {
+      'Pay method': 'Monthly bank deposit',
+      'Tier 1 sub ($4.99)': '~$2.50 (50/50 split)',
+      'Tier 2 sub ($9.99)': '~$5.00',
+      'Tier 3 sub ($24.99)': '~$12.50',
+      'Bits': '$0.01 per Bit (100 Bits = $1)',
+      'Ads': '~$3.50 CPM',
+      'Plus Program': '60/40 at 100 points, 70/30 at 300 points',
+      'Donations (via Streamlabs)': '100% yours',
+      'Minimum payout': '$100'
+    },
+    finalTake: 'Twitch rewards showing up live, repeatedly. Small streamers (~5 viewers) earn ~$50 to $65/month. Mid-tier (1,000 subs) hits $10K/month. The path is long. Not for people who want passive income or hate being on camera live.',
     idealFor: [
-      'People who enjoy live interaction and chatting',
-      'Gamers who want to share their gameplay',
-      'Creators who hate editing',
-      'Those who can commit to a consistent schedule',
-      'Community builders who thrive on real-time engagement',
-      'NOT for those who want passive income or hate being on camera live'
+      'Like live chat and interaction',
+      'Gamer who wants to share gameplay',
+      'Hate editing',
+      'Can commit to a consistent schedule',
+      'Not for passive income or shy creators'
     ]
   },
   'x': {
     name: 'X (Twitter)',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/x.png',
     link: 'https://help.x.com/en/using-x/creator-monetization',
-    rate: '$8–$85/1M views',
-    description: 'Ad revenue sharing from replies to your posts. Only impressions from verified (Premium) users count. Requires X Premium subscription.',
+    rate: '$50–$5,000+/tweet',
+    description: 'Short posts with ad revenue or sponsor deals.',
     category: 'creative',
-    tldr: 'Monetize tweets through ad revenue sharing — but ONLY impressions from verified (Premium) users count. Need 500 followers + 5M impressions in 90 days + X Premium subscription. Pays ~$8-85 per 1M verified impressions. Subscriptions let you charge $2.99-$9.99/mo (keep 97% until $50K, then 80%). Tips available via Cash App/Venmo/Bitcoin — X takes 0%.',
-    intro: '<strong>X (formerly Twitter)</strong> now pays creators, but with a major catch: only engagement from Premium (verified) users counts toward your payout. If your audience is mostly free users, you earn almost nothing.\n\nThis makes X monetization unpredictable. A viral post with 10M impressions might pay $20 if most viewers are unverified. Best treated as bonus income, not a primary revenue stream.',
+    tldr: '**What it is:** Text-first social platform. Monetize via ad revenue, subscriptions, tips, or brand deals.\n\n**The pay:** Only Premium (verified) user impressions count for ad revenue. ~$8 to $85 per 1M verified impressions. Subscriptions: $2.99 to $9.99/mo (you keep 97% until $50K, then 80%). Tips have 0% X fee.\n\n**The catch:** Need 500 followers + 5M impressions in 90 days + X Premium ($8-16/mo) to monetize. Free user views earn you $0.',
     whyAdhd: [
-      'Short-form content — tweets are quick to create',
-      'No video editing required',
-      'Can build audience through text alone',
-      'Tips feature = instant gratification',
-      'Threads let you brain-dump ideas',
-      'Less production overhead than YouTube/TikTok',
-      'Can be very reactive/spontaneous'
+      'Tweets are quick to create.',
+      'No video editing.',
+      'Text-only builds an audience.',
+      'Tips give instant feedback.',
+      'Threads let you brain-dump ideas.'
     ],
-    standOut: [
-      'Text-based monetization (rare among platforms)',
-      'Subscriptions: $2.99-$9.99/mo (keep up to 97%)',
-      'Tips via Cash App, Venmo, Bitcoin (0% X fee)',
-      'Ticketed Spaces for live audio events',
-      'Brand deals often pay more than ad share',
-      'Threads and text posts can monetize',
-      'Video content also supported now'
+    pros: [
+      'Text content is fast to make',
+      'Subscriptions keep 97% (better than Patreon)',
+      'Tips are 0% fee',
+      'Premium audience can pay well',
+      'Audio Spaces unlock another revenue stream'
     ],
-    importantNotes: [
-      'ONLY Premium user impressions count for ad revenue',
-      'Need X Premium subscription to monetize ($8-16/mo cost)',
-      'Requires 500 followers + 5M impressions in 90 days',
-      'Stripe account required for payouts',
-      'Ad revenue: ~$8-85 per 1M verified impressions',
-      'Non-verified engagement = $0 toward payout',
-      'Payouts are unpredictable and fluctuate',
-      'Brand-safe content only — controversial topics get suppressed',
-      'Can\'t track earnings in real-time'
+    cons: [
+      'Free user views earn $0',
+      'X Premium fee eats into income',
+      'Payouts unpredictable',
+      '380K followers = ~$56/month in one reported case',
+      'Brand-safe content rule limits topics'
     ],
-    payoutInfo: [
-      'Ad revenue: ~$8-85 per 1M verified impressions',
-      'Typical: $2-10 per 1,000 Premium engagements',
-      'Subscriptions: Keep 97% until $50K lifetime, then 80%',
-      'Tips: 0% X fee (only payment processor fees)',
-      'Real example: 380K followers = ~$56/month',
-      'Minimum payout: ~$10-42.50',
-      'Payment: Bi-weekly via Stripe',
-      'US/UK audiences = highest CPM',
-      'Finance/tech niches pay best'
-    ],
-    taskTypes: [
-      'Tweets and threads',
-      'Video content',
-      'Live Spaces (audio rooms)',
-      'Ticketed Spaces (paid events)',
-      'Subscription-exclusive content',
-      'Brand partnerships',
-      'Affiliate marketing'
-    ],
-    finalTake: '<strong>Supplemental income at best — don\'t rely on it.</strong> The "only Premium users count" rule kills earnings for most creators. Someone with 380K followers reported earning ~$56/month. Best use: build audience via free content, monetize through subscriptions/tips/brand deals rather than ad share. Subscriptions (97% cut) are the real opportunity here — but you need loyal fans willing to pay.',
+    payout: {
+      'Pay method': 'Bi-weekly Stripe deposit',
+      'Ad revenue': '~$8 to $85 per 1M verified impressions',
+      'Subscriptions': 'Keep 97% until $50K lifetime, then 80%',
+      'Tips': '0% X fee (payment processor fees only)',
+      'Premium fee to qualify': '$8 to $16/month',
+      'Minimum payout': '~$10 to $42.50'
+    },
+    finalTake: 'Supplemental income at best. The "Premium users only" rule kills most creator earnings. Subscriptions and tips are the real opportunity. Need loyal fans willing to pay.',
     idealFor: [
-      'Writers and text-based creators',
-      'People who already have engaged X audiences',
-      'Those with audiences heavy in Premium users',
-      'Niche experts who can sell subscriptions',
-      'NOT for those expecting predictable income',
-      'NOT worth it if your audience is mostly free users'
+      'Writer or text-first creator',
+      'Already have engaged X audience',
+      'Audience skews Premium users',
+      'Niche expert who can sell subscriptions',
+      'Not for unpredictable-income haters'
     ]
   },
   'patreon': {
     name: 'Patreon',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/patreon.png',
     link: 'https://www.patreon.com/',
-    rate: 'You set prices',
-    description: 'Subscription platform where fans pay monthly for exclusive content. You set your tiers, you keep 80-90% after fees.',
+    rate: '$5–$5,000+/month',
+    description: 'Fans pay you monthly to support your work.',
     category: 'creative',
-    tldr: 'Membership platform for creators — fans pay monthly for exclusive content. New creators pay 10% platform fee + ~3% payment processing (total ~13-14%). You set your own tier prices ($1-$100+). 250,000+ creators earning $2B+ annually. Payout monthly via direct deposit, PayPal, or Payoneer. No follower requirements — anyone can start.',
-    intro: '<strong>Patreon</strong> lets you turn fans into paying subscribers. You create tiers ($3, $5, $10, whatever), offer exclusive perks, and collect recurring monthly income. Unlike ad-based platforms, you are not dependent on algorithms or views.\n\nNo follower count required to start. If you have even 10 dedicated fans willing to pay $5/month, that is $50/month. Scale from there. Best for creators with an existing audience somewhere else.',
+    tldr: '**What it is:** Membership platform. Fans pay monthly for exclusive content. You set tiers ($1 to $100+).\n\n**The pay:** New creators pay 10% platform fee + ~3% payment processing (~13-14% total). You keep ~85-87%. Monthly payout, $25 minimum. Direct deposit, PayPal, or Payoneer.\n\n**The catch:** Patreon does not bring you fans. You bring fans to Patreon. Requires consistent content to retain subscribers.',
     whyAdhd: [
-      'Recurring income — predictable monthly payments',
-      'You set your own schedule for posting',
-      'No algorithm to fight',
-      'Direct relationship with supporters',
-      'Can batch-create content when motivated',
-      'Multiple tier options reduce decision paralysis for fans',
-      'Community features keep you engaged with supporters'
+      'Recurring monthly income. Predictable.',
+      'Post on your own schedule.',
+      'No algorithm to fight.',
+      'Direct relationship with fans.',
+      'Batch-create when motivated.'
     ],
-    standOut: [
-      'No follower requirements to start',
-      'You set your own prices and tiers',
-      'Recurring monthly income (not one-time)',
-      'Built-in video hosting (100 hrs/month free)',
-      'Community chat features',
-      'Discovery ecosystem drives $200M+ to creators yearly',
-      'Handles taxes, chargebacks, fraud for you',
-      'Works globally with multiple payment methods'
+    pros: [
+      'Predictable monthly income',
+      'No follower threshold to start',
+      'You set tier prices',
+      'Built-in video hosting',
+      'Trusted platform'
     ],
-    importantNotes: [
-      'New creators (after Aug 2025): 10% platform fee',
-      'Legacy creators: 5-8% depending on plan',
-      'Payment processing: ~2.9% + $0.30 per transaction',
-      'Total fees: ~13-14% of earnings',
-      'iOS purchases: Apple takes 30% (outside US)',
-      'Currency conversion: 2.5% fee if different currency',
-      'Need existing audience — Patreon does not bring you fans',
-      'Requires consistent content delivery to retain subscribers',
-      'Churn is real — subscribers cancel if you stop posting'
+    cons: [
+      '~13 to 14% in total fees',
+      'No discovery (bring your own audience)',
+      'iOS Apple tax adds 30% on top',
+      'Subscribers churn if you stop posting',
+      'New creator fee bumped to 10% in Aug 2025'
     ],
-    payoutInfo: [
-      'Platform fee: 10% (new creators) or 5-8% (legacy)',
-      'Payment processing: 2.9% + $0.30 (over $3)',
-      'Payment processing: 5% + $0.10 (under $3)',
-      'Total take-home: ~85-87% of gross',
-      'You set tier prices: $1, $3, $5, $10, $50+ — whatever you want',
-      'Payout methods: Direct deposit, PayPal, Payoneer',
-      'Payout timing: Monthly (around 1st-5th)',
-      'Minimum payout: $25 (varies by method)',
-      'Example: 100 patrons × $5 = $500 gross → ~$430 net'
-    ],
-    taskTypes: [
-      'Exclusive posts and updates',
-      'Behind-the-scenes content',
-      'Early access to videos/podcasts',
-      'Members-only Discord/community',
-      'Digital downloads (PDFs, art, music)',
-      'Livestreams for patrons',
-      'Polls letting patrons vote on content',
-      'One-time digital product sales (Shop feature)'
-    ],
-    finalTake: '<strong>Best for creators who already have an audience elsewhere and want predictable monthly income.</strong> Patreon does not bring you fans — you bring fans to Patreon. Fees (~13-14% total) are higher than some alternatives but the platform is trusted and handles all the payment complexity. Works great alongside YouTube, podcasts, or social media. Not a starting point — it is a monetization layer for existing audiences.',
+    payout: {
+      'Pay method': 'Direct deposit, PayPal, or Payoneer',
+      'Platform fee (new)': '10%',
+      'Platform fee (legacy)': '5 to 8%',
+      'Payment processing': '2.9% + $0.30 (over $3) or 5% + $0.10 (under $3)',
+      'Your take-home': '~85% to 87%',
+      'Payout timing': 'Monthly (1st to 5th)',
+      'Minimum payout': '$25',
+      'Example': '100 patrons × $5 = $500 gross → ~$430 net'
+    },
+    finalTake: 'Best for creators with an existing audience elsewhere who want predictable monthly income. Patreon does not bring you fans. Works great as a monetization layer for YouTubers, podcasters, and artists. Not a starting point.',
     idealFor: [
-      'Creators with existing audience on other platforms',
-      'Podcasters, YouTubers, artists, writers, musicians',
-      'Those who want recurring monthly income',
-      'People who can commit to regular exclusive content',
-      'NOT for those without an existing fanbase'
+      'Existing audience on YouTube, podcast, social',
+      'Podcaster, artist, writer, musician',
+      'Want recurring monthly income',
+      'Can commit to regular exclusive content',
+      'Not for creators without an audience yet'
     ]
   },
   'snapchat': {
     name: 'Snapchat',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/vbW8ThYIphaDae1RKLml.png',
     link: 'https://www.snapchat.com/',
-    rate: '',
-    description: 'Earn via sponsored posts, affiliate links, and branded content partnerships.',
+    rate: 'Brand deals only',
+    description: 'Sponsored posts, affiliate links, and brand deals.',
     category: 'social',
-    intro: '**Snapchat** is a social media app where users share photos and videos (Snaps) that disappear after viewing. Think of it like a digital walkie-talkie mixed with a visual diary.  \nIt’s designed for individuals, influencers, and businesses who want to connect with audiences in a raw, authentic, and fast-paced way.',
-    whyAdhd: ['Quick, low-effort content (no need for polished videos).', 'Ephemeral posts = less pressure to be perfect.', 'Variety of formats (Snaps, Stories, Spotlight, AR filters).', 'Fun and playful features keep novelty high.', 'Fast feedback loop (views, screenshots, chats).'],
-    standOut: [],
-    importantNotes: ['Content is short-lived—requires constant posting to stay relevant.', 'Audience is mostly Gen Z and young millennials.', 'Monetization is limited compared to YouTube or TikTok.', 'Harder to build long-term visibility since posts disappear.', 'Requires creativity with filters, lenses, and trends to stand out.'],
-    payoutInfo: [],
-    taskTypes: [],
-    finalTake: '',
-    idealFor: ['ADHD extroverts who enjoy quick, casual sharing.', 'Young creators (Gen Z, millennials) targeting similar audiences.', 'Creatives who thrive on trends, memes, and filters.', 'Side hustlers testing content before scaling on TikTok or YouTube.']
+    tldr: '**What it is:** Photo and video sharing app. Posts disappear after viewing. Mostly Gen Z audience.\n\n**The pay:** No direct view payments. Income comes from sponsored posts, affiliate links, and brand deals. Spotlight has paid out for viral content but is unpredictable.\n\n**The catch:** Audience is hard to monetize directly. Posts disappear, so no long-tail discovery.',
+    whyAdhd: [
+      'Quick, low-effort posts.',
+      'Posts disappear. No pressure to be perfect.',
+      'Mix of Snaps, Stories, Spotlight, AR filters.',
+      'Fast feedback loop.',
+      'Fun, playful features keep novelty high.'
+    ],
+    pros: [
+      'Easy to post, no polish needed',
+      'Gen Z reach',
+      'AR filters are creative tools',
+      'Lower pressure than permanent platforms'
+    ],
+    cons: [
+      'No direct view payment',
+      'Posts disappear (no long-tail)',
+      'Limited monetization tools',
+      'Audience is hard to convert to other platforms'
+    ],
+    payout: {
+      'Pay method': 'External (brand deals, affiliate, Spotlight)',
+      'Spotlight': 'Viral video pool (unpredictable)',
+      'Brand deals': '$50 to $5,000+ depending on following',
+      'Affiliate': 'Set commission per product'
+    },
+    finalTake: 'Best as a content sandbox to test ideas before posting them on TikTok or Instagram. Direct monetization is weak. Use it to build a Gen Z audience, then convert them elsewhere.',
+    idealFor: [
+      'Like quick, casual sharing',
+      'Gen Z creator',
+      'Test content before scaling',
+      'Not for primary income'
+    ]
   },
   'kofi': {
     name: 'Ko-fi',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/kofi.png',
     link: 'https://ko-fi.com/',
-    rate: 'You set prices',
-    description: 'Simple tip jar and shop for creators. 0% fee on donations (free plan), 5% on sales/memberships. No monthly cost to start.',
+    rate: '$1–$1,000+/tip',
+    description: 'Tip jar for creators. No fees on tips. Sell stuff too.',
     category: 'creative',
-    tldr: 'Tip jar + shop + memberships in one. Free plan: 0% fee on one-time tips, 5% on shop/memberships/commissions. Gold ($6-8/mo): 0% on everything. Payments go directly to your PayPal or Stripe — instant, no waiting. 1M+ creators, $150M+ paid out. No follower requirements.',
-    intro: '<strong>Ko-fi</strong> is the simpler, cheaper alternative to Patreon. Accept tips ("buy me a coffee"), sell digital products, offer memberships, take commissions — all from one page. Lowest fees in the creator economy.\n\nKey difference from Patreon: payments go directly to YOUR PayPal/Stripe instantly. No waiting for monthly payouts. No platform holding your money.',
+    tldr: '**What it is:** Tip jar + shop + memberships in one. Simpler, cheaper Patreon alternative.\n\n**The pay:** Free plan: 0% fee on tips, 5% on shop/memberships/commissions. Gold plan ($6-8/mo): 0% on everything. Payments go directly to YOUR PayPal or Stripe instantly.\n\n**The catch:** Less discovery than Patreon. You bring your own audience. You handle your own taxes.',
     whyAdhd: [
-      'Dead simple setup — under 5 minutes',
-      'No pressure to post on schedule',
-      'Instant payouts — money hits your account immediately',
-      'Multiple income types in one place',
-      'Low cognitive load — cleaner than Patreon',
-      '"Buy me a coffee" framing feels casual, low-pressure',
-      'Can be as active or passive as you want'
+      'Setup takes 5 minutes.',
+      'No pressure to post on a schedule.',
+      'Instant payouts. Money hits your account.',
+      'Multiple income types in one page.',
+      '"Buy me a coffee" framing feels casual.'
     ],
-    standOut: [
-      '0% fee on tips (free plan) — unmatched',
-      'Instant payouts to PayPal/Stripe',
-      'Ko-fi never holds your money',
-      'Shop, memberships, commissions all in one',
-      'Gold plan ($6-8/mo) = 0% fees on everything',
-      'Stream alerts integration for Twitch',
-      'Discord role integration',
-      'No follower requirements to start',
-      'Way cheaper than Patreon'
+    pros: [
+      '0% on tips is unbeatable',
+      'Instant payouts',
+      'Cheaper than Patreon',
+      'Multiple monetization types',
+      'No follower requirement to start'
     ],
-    importantNotes: [
-      'Free plan: 0% on tips, 5% on shop/memberships/commissions',
-      'Contributor mode: 5% on everything (unlocks extra features)',
-      'Gold ($6-8/mo): 0% on everything',
-      'Payment processor fees still apply (~2.9% + $0.30)',
-      'You handle your own taxes — Ko-fi does not collect VAT/sales tax',
-      'Less discovery than Patreon — you bring your own audience',
-      'Simpler features than Patreon (less robust analytics)',
-      'Best for smaller creators or casual monetization'
+    cons: [
+      'No discovery (bring your own fans)',
+      'Simpler features than Patreon',
+      'Tax handling is on you',
+      'Less robust analytics'
     ],
-    payoutInfo: [
-      'Free plan tips: 0% Ko-fi fee',
-      'Free plan shop/memberships: 5% Ko-fi fee',
-      'Gold plan: 0% Ko-fi fee on everything',
-      'Payment processing: ~2.9% + $0.30 (Stripe/PayPal)',
-      'Example: $10 tip on free plan = ~$9.41 after Stripe',
-      'Example: $10 sale on free plan = ~$8.91 after fees',
-      'Payouts: INSTANT to your PayPal or Stripe',
-      'No minimum threshold — get paid immediately',
-      'Gold pays for itself at ~$250/mo in sales'
-    ],
-    taskTypes: [
-      'One-time tips ("coffees")',
-      'Monthly memberships with tiers',
-      'Digital product sales (art, PDFs, music)',
-      'Physical product sales',
-      'Commissions (art, writing, services)',
-      'Crowdfunding goals',
-      'Exclusive supporter-only content',
-      'Stream alerts for Twitch/YouTube'
-    ],
-    finalTake: '<strong>Best low-fee option for creators who want simple tip jars and occasional sales.</strong> 0% on tips is unbeatable. Instant payouts mean no waiting. Less feature-rich than Patreon but way cheaper and simpler. Perfect for artists, streamers, writers who want a "support me" button without complexity. Gold ($6-8/mo) makes sense once you hit ~$250/mo in non-tip income.',
+    payout: {
+      'Pay method': 'Instant PayPal or Stripe',
+      'Free plan tips': '0% Ko-fi fee',
+      'Free plan shop / memberships': '5% Ko-fi fee',
+      'Gold plan ($6-8/mo)': '0% on everything',
+      'Payment processing': '~2.9% + $0.30',
+      'Minimum payout': 'None (instant)',
+      'Example': '$10 tip on free plan = ~$9.41 after Stripe'
+    },
+    finalTake: 'Cheapest tip jar in the creator economy. Instant payouts. Less feature-rich than Patreon but way simpler. Gold pays for itself at ~$250/mo in non-tip income.',
     idealFor: [
-      'Creators who want simple tip-based support',
-      'Artists selling commissions or digital downloads',
-      'Streamers wanting donation/tip integration',
-      'Anyone who hates waiting for payouts',
-      'Small creators who find Patreon overkill',
-      'NOT for those needing robust analytics or discovery'
+      'Want simple tip-based support',
+      'Artist selling commissions or downloads',
+      'Streamer who wants donation integration',
+      'Hate waiting for payouts',
+      'Find Patreon overkill'
     ]
   },
   'linkedin': {
     name: 'LinkedIn',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/linkedin.png',
     link: 'https://www.linkedin.com/help/linkedin/answer/a1342750',
-    rate: 'Indirect — you sell services',
-    description: 'No direct pay-per-view. Monetize through consulting, coaching, freelance clients, brand deals, courses, and newsletters. High-intent B2B audience.',
+    rate: '$500–$20,000+/gig',
+    description: 'Find clients, speaking gigs, and course buyers.',
     category: 'creative',
-    tldr: 'LinkedIn does NOT pay you for views like YouTube or TikTok. You monetize indirectly by converting your audience into clients, brand deals, or product sales. Top creators earn $7K+/month from services and sponsorships. Video monetization program exists (invite-only, ad revenue sharing). Brand deals start ~$200-250/post for beginners, $1,500+ for established creators. Best platform for B2B, consulting, coaching.',
-    intro: '<strong>LinkedIn</strong> is not a "get paid for views" platform — it\'s a lead generation machine. The 1 billion users are professionals actively looking for business solutions, career help, and expertise. This makes it ideal for selling services, not chasing ad revenue.\n\nThe real money comes from consulting clients, coaching packages, brand partnerships, digital products, and courses. Build authority through content → convert followers into paying clients.',
+    tldr: '**What it is:** Professional network with 1B+ users. Lead generation machine for consultants, coaches, and B2B freelancers.\n\n**The pay:** No direct pay-per-view (except an invite-only video program). Real money comes from consulting clients ($100 to $500+/hr), brand deals ($200 to $1,500+/post), courses, and newsletters. Top creators hit $7,000+/month.\n\n**The catch:** Not a "post and get paid" platform. It is a lead generation engine. Takes months to build authority.',
     whyAdhd: [
-      'Text posts are quick to create — no video editing',
-      'Can repurpose existing expertise you already have',
-      'No pressure to be "entertaining" — value wins',
-      'Comments and engagement = instant feedback',
-      'Carousels let you break ideas into chunks',
-      'Newsletter feature for longer-form content',
-      'Less overwhelming than video-first platforms'
+      'Text posts are quick to create. No video editing.',
+      'Use the expertise you already have.',
+      'No pressure to be entertaining. Value wins.',
+      'Carousels let you break ideas into chunks.',
+      'Newsletter feature for long-form posts.'
     ],
-    standOut: [
-      '1 billion professional users',
-      'High-intent audience (people looking to hire/buy)',
-      '3x higher conversion rate than other platforms',
-      'Organic reach still strong (less saturated than IG/TikTok)',
-      'Newsletter feature with built-in subscribers',
-      'Video monetization program (invite-only)',
-      'Brand deals focus on professional/B2B products',
-      'Direct path: content → client inquiries'
+    pros: [
+      'Highest-intent professional audience',
+      '3x conversion rate vs other platforms',
+      'Text content is fast',
+      'Organic reach still works',
+      'Top creators clear $7K/month'
     ],
-    importantNotes: [
-      'NO direct pay-per-view (except invite-only video program)',
-      'Money comes from services, products, brand deals',
-      'External links get suppressed by algorithm',
-      'Takes time to build authority — not instant income',
-      'Brand deals: $200-250/post (beginner) to $1,500+ (established)',
-      'Video program requires: 100+ followers, good standing, invite',
-      'Best for B2B, professional services, coaching',
-      'Content with affiliate links gets downranked',
-      'Payments happen off-platform (Stripe, PayPal, etc.)'
+    cons: [
+      'No pay-per-view',
+      'External links get suppressed',
+      'Long authority build before income',
+      'Not for entertainment or lifestyle content',
+      'All payment happens off-platform'
     ],
-    payoutInfo: [
-      'Services/Consulting: $100-$500+/hour',
-      'Brand deals (beginner): $200-250/post',
-      'Brand deals (established): $1,500+/post',
-      'Video program: Ad revenue share (invite-only, Stripe payout)',
-      'Courses: Sell on LinkedIn Learning or external platforms',
-      'Newsletters: Sponsorships, affiliate, lead gen',
-      'Top creators: $7,000+/month from deals + services',
-      'No minimum followers to start monetizing',
-      'All payments happen externally'
-    ],
-    taskTypes: [
-      'Consulting/coaching services',
-      'Freelance client acquisition',
-      'Brand partnerships and sponsored posts',
-      'Digital products (ebooks, templates, courses)',
-      'LinkedIn Learning courses',
-      'Newsletter monetization',
-      'Webinars and paid workshops',
-      'Affiliate marketing (carefully — links get suppressed)',
-      'Profile optimization services'
-    ],
-    finalTake: '<strong>Best platform for turning expertise into clients — not for passive income.</strong> If you have skills people pay for (consulting, coaching, freelancing), LinkedIn is unmatched for finding high-value clients. 1 billion professionals looking for solutions. But it requires building authority through consistent content. Not a "post and get paid" platform — it\'s a lead generation engine.',
+    payout: {
+      'Pay method': 'External (Stripe, PayPal, your own invoicing)',
+      'Consulting / coaching': '$100 to $500+/hr',
+      'Brand deals (beginner)': '$200 to $250/post',
+      'Brand deals (established)': '$1,500+/post',
+      'Video program': 'Ad revenue share (invite-only)',
+      'Top creators': '$7,000+/month',
+      'Follower minimum': 'None'
+    },
+    finalTake: 'Best platform for turning expertise into clients. Not for passive income. If you have a skill people pay for (consulting, coaching, freelancing), LinkedIn finds you high-value clients. Build authority through consistent posts.',
     idealFor: [
-      'Consultants and coaches',
-      'Freelancers seeking B2B clients',
-      'Experts who can package knowledge into services',
-      'People comfortable with text-based content',
-      'Those targeting business/professional audiences',
-      'NOT for those wanting passive pay-per-view income',
-      'NOT for entertainment/lifestyle content'
+      'Consultant or coach',
+      'Freelancer seeking B2B clients',
+      'Expert who can package knowledge into services',
+      'Comfortable with text-based content',
+      'Not for entertainment or lifestyle'
     ]
   },
   'rev': {
     name: 'Rev',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/rev.png',
     link: 'https://www.rev.com/freelancers',
-    rate: '$0.30–$3.00/audio min',
-    description: 'Transcription, captioning, and subtitling work from the makers of industry-leading speech-to-text software. Currently has a waitlist.',
+    rate: '$10–$20/hr',
+    description: 'Transcribe audio for big clients like Google and Amazon.',
     category: 'freelance',
-    tldr: '⚠️ CURRENTLY HAS A WAITLIST. Transcription and captioning for major clients like Google, Amazon, NBC. Pay $0.30–$1.10/audio minute for transcription, up to $3/min for foreign subtitles. Weekly PayPal payments every Monday. You can still apply, but expect to wait before getting access.',
-    intro: '<strong>Rev</strong> is one of the largest online transcription and captioning companies, founded in 2010. They serve major clients including Amazon, Microsoft, Google, Buzzfeed, and NBC. Over 60,000 freelancers ("Revvers") transcribe millions of minutes of audio and video content.\n\n<strong>⚠️ Important: Rev currently has a waitlist due to high freelancer interest.</strong> You can still apply, but you may not get immediate access to work. This has been ongoing for a while, so factor that into your plans if you need income now.',
+    tldr: '**What it is:** Transcription and captioning for big clients (Google, Amazon, NBC). Currently on a waitlist.\n\n**The pay:** $0.30 to $1.10 per audio minute for transcription. Up to $3/min for foreign subtitles. Weekly PayPal every Monday. No minimum.\n\n**The catch:** Has a waitlist. One audio minute takes 3 to 6 minutes to actually transcribe. Real hourly is $3 to $20.',
     whyAdhd: [
-      'Total schedule flexibility — work whenever you want',
-      'Choose your own projects — see pay before committing',
-      'No minimum hours or quotas',
-      'Variety of content keeps work interesting',
-      'Weekly payments — reliable every Monday',
-      'Work alone — no customer interaction'
+      'Total schedule flexibility.',
+      'See pay before you accept the file.',
+      'No minimum hours.',
+      'Different content every time.',
+      'Weekly Monday payments.'
     ],
-    standOut: [
-      'Major clients: Google, Amazon, NBC, Buzzfeed',
-      '60,000+ freelancers in their network',
-      'Weekly PayPal payments every Monday',
-      'No minimum payout threshold',
-      'Free training and style guides provided',
-      'Three Revver levels: Rookie → Revver → Revver+',
-      'Higher levels unlock better-paying jobs',
-      'Revver+ can become paid graders',
-      'Available in US (except CA), Canada, UK, Australia, and more',
-      'Interesting content variety (podcasts, lectures, interviews)'
+    pros: [
+      'Real clients, real pay',
+      'Weekly Monday cashout',
+      'No minimum',
+      'Foreign subtitle work pays up to $3/min',
+      'Free training included'
     ],
-    importantNotes: [
-      '⚠️ WAITLIST IN EFFECT — may take weeks/months to get access',
-      'Pay is per audio minute — NOT per minute worked',
-      'One audio minute can take 3–6 minutes to transcribe',
-      'Realistic hourly rate: $3–$20/hr depending on speed/difficulty',
-      'Audio quality varies widely — some files very hard to hear',
-      'Strict grading system — errors can get you removed',
-      'Competition for good files — best jobs disappear quickly',
-      'Rookies get shorter, lower-paying projects first',
-      'Need 45 minutes transcribed to reach Revver level',
-      'Need 800 minutes with high scores for Revver+',
-      'California residents cannot apply'
+    cons: [
+      'Waitlist before you can even start',
+      'Real hourly often $3 to $20',
+      'Strict grading',
+      'No CA residents',
+      'Best jobs disappear fast'
     ],
-    payoutInfo: [
-      'Transcription: $0.30–$1.10 per audio minute',
-      'Captioning: $0.54–$1.10 per audio minute',
-      'Foreign subtitles: $1.50–$3.00 per audio minute',
-      'Revvers earn 25% more than Rookies',
-      'Top earners: ~$1,495/month',
-      'Top 5%: ~$900/month average',
-      'Average (15 jobs): ~$156/month',
-      'Payment: Weekly via PayPal every Monday',
-      'Pay week: Sunday–Saturday (cutoff 11:59pm GMT)',
-      'No minimum payout threshold'
-    ],
-    taskTypes: [
-      'Transcription — audio/video to text',
-      'Captioning — synced captions for video + sound descriptions',
-      'Subtitling — foreign language translations',
-      'Translation — multi-language content',
-      'Grading — review other Revvers\' work (Revver+ only)',
-      'Content types: podcasts, interviews, lectures, business meetings, legal, medical'
-    ],
-    finalTake: '<strong>Rev is the entry point into transcription work</strong> — reliable weekly payments, major clients, and zero cost to start. However, there\'s currently a waitlist, so don\'t count on immediate income. The pay-per-audio-minute model is also tricky: one hour of audio can take 3–6 hours to transcribe, making actual hourly rates much lower than they appear. Apply now to get in the queue, but explore other options if you need money today.',
+    payout: {
+      'Pay method': 'Weekly PayPal (Mondays)',
+      'Transcription': '$0.30 to $1.10/audio min',
+      'Captioning': '$0.54 to $1.10/audio min',
+      'Foreign subtitles': '$1.50 to $3.00/audio min',
+      'Top earners': '~$1,495/month',
+      'Top 5%': '~$900/month',
+      'Average (15 jobs)': '~$156/month',
+      'Minimum payout': 'None'
+    },
+    finalTake: 'Entry point into transcription. Real clients, weekly payments. Catch is the waitlist and the math: one hour of audio = 3 to 6 hours of work. Apply now to get in the queue. Use TranscribeMe or Speechpad if you need work today.',
     idealFor: [
-      'Fast typists (60+ WPM) who value flexibility',
-      'Introverts who prefer zero customer interaction',
-      'Stay-at-home parents needing flexible hours',
-      'Students looking for work around class schedules',
-      'Anyone building transcription skills for higher-paying gigs',
-      'People willing to wait for access (not urgent income needs)'
+      'Fast typist (60+ WPM)',
+      'Introvert who prefers zero customer interaction',
+      'Stay-at-home parent needing flexible hours',
+      'Student around a class schedule',
+      'Patient enough to wait for access'
     ]
   },
   'transcribeme': {
     name: 'TranscribeMe',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/transcribeme.jpg',
     link: 'https://www.transcribeme.com/freelancers/',
     rate: '$15–$22/audio hr',
-    description: 'Beginner-friendly transcription platform with short 2–4 minute clips and career advancement opportunities.',
+    description: 'Short audio clips. Flexible hours, easy to start.',
     category: 'freelance',
-    tldr: 'Entry-level transcription with short 2–4 min clips instead of long interviews. Pay $15–$22/audio hour (realistically $4–6/hr for beginners). Special teams earn $60–$70/audio hour. Weekly PayPal payments, $10 minimum. Great for learning — not great for income.',
-    intro: '<strong>TranscribeMe</strong> is a San Francisco-based transcription company founded in 2011, with offices in New Zealand and Singapore. They\'re known as one of the best entry points for beginner transcriptionists because they break files into short 2–4 minute clips instead of hour-long interviews.\n\nThe platform uses a crowdsourced model where files pass through multiple transcribers. You transcribe one clip, submit, and get another — no limit on how many you can do. They offer career advancement opportunities through special teams that pay significantly more.',
+    tldr: '**What it is:** Entry-level transcription with short 2 to 4 minute clips instead of long interviews. Crowdsourced model.\n\n**The pay:** $15 to $22 per audio hour standard. Special teams hit $22 to $60/audio hr. Medical team: $60 to $70/audio hr. Weekly PayPal, $10 minimum.\n\n**The catch:** Real hourly rate for beginners is $4 to $6/hr. Industry standard is 4 minutes of work per 1 minute of audio. Only 2 attempts on the entrance exam.',
     whyAdhd: [
-      'Short 2–4 minute clips — not overwhelming hour-long files',
-      'No minimum hours or quotas',
-      'Work whenever you want, 24/7',
-      'Built-in editor — no software to buy',
-      'Clips keep coming — no searching for work',
-      'Variety of topics keeps it interesting'
+      'Short 2 to 4 minute clips. Not overwhelming.',
+      'No minimum hours or quotas.',
+      'Work 24/7.',
+      'Built-in editor. No software to buy.',
+      'Clips keep coming. No searching for work.'
     ],
-    standOut: [
-      'Perfect for complete beginners — no experience required',
-      'Short clips (2–4 min) instead of full interviews',
-      'Free training and style guide provided',
-      'Career advancement to special teams ($60–$70/audio hr)',
-      'Medical transcription team available (higher pay)',
-      'Global — available worldwide',
-      'Weekly PayPal payments',
-      '$10 minimum payout',
-      'No software costs — browser-based editor',
-      'Community forums for support'
+    pros: [
+      'No experience required',
+      'Short clips fit short attention spans',
+      'Free training included',
+      'Global access',
+      'Special teams are real upgrade'
     ],
-    importantNotes: [
-      'Pay is per AUDIO hour — not per hour worked',
-      'Industry standard: 4 minutes to transcribe 1 minute of audio',
-      'Realistic hourly rate for beginners: $4–6/hr',
-      'Need 150 jobs + exam to access medical transcription',
-      'Work availability varies — can go months without work',
-      'Strict accuracy requirements',
-      'Must provide government ID with photo during signup',
-      'Only 2 attempts allowed on entrance exam',
-      'Files can have poor audio quality',
-      'Cannot replace full-time income for most people'
+    cons: [
+      'Real hourly is brutal for beginners',
+      '$4 to $6/hr until you climb',
+      'Work volume is uneven',
+      'Cannot replace full-time income',
+      'Only 2 exam attempts'
     ],
-    payoutInfo: [
-      'Standard rate: $15–$22 per audio hour',
-      'Special teams: $22–$60 per audio hour',
-      'Medical transcription: $60–$70 per audio hour',
-      'Top earners: ~$1,495/month (40–50 hrs/week)',
-      'Average transcriptionist: ~$250/month',
-      'Payment: Weekly via PayPal',
-      'Minimum payout: $10',
-      'Pay increases as you advance levels'
-    ],
-    taskTypes: [
-      'General transcription — interviews, meetings, podcasts',
-      'Medical transcription — requires exam + 150 jobs',
-      'Legal transcription — depositions, interviews',
-      'Market research — focus groups, surveys',
-      'Academic transcription — lectures, research',
-      'Corporate transcription — business meetings'
-    ],
-    finalTake: '<strong>TranscribeMe is for learning, not earning.</strong> The short clips and free training make it genuinely beginner-friendly, but the math doesn\'t lie: $15–$22 per audio hour translates to $4–6/hr actual work time for beginners. Great as a stepping stone to build skills and resume experience, but don\'t expect to pay bills with it. The special teams paying $60–$70/audio hour are the real prize — if you can get there.',
+    payout: {
+      'Pay method': 'Weekly PayPal',
+      'Standard rate': '$15 to $22/audio hr',
+      'Special teams': '$22 to $60/audio hr',
+      'Medical transcription': '$60 to $70/audio hr',
+      'Top earners': '~$1,495/month (40 to 50 hrs/week)',
+      'Average': '~$250/month',
+      'Minimum payout': '$10'
+    },
+    finalTake: 'For learning, not earning. Short clips and free training make it the easiest entry. Pay starts brutal but the special teams are the real prize once you climb. Use it to build skills, then move to Speechpad or Rev.',
     idealFor: [
-      'Complete beginners wanting to learn transcription',
-      'People who get overwhelmed by long audio files',
-      'Those building a resume for higher-paying transcription jobs',
-      'Stay-at-home parents needing flexible snippets of work',
-      'Anyone curious if transcription is right for them'
+      'Complete beginner wanting to learn',
+      'Get overwhelmed by long audio files',
+      'Building a resume for better transcription jobs',
+      'Stay-at-home parent with snippet hours',
+      'Curious if transcription is for you'
     ]
   },
   'gotranscript': {
     name: 'GoTranscript',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/gotranscript.png',
     link: 'https://gotranscript.com/transcription-jobs',
-    rate: '$0.60/audio min',
-    description: 'One of the largest transcription companies with 19+ years experience and 140+ languages.',
+    rate: '$10–$20/hr',
+    description: 'Transcribe audio and video. Paid weekly through PayPal.',
     category: 'freelance',
-    tldr: '⚠️ NOT CURRENTLY HIRING ENGLISH TRANSCRIBERS. One of the world\'s largest transcription services (since 2005). Pay ~$0.60/audio minute. Weekly PayPal/Payoneer payments on Fridays. Average earnings: $150/month. Top earners: $1,215/month. Open to 140+ languages — better options for non-English.',
-    intro: '<strong>GoTranscript</strong> is one of the largest transcription and translation companies in the world, founded in Edinburgh, Scotland in 2005. They\'ve paid over $100M to freelancers and work with clients like Stanford, Cambridge, Bose, and Fisher & Paykel Healthcare.\n\n<strong>⚠️ Important: GoTranscript is currently NOT hiring English transcribers.</strong> If you\'re fluent in other languages, you have better options here — they support 140+ languages. Check back periodically if you\'re English-only.',
+    tldr: '**What it is:** Big transcription site since 2005. Clients include Stanford, Cambridge, Bose. 140+ languages.\n\n**The pay:** Up to $0.60/audio minute (most jobs pay less). Weekly PayPal or Payoneer every Friday. No minimum cashout.\n\n**The catch:** Not currently hiring English transcribers. Bilingual workers have better odds. Real hourly is $1 to $3/hr for English beginners.',
     whyAdhd: [
-      'Pick your own files from available jobs',
-      'No minimum hours required',
-      'Work from anywhere with internet',
-      'Editors give feedback to help you improve',
-      'Fair turnaround deadlines',
-      'Can work in multiple languages'
+      'Pick your own files.',
+      'No minimum hours.',
+      'Work from anywhere.',
+      'Editors give feedback to help you improve.',
+      'Can work in multiple languages.'
     ],
-    standOut: [
-      '19+ years in business (since 2005)',
-      '$100M+ paid to freelancers',
-      '140+ languages supported',
-      'Major clients: Stanford, Cambridge, Bose',
-      'Weekly payments every Friday',
-      'PayPal and Payoneer options',
-      'No minimum payout threshold',
-      'Beginner-friendly — no experience required',
-      'Constructive feedback from editors',
-      'Also offers data labeling projects for extra income'
+    pros: [
+      '140+ languages opens it up worldwide',
+      'Around for 20+ years',
+      'Weekly Friday payouts',
+      'PayPal or Payoneer',
+      'No minimum cashout'
     ],
-    importantNotes: [
-      '⚠️ NOT HIRING ENGLISH TRANSCRIBERS currently',
-      'Must pass test with 95%+ accuracy',
-      'Test review can take 30–60 days',
-      '3 low-rated transcripts (3.6 or below) = removed from team',
-      'Audio quality varies widely — some files very difficult',
-      'Realistic hourly rate: $1–$3/hr for beginners',
-      'Experienced workers: still won\'t make US minimum wage',
-      'Better value for workers in lower cost-of-living countries',
-      'Competition for good files — best ones go fast',
-      'Advertised $0.60/min is maximum — most jobs pay less'
+    cons: [
+      'English hiring is closed',
+      'English pay is below minimum wage in the US',
+      'Test review takes a month or more',
+      'Audio quality varies wildly',
+      'Best files go fast'
     ],
-    payoutInfo: [
-      'Average rate: $0.60/audio minute ($36/audio hour)',
-      'Realistic rate: $0.23–$0.26/min for most jobs',
-      'Average monthly earnings: ~$150',
-      'Top earners: ~$1,215/month',
-      'Payment: Weekly via PayPal or Payoneer',
-      'Payment day: Every Friday',
-      'No minimum payout threshold',
-      'Ratings affect pay (scale of 5–9)'
-    ],
-    taskTypes: [
-      'Transcription — audio/video to text',
-      'Translation — 140+ languages',
-      'Captioning — video captions',
-      'Subtitling — foreign language subtitles',
-      'Editing — improve existing transcripts',
-      'Data labeling — AI training projects'
-    ],
-    finalTake: '<strong>GoTranscript is massive and legit, but the pay is brutal for English speakers.</strong> At $0.60/audio minute (and often less), you\'re looking at $1–$3/hr actual work time for beginners. The real opportunity is for bilingual workers — 140+ languages supported. If you speak Spanish, German, French, or other languages, this becomes more viable. English-only workers should look elsewhere.',
+    payout: {
+      'Pay method': 'Weekly Friday PayPal or Payoneer',
+      'Max rate': '$0.60/audio min ($36/audio hr)',
+      'Realistic rate': '$0.23 to $0.26/min',
+      'Average monthly earnings': '~$150',
+      'Top earners': '~$1,215/month',
+      'Minimum cashout': 'None'
+    },
+    finalTake: 'Massive and legit, but English pay is brutal. The real value is for bilingual workers. If you speak Spanish, German, French, or another language, GoTranscript becomes viable. English-only workers should pick Speechpad or Rev instead.',
     idealFor: [
-      'Bilingual/multilingual speakers (140+ languages)',
-      'Workers in countries with lower cost of living',
-      'Beginners wanting to practice transcription skills',
-      'Those who can wait 30–60 days for test approval',
-      'People looking for occasional side income, not primary income'
+      'Bilingual or multilingual speaker',
+      'Live in a low cost-of-living country',
+      'Want to practice transcription',
+      'OK waiting 30 to 60 days for approval',
+      'Side income only, not primary'
     ]
   },
   'scribie': {
     name: 'Scribie',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/scribie.jpg',
     link: 'https://scribie.com/',
-    rate: '$5–$20/audio hr',
-    description: 'AI-assisted transcription platform with short 6-minute files — currently paused for new hires.',
+    rate: '$5–$15/hr',
+    description: 'Beginner transcription work. Currently on hold.',
     category: 'freelance',
-    tldr: '⚠️ CURRENTLY NOT HIRING — transitioning to Scribie.ai. When open: Short 6-min files, AI-generated drafts save ~60% typing. Pay $5–$20/audio hour (realistically $1–$2/hr). PayPal payments. 10 test attempts allowed. Good for practice, bad for income.',
-    intro: '<strong>Scribie</strong> has been providing transcription services since 2008, with over 10M minutes transcribed and 50K+ certified transcribers. They\'re known for their 4-step transcription process: Raw Transcription → Review → Proofreading → Quality Check.\n\n<strong>⚠️ Important: Scribie is currently NOT hiring freelance transcribers</strong> while they migrate to their new platform, Scribie.ai. Check back for updates on when hiring resumes.',
+    tldr: '**What it is:** Transcription site since 2008. Short 6-minute files. AI generates a draft so you edit instead of typing from scratch.\n\n**The pay:** $5 to $20/audio hour. Real hourly is $1 to $2/hr. PayPal payments.\n\n**The catch:** Not currently hiring. They are migrating to Scribie.ai. Check back later.',
     whyAdhd: [
-      'Short 6-minute files — not overwhelming',
-      'AI generates draft — saves ~60% typing',
-      'One file at a time — no juggling',
-      'Browser-based — no software needed',
-      '10 test attempts (generous)',
-      'Work at your own pace'
+      'Short 6-minute files.',
+      'AI draft saves ~60% of typing.',
+      'One file at a time.',
+      'Browser-based, no software needed.',
+      '10 test attempts allowed.'
     ],
-    standOut: [
-      'AI-assisted transcription (saves typing effort)',
-      'Short files (~6 minutes)',
-      'In business since 2008',
-      '50K+ certified transcribers',
-      '10 test attempts allowed',
-      'Bonus for completing 3+ audio hours per pay period',
-      'PayPal payments',
-      'No minimum monthly commitment',
-      '4-step quality process',
-      'Multiple job types: transcription, review, proofreading, QC'
+    pros: [
+      'AI assistance reduces typing',
+      'Short files fit short attention spans',
+      '10 test attempts vs 2 elsewhere',
+      'Real long history (since 2008)',
+      'Daily earnings tracking'
     ],
-    importantNotes: [
-      '⚠️ NOT CURRENTLY HIRING — system migration in progress',
-      'Pay is per AUDIO hour — not per hour worked',
-      'Standard rate is typically $5/audio hour (not $20)',
-      'Realistic hourly rate: $1–$2/hr',
-      'Audio quality varies — some files very hard to hear',
-      'Graded on 5-point scale — below certain grade = no pay',
-      'Customer can cancel = you don\'t get paid',
-      'Must wait 6 months to reapply after 10 failed tests',
-      '2-hour turnaround required for files under 6 minutes',
-      'Very strict accuracy requirements'
+    cons: [
+      'Hiring is paused',
+      'Real hourly is $1 to $2',
+      'Customer cancellation = no pay',
+      'Strict grading',
+      'Files can have rough audio'
     ],
-    payoutInfo: [
-      'Pay range: $5–$20 per audio hour',
-      'Typical rate: $5/audio hour',
-      'Per file: $0.50–$2 for 6-minute file',
-      'Bonus available for 3+ audio hours/pay period',
-      'Beginners estimate: up to $400/month',
-      'Advanced transcriptionists: up to $1,600/month',
-      'Payment: Via PayPal',
-      'Daily earnings accumulation',
-      'Minimum payout threshold applies'
-    ],
-    taskTypes: [
-      'Raw transcription — first pass from audio',
-      'Review — check and correct transcripts',
-      'Proofreading — polish for consistency',
-      'Quality check — final accuracy assessment',
-      'AI transcript editing — clean up automated drafts'
-    ],
-    finalTake: '<strong>Scribie is on pause, and even when it wasn\'t, the pay was painful.</strong> Despite advertising $5–$20/audio hour, most workers report earning $1–$2/hr actual work time. The AI-assistance is genuinely helpful (saves typing), and 10 test attempts is generous. But with hiring frozen during their platform migration, check back later — and even then, treat it as practice, not income.',
+    payout: {
+      'Pay method': 'PayPal',
+      'Pay range': '$5 to $20/audio hr',
+      'Typical rate': '$5/audio hr',
+      'Per 6-min file': '$0.50 to $2',
+      'Beginner monthly': 'Up to $400',
+      'Advanced monthly': 'Up to $1,600'
+    },
+    finalTake: 'Paused right now. Even when open, pay was rough. Use it for practice, not income. AI-assisted drafts are the real perk if you can grind through low-pay work.',
     idealFor: [
-      'Complete beginners wanting low-pressure practice',
-      'Those who appreciate AI-assisted transcription',
-      'Workers in very low cost-of-living areas',
-      'People who prefer short files over long interviews',
-      'Anyone willing to wait for hiring to reopen'
+      'Beginner wanting low-pressure practice',
+      'Like AI-assisted typing',
+      'In a low cost-of-living area',
+      'Prefer short files',
+      'Patient enough to wait for hiring to reopen'
     ]
   },
   'tigerfish': {
     name: 'Tigerfish',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/tigerfish.jpg',
     link: 'https://tigerfish.com/transcription-jobs/',
-    rate: '$7–$15/hr',
-    description: 'Established transcription company (since 1989) that accepts beginners — US residents only.',
+    rate: '$5–$15/hr',
+    description: 'Interviews, focus groups, and legal recordings. Strict on quality.',
     category: 'freelance',
-    tldr: 'One of the oldest transcription companies (since 1989). US residents only. Accepts beginners but requires purchasing $250 software if hired. Pay ~$0.005/word (~$7–$15/hr). Weekly PayPal payments. Major clients: Nike, Sony, Google, ESPN. Long response times after applying.',
-    intro: '<strong>Tigerfish</strong> has been in the transcription business since 1989 — before the internet was mainstream. They\'re known for accepting beginners and having a friendly, flexible work environment. Many transcribers have stayed with them for over a decade.\n\nThey work with major clients like Nike, Sony, Google, ESPN, and Samsung, transcribing everything from documentary footage to police interrogations to corporate research.',
+    tldr: '**What it is:** Transcription company since 1989. Real clients: Nike, Sony, Google, ESPN. US residents only.\n\n**The pay:** ~$0.005/word or $0.03 to $0.04/line. Real hourly $7 to $10 for beginners, up to $15 experienced. Weekly PayPal.\n\n**The catch:** Must buy $250 software if hired (Start Stop PowerPlay). Windows only. Response time after applying can take weeks or months.',
     whyAdhd: [
-      'Accepts complete beginners',
-      'Flexible schedule — work when you want',
-      'Variety of content keeps it interesting',
-      'Friendly, supportive environment',
-      'Long-term transcribers stay 10+ years (good sign)',
-      'Weekly payments'
+      'Accepts complete beginners.',
+      'Flexible schedule.',
+      'Variety of content (documentaries, legal, corporate).',
+      'Friendly culture by reputation.',
+      'Long-term transcribers stay 10+ years.'
     ],
-    standOut: [
-      'In business since 1989 (35+ years)',
-      'Accepts beginners with no experience',
-      'Major clients: Nike, Sony, Google, ESPN, Samsung',
-      'Known for friendly, flexible culture',
-      'Many transcribers stay 10+ years',
-      'Variety of work: documentaries, legal, corporate, police',
-      'Weekly PayPal payments',
-      'US-based company',
-      '2-hour guaranteed turnaround to clients',
-      'Good resume builder'
+    pros: [
+      '35+ year track record',
+      'Real enterprise clients',
+      'Beginner-friendly culture',
+      'Weekly cashout',
+      'Long-tenure workers is a good sign'
     ],
-    importantNotes: [
-      'US residents only — no international workers',
-      'Must purchase software if hired (~$250 for Start Stop PowerPlay)',
-      'Requires Windows computer',
-      'Pay rate not publicly disclosed',
-      'Pay per line/word — not per audio minute',
-      'Typical rate: ~$0.005/word or $0.03–$0.04/line',
-      'Realistic hourly: $7–$10 for beginners, up to $15 experienced',
-      'Application involves transcribing 3 five-minute audio segments',
-      'Response time can take weeks or months',
-      'Not always actively hiring'
+    cons: [
+      '$250 software cost before you earn',
+      'US only',
+      'Windows only',
+      'Slow application response',
+      'Pay rates hidden until hired'
     ],
-    payoutInfo: [
-      'Pay structure: Per word (~$0.005/word)',
-      'Alternate structure: Per line ($0.03–$0.04/line)',
-      'Beginner estimate: $7–$10/hr',
-      'Experienced transcriber: up to $15/hr',
-      'Potential daily earnings: $10–$50+',
-      'Payment: Weekly via PayPal',
-      'No publicly disclosed rates'
-    ],
-    taskTypes: [
-      'Documentary film footage transcription',
-      'Police interrogations',
-      'Legal depositions',
-      'Corporate research projects',
-      'Focus groups',
-      'Interviews',
-      'Absolute verbatim transcription',
-      'Edited/clean verbatim transcription'
-    ],
-    finalTake: '<strong>Tigerfish is beginner-friendly and established, but the software cost is a barrier.</strong> Paying $250 upfront for required software before you\'ve earned anything is a significant investment. The pay (~$7–$15/hr) is decent for transcription, and the 35-year track record is reassuring. Best for US residents serious about transcription as a long-term side hustle.',
+    payout: {
+      'Pay method': 'Weekly PayPal',
+      'Per word': '~$0.005',
+      'Per line': '$0.03 to $0.04',
+      'Beginner hourly': '$7 to $10',
+      'Experienced hourly': 'Up to $15',
+      'Daily potential': '$10 to $50+'
+    },
+    finalTake: 'Beginner-friendly and established. $250 software upfront is the barrier. Pay is decent for transcription. Best for US residents who want long-term transcription work and can stomach the upfront cost.',
     idealFor: [
-      'US residents only',
-      'Beginners willing to invest $250 in software',
-      'Those seeking long-term transcription work',
-      'People who enjoy variety in audio content',
-      'Anyone patient enough to wait weeks for application response'
+      'US resident only',
+      'Beginner willing to invest $250 in software',
+      'Seeking long-term transcription work',
+      'Use a Windows computer',
+      'Patient with application response'
     ]
   },
   'castingwords': {
     name: 'CastingWords',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/castingwords.png',
     link: 'https://workshop.castingwords.com/',
-    rate: '$0.085–$1.00/audio min',
-    description: 'Global transcription platform with badge-based progression — very low starting pay.',
+    rate: '$8–$12/hr',
+    description: 'Pick the projects you want. Paid weekly through PayPal.',
     category: 'freelance',
-    tldr: 'Transcription platform since 2005 with gamified badge system. Starting pay is brutal: $0.085/audio min (~$1–$2/hr actual). Work up to $1/audio min with high grades. Weekly PayPal payments (Fridays). Not available in CA, NY, MA, DC, IN, HI, WV. Good for practice, bad for income.',
-    intro: '<strong>CastingWords</strong> is a Los Alamos, New Mexico-based transcription company that\'s been operating since 2005. They\'ve been featured in The Economist and The New York Times.\n\nTheir unique badge system gamifies progression — better grades unlock higher-paying work. But the starting pay is extremely low, nearly guaranteeing sub-minimum wage for newcomers.',
+    tldr: '**What it is:** Transcription platform since 2005 with a gamified badge system. Better grades unlock higher-paying work.\n\n**The pay:** Starts at $0.085/audio min. Top grade (9/9) pays up to 3x base ($1/audio min). Weekly PayPal Fridays, $1 minimum.\n\n**The catch:** Real hourly for beginners is $1 to $2/hr. Not available in CA, NY, MA, DC, IN, HI, WV. Grades below 5 mean no pay.',
     whyAdhd: [
-      'Badge system gamifies progression',
-      'Pick your own assignments',
-      'No minimum hours required',
-      'Leaderboards add competition element',
-      'Multiple job types for variety',
-      'Short preview before committing'
+      'Badge system gamifies progression.',
+      'Pick your own assignments.',
+      'No minimum hours.',
+      'Leaderboards add competition.',
+      'Mix of job types.'
     ],
-    standOut: [
-      'In business since 2005',
-      'Featured in The Economist, NY Times',
-      'Gamified badge/level system',
-      'Leaderboards for competition',
-      'Multiple job types: transcription, editing, grading',
-      'Work up to 3x base pay with perfect grades (9/9)',
-      'No test required for some applicants',
-      'Global hiring (most countries)',
-      'Weekly PayPal payments (Fridays)',
-      '$1 minimum payout',
-      'Top earners: $12K+/year possible'
+    pros: [
+      'Real progression system',
+      'Top grades pay 3x base',
+      'Weekly Friday cashout',
+      '$1 minimum',
+      'Global hiring (most countries)'
     ],
-    importantNotes: [
-      'Starting pay is extremely low: $0.085/audio minute',
-      'Realistic beginner hourly: $1–$2/hr',
-      'Not available in: CA, NY, MA, DC, IN, HI, WV',
-      'Grading scale 0–9 (below 5 = rejected, no pay)',
-      'New workers\' jobs go through more review',
-      'Approval can take up to a month',
-      'Badge level affects job access and pay',
-      'Feast or famine work availability',
-      'Audio quality varies significantly',
-      'No built-in transcription tools — download files and use own software'
+    cons: [
+      'Starting pay is $1 to $2/hr',
+      'Several US states excluded',
+      'Failed grades pay $0',
+      'No built-in tools',
+      'Months of grinding to reach decent pay'
     ],
-    payoutInfo: [
-      'Base rate: $0.085/audio minute (entry level)',
-      'Grade 5: Base pay only',
-      'Grade 9: Up to 3x base pay',
-      'Maximum rate: ~$1/audio minute',
-      'Editing jobs: $0.02–$0.25',
-      'Top earners: $12K+/year (requires dedication)',
-      'Payment: Weekly via PayPal (Fridays)',
-      'Minimum payout: $1',
-      'CastingWords covers PayPal fees'
-    ],
-    taskTypes: [
-      'Transcription — audio to text',
-      'Editing — improve other workers\' transcripts',
-      'AI transcript cleanup — fix automated drafts',
-      'Grading — rate others\' work',
-      'Approving — final quality checks',
-      'Focus groups, sermons, market research, commercial work'
-    ],
-    finalTake: '<strong>CastingWords is a long game with brutal starting pay.</strong> At $0.085/audio minute, beginners earn $1–$2/hr actual work time. The badge system means you CAN work up to ~$1/min with perfect grades, but that takes months of grinding. Some veteran workers earn $12K+/year, proving it\'s possible — but most won\'t get there. Best for patient learners in low cost-of-living areas.',
+    payout: {
+      'Pay method': 'Weekly Friday PayPal',
+      'Base rate': '$0.085/audio min',
+      'Grade 5': 'Base pay only',
+      'Grade 9': 'Up to 3x base',
+      'Maximum rate': '~$1/audio min',
+      'Editing jobs': '$0.02 to $0.25',
+      'Top earners': '$12K+/year',
+      'Minimum payout': '$1 (CastingWords covers PayPal fees)'
+    },
+    finalTake: 'Long game with brutal starting pay. Most beginners earn $1 to $2/hr. Veteran workers with perfect grades clear $12K+/year. Best for patient learners in low cost-of-living areas.',
     idealFor: [
-      'Patient people willing to grind through low-pay period',
-      'Workers in countries with low cost of living',
-      'Those who enjoy gamified progression systems',
-      'Beginners wanting practice without experience requirements',
-      'NOT for: CA, NY, MA, DC, IN, HI, WV residents'
+      'Patient enough to grind low pay early',
+      'Live in a low cost-of-living area',
+      'Like gamified progression',
+      'Beginner wanting practice',
+      'Not for CA, NY, MA, DC, IN, HI, or WV residents'
     ]
   },
   'speechpad': {
     name: 'Speechpad',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/speechpad.jpg',
     link: 'https://www.speechpad.com/worker',
-    rate: '$0.25–$1.00/audio min',
-    description: 'Transcription and captioning platform with twice-weekly payments and rating-based advancement.',
+    rate: '$10–$25/hr',
+    description: 'General, legal, and medical transcription. Paid twice a week.',
     category: 'freelance',
-    tldr: 'Transcription and captioning for clients like Amazon, Netflix, Yahoo. Pay $0.25–$1/audio minute. Twice-weekly PayPal payments (Thu & Fri). Rating system unlocks better jobs. Requires 94%+ on typing test. May not always be hiring.',
-    intro: '<strong>Speechpad</strong> is a transcription company founded in 2008 that provides services to major clients like Amazon, Netflix, Yahoo, and Hubspot. They\'ve transcribed over 10,000 audio/video minutes.\n\nUnlike many transcription platforms, Speechpad uses AI to generate initial transcripts — your job is often to clean up and perfect the automated drafts rather than transcribing from scratch.',
+    tldr: '**What it is:** Transcription and captioning since 2008. Clients: Amazon, Netflix, Yahoo, Hubspot. AI generates initial drafts so you edit instead of typing from scratch.\n\n**The pay:** $0.25 to $1/audio min. Twice-weekly PayPal (Thursday and Friday). No minimum cashout. Speechpad covers PayPal fees.\n\n**The catch:** Must score 94%+ on typing test. Not always hiring.',
     whyAdhd: [
-      'AI generates initial draft — less typing from scratch',
-      'Pick your own jobs',
-      'No minimum hours required',
-      'Twice-weekly payments — faster than most',
-      '5-second audio preview before accepting',
-      'Rating system rewards good work'
+      'AI generates first draft. Less typing.',
+      'Pick your own jobs.',
+      'No minimum hours.',
+      'Twice-weekly payments.',
+      '5-second audio preview before accepting.'
     ],
-    standOut: [
-      'Major clients: Amazon, Netflix, Yahoo, Hubspot',
-      'AI-assisted transcription (edit drafts vs. type from scratch)',
-      'Twice-weekly PayPal payments (Thu & Fri)',
-      'No minimum payout — get paid for any amount',
+    pros: [
+      'Twice-weekly cashout (faster than most)',
+      'AI drafts cut typing time',
       'Speechpad covers PayPal fees',
-      'Rating system unlocks better-paying jobs',
-      'Review jobs available (invite-only, higher pay)',
-      'Global hiring',
-      'Helpful, responsive support staff',
+      'No minimum cashout',
       '4.3/5 Glassdoor rating'
     ],
-    importantNotes: [
-      'Must score 94%+ on typing test to be accepted',
-      'Not always hiring — check back if applications closed',
-      'Rating based on last 10 jobs — affects job access',
-      'Entry-level jobs pay lowest ($0.25/min)',
-      'Review jobs are invite-only',
-      'Audio quality varies — some files difficult',
-      'Competition for "good" jobs',
-      'Extensions only granted for emergencies',
-      'No app — web-based only',
-      'Interview may be required after passing tests'
+    cons: [
+      '94%+ typing test bar',
+      'Application closed sometimes',
+      'Entry-level pay is low',
+      'Review jobs are gated',
+      'Web only, no app'
     ],
-    payoutInfo: [
-      'Transcription: $0.25–$1.00/audio minute',
-      'Captioning: $0.30–$1.00/audio minute',
-      'Review jobs: $0.20–$1.00/audio minute',
-      'Experienced transcriptionist: 15–20 audio min/hr (~$7–$20/hr)',
-      'Experienced reviewer: 40 audio min/hr',
-      'Bonuses for 5-star customer ratings',
-      'Payment: Twice weekly via PayPal (Thu & Fri)',
-      'No minimum payout',
-      'Speechpad covers PayPal transaction fees'
-    ],
-    taskTypes: [
-      'Transcription — audio/video to text',
-      'Captioning — video captions (requires qualification test)',
-      'Translation — multiple languages (requires qualification test)',
-      'Review — edit others\' work (invite-only)',
-      'Quality review — premium caption checking'
-    ],
-    finalTake: '<strong>Speechpad is one of the better transcription platforms.</strong> Twice-weekly payments, major clients, AI-assisted drafts, and they cover PayPal fees. The rating system rewards quality work with better jobs. Pay ranges from mediocre ($0.25/min) to decent ($1/min). Best for experienced transcribers who can hit the ground running and build their rating quickly.',
+    payout: {
+      'Pay method': 'Twice-weekly PayPal (Thursday and Friday)',
+      'Transcription rate': '$0.25 to $1.00/audio min',
+      'Captioning rate': '$0.30 to $1.00/audio min',
+      'Review jobs (invite)': '$0.20 to $1.00/audio min',
+      'Experienced transcriber': '15 to 20 audio min/hr (~$7 to $20/hr)',
+      'Experienced reviewer': '40 audio min/hr',
+      'Minimum cashout': 'None (Speechpad covers fees)'
+    },
+    finalTake: 'One of the better transcription platforms. Twice-weekly pay and AI-assisted drafts are real perks. Rating system rewards quality. Best for experienced transcribers who can hit the typing test and build a rating fast.',
     idealFor: [
-      'Experienced transcribers wanting reliable payments',
-      'Fast typists who can score 94%+ on typing test',
-      'Those who prefer editing AI drafts over typing from scratch',
-      'People who value twice-weekly payments',
-      'Workers wanting to build toward review jobs (higher pay)'
+      'Experienced transcriber',
+      'Fast typist (94%+ on typing test)',
+      'Prefer editing AI drafts to typing from scratch',
+      'Want twice-weekly cashouts',
+      'Building toward review jobs (higher pay)'
     ]
   },
   'quicktate': {
     name: 'Quicktate',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/quicktate.png',
     link: 'https://www.quicktate.com/',
-    rate: '$0.0025/word',
-    description: 'Voicemail and short audio transcription with very low per-word pay — requires $20 background check.',
+    rate: '$5–$10/hr',
+    description: 'Short voicemails plus medical and legal clips. Quick tasks.',
     category: 'freelance',
-    tldr: 'Transcribe voicemails, memos, and short audio files. Pay is brutal: $0.0025/word (1¢ per 4 words) for general, $0.005/word for medical. Requires $20 background check before starting. Bi-weekly PayPal payments. Easy audio, but essentially practice-level pay.',
-    intro: '<strong>Quicktate</strong> has been providing transcription services since 2008, headquartered in California. They transcribe voicemails, memos, legal files, medical reports, phone calls, and conference calls. Their sister company, iDictate, handles longer files.\n\nTheir clients include major names like Coca-Cola, Ford, Wells Fargo, and CNN. Files are typically short — some just a few minutes — making it accessible for beginners.',
+    tldr: '**What it is:** Transcribe voicemails, memos, and short audio files. Sister company iDictate handles longer files. Real clients: Coca-Cola, Ford, CNN, Wells Fargo.\n\n**The pay:** $0.0025/word general (1¢ per 4 words), $0.005/word medical. Bi-weekly PayPal, always on time.\n\n**The catch:** Requires a $20 background check before you can start earning. Pay is essentially practice-level.',
     whyAdhd: [
-      'Very short files — often just voicemails',
-      'Work 24/7 — log in anytime',
-      'No minimum hours',
-      'Pick which files to work on',
-      'Email notifications when work available',
-      'Easy audio quality (usually)'
+      'Very short files. Often just voicemails.',
+      'Work 24/7.',
+      'No minimum hours.',
+      'Pick which files to work.',
+      'Easy audio quality usually.'
     ],
-    standOut: [
-      'In business since 2008',
-      'Major clients: Coca-Cola, Ford, CNN, Wells Fargo',
-      'Short files — voicemails, memos',
-      'Available 24/7',
-      'No special equipment required',
-      'Sister company iDictate for longer files (higher pay)',
-      'Medical transcription available (better pay)',
-      'Bi-weekly PayPal payments',
+    pros: [
+      'Easy short files',
+      'Real long history (since 2008)',
       'Always pays on time',
-      'Easy audio quality typically'
+      'Bi-weekly cashout',
+      'Medical option pays 2x'
     ],
-    importantNotes: [
-      'Requires $20 background check before starting',
-      'Pay is per WORD — not per minute or hour',
-      'General rate: $0.0025/word (1¢ per 4 words)',
-      'Medical rate: $0.005/word (1¢ per 2 words)',
-      'Realistic hourly: Very low — practice-level pay',
-      'Cannot use foot pedals',
-      'No guaranteed work — availability varies',
-      'iDictate promotion has management/consistency issues',
-      'Must pass quiz and typing tests',
-      '3 non-family references required'
+    cons: [
+      'Pay is essentially practice level',
+      'Pay $20 upfront for background check',
+      'Per-word pay structure',
+      'Work volume is uneven',
+      'No foot pedal support'
     ],
-    payoutInfo: [
-      'General/Legal: $0.0025/word (1¢ per 4 words)',
-      'Medical: $0.005/word (1¢ per 2 words)',
-      'Realistic estimate: pennies per file',
-      'Payment: Bi-weekly via PayPal',
-      'Always paid on time',
-      'Small Christmas bonus reported by workers',
-      '$20 background check fee required upfront'
-    ],
-    taskTypes: [
-      'Voicemail transcription — short messages',
-      'Memos and letters — business communications',
-      'Legal notes — depositions, proceedings',
-      'Medical reports — requires qualification',
-      'Field notes — various industries',
-      'Phone call recordings',
-      'Conference calls (via iDictate)',
-      'Applicant reviews'
-    ],
-    finalTake: '<strong>Quicktate is for practice, not paychecks.</strong> At 1¢ per 4 words, you\'re earning essentially nothing — but the audio is easy and files are short, making it decent practice. The $20 background check fee before earning anything is frustrating. Use it to build skills and resume experience, then move to platforms that actually pay.',
+    payout: {
+      'Pay method': 'Bi-weekly PayPal',
+      'General / Legal rate': '$0.0025/word (1¢ per 4 words)',
+      'Medical rate': '$0.005/word (1¢ per 2 words)',
+      'Realistic earnings': 'Pennies per file',
+      'Background check': '$20 upfront fee',
+      'Christmas bonus': 'Small one reported by workers'
+    },
+    finalTake: 'For practice, not paychecks. At 1¢ per 4 words you are earning almost nothing. Files are easy and short. Use it to build skills, then move to Speechpad or Rev.',
     idealFor: [
-      'Complete beginners wanting easy practice',
-      'Those who prefer very short files (voicemails)',
-      'Workers building transcription skills for better-paying jobs',
-      'People who don\'t mind paying $20 upfront for background check',
-      'NOT for anyone expecting meaningful income'
+      'Beginner wanting easy practice',
+      'Prefer very short files',
+      'Building toward better-paying transcription',
+      'OK paying $20 upfront',
+      'Not for meaningful income'
     ]
   },
   'belaysolutions': {
     name: 'BELAY',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
     link: 'https://belaysolutions.com/',
-    rate: '$18–$22/hr',
-    description: 'Premium U.S.-based virtual assistant company matching experienced professionals with executives and business owners.',
+    rate: '$15–$25/hr',
+    description: 'Long term virtual assistant work for US clients.',
     category: 'freelance',
-    tldr: 'U.S.-based virtual staffing company (founded 2010, Atlanta). They match you with 1-2 clients who need executive-level support. Pay: $18–$22/hr as a contractor. Highly selective — only 3.9% acceptance rate. Prefer bachelor\'s degree + 5 years executive assistant experience. Fully remote, flexible hours, but you\'re the middleman — clients pay $38-45/hr.',
-    intro: '<strong>BELAY</strong> is a premium virtual assistant company — not a gig platform. They match experienced U.S.-based professionals with executives, entrepreneurs, pastors, and business owners who need high-level remote support.\n\nYou work as a 1099 contractor, typically with 1-2 dedicated clients. BELAY handles client acquisition, contracts, and billing. You handle the actual work. The catch? Clients pay $38-45/hr while you earn $18-22/hr — BELAY takes the spread.',
+    tldr: '**What it is:** US-based virtual staffing company since 2010. They match you with 1 to 2 dedicated clients who need executive-level support.\n\n**The pay:** $18 to $22/hr as a 1099 contractor. BELAY finds clients and handles billing.\n\n**The catch:** Only 3.9% of applicants get in. Prefer bachelor\'s degree + 5 years executive assistant experience. Clients pay $38 to $45/hr. BELAY takes the spread.',
     whyAdhd: [
-      'Fully remote — work from home',
-      'Flexible hours within business hours',
-      'Dedicated clients (not random gigs)',
-      'Variety of tasks keeps it interesting',
-      'No cold-calling or client hunting',
-      'Ongoing support from Client Success team'
+      'Fully remote.',
+      'Flexible business hours.',
+      'Dedicated clients, not random tasks.',
+      'No client hunting.',
+      'Ongoing support from a Client Success team.'
     ],
-    standOut: [
-      '100% remote, U.S.-based only',
-      'Matched with dedicated clients (not random work)',
-      'BELAY handles all client acquisition and billing',
-      '93% first-match success rate claimed',
-      '2,000+ pre-vetted professionals',
-      'Named to Inc. 5000 multiple times',
-      'Serves 50+ industries',
-      'Client Success Consultant supports you ongoing'
+    pros: [
+      'Steady remote work',
+      'No client hunting',
+      'Ongoing support',
+      'Real clients (executives, business owners)',
+      'Real culture (Inc. 5000 listed)'
     ],
-    importantNotes: [
-      'Only 3.9% acceptance rate',
-      'Prefer bachelor\'s degree + 5 years experience',
-      'Pay range: $18–$22/hr (flat, regardless of client)',
-      'Clients pay $38–$45/hr — BELAY takes the difference',
-      '1099 contractor — you handle taxes',
-      'Must provide your own equipment',
-      'Business hours only (Mon-Fri, 9-5)',
-      'Time off can be complicated to arrange',
-      'No buyout option without fees',
-      'Some reviews cite low pay for experience required'
+    cons: [
+      '~50% spread between client pay and your pay',
+      '3.9% acceptance rate',
+      'Need 5+ years experience',
+      'Business hours only',
+      'Time off is hard to arrange'
     ],
-    payoutInfo: [
-      'Pay range: $18–$22/hr',
-      'Glassdoor average: ~$24/hr',
-      'Independent contractor (1099)',
-      'No benefits (though exploring options)',
-      'Can request annual pay reevaluation',
-      'Taxes not withheld — plan accordingly'
-    ],
-    taskTypes: [
-      'Calendar and email management',
-      'Travel arrangements',
-      'Project coordination',
-      'Document creation and formatting',
-      'CRM updates and data entry',
-      'Social media management',
-      'Bookkeeping (separate role)',
-      'Marketing assistance (separate role)'
-    ],
-    finalTake: '<strong>BELAY is legit and professional, but you\'re trading earning potential for stability.</strong> They find clients, handle contracts, and provide ongoing support — but take a ~50% cut. At $18-22/hr for work requiring 5+ years experience, many VAs feel underpaid. Best for: experienced admins who want consistent remote work without hustling for clients. Skip if: you can find your own clients and keep 100%.',
+    payout: {
+      'Pay method': 'Direct deposit (1099 contractor)',
+      'Pay range': '$18 to $22/hr',
+      'Glassdoor average': '~$24/hr',
+      'Client pays': '$38 to $45/hr (BELAY keeps the spread)',
+      'Benefits': 'None',
+      'Taxes': 'Not withheld'
+    },
+    finalTake: 'Trade earning potential for stability. BELAY handles client acquisition. You earn ~50% of what the client pays. Best for experienced admins who want consistent remote work without hustling. Skip if you can find your own clients.',
     idealFor: [
-      'Experienced executive assistants',
-      'U.S.-based professionals wanting remote work',
-      'Those who prefer stability over maximizing income',
-      'People who don\'t want to find their own clients',
-      'NOT for beginners or those outside the U.S.'
+      'Experienced executive assistant',
+      'US-based, wants remote work',
+      'Prefer stability over max income',
+      'Hate client hunting',
+      'Not for beginners or non-US'
     ]
   },
   'timeetc': {
     name: 'Time Etc',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
     link: 'https://www.timeetc.com/',
-    rate: '$17–$19+/hr',
-    description: 'UK-founded virtual assistant company matching experienced professionals with entrepreneurs and executives in the U.S. and UK.',
+    rate: '$15–$30/hr',
+    description: 'Steady virtual assistant work, US and UK only.',
     category: 'freelance',
-    tldr: 'UK-founded VA company (2007, now in US too). They match you with 3-6 dedicated clients. Starting pay: $17-19/hr, increases over time. Requires 5+ years experience. Clients pay $35-38/hr — Time Etc takes the spread. ~700 assistants, Great Place to Work certified. Paid monthly via PayPal.',
-    intro: '<strong>Time Etc</strong> was founded in 2007 by Barnaby Lashbrooke, with Penni Pike (Richard Branson\'s assistant for 32 years) as special advisor. Headquartered in Birmingham, UK with US operations.\n\nSimilar to BELAY — they match experienced VAs with entrepreneurs and executives. You work with 3-6 dedicated clients on an ongoing basis. Time Etc handles client acquisition, invoicing, and payments. They claim to have saved clients over 1 million hours.',
+    tldr: '**What it is:** UK-founded VA company since 2007 with US operations. They match you with 3 to 6 dedicated clients.\n\n**The pay:** Starting $17 to $19/hr, increases with tenure. Paid monthly via PayPal. 1099 contractor.\n\n**The catch:** Need 5 to 8 years of experience. US or UK residents only. Clients pay $35 to $38/hr. Time Etc takes ~50%.',
     whyAdhd: [
-      'Fully remote — work from home',
-      'Flexible hours (some availability during business hours)',
-      'Dedicated clients (not random tasks)',
-      'Variety of work keeps it interesting',
-      'No client hunting — they bring clients to you',
-      'Payment guaranteed for all work'
+      'Fully remote.',
+      'Flexible hours within business hours.',
+      'Dedicated clients, not random tasks.',
+      'No client hunting.',
+      'Payment guaranteed on every job.'
     ],
-    standOut: [
-      'U.S. and UK-based assistants only',
-      'Matched with 3-6 dedicated clients',
-      'Time Etc handles all invoicing and billing',
-      'Pay increases over time with tenure',
-      '~700 assistants in their network',
-      'Great Place to Work certified 2023-2024',
-      'Penni Pike (Branson\'s former EA) on team',
-      '10,000+ clients served since 2007'
+    pros: [
+      'Multiple clients (3 to 6) means more variety',
+      'Pay raises with tenure',
+      'Great Place to Work culture',
+      'Guaranteed payment on every job',
+      'No client hunting'
     ],
-    importantNotes: [
-      'Requires 5-8 years of experience minimum',
-      'Starting pay: $17-19/hr',
-      'Clients pay $35-38/hr — Time Etc takes ~50%',
-      'U.S. or UK residents only',
-      'Minimum 5 hours/week commitment',
-      '1-year commitment expected',
-      'Paid monthly via PayPal (fees apply)',
-      'Must provide your own equipment',
-      'Video interview required during application',
-      'Some reviews cite inconsistent client availability'
+    cons: [
+      '~50% spread to Time Etc',
+      'Need 5+ years experience',
+      '1-year commitment',
+      'Monthly pay cycle (slower than weekly)',
+      'PayPal fees on top'
     ],
-    payoutInfo: [
-      'Starting pay: $17–$19/hr',
-      'Pay increases with tenure and performance',
-      'Glassdoor average: ~$25/hr',
-      'Paid monthly via PayPal',
-      'Payment guaranteed for all completed work',
-      '1099 contractor — handle own taxes'
-    ],
-    taskTypes: [
-      'Email and inbox management',
-      'Calendar and scheduling',
-      'Travel arrangements',
-      'Research and data entry',
-      'Social media management',
-      'Content writing and blog posts',
-      'Personal tasks and life admin',
-      'Presentation design'
-    ],
-    finalTake: '<strong>Time Etc is BELAY\'s UK-born competitor — similar model, slightly better starting pay ($17-19 vs $18-22), but same ~50% cut.</strong> They bring you clients, guarantee payment, and handle admin. The tradeoff: you need 5+ years experience for rates that many VAs consider low. Best for: experienced admins wanting stable remote work. Their Great Place to Work certification suggests decent company culture.',
+    payout: {
+      'Pay method': 'Monthly PayPal',
+      'Starting pay': '$17 to $19/hr',
+      'Glassdoor average': '~$25/hr',
+      'Client pays': '$35 to $38/hr (Time Etc takes the spread)',
+      'Contract type': '1099 contractor',
+      'Minimum commitment': '5 hrs/week, 1 year'
+    },
+    finalTake: 'BELAY\'s UK-born twin. Slightly better starting pay. Same ~50% spread. Best for experienced admins who want stable remote work without hustling. Their Great Place to Work certification suggests decent culture.',
     idealFor: [
-      'Experienced executive assistants (5+ years)',
-      'U.S. or UK-based professionals',
-      'Those wanting flexible remote work',
-      'People who prefer not to find own clients',
-      'NOT for beginners or those outside US/UK'
+      'Experienced executive assistant (5+ years)',
+      'US or UK resident',
+      'Want flexible remote work',
+      'Prefer not to find own clients',
+      'Not for beginners or non-US/UK'
     ]
   },
   'fancyhands': {
     name: 'Fancy Hands',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/xxx/pub/xxx.png',
     link: 'https://www.fancyhands.com/',
-    rate: '$3–$7/task',
-    description: 'Microtask-based virtual assistant platform — grab small tasks anytime, but expect very low pay for the time invested.',
+    rate: '$10–$15/hr',
+    description: 'Quick virtual assistant tasks. Great for ADHD wins.',
     category: 'freelance',
-    tldr: 'NYC-based microtask VA platform (founded 2010). You grab small tasks from a queue — $3-7 per "20-minute" task. Reality: tasks often take way longer, so effective pay is often $5-9/hr or less. US-only. Paid via Dwolla every 2 weeks. Extremely flexible but very low income potential. Side hustle at best.',
-    intro: '<strong>Fancy Hands</strong> is NOT like BELAY or Time Etc. Instead of dedicated clients, you grab individual tasks from a shared queue — scheduling calls, research, booking appointments, etc.\n\nFounded in 2010 by Ted Roden in NYC. The concept: each task is "20 minutes" and pays $3-7. The reality: tasks often take much longer, and you can\'t negotiate. Workers consistently report earning far below minimum wage.',
+    tldr: '**What it is:** Microtask VA platform since 2010. Grab small tasks from a shared queue. Phone calls, scheduling, research, bookings.\n\n**The pay:** $3 to $7 per "20-minute" task. Sometimes $10 to $15 for harder tasks. Bi-weekly Dwolla payment.\n\n**The catch:** Tasks usually take longer than 20 minutes. Real hourly is $5 to $9. US only.',
     whyAdhd: [
-      'Ultimate flexibility — work anytime',
-      'No minimum hours or commitments',
-      'Grab tasks that interest you',
-      'No client relationships to manage',
-      'Quick tasks (in theory)',
-      'Work from phone or computer'
+      'Work anytime, no commitments.',
+      'No minimum hours.',
+      'Pick tasks that interest you.',
+      'No client relationships.',
+      'Quick task cycle gives dopamine.'
     ],
-    standOut: [
-      'True on-demand — work whenever',
-      'No interview or onboarding process',
-      'Mobile app available',
-      'US-based assistants only',
-      'Tasks available 24/7',
-      'No minimum hours',
-      'Featured in NYT, Forbes, Time'
+    pros: [
+      'True on-demand work',
+      'No interview to start',
+      'Variety of task types',
+      'No client management',
+      'Phone app for on-the-go work'
     ],
-    importantNotes: [
-      '⚠️ Pay: $3-7 per "20-minute" task',
-      'Tasks often take much longer than 20 minutes',
-      'Effective hourly rate often $5–9/hr (often less)',
-      'US residents only',
-      '"Mentors" must approve client communication (delays)',
-      'Tasks can be unclaimed/reassigned if too slow',
-      'Paid every 2 weeks via Dwolla only',
-      'Glassdoor: 2.5/5 rating, 1.9/5 for compensation',
-      'Many reviews call it "digital sweatshop"',
-      'Clients pay $35/hr — you get ~$3/task'
+    cons: [
+      'Real hourly often below minimum wage',
+      'Tasks usually take longer than billed',
+      'Dwolla only for payment',
+      'Mentors delay client communication',
+      'Many reviews call it exploitative'
     ],
-    payoutInfo: [
-      'Per task: $3–$7 (occasionally up to $10-15)',
-      'Tasks assumed to be 20 minutes',
-      'Realistic hourly: $5–$9/hr (often less)',
-      'Paid every 2 weeks (Tuesdays)',
-      'Payment via Dwolla only',
-      'Independent contractor (1099)'
-    ],
-    taskTypes: [
-      'Phone calls on client\'s behalf',
-      'Scheduling and appointments',
-      'Research and data gathering',
-      'Travel booking',
-      'Price comparisons',
-      'Customer service calls',
-      'Basic data entry',
-      'Finding vendors/services'
-    ],
-    finalTake: '<strong>Fancy Hands is technically legitimate but widely considered exploitative.</strong> You\'ll work a "20-minute" task that takes an hour and get paid $3. Clients pay $35/hr while you earn $3/task. The flexibility is real — work anytime, no commitments — but the pay makes it barely worth your time. Only consider this for absolute emergencies or if you literally have no other options.',
+    payout: {
+      'Pay method': 'Bi-weekly Dwolla (Tuesdays)',
+      'Per task': '$3 to $7 (occasionally $10 to $15)',
+      'Task duration assumption': '20 minutes',
+      'Realistic hourly': '$5 to $9',
+      'Client pays': '$35/hr (you get ~$3/task)',
+      'Contract type': '1099'
+    },
+    finalTake: 'Technically legit but widely seen as exploitative. Tasks billed at 20 minutes often take an hour. Only consider it for emergencies. Use Fiverr or freelance directly instead.',
     idealFor: [
-      'People who need ultimate flexibility',
-      'Those wanting quick pocket money',
-      'Anyone testing if VA work is for them',
-      'NOT for anyone needing real income',
-      'NOT for anyone who values their time'
+      'Need ultimate flexibility',
+      'Want quick pocket money',
+      'Testing if VA work is for you',
+      'Not for anyone who values their time'
     ]
   },
   'voices': {
     name: 'Voices',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    logo: 'images/voices.png',
     link: 'https://www.voices.com/',
     rate: '$100–$10,000+/project',
-    description: 'World\'s largest voice-over marketplace connecting talent with major brands — requires paid membership to actively audition.',
+    description: 'Voice work for ads, audiobooks, and games.',
     category: 'freelance',
-    tldr: 'The #1 voice-over marketplace (since 2003) with clients like Microsoft, Hulu, BMW, Cisco. Free to create profile, but $499/year Premium membership required to audition for jobs. 20% platform fee on top of membership. High-quality gigs available, but fierce competition and steep upfront cost. SurePay guarantees payment within 2 weeks.',
-    intro: '<strong>Voices.com</strong> is the world\'s largest online voice-over marketplace, founded in 2003 by David and Stephanie Ciccarelli in Toronto. They connect voice actors with clients in 160+ countries and have facilitated millions of voice-over projects.\n\nTheir client list is impressive: Microsoft, Cisco, Hulu, BMW, Discovery Channel, GoDaddy, Shopify. They post 5,000+ jobs per month across commercials, audiobooks, video games, e-learning, and more. But there\'s a catch — you need a $499/year membership to actively pursue work.',
+    tldr: '**What it is:** Biggest voice-over marketplace since 2003. Clients: Microsoft, Hulu, BMW, Cisco, Discovery. 5,000+ jobs posted monthly.\n\n**The pay:** You set your own rates. Local radio $100 to $250. National TV up to $10,000+. SurePay guarantees payment within 14 days. Weekly PayPal Fridays.\n\n**The catch:** $499/year Premium membership required to audition. 20% platform fee on top. Without Premium, you are invisible.',
     whyAdhd: [
-      'Variety of project types keeps it interesting',
-      'Set your own rates and choose your jobs',
-      'Work from home studio on your schedule',
-      'Short auditions (read a script, submit)',
-      'SurePay guarantees you get paid',
-      'No client-chasing — jobs come to you'
+      'Mix of project types.',
+      'Set your own rates and pick jobs.',
+      'Work from your home studio on your schedule.',
+      'Short auditions: read a script, submit.',
+      'SurePay guarantees payment.'
     ],
-    standOut: [
-      'World\'s #1 voice-over marketplace (since 2003)',
-      'Major clients: Microsoft, Hulu, BMW, Cisco, Discovery',
-      '5,000+ jobs posted monthly',
-      '160+ countries served',
-      'SurePay — guaranteed payment within 2 weeks',
-      'Funds held in escrow before work begins',
-      'Job screening — Voices vets each posting',
-      'Dispute resolution support',
-      'Rate guide helps you price competitively',
-      'Resources and training for beginners',
-      'Trust & Safety team for protection',
-      'PayPal payments every Friday'
+    pros: [
+      'Real enterprise clients',
+      'Payment guaranteed (SurePay)',
+      'Mix of project types',
+      'Weekly PayPal payouts',
+      'Trust and Safety team for disputes'
     ],
-    importantNotes: [
-      '⚠️ $499/year Premium membership required to audition',
-      '20% platform fee on all earnings (on top of membership)',
-      'Free Guest membership = can only wait for private invites',
-      'Without Premium, you\'re invisible in search results',
-      'Fierce competition — experienced pros on every job',
-      'Beginners often struggle to book work initially',
-      'Some users report lack of fee transparency',
-      'Processing fee (4–6%) charged on payments',
-      'Need quality home studio setup to compete',
-      'ROI depends entirely on booking rate',
-      'Watch for sales/discounts on membership'
+    cons: [
+      '$499/year membership before you earn anything',
+      '20% platform fee',
+      '4-6% processing fee on top',
+      'Fierce competition for beginners',
+      'Home studio required'
     ],
-    payoutInfo: [
-      'You set your own rates per project',
-      'Local radio commercial: ~$100–$250',
-      'National TV commercial: up to $10,000+',
-      'Audiobooks: $750–$999 for 4,500–6,000 words',
-      'E-learning/corporate: varies by length',
-      'Platform fee: 20% of your quote',
-      'Processing fee: 4–6% additional',
-      'Payment: PayPal every Friday',
-      'SurePay: Guaranteed within 14 days of job completion',
-      'Membership: $499/year (Premium)'
-    ],
-    taskTypes: [
-      'Commercials — TV, radio, online ads',
-      'Audiobooks — narration, character voices',
-      'Video games — character acting',
-      'E-learning — corporate training, educational',
-      'Explainer videos — product demos, tutorials',
-      'IVR/phone systems — hold messages, prompts',
-      'Podcasts — intros, narration',
-      'Documentaries — narration',
-      'Animation — character voices',
-      'Movie trailers — dramatic narration'
-    ],
-    finalTake: '<strong>Voices.com is the big leagues — with big league costs.</strong> The $499/year membership + 20% platform fee means you need to book several jobs just to break even. But for serious voice actors, the access to major brands (Microsoft, BMW, Hulu) and guaranteed payment makes it worthwhile. Beginners will struggle against experienced competition. Best approach: wait for membership sales, invest in your home studio, and treat it as a long-term career investment, not a quick side hustle.',
+    payout: {
+      'Pay method': 'Weekly Friday PayPal',
+      'Local radio commercial': '~$100 to $250',
+      'National TV commercial': 'Up to $10,000+',
+      'Audiobook (4,500 to 6,000 words)': '$750 to $999',
+      'Platform fee': '20% of your quote',
+      'Processing fee': '4 to 6%',
+      'SurePay timing': 'Within 14 days',
+      'Premium membership': '$499/year'
+    },
+    finalTake: 'Big leagues with big-league costs. $499/year + 20% means you need several bookings to break even. For serious voice actors with a real home studio, the access to enterprise brands makes it worth it. Beginners struggle.',
     idealFor: [
-      'Experienced voice actors ready to compete with pros',
-      'Those with quality home studio setups',
-      'People serious about voice-over as a career',
-      'Voice actors who can invest $499+ upfront',
-      'NOT for casual hobbyists or complete beginners'
+      'Experienced voice actor',
+      'Have a quality home studio',
+      'Serious about voice-over as a career',
+      'Can invest $499+ upfront',
+      'Not for casual hobbyists'
     ]
   },
   'voice123': {
     name: 'Voice123',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/jpwPeaMTIVCxow6FaQJY.png',
     link: 'https://voice123.com/#how-to-search',
-    rate: '$100–$2,000+ per project',
-    description: 'Global voice marketplace',
+    rate: '$100–$2,000+/project',
+    description: 'Set your own voice acting rates. No platform fees.',
     category: 'voice',
-    intro: '**Voice123** is a freelance voiceover marketplace where clients post projects and voice actors audition for them. Think of it like a casting call board for voice talent.  \nIt’s designed for beginner to professional voice actors who want direct access to clients without an agent.',
-    whyAdhd: ['Lots of variety—commercials, audiobooks, video games, narration.', 'Quick, focused auditions (short scripts to record and submit).', 'Clear briefs reduce ambiguity.', 'Flexibility—you audition when you want, no fixed schedule.', 'Great for ADHD performers who thrive on novelty and storytelling.'],
-    standOut: [],
-    importantNotes: ['Free account = very limited auditions; premium plans ($395–$4,950/year) unlock more.'],
-    payoutInfo: [],
-    taskTypes: [],
-    finalTake: '',
-    idealFor: []
+    tldr: '**What it is:** Voice-over marketplace where clients post projects and voice actors audition. Direct-to-client, no agent.\n\n**The pay:** You set your own rates. Local jobs $100 to $250, big projects $2,000+. No platform fee on top of membership. Clients pay you directly.\n\n**The catch:** Free account gets very limited auditions. Premium plans run $395 to $4,950/year. Real competition with experienced voice actors.',
+    whyAdhd: [
+      'Lots of variety. Commercials, audiobooks, games, narration.',
+      'Auditions are short scripts. Record and submit.',
+      'Briefs are clear.',
+      'Audition when you want.',
+      'Novelty and storytelling on every job.'
+    ],
+    pros: [
+      'No commission on your earnings',
+      'Direct client relationships',
+      'Set your own rates',
+      'Mix of project types',
+      'Free tier to start'
+    ],
+    cons: [
+      'Free tier is hobbled',
+      'Premium is pricey ($395+ minimum)',
+      'No payment guarantee like SurePay',
+      'You handle invoicing yourself',
+      'Heavy competition from pros'
+    ],
+    payout: {
+      'Pay method': 'Direct from client (PayPal, bank, etc.)',
+      'Platform fee': '0%',
+      'Local jobs': '$100 to $250',
+      'Mid-tier projects': '$500 to $1,000',
+      'Big projects': '$2,000+',
+      'Membership cost': '$395 to $4,950/year (Premium tiers)'
+    },
+    finalTake: 'No commission is the big win. The trade-off is membership cost and no payment guarantee. Best for serious voice actors who want direct client relationships. Compare against Voices.com before committing.',
+    idealFor: [
+      'Want direct client relationships',
+      'Hate paying platform commission',
+      'Comfortable invoicing clients',
+      'Serious voice actor, not casual',
+      'Can afford the membership fee'
+    ]
   },
   'acx': {
-    name: 'ACX',
-    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/xxx.png',
+    name: 'ACX (Amazon)',
+    logo: 'images/acx.jpg',
     link: 'https://www.acx.com/',
-    rate: '$50–$400+/finished hr',
-    description: 'Amazon/Audible\'s audiobook creation platform connecting narrators with authors — free to join, distributed to Audible, Amazon & Apple Books.',
+    rate: '$200–$800+/hr',
+    description: 'Narrate audiobooks for Audible. Earn royalties or flat pay.',
     category: 'freelance',
-    tldr: 'Amazon/Audible\'s platform connecting audiobook narrators with authors. Free to join, 100% free to use. Three pay models: Per-Finished-Hour ($100–$400+ PFH), Royalty Share (50/50 split, 7-year contract), or Royalty Share Plus (hybrid). Distributed to Audible, Amazon & Apple Books. US/UK/Canada/Ireland only. High audio quality standards — takes 4–6 hours to produce 1 finished hour.',
-    intro: '<strong>ACX (Audiobook Creation Exchange)</strong> is owned by Audible/Amazon and launched in 2011. It\'s the primary marketplace connecting authors and publishers with audiobook narrators and producers.\n\nUnlike voice-over marketplaces with annual fees, ACX is 100% free to join and use. You audition for projects, negotiate rates directly with authors, and your finished audiobooks get distributed to Audible, Amazon, and Apple Books — the world\'s largest audiobook platforms.',
+    tldr: '**What it is:** Amazon/Audible\'s audiobook platform since 2011. You audition, narrate, and your books distribute to Audible, Amazon, and Apple Books.\n\n**The pay:** Three models: Per-Finished-Hour ($100 to $400+ PFH), Royalty Share (50/50 split, 7-year contract), or Hybrid. Direct deposit or PayPal.\n\n**The catch:** US, UK, Canada, Ireland only. Takes 4 to 6 hours of work per 1 finished hour. Royalty Share locks you in for 7 years and most books do not sell well.',
     whyAdhd: [
-      'Long-form projects — deep focus, not short clips',
-      'Work from home studio on your schedule',
-      'Choose projects that interest YOU',
-      'Royalty share = passive income over time',
-      'No membership fees or commissions',
-      'Build portfolio with each completed book'
+      'Long-form projects. Deep focus, not short clips.',
+      'Work from home studio on your schedule.',
+      'Pick projects that interest you.',
+      'Royalty share builds passive income.',
+      'No membership fees.'
     ],
-    standOut: [
-      '100% free to join and use',
-      'No platform fees or commissions',
-      'Owned by Audible/Amazon',
-      'Distribution to Audible, Amazon & Apple Books',
-      '1,800+ open projects at any time',
-      'Three payment models (PFH, Royalty Share, Hybrid)',
-      'Royalty share creates passive income stream',
-      'SAG-AFTRA partnership at $250+ PFH',
-      'Tons of free training resources and videos',
-      'Promo codes provided for marketing',
-      'New Voice Replica program (AI narration beta)',
-      'QA team reviews submissions'
+    pros: [
+      'Free to join, no membership fee',
+      'Massive distribution (Audible + Amazon + Apple Books)',
+      'Long projects = deep focus',
+      'Royalty share builds passive income',
+      'Real training resources'
     ],
-    importantNotes: [
-      'Only available in US, UK, Canada, Ireland',
-      'Must have existing ebook/print book on Amazon',
-      'High audio quality standards — strict QA review',
-      'Takes 4–6 hours work to produce 1 finished hour',
-      'Beginners: could take 10+ hours per finished hour',
-      'Royalty Share = 7-year contract, no upfront pay',
-      'Many RS projects never sell well — narrator gets nothing',
-      'Fierce competition from experienced pros',
-      'Risk of fraudulent rights holders — narrator doesn\'t get paid',
-      'Exclusive distribution = 40% royalty, Non-exclusive = 25%',
-      'Listeners can return audiobooks within 7 days — no compensation',
-      'Need home studio with proper equipment'
+    cons: [
+      'High audio quality bar',
+      '4 to 6 hours per finished hour',
+      'Royalty Share is a 7-year gamble',
+      'Heavy competition from pros',
+      'Need real home studio gear'
     ],
-    payoutInfo: [
-      'Beginners: $10–$100 per finished hour',
-      'Experienced: $100–$400+ per finished hour',
-      'Industry standard: ~$200 narration + $200 post-production',
-      'Top narrators: $500+ per finished hour',
-      'Average completed project: $2,000–$5,000',
-      'Royalty Share: 20% to narrator, 20% to author (of 40%)',
-      'Exclusive royalty: 40% of net sales',
-      'Non-exclusive royalty: 25% of net sales',
-      'SAG-AFTRA eligible at $250+ PFH',
-      'Payment: Direct deposit or PayPal',
-      'RS payments: Monthly for 7 years'
-    ],
-    taskTypes: [
-      'Fiction narration — novels, short stories',
-      'Non-fiction narration — self-help, business, memoir',
-      'Children\'s audiobooks',
-      'Romance narration',
-      'Mystery/thriller narration',
-      'Sci-fi/fantasy narration (character voices)',
-      'Self-help and motivational',
-      'Biography and memoir',
-      'Full production (narration + editing + mastering)',
-      'Voice Replica (AI voice licensing — beta)'
-    ],
-    finalTake: '<strong>ACX is the gold standard for audiobook narration — but it\'s not easy money.</strong> The math: 1 finished hour = 4–6 hours of actual work (prep, recording, editing, mastering). At $200 PFH, that\'s $33–$50/hr real time. Royalty Share sounds attractive but most books don\'t sell well — you could work 60+ hours for nothing. Best approach: Mix PFH projects (guaranteed pay) with selective RS projects (passive income potential). Free to join, legitimate platform, but expect fierce competition and high standards.',
+    payout: {
+      'Pay method': 'Direct deposit or PayPal',
+      'Beginner PFH': '$10 to $100',
+      'Experienced PFH': '$100 to $400+',
+      'Industry standard': '~$200 narration + $200 post-production',
+      'Top narrators': '$500+ PFH',
+      'Average project total': '$2,000 to $5,000',
+      'Royalty Share': '20% narrator + 20% author (of 40% net)',
+      'Exclusive royalty': '40% of net sales',
+      'RS payments': 'Monthly for 7 years'
+    },
+    finalTake: 'Gold standard for audiobook narration. Not easy money. At $200 PFH that is $33 to $50/hr real time after editing. Royalty Share is a gamble. Mix PFH and selective RS projects to balance guaranteed pay with passive upside.',
     idealFor: [
-      'Aspiring audiobook narrators willing to invest in home studio',
-      'Voice actors who enjoy long-form reading over short clips',
-      'People in US, UK, Canada, or Ireland only',
-      'Those who can commit 20–60+ hours per project',
-      'Narrators building passive income through royalty share',
-      'NOT for those wanting quick, easy money'
+      'Aspiring audiobook narrator with home studio',
+      'Like long-form reading over short clips',
+      'In US, UK, Canada, or Ireland',
+      'Can commit 20 to 60+ hours per project',
+      'Not for quick money'
     ]
   },
 
@@ -4838,53 +3477,971 @@ export const gigData: Record<string, any> = {
     logo: 'images/cloudresearch.webp',
     link: 'https://www.cloudresearch.com/products/connect-for-participants/',
     rate: '$6–$15/hr',
-    description: 'University and corporate research surveys with fair pay.',
+    description: 'Research surveys from universities and companies. Fair pay.',
     category: 'surveys',
-    tldr: '**What it is:** Academic and market research surveys from universities and corporations with a two-way rating system.\n\n**The pay:** $6–15/hr (avg $9–10/hr). PayPal cashout at $5, bank transfer at $25. Studies range from $0.20 quick tasks to $15 for longer ones.\n\n**The catch:** Newer platform with lower survey volume than Prolific. US, UK, Canada, Australia, NZ, Ireland only. Identity verification required for full cashout options.',
-    intro: '<strong>CloudResearch Connect</strong> is a research participation platform launched in 2022 by CloudResearch (founded 2015, Michigan). It connects participants with universities and corporations running behavioral research, product feedback studies, and AI training tasks.\n\nUnlike typical survey sites, Connect uses a two-way reputation system—you rate researchers and they rate you. This keeps quality high on both sides. Researchers must pay at least $6/hr minimum, with most studies landing around $9-10/hr.',
+    tldr: '**What it is:** Surveys and short studies from real universities and companies. Closest thing to Prolific.\n\n**The pay:** $6 to $15/hr (most around $9 to $10). PayPal at $5, bank at $25. Studies pay $0.20 for quick tasks up to $15 for longer ones.\n\n**The catch:** Newer site, fewer studies than Prolific. US, UK, Canada, Australia, NZ, and Ireland only. ID check kicks in after 10 surveys.',
     whyAdhd: [
-      'Dashboard shows exact pay before you commit—no surprise low payouts',
-      'Studies are typically 10–30 minutes, not endless hour-long slogs',
-      'You choose which projects to accept—no pressure to complete everything',
-      'Email/text notifications for new studies so you don\'t have to constantly refresh',
-      'Academic research tends to be more engaging than repetitive market surveys'
+      'Dashboard shows pay before you start. No surprises.',
+      'Most studies run 10 to 30 minutes.',
+      'Pick what you want. No pressure to do everything.',
+      'Email and text alerts when new studies open.',
+      'Academic studies are more interesting than brand surveys.'
     ],
-    standOut: [
-      'Two-way rating system—you can rate researchers back',
-      '$6/hr minimum pay enforced by platform',
-      'Multiple login options (Google, Facebook, Amazon, Microsoft)',
-      'Fill out "About You" section to get targeted for relevant studies',
-      'Sentry behavioral screening keeps data quality high',
-      'Academic-quality studies similar to Prolific'
+    pros: [
+      'Two-way rating (you rate the researchers back)',
+      '$6/hr floor on every study',
+      'Multiple sign-in options',
+      'Same caliber as Prolific',
+      'Fair payment terms'
     ],
-    importantNotes: [
-      'Waitlisting is real—many users report being waitlisted or banned without explanation',
-      'Limited survey volume—platform is still growing, don\'t expect constant work',
-      'Competition for high-payers—good studies disappear fast',
-      'Rejection risk—researchers can reject if they think you rushed (disputes rarely win)',
-      'Identity verification required—after ~10 surveys, you\'ll need government ID via Stripe',
-      'Geographic restrictions—US, UK, Canada, Australia, NZ, Ireland only'
+    cons: [
+      'Some users get waitlisted or banned with no reason',
+      'Lower survey volume than Prolific',
+      'Good-paying studies fill fast',
+      'Disputes on rejected work rarely win',
+      'US, UK, Canada, Australia, NZ, Ireland only'
     ],
-    payoutInfo: [
-      'PayPal: $5 minimum, $100 daily max, 1-2 days typical',
-      'Bank transfer (Stripe): $25 minimum, $250 daily max, 3-5 days, requires ID',
-      'Amazon gift cards: No minimum, $100 daily max, requires ID verification',
-      'Processing time varies—PayPal fastest, bank transfers take longer'
-    ],
-    taskTypes: [
-      'Academic behavioral research surveys',
-      'Consumer product feedback',
-      'Psychology experiments',
-      'AI training and data labeling tasks',
-      'Opinion polls and market research'
-    ],
-    finalTake: '**CloudResearch Connect** is a solid Prolific alternative with similar pay ($9-10/hr average) and academic-quality studies. The catch: it\'s newer, so survey volume is lower and the waitlist/ban system frustrates some users. If you\'re already on Prolific, add this to your rotation but don\'t expect it to replace anything. If Prolific is full in your country, Connect is worth trying. Just verify your identity, fill out your profile completely, and be patient with availability.',
+    payout: {
+      'PayPal': '$5 minimum, paid in 1 to 2 days',
+      'Bank transfer (Stripe)': '$25 minimum, 3 to 5 days, requires ID',
+      'Amazon gift cards': 'No minimum, requires ID',
+      'Daily caps': 'Apply to each method',
+      'ID verification': 'Required after ~10 surveys'
+    },
+    finalTake: 'A solid Prolific backup with the same kind of studies. Pay matches Prolific when work is available. Sign up, fill out your profile, verify ID, and check in when the email pings. Do not expect it to replace Prolific yet.',
     idealFor: [
-      'Prolific users wanting another quality survey source',
-      'People in US, UK, Canada, Australia, NZ, or Ireland',
-      'Those who prefer academic research over market survey spam',
-      'Participants who want to rate bad researchers back',
-      'Anyone comfortable with identity verification for cashouts'
+      'Already on Prolific and want a second source',
+      'In the US, UK, Canada, Australia, NZ, or Ireland',
+      'Like academic research over brand surveys',
+      'OK with verifying your ID for cashouts'
+    ]
+  },
+
+  'fetch': {
+    name: 'Fetch Rewards',
+    logo: 'https://play-lh.googleusercontent.com/E0T0M0dd9w6v7X9_CFaaxlaFjyrGxSLGKxks9NWuAkcQoVckHsGnA_F50SzRSSoMlzs=w240-h480-rw',
+    link: 'https://fetchrewards.com/',
+    rate: '$25–$150/yr',
+    description: 'Scan any receipt for points. Easiest one. Best pay is from Special Offers.',
+    category: 'cashback',
+    tags: ['favorite', 'gift'],
+    tldr: '**What it is:** Receipt-scanning app. Snap any receipt within 14 days of purchase, earn points toward gift cards. Auto-scans e-receipts from your Gmail inbox.\n\n**The pay:** Base rate is 25 points ($0.025) per non-partner receipt. Real earnings come from Special Offers (buy partner brands, earn 1,000+ bonus points). Casual: $25 to $50/yr. Engaged: $75 to $150/yr. Power users: $200+. Minimum $3 Amazon.\n\n**The catch:** 90 days of no activity wipes your whole balance. Gift cards only, no cash. Silent point devaluations have hit long-term trust.',
+    whyAdhd: [
+      'Zero-effort passive. Receipts scan in 10 seconds.',
+      '14-day scan window forgives the coat-pocket pile.',
+      'E-receipt auto-scan pulls Gmail purchases without you thinking.',
+      'Points credit within seconds of scanning.',
+      '$3 Amazon redemption means rewards hit fast.'
+    ],
+    pros: [
+      'Truly zero-effort. 10-second scan.',
+      '14-day window is the most forgiving',
+      'E-receipt Gmail auto-scan',
+      'Long-term payouts confirmed',
+      'Lowest $3 minimum redemption'
+    ],
+    cons: [
+      '90-day inactivity = entire balance wiped',
+      'Base rate of $0.025 is tiny',
+      'Gift cards only, no cash',
+      'Silent devaluations',
+      'Late-month receipts earn less than early-month'
+    ],
+    payout: {
+      'Payout method': 'Gift cards only (Amazon, Walmart, Target)',
+      'Minimum redemption': '3,000 points ($3 Amazon)',
+      'Casual earnings': '$25 to $50/year',
+      'Engaged users': '$75 to $150/year',
+      'Power users': '$200+/year',
+      'Base scan rate': '25 points (~$0.025)',
+      'Special Offer bonus': '1,000+ points per partner-brand receipt',
+      'Inactivity rule': '90 days = entire balance wiped'
+    },
+    finalTake: 'Lowest-effort receipt app. Tradeoff is modest earnings unless you chase Special Offers. Set a quarterly reminder so 90-day inactivity does not wipe your balance. Pair with Ibotta (groceries) and Rakuten (online).',
+    idealFor: [
+      'Already shop weekly',
+      'Will not remember to clip coupons',
+      'Buy name-brand partner products (Huggies, Coca-Cola, Pepsi)',
+      'Online shoppers (Gmail e-receipt scan is underrated)',
+      'Want $3 Amazon credit every couple months'
+    ]
+  },
+
+  'fieldagent': {
+    name: 'Field Agent',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/bJvEwgxE41M5YKf5NNUc.png',
+    link: 'https://app.fieldagent.net/',
+    rate: '$3–$20 per task',
+    description: 'Quick in-person tasks while you\'re out. Price checks, photos, store audits.',
+    category: 'microgig',
+    tags: ['favorite', 'microgig'],
+    tldr: '**What it is:** Microtask app that pays you to do short in-person jobs at retail stores. Shelf audits, price checks, display photos, mystery shops, and "Buy & Try" product trials.\n\n**The pay:** Most tasks pay $3 to $12. Occasional $15 to $20+ jobs. A good errand day in a city is $20 to $60. Direct deposit or PayPal, 1 to 3 days after approval. No minimum cashout.\n\n**The catch:** BBB rating dropped to 1.4/5 in 2025. Most complaints are rejected submissions. One missed photo angle kills your $7. Best used as errand bolt-on, not as a real hustle.',
+    whyAdhd: [
+      'Tasks run 5 to 30 minutes. Different every time.',
+      'Claim jobs when you have energy. Skip when you do not.',
+      'No minimum. Pay hits in 1 to 3 days.',
+      'Turns a Target run into an $8 paid mission.',
+      'Gets you out of the chair.'
+    ],
+    finalTake: 'Bolt-on errand income, not a real side hustle. Already heading to Target? Claim a $5 shelf photo on the way. Follow the photo specs exactly or you eat the gas for nothing. $50 to $200/month for steady city users. Skip if you live outside a metro.',
+    idealFor: [
+      'Live near Target, Walmart, or Home Depot',
+      'Run errands anyway and want bolt-on cash',
+      'Detail brain that can follow strict photo specs',
+      '1 to 2 hours of flexible errand time a week'
+    ],
+    pros: [
+      'Real cash, no minimum',
+      'Fits inside normal errands',
+      'Mix of task types',
+      'Paid in 1 to 3 days',
+      '"Buy & Try" lets you get paid to try products'
+    ],
+    cons: [
+      'BBB 1.4/5 from payout disputes',
+      'One missed photo = $0',
+      'Almost no work outside cities',
+      'Gas can wipe out a small task',
+      'Need 10+ tasks for real money'
+    ],
+    payout: {
+      'Payout method': 'Direct deposit or PayPal',
+      'Typical task pay': '$3 to $12 (up to $20+ sometimes)',
+      'Processing time': '1 to 3 business days after approval',
+      'Minimum withdrawal': 'None',
+      'Realistic monthly (urban)': '$50 to $200',
+      'Buy & Try': 'Product cost reimbursed plus fee ($5 to $15)',
+      'Accuracy risk': 'Rejected submissions pay $0'
+    }
+  },
+
+  'ivueit': {
+    name: 'iVueit',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/er56Fd22kM8MbO3mU1Az.png',
+    link: 'https://ivueit.com/become-a-vuer',
+    rate: '$7–$50 per task',
+    description: 'Get paid to take photos of buildings or displays. Each gig is 5 to 20 minutes.',
+    category: 'microgig',
+    tags: ['microgig'],
+    tldr: '**What it is:** You become a "Vuer" and claim "Vues." Photo assignments at commercial properties, retail displays, signage, and sometimes houses. Each Vue has a checklist.\n\n**The pay:** $7 to $50 per Vue. Most jobs are $7 to $20. Complex property work hits $50. Instant PayPal after approval (80%+ are approved same day). No minimum cashout.\n\n**The catch:** Rejection rate is harsh. Miss one photo and you get $0. Volume is metro-only and US only. Hit 80%+ accuracy to unlock "Preferred Vuer" status.',
+    whyAdhd: [
+      'Photo checklists tell you exactly what to shoot.',
+      'Most Vues take 5 to 20 minutes on site.',
+      'Instant PayPal after approval. Fast dopamine.',
+      'No commitment. Skip jobs that do not fit your energy.',
+      'Gets you out of the chair.'
+    ],
+    finalTake: 'Field Agent\'s more structured twin. The photo checklist makes the job easier than open-ended audits. Read the checklist twice before you leave the site or you eat the gas. $20 to $100/week in a city, much less in a small town. Pair with Field Agent for more volume.',
+    idealFor: [
+      'Live in a metro with a car',
+      'Brain works better with step-by-step instructions',
+      'Detail brain that follows photo specs',
+      'Want instant PayPal',
+      'Already stacking microgig apps'
+    ],
+    pros: [
+      'Photo checklists cut the guesswork',
+      'Instant PayPal on approval',
+      '5 to 20 minute jobs fit short attention spans',
+      'Preferred Vuer system rewards consistency',
+      'No minimum cashout'
+    ],
+    cons: [
+      'US only, mostly cities',
+      'One missed photo = $0',
+      'App glitches force on-site retakes',
+      'Needs a car and gas',
+      'Good jobs get claimed in minutes'
+    ],
+    payout: {
+      'Payout method': 'PayPal (instant on approval)',
+      'Typical Vue pay': '$7 to $20',
+      'Higher-paying Vues': '$30 to $50+ (complex property)',
+      'Approval speed': '80%+ same day',
+      'Minimum cashout': 'None',
+      'Rejection risk': '$0 pay if photo specs are off'
+    }
+  },
+
+  'proxypics': {
+    name: 'ProxyPics',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/zkc8z9Vsbr0yqMVfYHiK.png',
+    link: 'https://ppcrowdsource.app.link/',
+    rate: '$14–$50 per task',
+    description: 'Property photo gigs. Homes pay $14 flat. Commercial pays more.',
+    category: 'microgig',
+    tags: ['microgig'],
+    tldr: '**What it is:** Real estate, insurance, and lender clients pay you to drive to a property and take exterior photos. More houses than retail.\n\n**The pay:** Residential jobs got cut to $14 flat. Commercial still pays $20 to $50+. Next-day direct deposit or PayPal.\n\n**The catch:** Work is inconsistent. Good jobs get claimed in minutes. The 2024 pay cut frustrated long-term users.',
+    whyAdhd: [
+      'Photo checklist tells you what to shoot.',
+      'Most jobs take 5 to 15 minutes on site.',
+      'Claim jobs when they fit, skip when they do not.',
+      'Next-day pay.',
+      'Outdoor only. No one to talk to.'
+    ],
+    finalTake: 'Worth it in a dense metro. Outside one, it dries up. After 15 minutes of driving plus gas, that $14 residential job nets $8 to $10. Commercial jobs are the real money. Stack with iVueit and Field Agent. Do not quit anything for this.',
+    idealFor: [
+      'Live in a city or dense suburb with a car',
+      'Drive a lot already and can bolt photo jobs onto trips',
+      'Already using iVueit or Field Agent',
+      'Want outdoor-only work with no people',
+      'Detail brain that follows photo specs'
+    ],
+    pros: [
+      'No customer interaction',
+      'Next-day pay',
+      'Most jobs 5 to 15 minutes',
+      'Commercial jobs pay $20 to $50+',
+      'No minimum cashout'
+    ],
+    cons: [
+      'Residential pay cut to $14',
+      'Volume is inconsistent outside cities',
+      'Good jobs gone in minutes',
+      'Gas can erase a $14 residential job',
+      'US only'
+    ],
+    payout: {
+      'Payout method': 'Direct deposit or PayPal',
+      'Residential job pay': '$14 flat',
+      'Commercial job pay': '$20 to $50+',
+      'Payout speed': 'Next business day',
+      'Minimum cashout': 'None',
+      'Realistic monthly': '$50 to $200 depending on metro density'
+    }
+  },
+
+  'honeygain': {
+    name: 'Honeygain',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/XFzVcPA2ZQRwdAl1iyVM.png',
+    link: 'https://honeygain.com/',
+    rate: '$2–$8/mo',
+    description: 'Earns pennies for sharing your unused internet. Slow payouts.',
+    category: 'passive',
+    tags: ['passive'],
+    tldr: '**What it is:** Install Honeygain on your phone, laptop, or desktop. It shares your unused internet bandwidth with paying business clients. You earn 1 credit per 10MB shared.\n\n**The pay:** ~$0.05 per GB (was $0.10 at launch). Most solo users pull $2 to $8/month per device running 24/7. $20 minimum cashout takes 3 to 6 months.\n\n**The catch:** Honeygain pays but it is slow. Rate devaluations have hit long-term users. Mobile earning is capped lower than desktop.',
+    whyAdhd: [
+      '100% passive. Install once, never touch.',
+      'Zero memory load. No tasks or deadlines.',
+      'Dashboard shows credits ticking up.',
+      'Multi-device: run on phone + laptop + desktop at once.',
+      'Set-and-forget income.'
+    ],
+    pros: [
+      'Genuinely passive. Install, forget.',
+      'Long-running payouts since 2019',
+      'Works on every major OS and mobile',
+      'Multi-device stacking multiplies earnings',
+      'Traffic encrypted and routed to vetted clients'
+    ],
+    cons: [
+      'Rate was silently cut to ~$0.05/GB',
+      '$20 cashout takes 3 to 6 months per device',
+      'Can slow your internet on slow plans',
+      'Mobile earning cap is low',
+      'No meaningful income, just change'
+    ],
+    payout: {
+      'Payout method': 'PayPal or Bitcoin',
+      'Minimum payout': '$20',
+      'Typical single-device monthly': '$2 to $8',
+      'Multi-device monthly': '$10 to $20',
+      'Rate': '~$0.05 per GB shared',
+      'Time to first payout': '3 to 6 months typically',
+      'Sign-up bonus': '$2 free'
+    },
+    finalTake: 'Truly passive but truly slow. If you already leave devices on 24/7 with uncapped internet, it is free money you would not have earned. Multi-device stacking is the only way this matters financially. One device is lunch money twice a year.',
+    idealFor: [
+      'Already leave devices on 24/7',
+      'Unlimited home internet, no data cap',
+      'Want zero-active-effort income',
+      'Multi-device household (3+ installs)',
+      '$5/month of free money is a win, not a grind'
+    ]
+  },
+
+  'weward': {
+    name: 'WeWard',
+    logo: 'images/weward.png',
+    link: 'https://www.wewardapp.com',
+    rate: '$5–$15/mo',
+    description: 'Get PayPal cash for walking. Slow to verify each cashout.',
+    category: 'fitness',
+    tags: ['fitness', 'passive'],
+    tldr: '**What it is:** Walk-to-earn app that pays real cash. Phone tracks your steps. You earn Wards (points) for hitting daily step thresholds plus bonus Wards from challenges and check-ins.\n\n**The pay:** ~10 Wards per 10,000 steps. 1,000 Wards = $10 PayPal. Realistic casual walker: $5 to $15/month. $20 minimum cashout.\n\n**The catch:** WeWard takes 15 business days to verify before paying out. Plan on 3+ months from install to first payout.',
+    whyAdhd: [
+      'Step tracking is fully automatic.',
+      'Daily challenges (spin wheel, claim bonus) give small dopamine hits.',
+      'Real PayPal cash, not gift cards.',
+      'Location check-ins gamify errands.',
+      'Walking is something you already do.'
+    ],
+    pros: [
+      'Real PayPal cash, not branded coins',
+      'Step tracking is automatic',
+      'Daily challenges add up',
+      'Legit company with $10M+ paid in EU',
+      'Charity donation option for tax benefits'
+    ],
+    cons: [
+      '15 business day verification delay',
+      '$20 minimum takes months',
+      'Prize store is essentially unreachable',
+      'Premium is the only real speed-up',
+      'Some features still EU-only'
+    ],
+    payout: {
+      'Payout method': 'PayPal, Venmo, or bank transfer',
+      'Minimum cashout': '~$20',
+      'Verification delay': '15 business days before payout',
+      'Conversion': '1,000 Wards = $10',
+      'Step rate': '~10 Wards per 10,000 steps',
+      'Realistic monthly': '$5 to $15 with 10K+ steps/day',
+      'Donation option': 'Yes, charity redemption'
+    },
+    finalTake: 'Legit but slow. The 15 business day verification is the biggest friction point. Realistic casual walker earns $5 to $15/month with first payout at month 2 to 4. Pair with another walking app if you want double-earning on the same steps.',
+    idealFor: [
+      'Already walk 8K to 15K steps/day',
+      'Want zero-active-input passive income',
+      'OK with $5 to $15/month',
+      'US user in a metro with partner spots',
+      'Prefer cash over branded coupons'
+    ]
+  },
+
+  'doordash': {
+    name: 'DoorDash',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/gX3qkpfWt1KW1Voi4Nfl.png',
+    link: 'https://dasher.doordash.com/en-us',
+    rate: '$10–$20/hr',
+    description: 'Biggest food delivery app in the US. Real pay is closer to $11/hr.',
+    category: 'delivery',
+    tags: ['delivery'],
+    tldr: '**What it is:** Pick up food from restaurants, deliver to customers. Use your own car, bike, or feet. Dash now or book a time slot.\n\n**The pay:** Base $2 to $10 per order + 100% of tips + occasional peak pay. Gridwise 2025 data (500K+ Dashers) shows the median is $11.63/hr gross, not the $15 to $25/hr DoorDash markets. After gas + wear, most Dashers net $9 to $11/hr.\n\n**The catch:** "Earn by Time" guarantees an hourly rate but tips run lower. "Earn by Offer" pays more if you cherry-pick. Slow zones = $2 offers you should not take.',
+    whyAdhd: [
+      'Turn on, turn off. No shift commitment.',
+      'New restaurants, new addresses. Rarely repetitive.',
+      'Clear micro-goals: pick up, drop off, get tip, repeat.',
+      'Money hits after every delivery.',
+      'Fast Pay daily for $1.99 if you need cash now.'
+    ],
+    pros: [
+      'Easiest gig to start. Approval in days.',
+      'Biggest market = most orders',
+      'Earn by Time mode floors pay in slow markets',
+      'Fast Pay + DasherDirect for daily cash',
+      'Truly flexible'
+    ],
+    cons: [
+      'Real net $9 to $11/hr after expenses',
+      'No benefits or paid time off',
+      'Self-employment tax eats more',
+      '$2 orders from far restaurants are common',
+      'Customer ratings tank you for restaurant errors'
+    ],
+    payout: {
+      'Payout method': 'Weekly direct deposit, DasherDirect prepaid card, or Fast Pay',
+      'Base pay': '$2 to $10 per delivery',
+      'Tips': '100% kept by Dasher',
+      'Gridwise 2025 median': '$11.63/hr gross',
+      'Realistic net': '$9 to $11/hr after expenses',
+      'Fast Pay fee': '$1.99 per same-day cashout',
+      'Pay period': 'Monday-Sunday, paid Wednesday'
+    },
+    finalTake: 'Lowest-friction way to turn a car into cash. Flexibility play, not an income play. Three rules: dash only peak hours, track every mile for taxes, decline anything below $2/mile.',
+    idealFor: [
+      'Have a paid-off fuel-efficient car',
+      'Need flexibility around a primary job',
+      'Hate sitting still',
+      'Live in a city or suburb',
+      'Bike or e-bike rider in a dense city'
+    ]
+  },
+
+  'instacart': {
+    name: 'Instacart',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/3GFZJ6HCfDr2O27WKzSb.png',
+    link: 'https://shoppers.instacart.com/role/full-service',
+    rate: '$15–$25/hr',
+    description: 'Shop and deliver groceries. Tips can boost pay, but the system is tricky.',
+    category: 'delivery',
+    tags: ['delivery'],
+    tldr: '**What it is:** Full-Service Shoppers see a batch (1 to 3 customer orders), drive to a store, shop the list, check out with an Instacart card, and deliver. Shopping + driving = 45 to 90 minutes per batch.\n\n**The pay:** Base batch pay $4 to $10 per order. Real money is tips. Good tippers can make a batch $40+.\n\n**The catch:** Workers report Instacart lowers base pay on high-tip batches (the "hidden tip" controversy). You have to decline most offers and cherry-pick.',
+    whyAdhd: [
+      'Active, on-feet work. No sitting still.',
+      'App tells you exactly what to grab.',
+      'Shopping a 40-item list is a pure task-completion loop.',
+      'Instant cashout to debit card after each batch.',
+      'Most batches need no customer chat.'
+    ],
+    pros: [
+      'Higher pay ceiling than food delivery on good batches',
+      'Better $/mile than food (one store = multiple orders)',
+      'You never front cash for groceries',
+      '100% of tips kept',
+      'Daytime grocery hours'
+    ],
+    cons: [
+      'Base pay as low as $4/order',
+      'Tip-shrouding controversy is real',
+      'Customers can retroactively yank tips',
+      'Heavy lifting + 5+ miles of walking per shift',
+      'Saturated markets mean long waits between good batches'
+    ],
+    payout: {
+      'Payout method': 'Weekly direct deposit or Instant Cashout ($0.50 fee)',
+      'Base batch pay': '$4 to $10 per order',
+      'Tips': '100% kept by shopper',
+      'Realistic hourly': '$15 to $25/hr with cherry-picking',
+      'Low end': '$10/hr accepting everything',
+      'Peak hours': 'Weekend mornings, early evenings'
+    },
+    finalTake: 'Pays better than food delivery when it pays. Strategy is accept 10 to 20% of batches and wait for the $30+ offers. Best used as a chunk-of-cash tool, not primary income. Heavy lifting wears on your back.',
+    idealFor: [
+      'Like grocery stores and know where things are',
+      'Hyperfocus on list-completion tasks',
+      'Live in higher-income suburb (Whole Foods, Costco)',
+      'Have a larger car or trunk',
+      'Willing to cherry-pick aggressively'
+    ]
+  },
+
+  'amazonflex': {
+    name: 'Amazon Flex',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/mZvl7S4O63tkqCfwYh7b.png',
+    link: 'https://flex.amazon.com/',
+    rate: '$18–$25/hr',
+    description: 'Deliver Amazon packages in set time blocks. Hardest part is grabbing blocks.',
+    category: 'delivery',
+    tags: ['delivery'],
+    tldr: '**What it is:** Reserve a "block" (2 to 8 hours) through the Flex app. Show up at an Amazon warehouse, grab 30 to 50 packages, deliver using Amazon\'s route app.\n\n**The pay:** $18 to $25/hr gross guaranteed per block. Real net is $10 to $20/hr after gas + wear. Twice-weekly direct deposit (Tuesday and Friday).\n\n**The catch:** Block availability is the real bottleneck. Saturated metros mean drivers refresh the app constantly to catch blocks that open in waves.',
+    whyAdhd: [
+      'Guaranteed hourly rate. Know the payout before you accept.',
+      'Solo work. Headphones, no customer interaction.',
+      'Clear route in the Flex app. No decision fatigue.',
+      'Defined block length. 3 hours means 3 hours.',
+      'Physical movement. Loading + walking to doors.'
+    ],
+    pros: [
+      'Guaranteed hourly rate',
+      'Clear start and end time',
+      'No restaurant waits or customer chat',
+      'Amazon\'s navigation is solid',
+      'Holiday surge blocks (Nov-Dec) hit $30+/hr'
+    ],
+    cons: [
+      'Block availability is brutal in saturated metros',
+      'Package blocks destroy suspension faster than food delivery',
+      'Net is $10 to $20/hr after expenses',
+      'Standing metric can cut you off with minimal notice',
+      'Some warehouses are in rough neighborhoods'
+    ],
+    payout: {
+      'Payout method': 'Direct deposit twice weekly (Tue + Fri)',
+      'Block rate': '$18 to $25/hr quoted upfront',
+      'Realistic net': '$10 to $20/hr',
+      'Holiday surge': '$28 to $35/hr Nov-Dec',
+      'Whole Foods / Fresh blocks': 'Base hourly + tips',
+      'Pay structure': 'Fixed hourly per block, not per delivery'
+    },
+    finalTake: 'Best-paid delivery gig on paper. The real challenge is getting blocks in saturated metros. If you can grab 15 to 20 hours/week of blocks, the math beats DoorDash. Best for organized, punctual people near newer Amazon warehouses.',
+    idealFor: [
+      'Want predictable hourly pay',
+      'Prefer solo work, headphones on',
+      'Have a larger car (sedan minimum)',
+      'Want defined start/end times',
+      'Live in a less-saturated suburb near an Amazon warehouse'
+    ]
+  },
+
+  'sparkdriver': {
+    name: 'Spark Driver',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/KRzWH9SN42Im32S7MV5b.png',
+    link: 'https://www.walmart.com/cp/spark-driver/1231928',
+    rate: '$15–$25/hr',
+    description: 'Walmart\'s delivery gig. Quieter in suburbs, but pay has dropped lately.',
+    category: 'delivery',
+    tags: ['delivery'],
+    tldr: '**What it is:** Walmart\'s own delivery app. Walmart staff shops and packs the order. You pick up and deliver to the customer.\n\n**The pay:** Gridwise 2025 data shows a median of $21.74/hr across 14,666 Spark drivers. Base pay $7 to $15 per order plus 100% of tips. Weekly direct deposit or Instant Pay via Branch card.\n\n**The catch:** Pay dropped after Walmart bought the operator (DDI). New drivers start at the bottom tier and get worst offers until they grind to Gold or Sapphire.',
+    whyAdhd: [
+      'Pre-packed orders on curbside batches. No shopping.',
+      'Suburban routes. Less traffic chaos.',
+      'Offer screen shows pay up front.',
+      'Less customer interaction than Instacart.',
+      'Accept or decline freely without acceptance-rate punishment.'
+    ],
+    pros: [
+      'Gridwise 2025 median is $21.74/hr (higher than DoorDash)',
+      'Pre-packed curbside skips the shopping grind',
+      '100% of tips kept',
+      'Less saturated than food delivery in suburbs',
+      'Instant Pay via Branch card'
+    ],
+    cons: [
+      'Pay declined after Walmart-DDI transition',
+      'New drivers start at bottom tier',
+      'Aggressive onboarding saturates markets',
+      'Base pay without tips is thin on short routes',
+      'Customer-not-home returns eat unpaid time'
+    ],
+    payout: {
+      'Payout method': 'Weekly direct deposit or Instant Pay via Branch card',
+      'Base pay': '$7 to $15 per order',
+      'Tips': '100% kept by driver',
+      'Gridwise 2025 median': '$21.74/hr',
+      'Typical range': '$15 to $25/hr before expenses',
+      'Tier system': 'Silver, Gold, Sapphire'
+    },
+    finalTake: 'Hidden gem getting crowded. In a suburb with a busy Walmart and few drivers, still the best gig. In a saturated metro or rural area, skip it. Curbside no-shopping is the killer feature for people who hate Instacart.',
+    idealFor: [
+      'Suburban driver near a busy Walmart Supercenter',
+      'Hate the Instacart shopping grind',
+      'Willing to grind volume to hit Gold or Sapphire',
+      'Want pre-packed pickup simplicity',
+      'Have a larger vehicle'
+    ]
+  },
+
+  'ubereats': {
+    name: 'Uber Eats',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/mTdTqcZhnOuJB5FcChLb.png',
+    link: 'https://www.uber.com/us/en/drive/delivery/',
+    rate: '$15–$25/hr',
+    description: 'Food delivery on your schedule. Real pay after gas is $8 to $15/hr.',
+    category: 'delivery',
+    tags: ['delivery'],
+    tldr: '**What it is:** Toggle "delivery only" on the Uber Driver app, accept restaurant orders, deliver. If you already drive Uber passengers, you are already on Uber Eats.\n\n**The pay:** $15 to $25/hr gross in most US markets. Peak-hour urban drivers can hit $27 to $35/hr. After gas + wear + self-employment tax, real net is $8 to $15/hr.\n\n**The catch:** Often called the "backup app." Most drivers use it to fill gaps when DoorDash is slow. Base pay per order can be $2 to $4.',
+    whyAdhd: [
+      'Instant cashout via Uber Pro Card.',
+      'Clear app navigation. Turn-by-turn.',
+      'Toggle rideshare + delivery in the same app.',
+      'No shift commitment. On for 20 min, off for 40.',
+      'Bike, e-bike, or scooter friendly in dense cities.'
+    ],
+    pros: [
+      'Most flexible of the big delivery apps',
+      'Instant Pay + Uber Pro Card with gas cashback',
+      'Toggle rideshare + delivery in one app',
+      'Quest bonuses for committed drivers',
+      'Works globally, not just US'
+    ],
+    cons: [
+      'Base pay $2 to $4 per order',
+      'Real net is $8 to $15/hr',
+      'Tips hidden before acceptance',
+      'Most drivers multi-app to make it worth it',
+      'Quest bonuses can trap you into bad orders'
+    ],
+    payout: {
+      'Payout method': 'Weekly direct deposit, Instant Pay, or Uber Pro Card',
+      'Instant Pay fee': '$0.50 per cashout (up to 5x/day)',
+      'Base pay': 'Per-pickup + per-dropoff + per-mile (often $2 to $4 total)',
+      'Tips': '100% kept by driver',
+      'Typical gross': '$15 to $25/hr',
+      'Realistic net': '$8 to $15/hr (Gridwise 2025)',
+      'Peak multipliers': 'Small zones, short windows'
+    },
+    finalTake: 'Secondary app in most markets. Run alongside DoorDash, accept the best offers. Bike or e-bike in a dense city is the one solo-Uber-Eats scenario that makes sense. Track your real $/hour, not the Quest carrot.',
+    idealFor: [
+      'Already drive Uber passengers',
+      'Multi-app with DoorDash',
+      'Bike or e-bike rider in a dense city',
+      'Want to toggle on and off without any schedule',
+      'Live where DoorDash is weak'
+    ]
+  },
+
+  'modeearn': {
+    name: 'Mode Earn',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/x2dOwyvRkTLnqbXD6fee.jpg',
+    link: 'https://play.google.com/store/apps/details?id=us.current.android',
+    rate: '$10–$50/mo',
+    description: 'Android only. Earns in the background while you charge or scroll.',
+    category: 'rewards',
+    tags: ['passive'],
+    tldr: '**What it is:** Background passive-earn app (formerly Current Rewards). Pays points for charging your phone, listening to music, opening articles, playing partner games. 16+ earning activities.\n\n**The pay:** 294 points = $0.10. Casual: $2 to $10/week. Regular: $15 to $30/week. Heavy: $50 to $100/month. $0.10 minimum cashout.\n\n**The catch:** Android only. Battery drain is real. Heavy permissions required.',
+    whyAdhd: [
+      'Truly passive. Earns while phone charges.',
+      '$0.10 cashout is the lowest of any rewards app.',
+      '16+ earning activities for variety.',
+      'No streaks or daily login pressure.',
+      'PayPal or gift cards.'
+    ],
+    pros: [
+      '$0.10 cashout is unmatched',
+      'Truly passive',
+      'PayPal cash, not just gift cards',
+      '16+ earning activities for variety',
+      'Payout processing has improved'
+    ],
+    cons: [
+      'Android only',
+      'Battery drain from background activity',
+      'Heavy permissions required',
+      'Marketing inflates earnings',
+      'Some payout glitch history'
+    ],
+    payout: {
+      'Payout method': 'PayPal, Amazon, Target, Walmart gift cards',
+      'Cashout minimum': '$0.10',
+      'Conversion rate': '294 points = $0.10',
+      'Casual users': '$2 to $10/week',
+      'Regular users': '$15 to $30/week',
+      'Heavy users': '$50 to $100/month',
+      'Platform': 'Android only',
+      'PayPal speed': '5 to 10 days'
+    },
+    finalTake: 'Passive pennies, not income. Install, grant permissions, let it run while you charge. $0.10 cashout keeps it dopamine-friendly. Pair with Fetch and Honeygain as a passive-income stack. Skip if you have an iPhone.',
+    idealFor: [
+      'Android user who charges phone overnight',
+      'Will not remember to actively engage with rewards apps',
+      'Building a passive-income stack',
+      'Want a $0.10 cashout for quick dopamine',
+      'OK with ~10% battery life cost'
+    ]
+  },
+
+  'justplay': {
+    name: 'JustPlay',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/HGRph2COAlLKrmVczKxH.jpg',
+    link: 'https://justplay.com/',
+    rate: '$0.25–$2/day',
+    description: 'Play games for instant PayPal. Big first week, then drops fast.',
+    category: 'rewards',
+    tags: [],
+    tldr: '**What it is:** Get-paid-to-play mobile game app. Play featured games, get coin drops, convert to PayPal cash. Payouts often hit within an hour.\n\n**The pay:** Random. Some users report $0.27 for an hour, others $0.42 for 15 minutes. Most earn $10 to $30/month total. 80,000 coins = $1.\n\n**The catch:** Earnings decline sharply after the first 2 to 4 weeks. Reddit and PissedConsumer (68% unfavorable) confirm rewards taper hard. Ad frequency is high.',
+    whyAdhd: [
+      'Instant PayPal payouts. Dopamine hits within the hour.',
+      'Low cashout threshold.',
+      'No strategy. Just tap and play.',
+      'Game rotation keeps it from getting stale.',
+      'Works on iOS and Android.'
+    ],
+    pros: [
+      'Instant to sub-hour PayPal payouts',
+      'Low cashout threshold',
+      'iOS and Android',
+      'Simple. No surveys or offers.'
+    ],
+    cons: [
+      'Earnings drop hard after a few weeks',
+      'High ad frequency',
+      'Random reward amounts',
+      '2.2 stars on PissedConsumer (68% unfavorable)',
+      'Real hourly under $1'
+    ],
+    payout: {
+      'Payout method': 'PayPal (primary), charity donation option',
+      'Payout speed': 'Instant to ~1 hour',
+      'Realistic monthly earnings': '$10 to $30',
+      'First-week feel': 'Higher drops (onboarding honeymoon)',
+      'After 2 to 4 weeks': 'Drops shrink, earnings taper hard',
+      'Coin-to-dollar': '~80,000 coins = $1',
+      'Platforms': 'iOS and Android'
+    },
+    finalTake: 'Two-week dopamine experiment, not a paycheck. Instant PayPal feels great the first time. Rewards taper hard after the honeymoon. Try it once for the novelty. Use Mistplay or Freecash if you want something more reliable.',
+    idealFor: [
+      'Already play casual mobile games',
+      'Want to try a fast-payout app for the experience',
+      'iPhone user locked out of Android-only options',
+      'OK cashing out small PayPal amounts fast',
+      'Not for steady income'
+    ]
+  },
+
+  'mistplay': {
+    name: 'Mistplay',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/rCXLcdy5K4EBVE2fQPdW.jpg',
+    link: 'https://www.mistplay.com/',
+    rate: '$5–$20/mo',
+    description: 'Play games for rewards. Now on iOS too. Slower than it used to be.',
+    category: 'rewards',
+    tags: ['gift'],
+    tldr: '**What it is:** The OG "get paid to play mobile games" app since 2015. Earn "units" by playing recommended games, redeem for gift cards or PayPal cash. Now on iPhone (US + Canada as of May 2025).\n\n**The pay:** Light users: $1 to $3/week. Dedicated: $5 to $10/week. Realistic monthly: $5 to $20. December 2024 devaluation: $10 PayPal went from 3,000 to 3,700 units.\n\n**The catch:** Account suspensions at cashout are a documented pattern. Trustpilot and PissedConsumer reviews flag accounts going on hold after large redemption requests.',
+    whyAdhd: [
+      'Rotating game library prevents boredom.',
+      'Unit counter shows progress toward next redemption.',
+      'No timers or streak pressure.',
+      '10-year track record.',
+      'Now works on iPhone (US/Canada).'
+    ],
+    pros: [
+      '10-year track record of paying out',
+      'Now on iOS (US/Canada)',
+      'No surveys or offerwalls',
+      'Gift cards + PayPal',
+      'Rotating game library'
+    ],
+    cons: [
+      'Account suspensions at cashout',
+      'December 2024 devaluation slowed earnings 20%',
+      'iOS still geo-locked',
+      'Newer games are low-quality merge titles',
+      'Time-to-dollar is slow vs offerwalls'
+    ],
+    payout: {
+      'Payout method': 'Gift cards (Amazon, Google Play, Visa) + PayPal',
+      'PayPal cost': '~3,700 units = $10',
+      'Light users': '$1 to $3/week',
+      'Dedicated users': '$5 to $10/week',
+      'Realistic monthly': '$5 to $20',
+      'Platforms': 'Android (global) + iOS (US/Canada)',
+      'Gift card delivery': 'Within 48 hours',
+      'Cashout watchout': 'Redeem in smaller amounts to avoid freeze flags'
+    },
+    finalTake: 'Most trustworthy play-to-earn app, but slower than it used to be. 10-year track record matters. May 2025 iOS launch finally unlocks iPhone users. Two watchouts: redeem in smaller amounts to avoid freeze flags, and treat $5 to $20/month as your realistic ceiling.',
+    idealFor: [
+      'Already play casual mobile games',
+      'iPhone user finally unlocked (US/Canada)',
+      'Like rotating novelty over fixed grind',
+      'Prefer long track records over flashy new apps',
+      'OK with $5 to $20/month cap'
+    ]
+  },
+
+  'freecash': {
+    name: 'Freecash',
+    logo: 'images/freecash.png',
+    link: 'https://freecash.com/',
+    rate: '$1–$10/day',
+    description: 'Tasks and offers for crypto or PayPal. Watch out for cashout issues.',
+    category: 'rewards',
+    tags: [],
+    tldr: '**What it is:** Get-Paid-To platform. Complete offers (sign up for apps, play games to a level, try free trials), earn coins, cash out to PayPal, crypto, or gift cards. Most payouts hit in under 5 minutes.\n\n**The pay:** Active users: $1 to $10/day. Big single offers (credit card signups, crypto exchange trials) can pay $50 to $200+ one-time. PayPal $20 min, crypto $5 min.\n\n**The catch:** Milestones sometimes do not track. Account freezes during withdrawal are the top 2025 complaint, often requiring ID verification.',
+    whyAdhd: [
+      'Hundreds of offers. Pick what sounds fun in the moment.',
+      'Fast payouts (under 5 min for crypto).',
+      'Big single-offer payouts. One crypto signup can pay $100+.',
+      'Multiple cashout paths (PayPal, BTC, ETH, LTC, gift cards).',
+      '$5 crypto minimum.'
+    ],
+    pros: [
+      'PayPal and crypto under 5 minutes',
+      'Crypto cashout at $5',
+      'Huge offerwall variety',
+      'Big single-offer payouts ($50 to $200+)',
+      'Solid Reddit and Discord reputation'
+    ],
+    cons: [
+      'Milestones do not always track',
+      'Account freezes at withdrawal are common',
+      'Support is slow when things break',
+      'Large first cashouts trigger ID verification',
+      'Survey disqualifications still happen'
+    ],
+    payout: {
+      'Payout method': 'PayPal, Bitcoin, Ethereum, Litecoin, gift cards',
+      'PayPal minimum': '$20 (under 5 min typical)',
+      'Crypto minimum': '$5 BTC/ETH/LTC (under 5 min typical)',
+      'Gift card delivery': 'A few hours',
+      'Active users': '$1 to $10/day',
+      'Big one-off offers': '$50 to $200+',
+      'Survey-only users': '$20 to $60/month',
+      'Withdrawal watchout': 'Large first cashouts trigger ID verification'
+    },
+    finalTake: 'Most legit offerwall GPT site, but offerwalls are offerwalls. Three watchouts: screenshot every offer, start with small withdrawals to build trust, and chase the big one-off offers (credit cards, crypto exchanges) where the real money lives.',
+    idealFor: [
+      'Have patience for screenshots and support tickets',
+      'Crypto-friendly user (fast $5 cashout)',
+      'Chasing big credit card or crypto signup bonuses',
+      'Want variety over a single grind',
+      'US user (most high-pay offers are US-only)'
+    ]
+  },
+
+  'ibotta': {
+    name: 'Ibotta',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/bY1HhCITQgsYsrOOgCGz.png',
+    link: 'https://home.ibotta.com/',
+    rate: '$100–$360/yr',
+    description: 'Cash back on groceries. Auto tracks Walmart and Kroger loyalty cards.',
+    category: 'cashback',
+    tags: ['favorite'],
+    tldr: '**What it is:** The original cashback app for groceries and retail. Pick offers before you shop, scan your receipt (or link Walmart/Kroger loyalty for auto-cashback), get real cash.\n\n**The pay:** Engaged users earn $15 to $30/month ($180 to $360/yr). "Pay with Ibotta" gives instant cashback without receipt scans. $20 minimum withdrawal.\n\n**The catch:** Since the 2024 IPO, complaints about receipt-scan glitches, account holds, and frozen withdrawals have spiked. PissedConsumer rating is 1.8 stars despite App Store still at 4.8.',
+    whyAdhd: [
+      'Click "+" on offers in the app. No promo codes to remember.',
+      'Walmart and Kroger loyalty linking means fully automatic cashback.',
+      'Small loop: shop, scan, see cash credit same day.',
+      'Real cash to PayPal. $20 hits as $20.',
+      'Bonus challenges stack (redeem 10 offers = $5 bonus).'
+    ],
+    pros: [
+      'Real cash, not gift cards only',
+      'Walmart + Kroger auto-cashback is huge',
+      '"Pay with Ibotta" skips the scan',
+      'Bonus stacking can double a month\'s payout',
+      'Every major grocery chain supported'
+    ],
+    cons: [
+      'Must activate offers before shopping (ADHD tax)',
+      '$20 minimum traps small balances',
+      'Receipt-scan glitches are common now',
+      'Account holds near holidays',
+      'Email-only support is slow'
+    ],
+    payout: {
+      'Payout method': 'PayPal, direct deposit, or gift cards',
+      'Minimum withdrawal': '$20',
+      'Casual earnings': '$60 to $120/year',
+      'Engaged users': '$180 to $360/year',
+      'Welcome bonus': '$5 after first receipt (promo-dependent)',
+      'Processing time': '1 to 3 business days',
+      'Best integration': 'Walmart Rewards + Kroger Plus auto-cashback'
+    },
+    finalTake: 'Best cashback app for grocery shoppers if you can remember to activate offers. Withdraw often. Pair with Fetch (any receipt) and Rakuten (online).',
+    idealFor: [
+      'Grocery shopper at Walmart, Kroger, Publix, or Target',
+      'Can remember to check the app before shopping',
+      'Buy brand-name products',
+      'Will withdraw to PayPal every month',
+      'Want real cash, not gift cards'
+    ]
+  },
+
+  'rakuten': {
+    name: 'Rakuten',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/YAoQtLxBaX1cdRNsICoB.jpg',
+    link: 'https://www.rakuten.com/',
+    rate: '$30–$300/yr',
+    description: 'Set and forget online cashback. Install the extension, get paid quarterly.',
+    category: 'cashback',
+    tags: ['favorite'],
+    tldr: '**What it is:** Biggest online cashback portal (formerly Ebates). Install the browser extension, shop at 3,500+ stores, get a percentage back.\n\n**The pay:** 1 to 10% cashback at most stores. Featured retailers bump to 15 to 40%. Typical user earns $25 to $250/year. PayPal, check, or direct deposit.\n\n**The catch:** Quarterly payouts only. Jan to March earnings arrive May 15. Up to 120 days to wait. Missing cashback is the top Reddit complaint.',
+    whyAdhd: [
+      'Browser extension auto-activates. Zero decision fatigue.',
+      'Set and forget. No codes to clip.',
+      'Quarterly "Big Fat Check" feels like surprise money.',
+      'Double Cash Back days rotate. Natural dopamine beats.',
+      'No minimum withdrawal.'
+    ],
+    pros: [
+      'Truly set-and-forget once installed',
+      'Wide store coverage (3,500+ retailers)',
+      'Real cash, not points',
+      'No minimum withdrawal',
+      '$30 welcome bonus is easy'
+    ],
+    cons: [
+      'Quarterly payouts (up to 120-day wait)',
+      'Rates change weekly per store',
+      'Missing cashback is a recurring complaint',
+      'Returns claw back cashback',
+      'Low or no rates at Amazon and Walmart'
+    ],
+    payout: {
+      'Payout method': 'PayPal, check, or direct deposit',
+      'Payout frequency': 'Quarterly (Feb 15, May 15, Aug 15, Nov 15)',
+      'Minimum withdrawal': 'None',
+      'Welcome bonus': '$30 after first $30 qualifying purchase',
+      'Typical earnings': '$25 to $250/year',
+      'Power users': '$500+/year',
+      'Cashback rate': '1 to 10% typical, 15 to 40% on featured days'
+    },
+    finalTake: 'Easiest cashback app to actually use. Install once, shop normally, get paid quarterly. Quarterly schedule is slow. Best for online shoppers at Macy\'s, Kohl\'s, Best Buy, or Nordstrom. Pair with Ibotta for in-store grocery. Zero overlap.',
+    idealFor: [
+      'Online shopper at mid-to-high-end retailers',
+      'Forget to clip coupons',
+      'Want zero-effort passive cashback',
+      'Bilt ecosystem user (through May 2026)',
+      'Like quarterly surprise-money over monthly trickle'
+    ]
+  },
+
+  'swagbucks': {
+    name: 'Swagbucks',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/kV1Ic0B8nEXPNSAGTtA6.png',
+    link: 'https://www.swagbucks.com/',
+    rate: '$50–$600/yr',
+    description: 'Old school rewards site. Skip the surveys, use the shopping portal.',
+    category: 'cashback',
+    tags: [],
+    tldr: '**What it is:** One of the longest-running rewards sites (since 2008). Earn SB points for surveys, online shopping cashback, videos, games, and web searches. 100 SB = $1.\n\n**The pay:** Engaged users earn $30 to $60/month with 30 to 45 min of daily activity. Real money is shopping cashback, not surveys. PayPal at $5 (500 SB), gift cards at $3.\n\n**The catch:** 60 to 80% survey disqualification rate. Long-term users report sudden account bans with vague "terms of service" messages, often right before big redemptions.',
+    whyAdhd: [
+      '12+ ways to earn. Always something to do when bored.',
+      'Low $3 gift card minimum. Fastest first redemption.',
+      'Shopping cashback runs in the background.',
+      'Daily goals and streak bonuses give structure.',
+      'Playtime bonuses stack when you play games you would play anyway.'
+    ],
+    pros: [
+      '17+ year track record',
+      'Low $3 gift card minimum',
+      'Shopping portal is genuinely useful',
+      'Multiple earning paths',
+      '$10 new-user bonus when running'
+    ],
+    cons: [
+      '60 to 80% survey screen-out rate',
+      'Account bans before large redemptions',
+      'Real survey hourly is $1.50 to $3',
+      'Offer walls with auto-renewing credit card trials',
+      'Videos and games pay pennies'
+    ],
+    payout: {
+      'Payout method': 'PayPal cash or gift cards',
+      'PayPal minimum': '$5 (500 SB)',
+      'Gift card minimum': '$3',
+      'Conversion rate': '100 SB = $1',
+      'Processing time': '24 to 72 hours',
+      'Typical engaged earnings': '$30 to $60/month',
+      'Best earning path': 'Shopping cashback, not surveys'
+    },
+    finalTake: 'Skip surveys entirely. Use it as a cashback shopping portal. Walmart, Target, and eBay all give 2 to 8% back through it. Cash out at $5 PayPal often. Do not hoard points. Pair with Rakuten or Ibotta.',
+    idealFor: [
+      'Want a cashback portal at non-Rakuten stores',
+      'Have boring downtime to fill',
+      'Enjoy variety over consistency',
+      'Will redeem fast, not hoard',
+      'OK with gift cards over cash'
+    ]
+  },
+
+  'pogo': {
+    name: 'Pogo',
+    logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/6vibzs1oxfjhXTaySH0N.jpg',
+    link: 'https://www.joinpogo.com/',
+    rate: '$5–$40/yr',
+    description: 'Passive cashback linked to your card. Small pay, set and forget.',
+    category: 'cashback',
+    tags: [],
+    tldr: '**What it is:** Link your bank account (via Plaid) and debit or credit cards. Pogo automatically credits points on qualifying purchases. 1,000 points = $1.\n\n**The pay:** Tiny. One reviewer earned $5 over a full year. Most transactions credit 2 to 20 points ($0.002 to $0.02) each. Realistic annual: $5 to $40.\n\n**The catch:** Data-for-money trade. Pogo collects your transaction history, DOB, gender, income, and ethnicity, and sells aggregated data to brands. You are the product.',
+    whyAdhd: [
+      '100% automatic after setup.',
+      'Runs silently in the background.',
+      'Surprise micro-credits pop up as you shop normally.',
+      'No streaks, no deadlines.',
+      'Low $3 cashout means you actually see money.'
+    ],
+    pros: [
+      '100% automatic after setup',
+      'Plaid integration (credentials not exposed)',
+      'Low $3 cashout',
+      'Boost Offers add real money',
+      'Reliable payouts'
+    ],
+    cons: [
+      'Real earnings are tiny ($5 to $40/year)',
+      'Shares full transaction history via Plaid',
+      'Collects DOB, income, ethnicity, location',
+      'Base transaction credits are pennies',
+      'Plaid link breaks sometimes'
+    ],
+    payout: {
+      'Payout method': 'Venmo or PayPal',
+      'Minimum cashout': '3,000 points ($3)',
+      'Conversion rate': '1,000 points = $1',
+      'Typical annual earnings': '$5 to $40',
+      'Best earning path': 'Boost Offers ($1 to $5 per activation)',
+      'Base transaction rate': '2 to 20 points per qualifying purchase',
+      'Data shared': 'Full transactions, DOB, income, ethnicity, location'
+    },
+    finalTake: 'Honest data-for-cash trade. The cash side is tiny. Boost Offers are the real value if you shop at Amazon or Target anyway. Skip if you are privacy-conscious or expect real cashback earnings.',
+    idealFor: [
+      'Already comfortable with Plaid (Venmo, Robinhood)',
+      'Want zero-effort passive cashback',
+      'Shop at Amazon, Target, Walmart',
+      'OK trading data for ~$20/year',
+      'Layering with other cashback apps'
     ]
   },
 };

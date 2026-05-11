@@ -28,6 +28,7 @@ interface BrainFMPlayerContextValue {
   nextTrack: () => void
   prevTrack: () => void
   playBrainFM: () => void
+  close: () => void
 }
 
 const BrainFMPlayerContext = createContext<BrainFMPlayerContextValue>({
@@ -53,6 +54,7 @@ const BrainFMPlayerContext = createContext<BrainFMPlayerContextValue>({
   nextTrack: () => {},
   prevTrack: () => {},
   playBrainFM: () => {},
+  close: () => {},
 })
 
 export function BrainFMPlayerProvider({ children }: { children: React.ReactNode }) {
@@ -220,6 +222,13 @@ export function BrainFMPlayerProvider({ children }: { children: React.ReactNode 
     }
   }
 
+  const close = () => {
+    audioRef.current?.pause()
+    queueRef.current = []
+    setQueueIdx(-1)
+    setHasBeenActivated(false)
+  }
+
   const prevTrack = () => {
     const audio = audioRef.current
     // If more than 3s in, restart current track
@@ -241,7 +250,7 @@ export function BrainFMPlayerProvider({ children }: { children: React.ReactNode 
         isPlaying, isMuted, currentTime, duration, progress, hasBeenActivated,
         source, trackMeta, queueIndex, queueLength: queueRef.current.length,
         audioContext, analyserNode,
-        play, pause, toggle, mute, seek, loadTrack, playQueue, nextTrack, prevTrack, playBrainFM,
+        play, pause, toggle, mute, seek, loadTrack, playQueue, nextTrack, prevTrack, playBrainFM, close,
       }}
     >
       {children}

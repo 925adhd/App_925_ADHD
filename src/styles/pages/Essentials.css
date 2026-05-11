@@ -12,14 +12,14 @@
     }
 
     .essentials .page-header h1 {
-      font-size: 22px;
+      font-size: var(--fs-xl);
       font-weight: 800;
       margin-bottom: 6px;
     }
 
     .essentials .page-header p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: var(--fs-13);
     }
 
     /* Tool Cards */
@@ -32,15 +32,17 @@
     .essentials .tool-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       overflow: hidden;
       cursor: pointer;
       transition: all 0.2s;
     }
 
-    .essentials .tool-card:hover {
-      border-color: rgba(255, 255, 255, 0.1);
-    }
+@media (hover: hover) {
+      .essentials .tool-card:hover {
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+}
 
     .essentials .tool-header {
       padding: 16px;
@@ -52,11 +54,11 @@
     .essentials .tool-icon {
       width: 48px;
       height: 48px;
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
+      font-size: var(--fs-xl);
       flex-shrink: 0;
     }
 
@@ -79,7 +81,7 @@
     }
 
     .essentials .tool-subtitle {
-      font-size: 12px;
+      font-size: var(--fs-xs);
       color: var(--muted);
     }
 
@@ -90,7 +92,7 @@
       align-items: center;
       justify-content: center;
       color: var(--muted);
-      font-size: 12px;
+      font-size: var(--fs-xs);
       transition: transform 0.2s;
     }
 
@@ -116,7 +118,7 @@
 
     .essentials .tool-body p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: var(--fs-13);
       margin: 14px 0;
       line-height: 1.6;
     }
@@ -130,9 +132,9 @@
     .essentials .feature-list li {
       padding: 12px;
       background: rgba(255, 255, 255, 0.03);
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       margin-bottom: 8px;
-      font-size: 13px;
+      font-size: var(--fs-13);
       line-height: 1.5;
       display: flex;
       gap: 10px;
@@ -155,20 +157,20 @@
       background: rgba(251, 191, 36, 0.1);
       border: 1px solid rgba(251, 191, 36, 0.2);
       border-left: 3px solid var(--yellow);
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       padding: 12px;
       margin: 14px 0;
     }
 
     .essentials .pro-tip-title {
-      font-size: 12px;
+      font-size: var(--fs-xs);
       font-weight: 700;
       color: var(--yellow);
       margin-bottom: 6px;
     }
 
     .essentials .pro-tip p {
-      font-size: 12px;
+      font-size: var(--fs-xs);
       color: var(--muted);
       margin: 0;
       line-height: 1.5;
@@ -182,25 +184,27 @@
       background: var(--brand);
       color: #000;
       padding: 10px 16px;
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
-      font-size: 13px;
+      font-size: var(--fs-13);
       font-weight: 600;
       margin-top: 10px;
       transition: all 0.2s;
     }
 
-    .essentials .link-btn:hover {
-      transform: translateY(-1px);
-    }
+@media (hover: hover) {
+      .essentials .link-btn:hover {
+        transform: translateY(-1px);
+      }
+}
 
     /* Category Badge */
     .essentials .category-badge {
       display: inline-block;
       background: rgba(255, 255, 255, 0.08);
       padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 11px;
+      border-radius: var(--radius-md);
+      font-size: var(--fs-xxs);
       color: var(--muted);
       margin-bottom: 10px;
     }

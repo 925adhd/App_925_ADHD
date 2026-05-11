@@ -217,12 +217,8 @@ export default function AiPlayground() {
 
       <div className="container">
         <section className="hero">
-          <div className="hero-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
-            Free AI Practice Zone
-          </div>
-          <h1>AI Playground for Freelancers</h1>
-          <p>Learn to use AI for client emails, proposals, pricing, and more. Real practice with pre-built templates — no experience needed.</p>
+          <h1>Freelancer Prompt Vault</h1>
+          <p>Skip the blank page. Drop-in prompts for the awkward stuff — client emails, proposals, rate increases, scope creep — built for ADHD brains who hate drafting cold.</p>
         </section>
 
         <div className="tabs-container">
@@ -235,7 +231,7 @@ export default function AiPlayground() {
                 <path d="M17 14l3 3" />
                 <path d="M12 20c-.8 1-1.5 2-1.5 2s1 .5 1.5.5 1.5-.5 1.5-.5-0.7-1-1.5-2z" />
               </svg>
-              <span className="tab-text">Playground</span>
+              <span className="tab-text">Chat</span>
             </button>
             <button className={`tab${activeTab === 'templates' ? ' active' : ''}`} onClick={() => setActiveTab('templates')}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" /></svg>
@@ -305,8 +301,20 @@ export default function AiPlayground() {
                 {messages.length === 0 && !isLoading ? (
                   <div className="empty-chat">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
-                    <h4>Ready to practice!</h4>
-                    <p>Type a prompt below or click a quick prompt to get started.</p>
+                    <h4>Try one of these to get started</h4>
+                    <div className="starter-prompts">
+                      {[
+                        { emoji: '✍️', label: 'Write something for me', prompt: 'Help me write a polite email to my landlord about a leaky faucet in my apartment.' },
+                        { emoji: '🧠', label: 'Explain something simply', prompt: "Explain cryptocurrency to me like I'm 12 years old, using simple examples." },
+                        { emoji: '📋', label: 'Help me with a task', prompt: 'I feel overwhelmed by my to-do list. Help me prioritize these 8 tasks by importance.' },
+                      ].map((s, i) => (
+                        <button key={i} className="starter-btn" onClick={() => usePrompt(s.prompt)}>
+                          <span className="starter-emoji">{s.emoji}</span>
+                          <span>{s.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                    <p className="empty-hint">Or type your own prompt below</p>
                   </div>
                 ) : (
                   <>
@@ -432,7 +440,7 @@ export default function AiPlayground() {
         )}
 
         <footer className="page-footer">
-          <p>AI Playground by <a href="https://925adhd.com">925 ADHD</a> • Powered by Llama AI</p>
+          <p>Freelancer Prompt Vault by <a href="https://925adhd.com">925 ADHD</a> • Powered by Llama AI</p>
         </footer>
       </div>
 

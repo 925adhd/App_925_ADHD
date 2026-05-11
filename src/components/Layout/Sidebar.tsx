@@ -1,51 +1,10 @@
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
-import {
-  Home,
-  BookOpen,
-  Coins,
-  LayoutGrid,
-  Heart,
-  Wrench,
-  Bot,
-  ListChecks,
-  Music,
-  MessageSquare,
-  Brain,
-  LogOut,
-} from 'lucide-react'
+import { LogOut } from 'lucide-react'
 import ThemeToggle from '../ThemeToggle'
+import { NAV_SECTIONS } from '../../config/nav'
 
 const LOGO_URL = 'https://img1.wsimg.com/isteam/ip/e5c52ac6-7189-421d-9701-bbc6d6a027fc/SmartSelect_20241218_055052_Gallery.png'
-
-const NAV_SECTIONS = [
-  {
-    label: 'Main',
-    items: [
-      { to: '/dashboard',     icon: Home,       label: 'Home' },
-      { to: '/earn',           icon: Coins,      label: 'Earn' },
-      { to: '/guides',         icon: BookOpen,   label: 'Guides' },
-      { to: '/apps',           icon: LayoutGrid, label: 'Apps' },
-      { to: '/favorites',      icon: Heart,      label: 'Saved' },
-      { to: '/tools',          icon: Wrench,     label: 'Tools' },
-    ],
-  },
-  {
-    label: 'Explore',
-    items: [
-      { to: '/beginner-list',  icon: ListChecks, label: 'Beginner List' },
-      { to: '/ai-playground',  icon: Bot,        label: 'AI Playground' },
-      { to: '/adhd-hacks',     icon: Brain,      label: 'ADHD Hacks' },
-      { to: '/playlist',       icon: Music,      label: 'Playlist' },
-    ],
-  },
-  {
-    label: 'Other',
-    items: [
-      { to: '/feedback', icon: MessageSquare, label: 'Feedback' },
-    ],
-  },
-]
 
 export default function Sidebar() {
   const { signOut } = useAuth()
@@ -64,9 +23,9 @@ export default function Sidebar() {
       </Link>
 
       <nav className="sidebar-nav">
-        {NAV_SECTIONS.map((section) => (
+        {NAV_SECTIONS.map((section, i) => (
           <div key={section.label} className="sidebar-section">
-            <span className="sidebar-section-label">{section.label}</span>
+            {i > 0 && <div className="sidebar-divider" aria-hidden />}
             {section.items.map(({ to, icon: Icon, label }) => (
               <NavLink
                 key={to}
@@ -81,12 +40,13 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <ThemeToggle variant="sidebar" />
-
-      <button className="sidebar-logout" onClick={handleLogout}>
-        <LogOut size={18} />
-        <span>Logout</span>
-      </button>
+      <div className="sidebar-foot">
+        <ThemeToggle variant="sidebar" />
+        <button className="sidebar-logout" onClick={handleLogout}>
+          <LogOut size={14} />
+          <span>Log out</span>
+        </button>
+      </div>
     </aside>
   )
 }
