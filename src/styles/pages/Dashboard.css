@@ -349,6 +349,66 @@
 }
 
 /* =========================================================
+   PHONE — grow cards so the dashboard fills the viewport
+   ========================================================= */
+@media (max-width: 599px) {
+  .dashboard .dash-hero {
+    padding: 10px 12px 4px;
+  }
+  .dashboard .main-content {
+    padding: 4px 12px 12px;
+  }
+  .dashboard .dash-section-label {
+    margin: 0 0 8px;
+  }
+
+  /* Passion Finder hero: bigger icon + more padding */
+  .dashboard .featured-card--hero {
+    padding: 16px 16px;
+    gap: 14px;
+  }
+  .dashboard .featured-card--hero .featured-icon,
+  .dashboard .featured-card--hero .featured-icon img {
+    width: 72px;
+    height: 72px;
+  }
+  .dashboard .featured-card--hero h3 { font-size: 18px; }
+
+  /* Action cards: square so the 2x2 grid uses real estate */
+  .dashboard .dash-quick-grid {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .dashboard .action-card {
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    padding: 16px 12px;
+    justify-content: center;
+  }
+  .dashboard .action-icon,
+  .dashboard .action-icon img {
+    width: 72px;
+    height: 72px;
+  }
+  .dashboard .action-icon img[src*="brainfm"] {
+    width: 60px;
+    height: 60px;
+  }
+  .dashboard .action-card h3 { font-size: 14px; }
+  .dashboard .action-card p  { font-size: 11px; }
+
+  /* Need a boost card: a touch more padding so it balances */
+  .dashboard .featured-card--muted {
+    padding: 14px 14px;
+  }
+  .dashboard .featured-card--muted .featured-icon,
+  .dashboard .featured-card--muted .featured-icon img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* =========================================================
    DISCORD CARD
    ========================================================= */
 .dashboard .discord-card {
