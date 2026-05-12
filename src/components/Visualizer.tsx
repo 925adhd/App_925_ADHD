@@ -21,13 +21,28 @@ export default function Visualizer({ active, width, height }: Props) {
     if (!active || !audioContext || !analyserNode || !canvasRef.current) return
 
     let cancelled = false
+    // Many full-pack presets use shader features that fail to compile on
+    // mobile GPU drivers (Adreno/Mali) — render() throws inside the rAF loop
+    // and the canvas stays black. The minimal pack is curated for compatibility.
+    let presetNames: string[] = []
+    let presetMap: Record<string, any> = {}
+
+    const pickRandomPreset = () => {
+      if (!presetNames.length || !vizRef.current) return
+      const name = presetNames[Math.floor(Math.random() * presetNames.length)]
+      try {
+        vizRef.current.loadPreset(presetMap[name], 0.0)
+      } catch (err) {
+        console.warn('[Visualizer] loadPreset failed:', name, err)
+      }
+    }
 
     async function init() {
       try {
         const bcMod = await import('butterchurn')
         const butterchurn: any = (bcMod as any).default ?? bcMod
 
-        const bcPresets = await import('butterchurn-presets')
+        const bcPresets = await import('butterchurn-presets/lib/butterchurnPresetsMinimal.min.js')
         const butterchurnPresets: any = (bcPresets as any).default ?? bcPresets
 
         if (cancelled || !canvasRef.current) return
@@ -35,15 +50,27 @@ export default function Visualizer({ active, width, height }: Props) {
         const viz = butterchurn.createVisualizer(audioContext, canvasRef.current, { width, height })
         viz.connectAudio(analyserNode)
 
-        const presets = butterchurnPresets.getPresets()
-        const names = Object.keys(presets)
-        viz.loadPreset(presets[names[Math.floor(Math.random() * names.length)]], 0.0)
-
+        presetMap = butterchurnPresets.getPresets()
+        presetNames = Object.keys(presetMap)
         vizRef.current = viz
+        pickRandomPreset()
 
+        let consecutiveFailures = 0
         const loop = () => {
           if (cancelled) return
-          vizRef.current?.render()
+          try {
+            vizRef.current?.render()
+            consecutiveFailures = 0
+          } catch (err) {
+            consecutiveFailures++
+            console.warn('[Visualizer] render failed, swapping preset:', err)
+            if (consecutiveFailures < 5) {
+              pickRandomPreset()
+            } else {
+              console.error('[Visualizer] giving up after 5 consecutive failures')
+              return
+            }
+          }
           rafRef.current = requestAnimationFrame(loop)
         }
         loop()
@@ -89,7 +116,7 @@ export default function Visualizer({ active, width, height }: Props) {
   const cyclePreset = async () => {
     if (!vizRef.current) return
     try {
-      const bcPresets = await import('butterchurn-presets')
+      const bcPresets = await import('butterchurn-presets/lib/butterchurnPresetsMinimal.min.js')
       const butterchurnPresets: any = (bcPresets as any).default ?? bcPresets
       const presets = butterchurnPresets.getPresets()
       const names = Object.keys(presets)

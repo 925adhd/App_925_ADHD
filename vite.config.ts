@@ -5,6 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['butterchurn', 'butterchurn-presets'],
+    include: [
+      'butterchurn',
+      'butterchurn-presets',
+      'butterchurn-presets/lib/butterchurnPresetsMinimal.min.js',
+    ],
   },
 })

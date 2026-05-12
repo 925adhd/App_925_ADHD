@@ -21,3 +21,10 @@ declare module 'butterchurn-presets' {
   }
   export default butterchurnPresets
 }
+
+declare module 'butterchurn-presets/lib/butterchurnPresetsMinimal.min.js' {
+  const butterchurnPresetsMinimal: {
+    getPresets(): Record<string, object>
+  }
+  export default butterchurnPresetsMinimal
+}
