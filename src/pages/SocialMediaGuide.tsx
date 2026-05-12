@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Brain, Wallet, Target, Flame, AlertTriangle } from 'lucide-react'
 import '../styles/pages/SocialMediaGuide.css'
 import '../styles/pages/_guides-compact.css'
 import '../styles/pages/_detail-rhythm.css'
@@ -69,7 +70,7 @@ export default function SocialMediaGuide() {
   return (
     <div className="social-media-guide">
       <div className="reality-banner">
-        <span className="reality-icon">⚠️</span>
+        <span className="reality-icon"><AlertTriangle /></span>
         <div className="reality-text">
           <h3>The honest truth about influencer income</h3>
           <p>48% of influencers earn under $15,000/year. Only 15% make over $100K. This guide gives realistic expectations, not hype.</p>
@@ -105,7 +106,7 @@ export default function SocialMediaGuide() {
 
         <div className="rhythm-section section-alt">
           <div className="section-header">
-            <div className="section-icon adhd">🧠</div>
+            <div className="section-icon adhd"><Brain /></div>
             <h2 className="section-title">Why it's ADHD-friendly</h2>
           </div>
           <ul className="why-adhd-list">
@@ -118,7 +119,7 @@ export default function SocialMediaGuide() {
 
       <div className="rhythm-section">
         <div className="section-header">
-          <div className="section-icon payout">💸</div>
+          <div className="section-icon payout"><Wallet /></div>
           <h2 className="section-title">Pick your platform</h2>
         </div>
         <div className="platform-compare">
@@ -146,7 +147,7 @@ export default function SocialMediaGuide() {
 
       <div className="rhythm-section section-alt">
         <div className="section-header">
-          <div className="section-icon tasks">🎯</div>
+          <div className="section-icon tasks"><Target /></div>
           <h2 className="section-title">How to win the category</h2>
         </div>
         <ul className="why-adhd-list">
@@ -159,7 +160,7 @@ export default function SocialMediaGuide() {
 
       <div className="rhythm-section final-take">
         <div className="section-header">
-          <div className="section-icon verdict">🔥</div>
+          <div className="section-icon verdict"><Flame /></div>
           <h2 className="section-title">Start with this one</h2>
         </div>
         <div className="final-take-content">

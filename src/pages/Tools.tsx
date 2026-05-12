@@ -4,7 +4,7 @@ import '../styles/pages/Tools.css'
 const BASE = 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/'
 
 const FOCUS_TOOLS = [
-  { to: '/daily-flow',       img: `${BASE}wBhoYHSa5Q04KK4FKtXE.png`, title: 'Daily Flow',           desc: 'Time + energy. Your routine, your call.' },
+  { to: '/daily-flow',       img: `${BASE}wBhoYHSa5Q04KK4FKtXE.png`, title: 'Daily Flow',           desc: 'What to do, when.' },
 ]
 
 const MONEY_TOOLS = [

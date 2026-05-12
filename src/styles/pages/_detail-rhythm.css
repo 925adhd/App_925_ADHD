@@ -25,10 +25,11 @@
   font-size: 15px;
   flex-shrink: 0;
 }
-.rhythm-section .section-icon.adhd    { background: rgba(124, 58, 237, 0.20); }
-.rhythm-section .section-icon.payout  { background: rgba(86, 195, 174, 0.20); }
-.rhythm-section .section-icon.verdict { background: rgba(236, 72, 153, 0.20); }
-.rhythm-section .section-icon.tasks   { background: rgba(59, 130, 246, 0.20); }
+.rhythm-section .section-icon svg { width: 16px; height: 16px; display: block; }
+.rhythm-section .section-icon.adhd    { background: rgba(124, 58, 237, 0.20); color: #B5A7FF; }
+.rhythm-section .section-icon.payout  { background: rgba(86, 195, 174, 0.20); color: var(--brand); }
+.rhythm-section .section-icon.verdict { background: rgba(236, 72, 153, 0.20); color: #F472B6; }
+.rhythm-section .section-icon.tasks   { background: rgba(59, 130, 246, 0.20); color: #60A5FA; }
 
 .rhythm-section .section-title {
   font-size: 16px;

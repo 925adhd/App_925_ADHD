@@ -46,10 +46,11 @@ const STEPS: Step[] = [
     infoType: 'tip',
     infoTitle: 'Strategy',
     infoText: 'Sign up for ALL of these. More platforms = more money.',
-    tasks: ['User Interviews: $50-200/session', 'Prolific: $8-18/hr studies', 'Respondent: focus groups'],
+    tasks: ['User Interviews: $50-200/session', 'Prolific: $8-18/hr studies', 'CloudResearch: $5-15/hr studies', 'Respondent: focus groups'],
     links: [
       { href: 'https://userinterviews.com', label: 'User Interviews', primary: true },
       { href: 'https://prolific.com', label: 'Prolific' },
+      { href: 'https://www.cloudresearch.com/products/connect-for-participants/', label: 'CloudResearch' },
       { href: 'https://respondent.io', label: 'Respondent' },
     ],
   },

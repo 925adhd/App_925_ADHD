@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Brain, Wallet, Target, Flame } from 'lucide-react'
 import '../styles/pages/MysteryShoppingGuide.css'
 import '../styles/pages/_guides-compact.css'
 import '../styles/pages/_detail-rhythm.css'
@@ -13,15 +14,6 @@ interface Platform {
   href: string
   external?: boolean
 }
-
-const SHOP_TYPES: [string, string, string][] = [
-  ['🍔', 'Restaurants', '$15-50 + meal'],
-  ['🛒', 'Retail', '$8-25'],
-  ['🏦', 'Banks', '$15-40'],
-  ['🚗', 'Car Dealers', '$25-100+'],
-  ['🏠', 'Apartments', '$20-50'],
-  ['🎬', 'Movies', '$10 + tickets'],
-]
 
 const platforms: Platform[] = [
   {
@@ -72,17 +64,7 @@ export default function MysteryShoppingGuide() {
       <div className="hero">
         <div className="hero-icon">🕵️</div>
         <h1><span>Mystery Shopping</span></h1>
-        <p className="subtitle">Get paid to evaluate real businesses on real visits. $200 to $800/month part-time.</p>
-      </div>
-
-      <div className="shop-types">
-        {SHOP_TYPES.map(([icon, name, pay]) => (
-          <div key={name} className="shop-type">
-            <div className="shop-type-icon">{icon}</div>
-            <div className="shop-type-name">{name}</div>
-            <div className="shop-type-pay">{pay}</div>
-          </div>
-        ))}
+        <p className="subtitle">Get paid to evaluate real businesses on real visits. Restaurants, retail, banks, car dealers. $8 to $100 per shop, $200 to $800/month part-time.</p>
       </div>
 
       <div className="filter-row">
@@ -95,7 +77,7 @@ export default function MysteryShoppingGuide() {
 
         <div className="rhythm-section section-alt">
           <div className="section-header">
-            <div className="section-icon adhd">🧠</div>
+            <div className="section-icon adhd"><Brain /></div>
             <h2 className="section-title">Why it's ADHD-friendly</h2>
           </div>
           <ul className="why-adhd-list">
@@ -108,7 +90,7 @@ export default function MysteryShoppingGuide() {
 
       <div className="rhythm-section">
         <div className="section-header">
-          <div className="section-icon payout">💸</div>
+          <div className="section-icon payout"><Wallet /></div>
           <h2 className="section-title">Pick your platform</h2>
         </div>
         <div className="platform-compare">
@@ -136,7 +118,7 @@ export default function MysteryShoppingGuide() {
 
       <div className="rhythm-section section-alt">
         <div className="section-header">
-          <div className="section-icon tasks">🎯</div>
+          <div className="section-icon tasks"><Target /></div>
           <h2 className="section-title">How to win the category</h2>
         </div>
         <ul className="why-adhd-list">
@@ -150,7 +132,7 @@ export default function MysteryShoppingGuide() {
 
       <div className="rhythm-section final-take">
         <div className="section-header">
-          <div className="section-icon verdict">🔥</div>
+          <div className="section-icon verdict"><Flame /></div>
           <h2 className="section-title">Start with this one</h2>
         </div>
         <div className="final-take-content">

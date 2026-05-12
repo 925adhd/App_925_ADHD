@@ -12,7 +12,8 @@
             gap: 15px;
         }
 
-        .social-media-guide .reality-icon { font-size: 2rem; flex-shrink: 0; }
+        .social-media-guide .reality-icon { font-size: 2rem; flex-shrink: 0; color: #FBBF24; display: inline-flex; align-items: center; }
+        .social-media-guide .reality-icon svg { width: 28px; height: 28px; }
         .social-media-guide .reality-text h3 { font-family: 'Fredoka', sans-serif; color: var(--accent-4); margin-bottom: 5px; }
         .social-media-guide .reality-text p { font-size: 0.95rem; color: var(--text-dim); }
 

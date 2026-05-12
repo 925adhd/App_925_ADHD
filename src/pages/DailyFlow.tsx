@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../styles/pages/DailyFlow.css'
 
-type Energy = 'low' | 'medium' | 'high'
-
 interface Platform {
   name: string
   url: string
@@ -199,18 +197,6 @@ function getCurrentBlockIndex(minutes: number): number {
   })
 }
 
-const energyMatch: Record<Energy, TimeBlock['category'][]> = {
-  low: ['low', 'break'],
-  medium: ['medium', 'low'],
-  high: ['high', 'medium'],
-}
-
-const ENERGY_LABEL: Record<Energy, { icon: string; label: string; sub: string }> = {
-  low:    { icon: '😴', label: 'Low',    sub: 'Easy wins, passive earnings' },
-  medium: { icon: '🎯', label: 'Medium', sub: 'Focused but flexible' },
-  high:   { icon: '🚀', label: 'High',   sub: 'Deep work, big payoffs' },
-}
-
 function PlatformLinks({ platforms }: { platforms: Platform[] }) {
   if (!platforms.length) return null
   return (
@@ -243,7 +229,6 @@ function BlockCard({ block, badge }: { block: TimeBlock; badge?: string }) {
 export default function DailyFlow() {
   const [currentTime, setCurrentTime] = useState('')
   const [currentMinutes, setCurrentMinutes] = useState(0)
-  const [energy, setEnergy] = useState<Energy | null>(null)
   const [showFullDay, setShowFullDay] = useState(false)
 
   useEffect(() => {
@@ -264,44 +249,13 @@ export default function DailyFlow() {
   const currentBlockIdx = getCurrentBlockIndex(currentMinutes)
   const currentBlock = currentBlockIdx >= 0 ? schedule[currentBlockIdx] : null
 
-  // Pick the recommended block based on energy + time
-  let primary: TimeBlock | null = currentBlock
-  if (energy) {
-    const matches = energyMatch[energy]
-    if (currentBlock && matches.includes(currentBlock.category)) {
-      primary = currentBlock
-    } else {
-      primary = schedule.find(b => matches.includes(b.category)) || currentBlock
-    }
-  }
-
   return (
     <div className="daily-flow">
       <header className="page-header">
         <h1>Daily Flow</h1>
         <div className="current-time">{currentTime || '--:--'}</div>
-        <p>What's your energy? Get a task that fits.</p>
+        <p>The plan for right now, based on the time of day.</p>
       </header>
-
-      <div className="energy-picker">
-        <div className="energy-picker-label">How's your energy right now?</div>
-        <div className="energy-picker-grid">
-          {(Object.keys(ENERGY_LABEL) as Energy[]).map((level) => {
-            const meta = ENERGY_LABEL[level]
-            return (
-              <button
-                key={level}
-                className={`energy-card energy-${level}${energy === level ? ' active' : ''}`}
-                onClick={() => setEnergy(energy === level ? null : level)}
-              >
-                <span className="energy-icon">{meta.icon}</span>
-                <span className="energy-label">{meta.label}</span>
-                <span className="energy-sub">{meta.sub}</span>
-              </button>
-            )
-          })}
-        </div>
-      </div>
 
       {outsideFlowWindow ? (
         <div className="off-hours-card">
@@ -317,17 +271,10 @@ export default function DailyFlow() {
             ))}
           </div>
         </div>
-      ) : primary && (
+      ) : currentBlock && (
         <div className="right-now-section">
-          <div className="right-now-label">
-            {energy
-              ? <>Best match for <strong>{ENERGY_LABEL[energy].label.toLowerCase()}</strong> energy right now</>
-              : <>Right now</>}
-          </div>
-          <BlockCard
-            block={primary}
-            badge={primary === currentBlock ? 'Now' : undefined}
-          />
+          <div className="right-now-label">Right now</div>
+          <BlockCard block={currentBlock} badge="Now" />
         </div>
       )}
 

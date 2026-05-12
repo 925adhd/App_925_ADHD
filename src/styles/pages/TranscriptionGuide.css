@@ -16,7 +16,8 @@
             gap: 15px;
         }
 
-        .transcription-guide .warning-icon { font-size: 2rem; flex-shrink: 0; }
+        .transcription-guide .warning-icon { font-size: 2rem; flex-shrink: 0; color: #FBBF24; display: inline-flex; align-items: center; }
+        .transcription-guide .warning-icon svg { width: 28px; height: 28px; }
 
         .transcription-guide .warning-text h3 {
             font-family: 'Fredoka', sans-serif;
