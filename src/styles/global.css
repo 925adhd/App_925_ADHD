@@ -14,6 +14,16 @@
   --accent-coral: #FF8E6B;
   --accent-lemon: #FFD66B;
   --accent-lilac: #B5A7FF;
+
+  /* Legacy aliases used by guide pages built from the older vanilla App template.
+     Without these defined, gradients using -webkit-text-fill-color: transparent
+     render headings invisible. */
+  --accent-1: var(--brand);
+  --accent-2: #B5A7FF;
+  --accent-3: #FF8E6B;
+  --accent-4: #FBBF24;
+  --text-dim: rgba(255, 255, 255, 0.55);
+  --card-hover: rgba(255, 255, 255, 0.05);
 }
 
 * { box-sizing: border-box; }

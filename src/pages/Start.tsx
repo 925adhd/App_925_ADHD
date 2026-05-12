@@ -22,7 +22,7 @@ const STEPS: Step[] = [
     preview: 'Separate work from personal spam',
     time: '2-3 min',
     infoType: 'tip',
-    infoTitle: '💡 Why First?',
+    infoTitle: 'Why first?',
     infoText: "A dedicated work email keeps everything organized. You won't lose payment emails in your Netflix notifications.",
     tasks: ['Create a Gmail like firstname.lastname.work@gmail.com', 'Enable 2-factor authentication'],
     links: [{ href: 'https://accounts.google.com/signup', label: '✨ Create Gmail →', primary: true }],
@@ -33,7 +33,7 @@ const STEPS: Step[] = [
     preview: 'Get ready to receive money',
     time: '5-7 min',
     infoType: '',
-    infoTitle: '💰 Reality',
+    infoTitle: 'Reality',
     infoText: '80%+ platforms pay through PayPal. Set up a business account for better tracking.',
     tasks: ['Create PayPal Business account', 'Link your bank account'],
     links: [{ href: 'https://paypal.com/business', label: '💳 PayPal Business →', primary: true }],
@@ -44,14 +44,13 @@ const STEPS: Step[] = [
     preview: 'Sign up for the best ones',
     time: '10-15 min',
     infoType: 'tip',
-    infoTitle: '⚡ Strategy',
+    infoTitle: 'Strategy',
     infoText: 'Sign up for ALL of these. More platforms = more money.',
-    tasks: ['User Interviews - $50-200/session 🔥', 'Prolific - $8-18/hr studies', 'Respondent - Focus groups', 'UserTesting - $10/test'],
+    tasks: ['User Interviews: $50-200/session', 'Prolific: $8-18/hr studies', 'Respondent: focus groups'],
     links: [
-      { href: 'https://userinterviews.com', label: '🎤 User Interviews', primary: true },
-      { href: 'https://prolific.co', label: '📊 Prolific' },
-      { href: 'https://respondent.io', label: '💼 Respondent' },
-      { href: 'https://www.usertesting.com/signup', label: '🧪 UserTesting' },
+      { href: 'https://userinterviews.com', label: 'User Interviews', primary: true },
+      { href: 'https://prolific.com', label: 'Prolific' },
+      { href: 'https://respondent.io', label: 'Respondent' },
     ],
   },
   {
@@ -60,7 +59,7 @@ const STEPS: Step[] = [
     preview: '100% profiles = more opportunities',
     time: '5-10 min',
     infoType: 'warning',
-    infoTitle: '⚠️ Important',
+    infoTitle: 'Important',
     infoText: 'Incomplete profiles = fewer matches. Fill out EVERYTHING.',
     tasks: ['Upload a professional photo', 'Complete ALL demographic questions', 'List skills and experiences'],
   },
@@ -70,10 +69,28 @@ const STEPS: Step[] = [
     preview: 'Time to earn something!',
     time: '10-20 min',
     infoType: 'tip',
-    infoTitle: '🎮 Mission',
-    infoText: "Find ONE task and complete it. Doesn't matter if it pays $1 or $100. First completion matters most!",
+    infoTitle: 'Mission',
+    infoText: "Find ONE task and complete it. Doesn't matter if it pays $1 or $100. The first one is the hardest.",
     tasks: ['Check Prolific for studies', 'Apply to 3+ User Interviews projects', 'Complete first paid task 🎉'],
-    completeBtnText: '🏆 Complete Setup',
+  },
+  {
+    num: 6,
+    title: '🛠️ Level Up Your Setup',
+    preview: 'Browser, extensions, hardware',
+    time: '15-30 min',
+    infoType: 'tip',
+    infoTitle: 'Why bother?',
+    infoText: 'The right browser + extensions let you finish surveys 2-3× faster and unlock studies that geo-block your IP. Worth the setup time.',
+    tasks: [
+      'Install Opera (built-in VPN unlocks 2-3× more surveys)',
+      'Add Honey + Rakuten extensions for automatic cashback',
+      'Bookmark 925 ADHD on your phone home screen',
+    ],
+    links: [
+      { href: 'https://www.opera.com/', label: 'Opera Browser', primary: true },
+      { href: '/essentials', label: 'Full setup guide' },
+    ],
+    completeBtnText: '🏆 Finish Setup',
   },
 ];
 
@@ -180,7 +197,7 @@ export default function Start() {
     showToastMsg('✅', `Step ${stepNum} complete!`);
     launch({ duration: 900, particleCount: 36 });
 
-    if (stepNum < 5) {
+    if (stepNum < STEPS.length) {
       const next = stepNum + 1;
       setCurrentStep(next);
       setTimeout(() => {
@@ -191,7 +208,7 @@ export default function Start() {
 
   const finishRun = () => {
     setTimerRunning(false);
-    setCompletedSteps(prev => new Set([...prev, 5]));
+    setCompletedSteps(prev => new Set([...prev, STEPS.length]));
     setFinalTime(timerDisplay);
     setShowVictory(true);
     launch({ duration: 4000, particleCount: 220 });
@@ -203,10 +220,10 @@ export default function Start() {
 
       <div className="timer-bar">
         <div className="timer-left">
-          <span className="speed-badge">⚡ SPEED RUN</span>
+          <span className="speed-badge">SETUP</span>
           <span className="timer-display">{timerDisplay}</span>
         </div>
-        <span className="step-counter">Step <span>{currentStep}</span> of <span>5</span></span>
+        <span className="step-counter">Step <span>{currentStep}</span> of <span>{STEPS.length}</span></span>
       </div>
 
       {toast && (
@@ -218,9 +235,9 @@ export default function Start() {
 
       <div className="container">
         <div className="hero">
-          <div className="hero-badge">🎮 Interactive Setup Guide</div>
+          <div className="hero-badge">Setup Guide</div>
           <h1 className="highlight">Get Set Up to Work Online</h1>
-          <p className="hero-sub">Do one step at a time. No guesswork. No overwhelm.</p>
+          <p className="hero-sub">One step at a time. No guesswork.</p>
         </div>
 
         {!showVictory ? (
@@ -270,7 +287,7 @@ export default function Start() {
                           ))}
                         </div>
                       )}
-                      {step.num < 5 ? (
+                      {step.num < STEPS.length ? (
                         <button className="complete-btn" onClick={() => completeStep(step.num)}>
                           Complete Step {step.num} →
                         </button>
@@ -296,7 +313,7 @@ export default function Start() {
                 <div className="victory-stat-label">Time</div>
               </div>
               <div className="victory-stat">
-                <div className="victory-stat-value">5</div>
+                <div className="victory-stat-value">{STEPS.length}</div>
                 <div className="victory-stat-label">Steps</div>
               </div>
               <div className="victory-stat">

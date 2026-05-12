@@ -1,33 +1,69 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/pages/DataAnnotationGuide.css'
+import '../styles/pages/_guides-compact.css'
+import '../styles/pages/_detail-rhythm.css'
 
-function Section({ icon, title, desc, time, defaultOpen = false, children }: any) {
-  const [open, setOpen] = useState<boolean>(defaultOpen)
-  return (
-    <div className={`section${open ? ' open' : ''}`}>
-      <button className={`section-toggle${open ? ' open' : ''}`} onClick={() => setOpen(o => !o)}>
-        <span className="section-icon">{icon}</span>
-        <div className="section-info">
-          <div className="section-title">{title}</div>
-          <div className="section-desc">{desc}</div>
-        </div>
-        <span className="section-time">{time}</span>
-        <span className="section-arrow">{open ? '▲' : '▼'}</span>
-      </button>
-      {open && <div className="section-content show">{children}</div>}
-    </div>
-  )
+type Fit = 'best' | 'good' | 'ok'
+
+interface Platform {
+  name: string
+  pay: string
+  fit: Fit
+  note: string
+  href: string
+  external?: boolean
 }
 
-function CheckItem({ children }: any) {
-  const [checked, setChecked] = useState(false)
-  return (
-    <div className={`check-item${checked ? ' checked' : ''}`} onClick={() => setChecked(c => !c)}>
-      <div className="check-box">✓</div>
-      <span className="check-text">{children}</span>
-    </div>
-  )
-}
+const platforms: Platform[] = [
+  {
+    name: 'Outlier',
+    pay: '$15-35/hr',
+    fit: 'best',
+    note: 'Expert-level AI training. Higher pay if you have a specialty (coding, writing, science).',
+    href: '/gig-detail?gig=outlier',
+  },
+  {
+    name: 'DataAnnotation.tech',
+    pay: '$15-40/hr',
+    fit: 'best',
+    note: 'Coding and writing tasks. Best-paying in the category but the onboarding test is the gatekeeper.',
+    href: 'https://app.dataannotation.tech/users/sign_up',
+    external: true,
+  },
+  {
+    name: 'Appen',
+    pay: '$3-14/hr',
+    fit: 'ok',
+    note: 'Big company, beginner-friendly tasks. Pay is low but work is more consistent.',
+    href: '/gig-detail?gig=appen',
+  },
+  {
+    name: 'Clickworker',
+    pay: '$5-12/hr',
+    fit: 'ok',
+    note: 'Easy starter tasks: short writing, labeling. Useful while you wait on better platforms.',
+    href: '/gig-detail?gig=clickworker',
+  },
+  {
+    name: 'Lionbridge',
+    pay: '$3-20/hr',
+    fit: 'ok',
+    note: 'Language + AI tasks. Good if you speak a second language.',
+    href: '/gig-detail?gig=lionbridge',
+  },
+]
+
+const idealFor = [
+  'You like pattern-recognition or spot-the-difference work',
+  'You have an expertise (coding, writing, science, languages)',
+  'You can sit with a 30 to 60 minute focus block',
+]
+
+const whyAdhd = [
+  'Variety: different task types prevent survey-style boredom',
+  'Hyperfocus is rewarded; top platforms pay $15 to $40/hr',
+  'Flexible: log on when your brain is on, log off when it isn\'t',
+]
 
 export default function DataAnnotationGuide() {
   return (
@@ -35,76 +71,93 @@ export default function DataAnnotationGuide() {
       <div className="hero">
         <div className="hero-icon">🤖</div>
         <h1><span>Data Annotation</span></h1>
-        <p className="subtitle">Teach AI to be smarter. Get paid for your brain.</p>
+        <p className="subtitle">Train AI by labeling, rating, and correcting outputs. The best-paid entry-level remote work right now.</p>
       </div>
 
-      <div className="quick-stats">
-        <div className="stat-card"><div className="stat-value">$15-40</div><div className="stat-label">per hour (top platforms)</div></div>
-        <div className="stat-card"><div className="stat-value">⭐⭐⭐⭐</div><div className="stat-label">ADHD friendly</div></div>
-        <div className="stat-card"><div className="stat-value">Flexible</div><div className="stat-label">work when you want</div></div>
+      {/* Filter row: persona + ADHD reasons */}
+      <div className="filter-row">
+        <div className="best-for-block">
+          <div className="best-for-title">Best for you if…</div>
+          {idealFor.map((item, i) => (
+            <div key={i} className="best-for-row">{item}</div>
+          ))}
+        </div>
+
+        <div className="rhythm-section section-alt">
+          <div className="section-header">
+            <div className="section-icon adhd">🧠</div>
+            <h2 className="section-title">Why it's ADHD-friendly</h2>
+          </div>
+          <ul className="why-adhd-list">
+            {whyAdhd.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      <div className="nav-pills">
-        <a href="#whatisit" className="nav-pill">🤔 What is it?</a>
-        <a href="#platforms" className="nav-pill">📱 Platforms</a>
-        <a href="#adhd" className="nav-pill">🧠 ADHD Tips</a>
-        <a href="#start" className="nav-pill active">🚀 Start Now</a>
+      {/* Platform compare: the unique funnel */}
+      <div className="rhythm-section">
+        <div className="section-header">
+          <div className="section-icon payout">💸</div>
+          <h2 className="section-title">Pick your platform</h2>
+        </div>
+        <div className="platform-compare">
+          {platforms.map(p => {
+            const isInternal = !p.external
+            const inner = (
+              <>
+                <div className="compare-row-head">
+                  <span className="compare-name">{p.name}</span>
+                  <span className="compare-pay">{p.pay}</span>
+                </div>
+                <span className={`compare-fit ${p.fit}`}>
+                  {p.fit === 'best' ? 'Top pick' : p.fit === 'good' ? 'Good' : 'OK'}
+                </span>
+                <div className="compare-note">{p.note}</div>
+              </>
+            )
+            return isInternal ? (
+              <Link key={p.name} to={p.href} className="compare-row">{inner}</Link>
+            ) : (
+              <a key={p.name} href={p.href} target="_blank" rel="noreferrer" className="compare-row">{inner}</a>
+            )
+          })}
+        </div>
       </div>
 
-      <Section icon="🤔" title="What is Data Annotation?" desc="The quick explanation + why ADHD brains can rock this" time="2 min" id="whatisit">
-        <div className="box blue"><h4>🎯 The One-Sentence Version</h4><p>You teach AI systems what things are by labeling data, rating responses, or correcting mistakes.</p></div>
-        <div className="box green"><h4>✅ Examples of What You'd Do</h4><ul><li><strong>Label images:</strong> "This is a cat" / "This is a dog"</li><li><strong>Rate AI responses:</strong> "This answer is helpful" / "This is incorrect"</li><li><strong>Compare outputs:</strong> "Response A is better than Response B"</li><li><strong>Write prompts:</strong> Create questions to test AI systems</li><li><strong>Fix AI mistakes:</strong> Correct grammar, facts, or tone</li></ul></div>
-        <div className="box pink"><h4>💜 Why ADHD Brains Can Excel</h4><ul><li><strong>Pattern recognition:</strong> You're literally built for spotting inconsistencies</li><li><strong>Variety:</strong> Different task types prevent boredom</li><li><strong>Hyperfocus bonus:</strong> Complex tasks can trigger productive flow states</li><li><strong>Flexibility:</strong> Work when your brain is ON, stop when it's not</li></ul></div>
-        <div className="box yellow"><h4>⚠️ ADHD Watch-Outs</h4><ul><li>Some tasks ARE repetitive (skip those when you can)</li><li>Guidelines can be complex and change often</li><li>Quality requirements are strict - careless = banned</li><li>Work availability is inconsistent</li></ul></div>
-      </Section>
-
-      <Section icon="📱" title="Best Platforms (Ranked)" desc="Where to actually make decent money" time="4 min" id="platforms">
-        <div className="box blue"><h4>💡 Strategy</h4><p>Sign up for the top 3. Don't spread yourself thin. Focus on one until you're good, then add more.</p></div>
-        <div className="platforms">
-          <div className="platform">
-            <div className="platform-header"><span className="platform-name">🥇 DataAnnotation.tech</span><span className="platform-badge hot">🔥 HOT</span></div>
-            <div className="platform-pay">💰 $15-40/hour</div>
-            <p className="platform-desc">AI training tasks, especially coding and writing. Currently the best-paying with consistent work.</p>
-            <a href="https://app.dataannotation.tech/users/sign_up" className="platform-link" target="_blank" rel="noreferrer">Sign up →</a>
-          </div>
-          <div className="platform">
-            <div className="platform-header"><span className="platform-name">🥈 Outlier</span><span className="platform-badge">GROWING</span></div>
-            <div className="platform-pay">💰 $15-40/hour</div>
-            <p className="platform-desc">Expert-level AI training. Best for people with specific knowledge areas.</p>
-            <a href="https://app.outlier.ai/en/expert/signup" className="platform-link" target="_blank" rel="noreferrer">Sign up →</a>
-          </div>
-          <div className="platform">
-            <div className="platform-header"><span className="platform-name">🥉 Remotasks</span><span className="platform-badge">ENTRY</span></div>
-            <div className="platform-pay">💰 $5-20/hour</div>
-            <p className="platform-desc">Wide variety of task types. Good for beginners to learn the ropes.</p>
-            <a href="https://www.remotasks.com/en/signup" className="platform-link" target="_blank" rel="noreferrer">Sign up →</a>
-          </div>
+      {/* Category-specific strategy */}
+      <div className="rhythm-section section-alt">
+        <div className="section-header">
+          <div className="section-icon tasks">🎯</div>
+          <h2 className="section-title">How to win the category</h2>
         </div>
-        <div className="box yellow"><h4>⚠️ Platforms to Avoid (for ADHD)</h4><ul><li><strong>Amazon MTurk:</strong> Low pay, mind-numbing repetition</li><li><strong>Clickworker:</strong> Boring tasks, inconsistent work</li></ul></div>
-      </Section>
+        <ul className="why-adhd-list">
+          <li><strong>Sign up for 2-3 platforms</strong> so one slow week doesn't kill your income.</li>
+          <li><strong>Treat the onboarding test like the real job.</strong> Most people quit here; passing it puts you ahead.</li>
+          <li><strong>Never work in zombie mode.</strong> One bad batch can ban you. Skip the task instead.</li>
+        </ul>
+      </div>
 
-      <Section icon="🧠" title="ADHD Success Strategies" desc="Actual tips that work, not generic advice" time="3 min" id="adhd">
-        <div className="box green"><h4>⚡ The Energy Matching System</h4><ul><li><strong>Hyperfocus mode:</strong> Tackle complex, high-paying tasks</li><li><strong>Medium energy:</strong> Standard labeling, comparisons</li><li><strong>Low energy:</strong> Simple yes/no tasks or skip entirely</li></ul></div>
-        <div className="box pink"><h4>🛡️ Protect Your Account</h4><p>These platforms WILL ban you for low quality.</p><ul><li>Read guidelines carefully</li><li>When in doubt, skip the task</li><li>Never work in "zombie mode"</li></ul></div>
-      </Section>
-
-      <Section icon="🚀" title="Start Right Now" desc="Your action checklist" time="10 min" defaultOpen>
-        <div className="box green"><h4>🎯 The Quick Start</h4><p>Don't overthink this. Sign up, do the training, complete one task. That's it.</p></div>
-        <div className="checklist">
-          <CheckItem><strong>Sign up for DataAnnotation.tech</strong> - Best one, start here</CheckItem>
-          <CheckItem><strong>Complete onboarding quiz</strong> - They test you first</CheckItem>
-          <CheckItem><strong>Read guidelines carefully</strong> - Yes, really</CheckItem>
-          <CheckItem><strong>Complete your first task</strong> - Any task counts!</CheckItem>
-          <CheckItem><strong>Sign up for Outlier as backup</strong> - More options = more money</CheckItem>
+      {/* Final Take = a pick, not a recap */}
+      <div className="rhythm-section final-take">
+        <div className="section-header">
+          <div className="section-icon verdict">🔥</div>
+          <h2 className="section-title">Start with this one</h2>
         </div>
-        <div style={{ textAlign: 'center', margin: '30px 0' }}>
-          <a href="https://app.dataannotation.tech/users/sign_up" className="cta" target="_blank" rel="noreferrer">🚀 Sign Up for DataAnnotation.tech</a>
+        <div className="final-take-content">
+          <p><strong>Outlier</strong> if you have any tech, science, or writing expertise. Highest pay-per-hour for people with a specialty.</p>
+          <p><strong>DataAnnotation.tech</strong> if you don't have a clear specialty but you can write and reason well. Top rates, but the onboarding test is hard.</p>
+          <p>Both pay weekly via PayPal. Apply to both. Whichever onboards you first is where you start.</p>
         </div>
-      </Section>
+      </div>
 
-      <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-dim)' }}>
-        <p>Remember: This is real work that takes effort.</p>
-        <p>But if you can focus for 30-60 minute bursts, you can absolutely do this. 💪</p>
+      {/* Sticky CTA */}
+      <div className="cta-section">
+        <p className="final-cta-headline">Ready to apply?</p>
+        <Link to="/gig-detail?gig=outlier" className="cta-btn">
+          Open Outlier deep dive →
+        </Link>
       </div>
     </div>
   )

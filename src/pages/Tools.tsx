@@ -11,7 +11,6 @@ const MONEY_TOOLS = [
   { to: '/gig-tracker',     img: `${BASE}BdMduJSDImXq22qq3v3m.png`, title: 'Earnings Tracker',     desc: 'Monitor income & progress' },
   { to: '/freelance-calc',  img: `${BASE}doTXb9E6rkYYbYQZbgkq.png`, title: 'Freelance Calculator', desc: 'Estimate rates & plan goals' },
   { to: '/receipt-stacker', img: `${BASE}uakfmOX6h8gm1CT9YMpc.png`, title: 'Receipt Stacking',     desc: 'Multiply cashback rewards' },
-  { to: '/essentials',      img: `${BASE}5Xaz4x2wv7VWpHIGXX9Q.png`, title: 'Gig Essentials',       desc: 'Core tools for freelancing' },
 ]
 
 const RESET_TOOLS = [
@@ -28,7 +27,6 @@ export default function Tools() {
         {/* ── Focus Tools ── */}
         <section className="tools-section">
           <div className="tools-section-label">Focus Tools</div>
-          <p className="tools-section-hint">🎯 Plan your day. Block your time. Match work to energy.</p>
           <div className="tools-grid">
             {FOCUS_TOOLS.map(({ to, img, title, desc }) => (
               <Link key={to} to={to} className="tool-card">
@@ -45,7 +43,6 @@ export default function Tools() {
         {/* ── Money Tools ── */}
         <section className="tools-section">
           <div className="tools-section-label">Money Tools</div>
-          <p className="tools-section-hint">💵 Track what you earn. Price your time. Stack the rewards.</p>
           <div className="tools-grid">
             {MONEY_TOOLS.map(({ to, img, title, desc }) => (
               <Link key={to} to={to} className="tool-card">

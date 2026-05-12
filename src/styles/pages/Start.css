@@ -1,392 +1,437 @@
-        .start-page .bg-gradient {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: 
-                radial-gradient(ellipse at 20% 20%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
-            z-index: 0;
-        }
+/* =========================================================
+   START GUIDE — speed-run setup
+   Mobile-first, tight, brand-color aware
+   ========================================================= */
 
-        .start-page .timer-bar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            height: 52px;
-            background: rgba(10, 10, 18, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 18px;
-            border-bottom: 2px solid var(--accent-1);
-        }
+.start-page {
+  --accent-1: var(--brand, #56C3AE);
+  --accent-2: #B5A7FF;
+  --accent-4: #FBBF24;
+  --bg: #0F0F0F;
+  --card-hover: rgba(255, 255, 255, 0.05);
+  --text-dim: rgba(255, 255, 255, 0.55);
 
-        .start-page .timer-left { display: flex; align-items: center; gap: 15px; }
-
-        .start-page .speed-badge {
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            color: var(--bg);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-        }
-
-        .start-page .timer-display {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--accent-4);
-        }
-
-        .start-page .step-counter {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 1rem;
-            color: var(--text-dim);
-        }
-
-        .start-page .step-counter span { color: var(--accent-1); font-weight: 700; }
-
-        .start-page {
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 60px 16px 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .start-page .hero {
-            text-align: center;
-            padding: 20px 0 24px;
-        }
-
-        .start-page .hero-badge {
-            display: inline-block;
-            background: var(--card);
-            border: 2px solid var(--accent-2);
-            border-radius: 30px;
-            padding: 8px 20px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            color: var(--accent-2);
-        }
-
-        .start-page .highlight, .start-page h1 .highlight {
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: inline-block;
-        }
-
-        .start-page .hero-sub { color: var(--text-dim); font-size: 1.15rem; }
-
-        .start-page .step {
-            margin: 25px 0;
-            opacity: 0.4;
-            transition: all 0.5s ease;
-        }
-
-        .start-page .step.active { opacity: 1; }
-        .start-page .step.completed { opacity: 0.6; }
-
-        .start-page .step-card {
-            background: var(--card);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .start-page .step.active .step-card {
-            border-color: var(--accent-1);
-            box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-        }
-
-        .start-page .step.completed .step-card { border-color: var(--accent-1); }
-
-        .start-page .step-header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 25px;
-            cursor: pointer;
-        }
-
-        .start-page .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--card-hover);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-            border: 3px solid var(--text-dim);
-        }
-
-        .start-page .step.active .step-number {
-            border-color: var(--accent-1);
-            background: rgba(0, 255, 136, 0.2);
-            color: var(--accent-1);
-        }
-
-        .start-page .step.completed .step-number {
-            background: var(--accent-1);
-            border-color: var(--accent-1);
-            color: var(--bg);
-        }
-
-        .start-page .step-info { flex: 1; }
-
-        .start-page .step-title {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .start-page .step-preview { color: var(--text-dim); font-size: 0.9rem; }
-
-        .start-page .step-time-badge {
-            background: var(--accent-2)22;
-            color: var(--accent-2);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .start-page .step-content {
-            padding: 0 25px 25px;
-            display: none;
-        }
-
-        .start-page .step.active .step-content {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .start-page .info-box {
-            background: rgba(255,255,255,0.03);
-            border-radius: var(--radius-md);
-            padding: 18px;
-            margin: 15px 0;
-            border-left: 4px solid var(--accent-2);
-        }
-
-        .start-page .info-box.tip { border-left-color: var(--accent-1); }
-        .start-page .info-box.warning { border-left-color: var(--accent-4); }
-
-        .start-page .info-box h4 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        .start-page .task-list { margin: 15px 0; }
-
-        .start-page .task {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px 15px;
-            background: var(--card-hover);
-            border-radius: 10px;
-            margin: 8px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-@media (hover: hover) {
-          .start-page .task:hover { background: rgba(0, 255, 136, 0.05); }
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 56px 12px 16px;
+  position: relative;
+  z-index: 1;
 }
 
-        .start-page .task.done {
-            border-color: var(--accent-1);
-            background: rgba(0, 255, 136, 0.08);
-        }
-
-        .start-page .task-check {
-            width: 24px;
-            height: 24px;
-            border: 2px solid var(--text-dim);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .start-page .task.done .task-check {
-            background: var(--accent-1);
-            border-color: var(--accent-1);
-            color: var(--bg);
-        }
-
-        .start-page .task-text { flex: 1; font-size: 0.95rem; }
-        .start-page .task.done .task-text { text-decoration: line-through; opacity: 0.7; }
-
-        .start-page .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0;
-        }
-
-        .start-page .quick-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--card-hover);
-            padding: 10px 18px;
-            border-radius: 25px;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-@media (hover: hover) {
-          .start-page .quick-link:hover {
-              border-color: var(--accent-2);
-              transform: translateY(-2px);
-          }
+.start-page .bg-gradient {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(86, 195, 174, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(181, 167, 255, 0.06) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
 }
 
-        .start-page .quick-link.primary {
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            color: var(--bg);
-        }
-
-        .start-page .complete-btn {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: var(--radius-md);
-            font-family: 'Fredoka', sans-serif;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            margin-top: 20px;
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-            color: var(--bg);
-            transition: all 0.3s ease;
-        }
-
-@media (hover: hover) {
-          .start-page .complete-btn:hover {
-              transform: scale(1.02);
-              box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-          }
+/* Timer bar (fixed at top under the global header) */
+.start-page .timer-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: rgba(10, 10, 18, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(86, 195, 174, 0.3);
 }
 
-        .start-page .victory {
-            display: none;
-            text-align: center;
-            padding: 40px 16px;
-        }
+.start-page .timer-left { display: flex; align-items: center; gap: 10px; }
 
-        .start-page .victory.show { display: block; }
+.start-page .speed-badge {
+  background: var(--brand);
+  color: #0B0D12;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
 
-        .start-page .victory-icon {
-            font-size: 5rem;
-            margin-bottom: 20px;
-            animation: bounce 1s infinite;
-        }
+.start-page .timer-display {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+.start-page .step-counter {
+  font-size: 12px;
+  color: var(--text-dim);
+}
 
-        .start-page .victory h2 {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 2.5rem;
-            background: linear-gradient(135deg, var(--accent-1), var(--accent-4));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-        }
+.start-page .step-counter span { color: var(--brand); font-weight: 700; }
 
-        .start-page .victory-stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
-        }
+/* Hero — tight, NO wasted space */
+.start-page .hero {
+  text-align: center;
+  padding: 8px 0 12px;
+}
 
-        .start-page .victory-stat { text-align: center; }
+.start-page .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(86, 195, 174, 0.08);
+  border: 1px solid rgba(86, 195, 174, 0.32);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 10px;
+}
 
-        .start-page .victory-stat-value {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-1);
-        }
+/* Hero title — solid brand mint, no gradient (DESIGN.md §2) */
+.start-page h1,
+.start-page .highlight {
+  font-size: clamp(22px, 6vw, 28px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  color: var(--text);
+}
 
-        .start-page .victory-stat-label { font-size: 0.9rem; color: var(--text-dim); }
+.start-page .hero-sub {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.4;
+}
 
-        .start-page .toast {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            /* start slightly below center and invisible */
-            transform: translate(-50%, 40px);
-            opacity: 0;
-            background: var(--card);
-            border: 2px solid var(--accent-1);
-            padding: 12px 20px;
-            border-radius: 28px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1100; /* ensure above header/nav */
-            transition: transform 0.35s ease, opacity 0.35s ease;
-            will-change: transform, opacity;
-        }
+/* Steps */
+.start-page .step {
+  margin: 10px 0;
+  opacity: 0.5;
+  transition: opacity 0.35s ease;
+}
 
-        .start-page .toast.show {
-            transform: translate(-50%, -50%);
-            opacity: 1;
-        }
+.start-page .step.active { opacity: 1; }
+.start-page .step.completed { opacity: 0.7; }
 
-        /* Confetti canvas (hidden until triggered) */
-        .start-page #confettiCanvas {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1200;
-            display: none;
-        }
+.start-page .step-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
 
-        @media (max-width: 600px) {
-            .start-page .timer-bar { padding: 0 12px; height: 48px; }
-            .start-page .step-header { padding: 14px; gap: 12px; }
-            .start-page .step-number { width: 38px; height: 38px; font-size: 1rem; }
-            .start-page .victory-stats { flex-direction: column; gap: 12px; }
-                /* Mobile task layout tweaks */
-                .start-page { padding: 50px 10px 20px; }
-                .start-page .task { padding: 8px 10px; gap: 8px; min-width: 0; }
-                .start-page .task-check { width: 18px; height: 18px; border-width: 2px; }
-                .start-page .task-text { font-size: 0.9rem; word-break: normal; overflow-wrap: break-word; white-space: normal; }
-                .start-page .step-header { padding: 12px; }
-                .start-page .victory { padding: 30px 12px; }
-        }
+.start-page .step.active .step-card {
+  border-color: var(--brand);
+}
+
+.start-page .step.completed .step-card { border-color: var(--brand); }
+
+.start-page .step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.start-page .step-number {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid var(--text-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.start-page .step.active .step-number {
+  border-color: var(--brand);
+  background: rgba(86, 195, 174, 0.18);
+  color: var(--brand);
+}
+
+.start-page .step.completed .step-number {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #0B0D12;
+}
+
+.start-page .step-info { flex: 1; min-width: 0; }
+
+.start-page .step-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 1px;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.start-page .step-preview {
+  color: var(--text-dim);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.start-page .step-time-badge {
+  background: rgba(181, 167, 255, 0.15);
+  color: #B5A7FF;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Step content (only when active) */
+.start-page .step-content {
+  padding: 0 14px 14px;
+  display: none;
+}
+
+.start-page .step.active .step-content {
+  display: block;
+  animation: stepSlideDown 0.25s ease;
+}
+
+@keyframes stepSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.start-page .info-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #B5A7FF;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 10px 0;
+}
+
+.start-page .info-box.tip { border-left-color: var(--brand); }
+.start-page .info-box.warning { border-left-color: var(--accent-4); }
+
+.start-page .info-box h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+
+.start-page .info-box p {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Tasks */
+.start-page .task-list { margin: 10px 0; display: flex; flex-direction: column; gap: 6px; }
+
+.start-page .task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+@media (hover: hover) {
+  .start-page .task:hover { background: rgba(86, 195, 174, 0.06); }
+}
+
+.start-page .task.done {
+  border-color: rgba(86, 195, 174, 0.4);
+  background: rgba(86, 195, 174, 0.08);
+}
+
+.start-page .task-check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--text-dim);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 11px;
+  color: transparent;
+}
+
+.start-page .task.done .task-check {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #0B0D12;
+}
+
+.start-page .task-text {
+  flex: 1;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.start-page .task.done .task-text {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+/* Quick links */
+.start-page .quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.start-page .quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+@media (hover: hover) {
+  .start-page .quick-link:hover {
+    border-color: rgba(181, 167, 255, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+.start-page .quick-link.primary {
+  background: var(--brand);
+  color: #0B0D12;
+}
+
+/* Complete button */
+.start-page .complete-btn {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  background: var(--brand);
+  color: #0B0D12;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+@media (hover: hover) {
+  .start-page .complete-btn:hover {
+    background: #56bfaa;
+  }
+}
+
+/* Victory */
+.start-page .victory {
+  display: none;
+  text-align: center;
+  padding: 24px 12px;
+}
+
+.start-page .victory.show { display: block; }
+
+.start-page .victory-icon {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.start-page .victory h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--brand);
+}
+
+.start-page .victory-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 18px 0;
+}
+
+.start-page .victory-stat { text-align: center; }
+
+.start-page .victory-stat-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.start-page .victory-stat-label { font-size: 11px; color: var(--text-dim); }
+
+/* Toast */
+.start-page .toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 40px);
+  opacity: 0;
+  background: var(--card);
+  border: 1px solid var(--brand);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1100;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.start-page .toast.show {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* Confetti canvas */
+.start-page #confettiCanvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1200;
+  display: none;
+}
+
+/* Tablet / desktop: slightly more breathing room */
+@media (min-width: 600px) {
+  .start-page { padding: 64px 20px 28px; }
+  .start-page .hero { padding: 14px 0 18px; }
+  .start-page .hero h1, .start-page .highlight { font-size: 32px; }
+  .start-page .hero-sub { font-size: 14px; }
+  .start-page .step-header { padding: 16px 18px; }
+  .start-page .step-number { width: 42px; height: 42px; font-size: 16px; }
+  .start-page .step-title { font-size: 15px; }
+  .start-page .step-preview { font-size: 12px; }
+  .start-page .step-content { padding: 0 18px 18px; }
+  .start-page .task-text { font-size: 13px; }
+  .start-page .complete-btn { font-size: 15px; padding: 13px; }
+}

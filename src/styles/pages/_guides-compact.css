@@ -1,0 +1,188 @@
+/* =========================================================
+   GUIDE PAGES — compact mobile overrides
+   Applies to: SurveysGuide, TranscriptionGuide, DataAnnotationGuide,
+               MysteryShoppingGuide, SocialMediaGuide
+   Imported at the END of each guide CSS so these rules win.
+   ========================================================= */
+
+.surveys-guide,
+.transcription-guide,
+.data-annotation-guide,
+.mystery-shopping-guide,
+.social-media-guide {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 14px 12px 20px;
+}
+
+/* Hero — kill the giant top padding (~40px → 14px) */
+.surveys-guide .hero,
+.transcription-guide .hero,
+.data-annotation-guide .hero,
+.mystery-shopping-guide .hero,
+.social-media-guide .hero {
+  text-align: center;
+  padding: 14px 0 18px;
+  margin: 0;
+}
+
+/* Hero icon — was 4rem, now scale-down */
+.surveys-guide .hero-icon,
+.surveys-guide .hero-emoji,
+.transcription-guide .hero-icon,
+.transcription-guide .hero-emoji,
+.data-annotation-guide .hero-icon,
+.mystery-shopping-guide .hero-icon,
+.social-media-guide .hero-icon {
+  font-size: clamp(40px, 9vw, 56px);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+/* Hero h1 — make sure it's visible and tight */
+.surveys-guide h1,
+.transcription-guide h1,
+.data-annotation-guide h1,
+.mystery-shopping-guide h1,
+.social-media-guide h1 {
+  font-size: clamp(20px, 5.6vw, 28px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+/* Subtitle */
+.surveys-guide .subtitle,
+.transcription-guide .subtitle,
+.data-annotation-guide .subtitle,
+.mystery-shopping-guide .subtitle,
+.social-media-guide .subtitle {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--text-dim, rgba(255,255,255,0.55));
+}
+
+/* Common card / section spacing — was 30px or 25px margins */
+.surveys-guide .card,
+.surveys-guide .section,
+.transcription-guide .card,
+.transcription-guide .section,
+.data-annotation-guide .card,
+.data-annotation-guide .section,
+.mystery-shopping-guide .card,
+.mystery-shopping-guide .section,
+.social-media-guide .card,
+.social-media-guide .section {
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+}
+
+/* Section headings inside cards */
+.surveys-guide .card h2,
+.surveys-guide .card h3,
+.transcription-guide .card h2,
+.transcription-guide .card h3,
+.data-annotation-guide .card h2,
+.data-annotation-guide .card h3,
+.mystery-shopping-guide .card h2,
+.mystery-shopping-guide .card h3,
+.social-media-guide .card h2,
+.social-media-guide .card h3 {
+  font-size: 15px;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.surveys-guide .card p,
+.transcription-guide .card p,
+.data-annotation-guide .card p,
+.mystery-shopping-guide .card p,
+.social-media-guide .card p {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Checklist items */
+.surveys-guide .checklist,
+.transcription-guide .checklist,
+.data-annotation-guide .checklist,
+.mystery-shopping-guide .checklist,
+.social-media-guide .checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.surveys-guide .checklist > *,
+.transcription-guide .checklist > *,
+.data-annotation-guide .checklist > *,
+.mystery-shopping-guide .checklist > *,
+.social-media-guide .checklist > * {
+  padding: 8px 10px;
+}
+
+.surveys-guide .check-text,
+.transcription-guide .check-text,
+.data-annotation-guide .check-text,
+.mystery-shopping-guide .check-text,
+.social-media-guide .check-text {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.surveys-guide .check-box,
+.transcription-guide .check-box,
+.data-annotation-guide .check-box,
+.mystery-shopping-guide .check-box,
+.social-media-guide .check-box {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* CTAs / action buttons */
+.surveys-guide .cta,
+.surveys-guide .action-btn,
+.transcription-guide .cta,
+.data-annotation-guide .cta,
+.mystery-shopping-guide .cta,
+.social-media-guide .cta {
+  font-size: 14px;
+  padding: 10px 16px;
+}
+
+/* Tablet+ — restore a bit more breathing room */
+@media (min-width: 600px) {
+  .surveys-guide,
+  .transcription-guide,
+  .data-annotation-guide,
+  .mystery-shopping-guide,
+  .social-media-guide {
+    padding: 22px 20px 28px;
+  }
+  .surveys-guide .hero,
+  .transcription-guide .hero,
+  .data-annotation-guide .hero,
+  .mystery-shopping-guide .hero,
+  .social-media-guide .hero {
+    padding: 20px 0 24px;
+  }
+  .surveys-guide h1,
+  .transcription-guide h1,
+  .data-annotation-guide h1,
+  .mystery-shopping-guide h1,
+  .social-media-guide h1 {
+    font-size: 30px;
+  }
+  .surveys-guide .subtitle,
+  .transcription-guide .subtitle,
+  .data-annotation-guide .subtitle,
+  .mystery-shopping-guide .subtitle,
+  .social-media-guide .subtitle {
+    font-size: 14px;
+  }
+}

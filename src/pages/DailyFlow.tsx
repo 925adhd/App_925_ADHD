@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/pages/DailyFlow.css'
 
 type Energy = 'low' | 'medium' | 'high'
@@ -152,7 +152,7 @@ const schedule: TimeBlock[] = [
   },
 ]
 
-const anytime: { title: string; tasks: { name: string; desc: string; platforms: Platform[] }[] } = {
+const anytime = {
   title: 'Anytime / Off-hours',
   tasks: [
     {
@@ -170,7 +170,6 @@ const anytime: { title: string; tasks: { name: string; desc: string; platforms: 
       platforms: [
         { name: 'Mistplay', url: 'https://www.mistplay.com/', fave: true },
         { name: 'JustPlay', url: 'https://justplay.com/', fave: true },
-        { name: 'Mode Earn', url: 'https://play.google.com/store/apps/details?id=us.current.android', fave: true },
       ],
     },
     {
@@ -178,7 +177,6 @@ const anytime: { title: string; tasks: { name: string; desc: string; platforms: 
       desc: 'Install once, earns while you do other things.',
       platforms: [
         { name: 'Honeygain', url: 'https://honeygain.com/', fave: true },
-        { name: 'Mode Earn', url: 'https://play.google.com/store/apps/details?id=us.current.android', fave: true },
       ],
     },
   ],
@@ -194,92 +192,87 @@ function parseTime(timeStr: string): number {
   return hours * 60 + minutes
 }
 
-function getStreak(): number {
-  try { return parseInt(localStorage.getItem('925_streak') || '0', 10) } catch { return 0 }
+function getCurrentBlockIndex(minutes: number): number {
+  return schedule.findIndex(block => {
+    const [start, end] = block.time.split(' - ')
+    return minutes >= parseTime(start) && minutes < parseTime(end)
+  })
 }
 
-function markActiveToday(): number {
-  try {
-    const today = new Date().toISOString().slice(0, 10)
-    const last = localStorage.getItem('925_streak_date') || ''
-    if (last === today) return getStreak()
-    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10)
-    const newStreak = last === yesterday ? getStreak() + 1 : 1
-    localStorage.setItem('925_streak', String(newStreak))
-    localStorage.setItem('925_streak_date', today)
-    return newStreak
-  } catch { return 0 }
+const energyMatch: Record<Energy, TimeBlock['category'][]> = {
+  low: ['low', 'break'],
+  medium: ['medium', 'low'],
+  high: ['high', 'medium'],
+}
+
+const ENERGY_LABEL: Record<Energy, { icon: string; label: string; sub: string }> = {
+  low:    { icon: '😴', label: 'Low',    sub: 'Easy wins, passive earnings' },
+  medium: { icon: '🎯', label: 'Medium', sub: 'Focused but flexible' },
+  high:   { icon: '🚀', label: 'High',   sub: 'Deep work, big payoffs' },
+}
+
+function PlatformLinks({ platforms }: { platforms: Platform[] }) {
+  if (!platforms.length) return null
+  return (
+    <div className="platforms">
+      {platforms.map((p, i) => (
+        <a key={i} href={p.url} target="_blank" rel="noreferrer" className={`platform-link${p.fave ? ' fave' : ''}`}>
+          {p.fave && <span className="fave-mark">★</span>}{p.name}
+        </a>
+      ))}
+    </div>
+  )
+}
+
+function BlockCard({ block, badge }: { block: TimeBlock; badge?: string }) {
+  return (
+    <div className={`flow-block cat-${block.category}`}>
+      <div className="flow-block-header">
+        <span className="flow-block-time">{block.time}</span>
+        {badge && <span className="flow-block-badge">{badge}</span>}
+        <span className="flow-block-earnings">{block.earnings}</span>
+      </div>
+      <div className="flow-block-title">{block.title}</div>
+      <p className="flow-block-desc">{block.desc}</p>
+      <PlatformLinks platforms={block.platforms} />
+      <div className="flow-block-tip">{block.tip}</div>
+    </div>
+  )
 }
 
 export default function DailyFlow() {
   const [currentTime, setCurrentTime] = useState('')
   const [currentMinutes, setCurrentMinutes] = useState(0)
-  const [showOffHours, setShowOffHours] = useState(false)
   const [energy, setEnergy] = useState<Energy | null>(null)
-  const [blockState, setBlockState] = useState<Record<number, boolean>>(() => {
-    try {
-      const raw = localStorage.getItem('925_dailyflow_blocks')
-      const stored = raw ? JSON.parse(raw) : { date: '', blocks: {} }
-      const today = new Date().toISOString().slice(0, 10)
-      return stored.date === today ? stored.blocks : {}
-    } catch { return {} }
-  })
-  const [streak, setStreak] = useState(getStreak)
-  const currentBlockRef = useRef<HTMLDivElement | null>(null)
-
-  const updateTime = () => {
-    const now = new Date()
-    const mins = now.getHours() * 60 + now.getMinutes()
-    setCurrentMinutes(mins)
-    setCurrentTime(now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }))
-    const start = parseTime('7:00 AM')
-    const end = parseTime('9:30 PM')
-    setShowOffHours(mins < start || mins > end)
-  }
+  const [showFullDay, setShowFullDay] = useState(false)
 
   useEffect(() => {
-    updateTime()
-    const id = setInterval(updateTime, 60000)
+    const update = () => {
+      const now = new Date()
+      setCurrentMinutes(now.getHours() * 60 + now.getMinutes())
+      setCurrentTime(now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }))
+    }
+    update()
+    const id = setInterval(update, 60000)
     return () => clearInterval(id)
   }, [])
 
-  useEffect(() => {
-    if (currentBlockRef.current) {
-      setTimeout(() => {
-        currentBlockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      }, 300)
+  const flowStart = parseTime('7:00 AM')
+  const flowEnd = parseTime('9:30 PM')
+  const outsideFlowWindow = currentMinutes < flowStart || currentMinutes > flowEnd
+
+  const currentBlockIdx = getCurrentBlockIndex(currentMinutes)
+  const currentBlock = currentBlockIdx >= 0 ? schedule[currentBlockIdx] : null
+
+  // Pick the recommended block based on energy + time
+  let primary: TimeBlock | null = currentBlock
+  if (energy) {
+    const matches = energyMatch[energy]
+    if (currentBlock && matches.includes(currentBlock.category)) {
+      primary = currentBlock
+    } else {
+      primary = schedule.find(b => matches.includes(b.category)) || currentBlock
     }
-  }, [currentMinutes])
-
-  const getStatus = (block: TimeBlock) => {
-    const [start, end] = block.time.split(' - ')
-    const startMin = parseTime(start)
-    const endMin = parseTime(end)
-    if (currentMinutes >= startMin && currentMinutes < endMin) return 'current'
-    if (currentMinutes < startMin) return 'future'
-    return 'past'
-  }
-
-  const scrollToCurrent = () => {
-    currentBlockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
-
-  const toggleBlock = (index: number) => {
-    const completing = !blockState[index]
-    const next = { ...blockState, [index]: completing }
-    setBlockState(next)
-    const today = new Date().toISOString().slice(0, 10)
-    localStorage.setItem('925_dailyflow_blocks', JSON.stringify({ date: today, blocks: next }))
-    if (completing) setStreak(markActiveToday())
-  }
-
-  const completedToday = Object.values(blockState).filter(Boolean).length
-
-  // Energy → category hint
-  const energyHint: Record<Energy, { label: string; matches: TimeBlock['category'][] }> = {
-    low: { label: 'low', matches: ['low', 'break'] },
-    medium: { label: 'medium', matches: ['medium', 'low'] },
-    high: { label: 'high', matches: ['high', 'medium'] },
   }
 
   return (
@@ -287,115 +280,86 @@ export default function DailyFlow() {
       <header className="page-header">
         <h1>Daily Flow</h1>
         <div className="current-time">{currentTime || '--:--'}</div>
-        <p>Time + energy. Your routine, your call.</p>
+        <p>What's your energy? Get a task that fits.</p>
       </header>
 
-      <div className="momentum-bar">
-        <span className="momentum-count">
-          <strong className="momentum-num">{completedToday}</strong> block{completedToday !== 1 ? 's' : ''} touched today
-        </span>
-        {streak > 1 && <span className="streak-badge">{streak}-day streak</span>}
-      </div>
-
-      <div className="energy-check">
-        <div className="energy-check-label">Energy right now (optional)</div>
-        <div className="energy-options">
-          {(['low', 'medium', 'high'] as Energy[]).map((level) => (
-            <button
-              key={level}
-              className={`energy-option energy-${level}${energy === level ? ' active' : ''}`}
-              onClick={() => setEnergy(energy === level ? null : level)}
-            >
-              {level[0].toUpperCase() + level.slice(1)}
-            </button>
-          ))}
+      <div className="energy-picker">
+        <div className="energy-picker-label">How's your energy right now?</div>
+        <div className="energy-picker-grid">
+          {(Object.keys(ENERGY_LABEL) as Energy[]).map((level) => {
+            const meta = ENERGY_LABEL[level]
+            return (
+              <button
+                key={level}
+                className={`energy-card energy-${level}${energy === level ? ' active' : ''}`}
+                onClick={() => setEnergy(energy === level ? null : level)}
+              >
+                <span className="energy-icon">{meta.icon}</span>
+                <span className="energy-label">{meta.label}</span>
+                <span className="energy-sub">{meta.sub}</span>
+              </button>
+            )
+          })}
         </div>
       </div>
 
-      {showOffHours && (
+      {outsideFlowWindow ? (
         <div className="off-hours-card">
           <h2>Outside the flow window</h2>
-          <p>The day-blocks below run 7 AM to 9:30 PM. These work anytime:</p>
+          <p>The day-blocks run 7 AM to 9:30 PM. These work anytime:</p>
           <div className="anytime-tasks">
             {anytime.tasks.map((task, i) => (
               <div key={i} className="anytime-task">
                 <h4>{task.name}</h4>
                 <p>{task.desc}</p>
-                <div className="platforms">
-                  {task.platforms.map((p, pi) => (
-                    <a key={pi} href={p.url} target="_blank" rel="noreferrer" className={`platform-link${p.fave ? ' fave' : ''}`}>
-                      {p.fave && <span className="fave-mark">★</span>}{p.name}
-                    </a>
-                  ))}
-                </div>
+                <PlatformLinks platforms={task.platforms} />
               </div>
             ))}
           </div>
         </div>
+      ) : primary && (
+        <div className="right-now-section">
+          <div className="right-now-label">
+            {energy
+              ? <>Best match for <strong>{ENERGY_LABEL[energy].label.toLowerCase()}</strong> energy right now</>
+              : <>Right now</>}
+          </div>
+          <BlockCard
+            block={primary}
+            badge={primary === currentBlock ? 'Now' : undefined}
+          />
+        </div>
       )}
 
-      <div className="legend">
-        <div className="legend-item"><span className="legend-dot high" /> Higher pay / focus</div>
-        <div className="legend-item"><span className="legend-dot medium" /> Medium</div>
-        <div className="legend-item"><span className="legend-dot low" /> Easy</div>
-        <div className="legend-item"><span className="legend-dot break" /> Break</div>
-        <div className="legend-item"><span className="fave-mark legend-fave">★</span> Staff pick</div>
-      </div>
+      <button
+        className="full-day-toggle"
+        onClick={() => setShowFullDay(v => !v)}
+        aria-expanded={showFullDay}
+      >
+        {showFullDay ? '↑ Hide full day' : '↓ See the full day'}
+      </button>
 
-      <div className="schedule">
-        {schedule.map((block, i) => {
-          const status = getStatus(block)
-          const touched = blockState[i] || false
-          const energyMatch = energy ? energyHint[energy].matches.includes(block.category) : true
-          return (
-            <div
+      {showFullDay && (
+        <div className="full-day-schedule">
+          {schedule.map((block, i) => (
+            <BlockCard
               key={i}
-              className={`time-block cat-${block.category} ${status}${touched ? ' touched' : ''}${energy && !energyMatch ? ' energy-mismatch' : ''}`}
-              ref={status === 'current' ? currentBlockRef : null}
-            >
-              <div className="block-header">
-                <div className="block-header-left">
-                  <span className="block-time">{block.time}</span>
-                  {status === 'current' && <span className="current-badge">Now</span>}
-                </div>
-                <span className="block-earnings">{block.earnings}</span>
-              </div>
-              <div className="block-title">{block.title}</div>
-              <p className="block-desc">{block.desc}</p>
-              {block.platforms.length > 0 && (
-                <div className="platforms">
-                  {block.platforms.map((p, pi) => (
-                    <a key={pi} href={p.url} target="_blank" rel="noreferrer" className={`platform-link${p.fave ? ' fave' : ''}`}>
-                      {p.fave && <span className="fave-mark">★</span>}{p.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-              <div className="block-tip">{block.tip}</div>
-              {block.category !== 'break' && (
-                <button
-                  className={`block-mark-btn${touched ? ' touched' : ''}`}
-                  onClick={() => toggleBlock(i)}
-                >
-                  {touched ? '✓ Worked on this' : 'Mark as worked on'}
-                </button>
-              )}
-            </div>
-          )
-        })}
-      </div>
+              block={block}
+              badge={i === currentBlockIdx ? 'Now' : undefined}
+            />
+          ))}
+        </div>
+      )}
 
       <div className="rules-section">
         <h3 className="snap-label">The Rules</h3>
         <ul className="rules-list">
-          <li><strong>Skip a block, no guilt.</strong> Streaks are a tally, not a job.</li>
-          <li><strong>Match the task to your energy.</strong> Don't burn a focused hour on $0.50 surveys.</li>
+          <li><strong>Skip what doesn't fit.</strong> No streak, no guilt.</li>
+          <li><strong>Match the task to your energy.</strong> Don't burn focus on $0.50 surveys.</li>
           <li><strong>Low energy still earns.</strong> Passive apps and quick surveys don't need focus.</li>
           <li><strong>Rotate platforms.</strong> One algorithm hiccup shouldn't tank your week.</li>
         </ul>
       </div>
-
-      <button className="scroll-btn" onClick={scrollToCurrent} title="Jump to current">↓ Now</button>
     </div>
   )
 }

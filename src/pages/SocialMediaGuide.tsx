@@ -1,24 +1,69 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/pages/SocialMediaGuide.css'
+import '../styles/pages/_guides-compact.css'
+import '../styles/pages/_detail-rhythm.css'
 
-function Section({ icon, title, desc, badge, defaultOpen = false, children }: any) {
-  const [open, setOpen] = useState<boolean>(defaultOpen)
-  return (
-    <div className="section">
-      <div className={`section-header${open ? ' open' : ''}`} onClick={() => setOpen(o => !o)}>
-        <span className="section-icon">{icon}</span>
-        <div className="section-info"><div className="section-title">{title}</div><div className="section-desc">{desc}</div></div>
-        <span className="section-badge">{badge}</span>
-        <span className="section-arrow">{open ? '▲' : '▼'}</span>
-      </div>
-      {open && <div className="section-body show">{children}</div>}
-    </div>
-  )
+type Fit = 'best' | 'good' | 'ok'
+
+interface Platform {
+  name: string
+  pay: string
+  fit: Fit
+  note: string
+  href: string
+  external?: boolean
 }
-function CheckItem({ children }: any) {
-  const [checked, setChecked] = useState(false)
-  return <div className={`check-item${checked ? ' checked' : ''}`} onClick={() => setChecked(c => !c)}><div className="check-box">✓</div><span className="check-text">{children}</span></div>
-}
+
+const INCOME_LADDER: [string, string, string, string, string][] = [
+  ['500-10K', 'Nano Influencer', '$10-100/post • $100-800/mo', 'Most achievable', 'good'],
+  ['10K-100K', 'Micro Influencer', '$100-1K/post • $800-5K/mo', 'Consistent posting needed', 'hard'],
+  ['100K-1M', 'Macro Influencer', '$1K-10K/post • $5K-50K/mo', 'High pressure', 'vhard'],
+  ['1M+', 'Mega Influencer', '$10K+/post • $50K+/mo', 'Extremely rare', 'vhard'],
+]
+
+const platforms: Platform[] = [
+  {
+    name: 'YouTube',
+    pay: '$3-10 RPM ad rev',
+    fit: 'best',
+    note: 'Weekly posting is sustainable. Algorithm rewards consistency, not daily grind. Best long-term play.',
+    href: 'https://www.youtube.com/creators/',
+    external: true,
+  },
+  {
+    name: 'LinkedIn',
+    pay: '$0-500/post (sponsored)',
+    fit: 'best',
+    note: 'Text-based, low production barrier. Less addictive algorithm. Pays via brand deals once you have a niche.',
+    href: '/gig-detail?gig=linkedin',
+  },
+  {
+    name: 'Instagram',
+    pay: '$10-1K/sponsored post',
+    fit: 'ok',
+    note: 'Comparison culture is brutal. Triggers perfectionism. Can pay if you survive the burnout.',
+    href: '/gig-detail?gig=instagram',
+  },
+  {
+    name: 'TikTok',
+    pay: '$0.02-0.04/1K views',
+    fit: 'ok',
+    note: 'Most addictive algorithm. ADHD kryptonite. High risk of doom-scrolling instead of creating.',
+    href: '/gig-detail?gig=tiktok',
+  },
+]
+
+const idealFor = [
+  'You can stick with a platform for at least 6 months',
+  'You have a niche you could talk about forever',
+  'You can post on a schedule (even if it\'s 2x/week)',
+]
+
+const whyAdhd = [
+  'Creative bursts during hyperfocus turn into content',
+  'Authenticity reads well on camera; ADHD brains rarely sound rehearsed',
+  'Novelty-seeking helps you catch trends early',
+]
 
 export default function SocialMediaGuide() {
   return (
@@ -26,50 +71,110 @@ export default function SocialMediaGuide() {
       <div className="reality-banner">
         <span className="reality-icon">⚠️</span>
         <div className="reality-text">
-          <h3>The Honest Truth About Influencer Income</h3>
-          <p>48% of influencers earn under $15,000/year. Only 15% make over $100k. This guide gives realistic expectations, not hype.</p>
+          <h3>The honest truth about influencer income</h3>
+          <p>48% of influencers earn under $15,000/year. Only 15% make over $100K. This guide gives realistic expectations, not hype.</p>
         </div>
       </div>
+
       <div className="hero">
         <div className="hero-icon">📱</div>
         <h1><span>Social Media Income</span></h1>
-        <p className="subtitle">The realistic, ADHD-honest guide to making money online.</p>
+        <p className="subtitle">The realistic, ADHD-honest take on making money on social platforms.</p>
       </div>
+
       <div className="income-ladder">
-        {[['500-10K','Nano Influencer','$10-100/post • $100-800/month','Most achievable','good'],
-          ['10K-100K','Micro Influencer','$100-1K/post • $800-5K/month','Consistent posting needed','hard'],
-          ['100K-1M','Macro Influencer','$1K-10K/post • $5K-50K/month','High pressure','vhard'],
-          ['1M+','Mega Influencer','$10K+/post • $50K+/month','Extremely rare','vhard']].map(([f,n,r,l,c])=>(
-          <div key={n} className="income-tier">
-            <span className="tier-followers">{f}</span>
-            <div className="tier-info"><div className="tier-name">{n}</div><div className="tier-range">{r}</div></div>
-            <span className={`tier-reality ${c}`}>{l}</span>
+        {INCOME_LADDER.map(([followers, name, range, label, color]) => (
+          <div key={name} className="income-tier">
+            <span className="tier-followers">{followers}</span>
+            <div className="tier-info">
+              <div className="tier-name">{name}</div>
+              <div className="tier-range">{range}</div>
+            </div>
+            <span className={`tier-reality ${color}`}>{label}</span>
           </div>
         ))}
       </div>
-      <Section icon="🧠" title="ADHD & Social Media: The Real Talk" desc="Why this can be amazing or terrible for you" badge="3 min">
-        <div className="card green"><h4>✅ ADHD Advantages</h4><ul><li><strong>Creativity bursts:</strong> Great for content ideation during hyperfocus</li><li><strong>Authenticity:</strong> ADHD brains often come across as genuine</li><li><strong>Trend-spotting:</strong> Novelty-seeking = early trend detection</li></ul></div>
-        <div className="card pink"><h4>❌ ADHD Danger Zones</h4><ul><li><strong>Doom-scrolling:</strong> Platforms are designed to trap your attention</li><li><strong>Consistency struggle:</strong> Algorithms reward daily posting</li><li><strong>Burnout:</strong> The "always on" pressure is real</li></ul></div>
-      </Section>
-      <Section icon="📱" title="Platform Breakdown for ADHD" desc="Which ones work with your brain" badge="4 min">
-        <div className="platforms">
-          <div className="platform"><div className="platform-top"><span className="platform-name">📺 YouTube</span><span className="platform-adhd good">ADHD: Best</span></div><div className="platform-adhd-note">💜 <strong>Why it works:</strong> Weekly posting is sustainable. Algorithm rewards consistency, not daily grind.</div></div>
-          <div className="platform"><div className="platform-top"><span className="platform-name">💼 LinkedIn</span><span className="platform-adhd good">ADHD: Great</span></div><div className="platform-adhd-note">💜 <strong>Why it works:</strong> Text-based = low production barrier. Less addictive algorithm.</div></div>
-          <div className="platform"><div className="platform-top"><span className="platform-name">📸 Instagram</span><span className="platform-adhd ok">ADHD: Medium</span></div><div className="platform-adhd-note">⚠️ <strong>Caution:</strong> Comparison culture is brutal. Can trigger perfectionism spirals.</div></div>
-          <div className="platform"><div className="platform-top"><span className="platform-name">🎵 TikTok</span><span className="platform-adhd hard">ADHD: Risky</span></div><div className="platform-adhd-note">🚨 <strong>Warning:</strong> Highly addictive algorithm. ADHD kryptonite. Proceed with extreme caution.</div></div>
+
+      <div className="filter-row">
+        <div className="best-for-block">
+          <div className="best-for-title">Best for you if…</div>
+          {idealFor.map((item, i) => (
+            <div key={i} className="best-for-row">{item}</div>
+          ))}
         </div>
-      </Section>
-      <Section icon="🚀" title="Sustainable Start Plan" desc="Start small, stay sane" badge="3 min" defaultOpen>
-        <div className="checklist">
-          <CheckItem><strong>Pick ONE platform</strong> - YouTube or LinkedIn for ADHD</CheckItem>
-          <CheckItem><strong>Choose your niche</strong> - What you could talk about forever</CheckItem>
-          <CheckItem><strong>Set up creator account</strong> - Separate from personal</CheckItem>
-          <CheckItem><strong>Install app timers</strong> - Protect your brain</CheckItem>
-          <CheckItem><strong>Create first piece</strong> - Done &gt; perfect</CheckItem>
-          <CheckItem><strong>Schedule posting days</strong> - 2x/week max to start</CheckItem>
+
+        <div className="rhythm-section section-alt">
+          <div className="section-header">
+            <div className="section-icon adhd">🧠</div>
+            <h2 className="section-title">Why it's ADHD-friendly</h2>
+          </div>
+          <ul className="why-adhd-list">
+            {whyAdhd.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
         </div>
-      </Section>
-      <div style={{textAlign:'center',padding:'40px 20px',color:'var(--text-dim)'}}><p>Build something real. Stay consistent. Be patient.</p><p>And remember: Your worth isn't your follower count. 💜</p></div>
+      </div>
+
+      <div className="rhythm-section">
+        <div className="section-header">
+          <div className="section-icon payout">💸</div>
+          <h2 className="section-title">Pick your platform</h2>
+        </div>
+        <div className="platform-compare">
+          {platforms.map(p => {
+            const inner = (
+              <>
+                <div className="compare-row-head">
+                  <span className="compare-name">{p.name}</span>
+                  <span className="compare-pay">{p.pay}</span>
+                </div>
+                <span className={`compare-fit ${p.fit}`}>
+                  {p.fit === 'best' ? 'Top pick' : p.fit === 'good' ? 'Good' : 'Risky'}
+                </span>
+                <div className="compare-note">{p.note}</div>
+              </>
+            )
+            return p.external ? (
+              <a key={p.name} href={p.href} target="_blank" rel="noreferrer" className="compare-row">{inner}</a>
+            ) : (
+              <Link key={p.name} to={p.href} className="compare-row">{inner}</Link>
+            )
+          })}
+        </div>
+      </div>
+
+      <div className="rhythm-section section-alt">
+        <div className="section-header">
+          <div className="section-icon tasks">🎯</div>
+          <h2 className="section-title">How to win the category</h2>
+        </div>
+        <ul className="why-adhd-list">
+          <li><strong>Pick ONE platform.</strong> Splitting effort across 4 = nothing grows.</li>
+          <li><strong>Set a posting cap.</strong> 2x/week to start, max. Daily posting kills ADHD brains.</li>
+          <li><strong>Install app timers.</strong> The same algorithm that pays you also eats your day.</li>
+          <li><strong>Done beats perfect.</strong> ADHD perfectionism is the #1 reason channels die in month 3.</li>
+        </ul>
+      </div>
+
+      <div className="rhythm-section final-take">
+        <div className="section-header">
+          <div className="section-icon verdict">🔥</div>
+          <h2 className="section-title">Start with this one</h2>
+        </div>
+        <div className="final-take-content">
+          <p><strong>YouTube</strong> for video. Weekly cadence is sustainable. The algorithm doesn't punish you for missing a day.</p>
+          <p><strong>LinkedIn</strong> for text. Lowest production barrier. Best for monetizing expertise via brand deals.</p>
+          <p>Avoid TikTok and Instagram until you have a posting habit elsewhere. Both will eat your attention before they pay you.</p>
+        </div>
+      </div>
+
+      <div className="cta-section">
+        <p className="final-cta-headline">Ready to start?</p>
+        <a href="https://www.youtube.com/creators/" target="_blank" rel="noreferrer" className="cta-btn">
+          Set up a YouTube creator account →
+        </a>
+      </div>
     </div>
   )
 }

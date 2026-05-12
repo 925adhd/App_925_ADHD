@@ -442,3 +442,158 @@
   cursor: pointer;
   z-index: 50;
 }
+
+/* =========================================================
+   REFACTORED LAYOUT — energy-first, "Right now" hero
+   ========================================================= */
+
+/* Energy picker — primary interaction */
+.daily-flow .energy-picker {
+  margin-bottom: 18px;
+}
+.daily-flow .energy-picker-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.daily-flow .energy-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.daily-flow .energy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text);
+  font-family: inherit;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+@media (hover: hover) {
+  .daily-flow .energy-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.daily-flow .energy-card.active.energy-low    { border-color: #4ade80; background: rgba(74, 222, 128, 0.10); }
+.daily-flow .energy-card.active.energy-medium { border-color: var(--brand); background: rgba(86, 195, 174, 0.10); }
+.daily-flow .energy-card.active.energy-high   { border-color: #f87171; background: rgba(248, 113, 113, 0.10); }
+
+.daily-flow .energy-icon { font-size: 24px; }
+.daily-flow .energy-label { font-size: 13px; font-weight: 700; }
+.daily-flow .energy-sub   { font-size: 10px; color: var(--muted); text-align: center; line-height: 1.25; }
+
+/* "Right now" section */
+.daily-flow .right-now-section {
+  margin-bottom: 14px;
+}
+.daily-flow .right-now-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+/* Flow block (new BlockCard component) */
+.daily-flow .flow-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  border-left: 4px solid var(--muted);
+}
+.daily-flow .flow-block.cat-high   { border-left-color: var(--cat-high); }
+.daily-flow .flow-block.cat-medium { border-left-color: var(--cat-medium); }
+.daily-flow .flow-block.cat-low    { border-left-color: var(--cat-low); }
+.daily-flow .flow-block.cat-break  { border-left-color: var(--cat-break); }
+
+.daily-flow .flow-block-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.daily-flow .flow-block-time {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.daily-flow .flow-block-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0B0D12;
+  background: var(--brand);
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.daily-flow .flow-block-earnings {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand);
+}
+.daily-flow .flow-block-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.daily-flow .flow-block-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0 0 10px;
+}
+.daily-flow .flow-block-tip {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* See full day toggle */
+.daily-flow .full-day-toggle {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 14px;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+@media (hover: hover) {
+  .daily-flow .full-day-toggle:hover {
+    border-color: var(--brand);
+    background: rgba(86, 195, 174, 0.05);
+  }
+}
+
+.daily-flow .full-day-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
