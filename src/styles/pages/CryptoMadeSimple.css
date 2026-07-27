@@ -475,3 +475,20 @@
     .crypto-made-simple .scroll-top.visible {
       opacity: 1;
     }
+
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .crypto-made-simple .progress-track {
+      background: rgba(0, 0, 0, 0.08);
+    }
+    html.light .crypto-made-simple .toc-link {
+      background: rgba(0, 0, 0, 0.04);
+    }
+    html.light .crypto-made-simple .comparison .card.traditional {
+      border-color: var(--border);
+    }
+    html.light .crypto-made-simple .alert.tip      { background: rgba(22, 163, 74, 0.10); }
+    html.light .crypto-made-simple .alert.warning  { background: rgba(217, 119, 6, 0.10); }
+    html.light .crypto-made-simple .alert.danger   { background: rgba(220, 38, 38, 0.10); }
+    html.light .crypto-made-simple .disclaimer    { background: rgba(217, 119, 6, 0.10); }

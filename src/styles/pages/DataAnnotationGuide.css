@@ -394,3 +394,30 @@
             .data-annotation-guide .cta { padding: 10px 16px; font-size: 0.95rem; }
         }
 
+        /* =========================================================
+           LIGHT THEME OVERRIDES
+           ========================================================= */
+        html.light .data-annotation-guide .box {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--text);
+        }
+        html.light .data-annotation-guide .section-toggle,
+        html.light .data-annotation-guide .section-content,
+        html.light .data-annotation-guide .nav-pill,
+        html.light .data-annotation-guide .stat-card,
+        html.light .data-annotation-guide .platform,
+        html.light .data-annotation-guide .check-item {
+            background: var(--card);
+            border-color: var(--border);
+            color: var(--text);
+        }
+        html.light .data-annotation-guide .nav-pill {
+            border-color: transparent;
+        }
+        html.light .data-annotation-guide .hero {
+            background: linear-gradient(135deg, rgba(86,195,174,0.08), rgba(139,92,246,0.06));
+            border-color: rgba(86, 195, 174, 0.2);
+        }
+        html.light .data-annotation-guide .platform-adhd {
+            color: var(--text);
+        }

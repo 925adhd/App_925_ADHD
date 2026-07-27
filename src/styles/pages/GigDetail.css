@@ -829,6 +829,34 @@ html.light .gig-detail .info-card-text {
 .gig-detail .hero-tag.delivery  { background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.3); color: #60A5FA; }
 .gig-detail .hero-tag.microgig  { background: rgba(86, 195, 174, 0.12); border-color: rgba(86, 195, 174, 0.3); color: var(--brand); }
 
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light .gig-detail .section-alt {
+  background: rgba(0, 0, 0, 0.03);
+}
+html.light .gig-detail .hero-logo {
+  background: #ececef;
+}
+html.light .gig-detail .loading-spinner {
+  border-color: rgba(0, 0, 0, 0.08);
+  border-top-color: var(--brand);
+}
+html.light .gig-detail .cta-section {
+  background: var(--card);
+  border-top-color: var(--border);
+}
+html.light .gig-detail .cta-btn {
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(77, 170, 152, 0.2);
+}
+html.light .gig-detail .cta-secondary {
+  border-color: var(--border);
+}
+html.light .gig-detail .page-fav-btn {
+  text-shadow: none;
+}
+
 /* === Structured payout grid === */
 .gig-detail .payout-grid {
   display: flex;

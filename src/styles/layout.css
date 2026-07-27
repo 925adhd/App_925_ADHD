@@ -56,6 +56,7 @@ html.light {
   --border: rgba(0, 0, 0, 0.09);
   --text: #111111;
   --text-muted: rgba(0, 0, 0, 0.52);
+  --text-dim: rgba(0, 0, 0, 0.52);
   --sidebar-bg: #ebebed;
   --panel-bg: #ffffff;
 

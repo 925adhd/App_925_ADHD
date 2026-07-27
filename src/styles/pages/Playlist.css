@@ -284,3 +284,20 @@
         margin: 8px auto;
       }
     }
+
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .playlist .player-container {
+      background: var(--card);
+      border-color: var(--border);
+    }
+    @media (hover: hover) {
+      html.light .playlist .track-row:hover {
+        background: rgba(0, 0, 0, 0.04);
+        border-color: rgba(0, 0, 0, 0.08);
+      }
+    }
+    html.light .playlist .brainfm-affiliate {
+      border-top-color: var(--border);
+    }

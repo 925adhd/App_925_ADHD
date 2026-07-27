@@ -208,3 +208,26 @@
       color: var(--muted);
       margin-bottom: 10px;
     }
+
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .essentials .feature-list li {
+      background: rgba(0, 0, 0, 0.03);
+      color: var(--text);
+    }
+    html.light .essentials .pro-tip {
+      background: rgba(217, 119, 6, 0.10);
+      border-color: rgba(217, 119, 6, 0.25);
+    }
+    html.light .essentials .pro-tip p {
+      color: var(--text);
+    }
+    html.light .essentials .category-badge {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    @media (hover: hover) {
+      html.light .essentials .tool-card:hover {
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+    }

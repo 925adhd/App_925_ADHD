@@ -722,3 +722,35 @@
             scroll-margin-top: 70px;
         }
 
+        /* =========================================================
+           LIGHT THEME OVERRIDES
+           ========================================================= */
+        html.light .surveys-guide .info-card {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--text);
+        }
+        html.light .surveys-guide .section-header,
+        html.light .surveys-guide .section-content,
+        html.light .surveys-guide .platform-card,
+        html.light .surveys-guide .check-item,
+        html.light .surveys-guide .action-btn,
+        html.light .surveys-guide .quiz-option {
+            background: var(--card);
+            border-color: var(--border);
+            color: var(--text);
+        }
+        html.light .surveys-guide .action-btn {
+            border-color: transparent;
+        }
+        html.light .surveys-guide .tldr {
+            background: linear-gradient(135deg, rgba(86,195,174,0.08), rgba(139,92,246,0.06));
+        }
+        html.light .surveys-guide .section-content {
+            border-color: var(--border);
+        }
+        html.light .surveys-guide .section-header.active {
+            border-color: var(--brand);
+        }
+        html.light .surveys-guide .platform-adhd {
+            color: var(--text);
+        }

@@ -271,3 +271,25 @@
 
       .receipt-stacker .reset-btn { padding: 10px; font-size: var(--fs-13); border-radius: var(--radius-sm); }
     }
+
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .receipt-stacker .progress-bar {
+      background: rgba(0, 0, 0, 0.08);
+    }
+    html.light .receipt-stacker .app-tip {
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--text);
+    }
+    @media (hover: hover) {
+      html.light .receipt-stacker .app-card:hover {
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+      html.light .receipt-stacker .reset-btn:hover {
+        background: rgba(0, 0, 0, 0.06);
+      }
+    }
+    html.light .receipt-stacker .reset-btn {
+      background: rgba(0, 0, 0, 0.04);
+    }

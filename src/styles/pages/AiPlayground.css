@@ -488,3 +488,47 @@
 /* Footer: hide — saves a row, no real value */
 .ai-playground .page-footer { display: none; }
 
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light .ai-playground .tips-banner {
+  background: linear-gradient(90deg, rgba(167,139,250,0.08), rgba(86,195,174,0.08), rgba(244,114,182,0.08));
+}
+html.light .ai-playground .message-content code {
+  background: rgba(0, 0, 0, 0.06);
+}
+html.light .ai-playground .template-category {
+  background: rgba(0, 0, 0, 0.05);
+}
+@media (hover: hover) {
+  html.light .ai-playground .tab:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  html.light .ai-playground .btn-ghost:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  html.light .ai-playground .starter-btn:hover {
+    background: rgba(86, 195, 174, 0.08);
+  }
+  html.light .ai-playground .prompt-btn:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.03);
+  }
+  html.light .ai-playground .copy-btn:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+html.light .ai-playground .prompt-btn {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+html.light .ai-playground .copy-modal .backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+html.light .ai-playground .copy-modal .dialog {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+html.light .ai-playground .toast {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+

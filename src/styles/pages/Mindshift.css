@@ -347,3 +347,17 @@
 .mindshift .disclaimer strong {
   color: var(--text);
 }
+
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light .mindshift .evidence-box {
+  background: rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.2);
+}
+html.light .mindshift .evidence-box strong {
+  color: #b8860b;
+}
+html.light .mindshift .mood-card[data-offset="0"] {
+  background: rgba(86, 195, 174, 0.10);
+}

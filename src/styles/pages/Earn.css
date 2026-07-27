@@ -1254,10 +1254,20 @@ html.light .earn-page .tab-btn {
   border-color: var(--border);
 }
 
+html.light .earn-page .tab-btn.active {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #fff;
+  border-color: rgba(15,118,110,0.4);
+}
+
 @media (hover: hover) {
   html.light .earn-page .tab-btn:hover {
     background: var(--card-hover);
     border-color: rgba(0,0,0,0.12);
+  }
+  html.light .earn-page .tab-btn.active:hover {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    border-color: rgba(15,118,110,0.5);
   }
 }
 html.light .earn-page .more-filters-panel {

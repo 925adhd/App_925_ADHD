@@ -402,3 +402,13 @@ html.light .final-take-content { color: rgba(0, 0, 0, 0.82); }
 @media (hover: hover) {
   .cta-btn:hover { background: #56bfaa; }
 }
+
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light .rhythm-section .section-alt { background: rgba(0, 0, 0, 0.03); }
+html.light .payout-row { border-bottom-color: var(--border); }
+html.light .pros-card,
+html.light .cons-card { background: var(--card); border-color: var(--border); }
+html.light .compare-fit.ok { background: rgba(0,0,0,0.05); color: var(--text-muted); }
+html.light .cta-btn { color: #0B0D12; }

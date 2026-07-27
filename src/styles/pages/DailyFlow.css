@@ -597,3 +597,53 @@
   gap: 10px;
   margin-bottom: 20px;
 }
+
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light .daily-flow {
+  --cat-break: rgba(0, 0, 0, 0.25);
+}
+html.light .daily-flow .anytime-task {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: var(--border);
+}
+html.light .daily-flow .platform-link {
+  background: rgba(0, 0, 0, 0.04);
+}
+@media (hover: hover) {
+  html.light .daily-flow .energy-option:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  html.light .daily-flow .energy-card:hover {
+    border-color: rgba(0, 0, 0, 0.18);
+  }
+  html.light .daily-flow .mood-dot:hover::before {
+    background: var(--text);
+  }
+}
+html.light .daily-flow .block-tip {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text);
+}
+html.light .daily-flow .flow-block-tip {
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-muted);
+}
+html.light .daily-flow .block-mark-btn {
+  background: rgba(86, 195, 174, 0.10);
+}
+@media (hover: hover) {
+  html.light .daily-flow .block-mark-btn:hover:not(.touched) {
+    color: #fff;
+  }
+}
+html.light .daily-flow .scroll-btn {
+  color: #0B0D12;
+}
+html.light .daily-flow .current-badge {
+  color: #0B0D12;
+}
+html.light .daily-flow .flow-block-badge {
+  color: #0B0D12;
+}

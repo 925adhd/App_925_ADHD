@@ -495,3 +495,31 @@
   background: var(--red);
   color: #fff;
 }
+
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light .gig-tracker .goal-display input {
+  background: rgba(0, 0, 0, 0.04);
+}
+html.light .gig-tracker .progress-bar {
+  background: rgba(0, 0, 0, 0.08);
+}
+@media (hover: hover) {
+  html.light .gig-tracker .category-btn:hover {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+  html.light .gig-tracker .quick-btn:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  html.light .gig-tracker .action-btn:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+html.light .gig-tracker .modal-btn.cancel {
+  background: rgba(0, 0, 0, 0.06);
+}
+html.light .gig-tracker .modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}

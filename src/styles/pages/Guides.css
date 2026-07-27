@@ -336,4 +336,27 @@
       to { transform: rotate(360deg); }
     }
 
-
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .guides .pro-tip {
+      background: rgba(217, 119, 6, 0.10);
+      color: var(--text);
+    }
+    html.light .guides .pro-tip strong {
+      color: #b8860b;
+    }
+    html.light .guides .guide-card-sub {
+      color: rgba(0, 0, 0, 0.45);
+    }
+    html.light .guides .menu-btn {
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--text);
+    }
+    html.light .guides .spinner {
+      border-color: rgba(0, 0, 0, 0.08);
+      border-top-color: var(--brand);
+    }
+    html.light .guides .bottom-nav {
+      background: var(--card);
+    }

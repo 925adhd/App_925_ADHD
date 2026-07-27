@@ -127,7 +127,7 @@ export default function Feedback() {
 
                 <div className="form-group">
                   <label htmlFor="description">Tell me more <span className="hint">Even one sentence helps</span></label>
-                  <textarea id="description" name="description" placeholder={"Explain your idea, describe the problem, or just brain-dump here.\nEven one or two sentences helps."} maxLength={1000} value={description} onChange={e => setDescription(e.target.value)} />
+                  <textarea id="description" name="description" placeholder="Explain your idea, describe the problem, or just brain-dump here." maxLength={1000} value={description} onChange={e => setDescription(e.target.value)} />
                   <div className={`char-count${description.length > 0 ? ' visible' : ''}${charDanger ? ' danger' : charWarning ? ' warning' : ''}`}>
                     <span>{description.length}</span> / 1000
                   </div>

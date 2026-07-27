@@ -235,3 +235,28 @@
             .social-media-guide .platform-details { grid-template-columns: 1fr; }
         }
 
+        /* =========================================================
+           LIGHT THEME OVERRIDES
+           ========================================================= */
+        html.light .social-media-guide .card {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--text);
+        }
+        html.light .social-media-guide .reality-banner {
+            background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(232,121,249,0.08));
+        }
+        html.light .social-media-guide .income-tier,
+        html.light .social-media-guide .section-header,
+        html.light .social-media-guide .section-body,
+        html.light .social-media-guide .platform,
+        html.light .social-media-guide .check-item {
+            background: var(--card);
+            border-color: var(--border);
+            color: var(--text);
+        }
+        html.light .social-media-guide .platform-detail strong {
+            color: var(--text);
+        }
+        html.light .social-media-guide .platform-adhd-note {
+            color: var(--text);
+        }

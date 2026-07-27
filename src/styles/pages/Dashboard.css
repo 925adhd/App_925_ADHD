@@ -555,6 +555,21 @@ html.light .dashboard .featured-card {
   border-color: rgba(86, 195, 174, 0.32);
 }
 
+html.light .dashboard .featured-card--muted,
+html.light .dashboard .featured-card--muted:hover {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: none;
+}
+html.light .dashboard .featured-card--muted::before { display: none; }
+
+html.light .dashboard .dash-welcome {
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 html.light .dashboard .discord-card {
   background: linear-gradient(135deg, rgba(88, 101, 242, 0.10), rgba(88, 101, 242, 0.03));
   border-color: rgba(88, 101, 242, 0.32);

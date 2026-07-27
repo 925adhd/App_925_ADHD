@@ -320,3 +320,29 @@
       .freelance-calc .form-group + .form-group { margin-top: 6px; }
       .freelance-calc .tip-box + button, .freelance-calc .form-group + button { margin-top: 8px; }
     }
+
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .freelance-calc .form-group input,
+    html.light .freelance-calc .result-item {
+      background: rgba(0, 0, 0, 0.03);
+    }
+    html.light .freelance-calc .tip-box {
+      background: rgba(217, 119, 6, 0.10);
+      border-color: rgba(217, 119, 6, 0.25);
+    }
+    html.light .freelance-calc .tip-box p {
+      color: var(--text);
+    }
+    html.light .freelance-calc .btn-secondary {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    @media (hover: hover) {
+      html.light .freelance-calc .btn-secondary:hover {
+        background: rgba(0, 0, 0, 0.08);
+      }
+    }
+    html.light .freelance-calc .results-tip p {
+      color: var(--text);
+    }

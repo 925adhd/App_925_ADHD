@@ -291,3 +291,19 @@
         padding: 20px;
       }
     }
+
+    /* =========================================================
+       LIGHT THEME OVERRIDES
+       ========================================================= */
+    html.light .adhd-hacks .tag.category {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    html.light .adhd-hacks .tag.time {
+      background: rgba(0, 0, 0, 0.04);
+    }
+    html.light .adhd-hacks .hack-steps {
+      background: rgba(0, 0, 0, 0.03);
+    }
+    html.light .adhd-hacks .hack-img {
+      background: #ececef;
+    }

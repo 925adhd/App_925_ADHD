@@ -583,3 +583,34 @@
             .transcription-guide .question-text { font-size: 1rem; }
         }
 
+        /* =========================================================
+           LIGHT THEME OVERRIDES
+           ========================================================= */
+        html.light .transcription-guide .card,
+        html.light .transcription-guide .result-advice {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--text);
+        }
+        html.light .transcription-guide .warning-banner {
+            background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(239,68,68,0.06));
+        }
+        html.light .transcription-guide .section-header,
+        html.light .transcription-guide .section-body,
+        html.light .transcription-guide .stat,
+        html.light .transcription-guide .nav-btn,
+        html.light .transcription-guide .quiz-option,
+        html.light .transcription-guide .breakdown-item,
+        html.light .transcription-guide .platform,
+        html.light .transcription-guide .check-item,
+        html.light .transcription-guide .result-score,
+        html.light .transcription-guide .quiz-restart {
+            background: var(--card);
+            border-color: var(--border);
+            color: var(--text);
+        }
+        html.light .transcription-guide .nav-btn {
+            border-color: transparent;
+        }
+        html.light .transcription-guide .platform-adhd {
+            color: var(--text);
+        }

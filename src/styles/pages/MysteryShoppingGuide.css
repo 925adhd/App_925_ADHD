@@ -229,3 +229,23 @@
             .mystery-shopping-guide .company { padding: 10px; }
         }
 
+        /* =========================================================
+           LIGHT THEME OVERRIDES
+           ========================================================= */
+        html.light .mystery-shopping-guide .card {
+            background: rgba(0, 0, 0, 0.03);
+            color: var(--text);
+        }
+        html.light .mystery-shopping-guide .section-header,
+        html.light .mystery-shopping-guide .section-body,
+        html.light .mystery-shopping-guide .shop-type,
+        html.light .mystery-shopping-guide .stat,
+        html.light .mystery-shopping-guide .company,
+        html.light .mystery-shopping-guide .check-item {
+            background: var(--card);
+            border-color: var(--border);
+            color: var(--text);
+        }
+        html.light .mystery-shopping-guide .hero {
+            background: linear-gradient(135deg, rgba(86,195,174,0.08), rgba(251,191,36,0.08));
+        }

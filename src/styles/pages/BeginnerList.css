@@ -446,3 +446,24 @@ html.light .beginner-list .logo-container {
   background: #F1F1F3;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
+html.light .beginner-list .intro {
+  border-color: var(--border);
+}
+html.light .beginner-list .progress-tracker {
+  border-color: var(--border);
+}
+html.light .beginner-list .progress-bar-bg {
+  background: rgba(0, 0, 0, 0.08);
+}
+html.light .beginner-list .category-header {
+  border-bottom-color: var(--border);
+}
+html.light .beginner-list .category-header .count {
+  background: rgba(0, 0, 0, 0.05);
+}
+html.light .beginner-list .stat {
+  background: rgba(0, 0, 0, 0.04);
+}
+html.light .beginner-list .cta-btn {
+  color: #fff;
+}
