@@ -678,7 +678,7 @@ export const gigData: Record<string, any> = {
   'paidviewpoint': {
     name: 'PaidViewpoint',
     logo: 'images/paidviewpoint.png',
-    link: 'https://paidviewpoint.com/',
+    link: 'https://paidviewpoint.com/landing/?r=925adhd',
     rate: '$0.03–$2/survey',
     description: 'Short surveys. Still pays you even if you don\'t qualify.',
     category: 'surveys',
@@ -768,7 +768,7 @@ export const gigData: Record<string, any> = {
   'clickworker': {
     name: 'Clickworker',
     logo: 'images/clickworker.png',
-    link: 'https://www.clickworker.com/clickworker/',
+    link: 'https://clickworker.app/EnMUcv',
     rate: '$3–$15/hr',
     description: 'Small writing and labeling tasks. Easy to start.',
     category: 'data',
@@ -3520,7 +3520,7 @@ export const gigData: Record<string, any> = {
   'fetch': {
     name: 'Fetch Rewards',
     logo: 'https://play-lh.googleusercontent.com/E0T0M0dd9w6v7X9_CFaaxlaFjyrGxSLGKxks9NWuAkcQoVckHsGnA_F50SzRSSoMlzs=w240-h480-rw',
-    link: 'https://fetchrewards.com/',
+    link: 'https://referral.fetch.com/vvv3/referralqr?code=4CVA47',
     rate: '$25–$150/yr',
     description: 'Scan any receipt for points. Easiest one. Best pay is from Special Offers.',
     category: 'cashback',
@@ -3570,7 +3570,7 @@ export const gigData: Record<string, any> = {
   'fieldagent': {
     name: 'Field Agent',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/bJvEwgxE41M5YKf5NNUc.png',
-    link: 'https://app.fieldagent.net/',
+    link: 'https://usapp.fieldagent.net/applinks/invite/?code=j65bwhd',
     rate: '$3–$20 per task',
     description: 'Quick in-person tasks while you\'re out. Price checks, photos, store audits.',
     category: 'microgig',
@@ -3714,7 +3714,7 @@ export const gigData: Record<string, any> = {
   'honeygain': {
     name: 'Honeygain',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/XFzVcPA2ZQRwdAl1iyVM.png',
-    link: 'https://honeygain.com/',
+    link: 'https://join.honeygain.com/KGIBS7A0B7',
     rate: '$2–$8/mo',
     description: 'Earns pennies for sharing your unused internet. Slow payouts.',
     category: 'passive',
@@ -4054,7 +4054,7 @@ export const gigData: Record<string, any> = {
   'modeearn': {
     name: 'Mode Earn',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/x2dOwyvRkTLnqbXD6fee.jpg',
-    link: 'https://play.google.com/store/apps/details?id=us.current.android',
+    link: 'https://crrnt.me/YhtvwsOw64b',
     rate: '$10–$50/mo',
     description: 'Android only. Earns in the background while you charge or scroll.',
     category: 'rewards',
@@ -4152,7 +4152,7 @@ export const gigData: Record<string, any> = {
   'mistplay': {
     name: 'Mistplay',
     logo: 'https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/bIquIPZf7ZEXDA4vlm8R/pub/rCXLcdy5K4EBVE2fQPdW.jpg',
-    link: 'https://www.mistplay.com/',
+    link: 'https://mistplay.onelink.me/ZGRQ/8wftysuq',
     rate: '$5–$20/mo',
     description: 'Play games for rewards. Now on iOS too. Slower than it used to be.',
     category: 'rewards',

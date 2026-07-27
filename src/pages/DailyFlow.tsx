@@ -25,9 +25,9 @@ const schedule: TimeBlock[] = [
     earnings: '$2-8',
     category: 'low',
     platforms: [
-      { name: 'Honeygain', url: 'https://honeygain.com/', fave: true },
-      { name: 'Fetch Rewards', url: 'https://fetchrewards.com/', fave: true },
-      { name: 'Paid Viewpoint', url: 'https://paidviewpoint.com/', fave: true },
+      { name: 'Honeygain', url: 'https://join.honeygain.com/KGIBS7A0B7', fave: true },
+      { name: 'Fetch Rewards', url: 'https://referral.fetch.com/vvv3/referralqr?code=4CVA47', fave: true },
+      { name: 'Paid Viewpoint', url: 'https://paidviewpoint.com/landing/?r=925adhd', fave: true },
     ],
     tip: 'Honeygain runs in the background once it\'s installed. Set it once, leave it.',
   },
@@ -61,7 +61,7 @@ const schedule: TimeBlock[] = [
     earnings: '$10-40',
     category: 'medium',
     platforms: [
-      { name: 'Field Agent', url: 'https://app.fieldagent.net/', fave: true },
+      { name: 'Field Agent', url: 'https://usapp.fieldagent.net/applinks/invite/?code=j65bwhd', fave: true },
       { name: 'Gigspot', url: 'https://www.gigspot.com/', fave: true },
       { name: 'Presto Shopper', url: 'https://insta.prestomobilesurveys.com/site', fave: true },
     ],
@@ -83,9 +83,9 @@ const schedule: TimeBlock[] = [
     earnings: '$3-10',
     category: 'low',
     platforms: [
-      { name: 'Mistplay', url: 'https://www.mistplay.com/', fave: true },
+      { name: 'Mistplay', url: 'https://mistplay.onelink.me/ZGRQ/8wftysuq', fave: true },
       { name: 'JustPlay', url: 'https://justplay.com/', fave: true },
-      { name: 'Mode Earn', url: 'https://play.google.com/store/apps/details?id=us.current.android', fave: true },
+      { name: 'Mode Earn', url: 'https://crrnt.me/YhtvwsOw64b', fave: true },
       { name: 'Amazon MTurk', url: 'https://www.mturk.com/worker' },
     ],
     tip: 'JustPlay pays big the first week then drops. Mistplay is steadier long-term.',
@@ -142,8 +142,8 @@ const schedule: TimeBlock[] = [
     earnings: '$2-8',
     category: 'low',
     platforms: [
-      { name: 'Paid Viewpoint', url: 'https://paidviewpoint.com/', fave: true },
-      { name: 'Fetch Rewards', url: 'https://fetchrewards.com/', fave: true },
+      { name: 'Paid Viewpoint', url: 'https://paidviewpoint.com/landing/?r=925adhd', fave: true },
+      { name: 'Fetch Rewards', url: 'https://referral.fetch.com/vvv3/referralqr?code=4CVA47', fave: true },
       { name: 'JustPlay', url: 'https://justplay.com/', fave: true },
     ],
     tip: 'Scan today\'s receipts into Fetch before bed. Stop by 9:30 PM. Screen-time past then hurts tomorrow\'s focus.',
@@ -158,7 +158,7 @@ const anytime = {
       desc: 'Background earnings on shopping you\'re already doing.',
       platforms: [
         { name: 'Ibotta', url: 'https://home.ibotta.com/', fave: true },
-        { name: 'Fetch Rewards', url: 'https://fetchrewards.com/', fave: true },
+        { name: 'Fetch Rewards', url: 'https://referral.fetch.com/vvv3/referralqr?code=4CVA47', fave: true },
         { name: 'Rakuten', url: 'https://www.rakuten.com/' },
       ],
     },
@@ -166,7 +166,7 @@ const anytime = {
       name: 'Mobile games',
       desc: 'Play while watching TV. Won\'t pay much but won\'t cost focus.',
       platforms: [
-        { name: 'Mistplay', url: 'https://www.mistplay.com/', fave: true },
+        { name: 'Mistplay', url: 'https://mistplay.onelink.me/ZGRQ/8wftysuq', fave: true },
         { name: 'JustPlay', url: 'https://justplay.com/', fave: true },
       ],
     },
@@ -174,7 +174,7 @@ const anytime = {
       name: 'Passive',
       desc: 'Install once, earns while you do other things.',
       platforms: [
-        { name: 'Honeygain', url: 'https://honeygain.com/', fave: true },
+        { name: 'Honeygain', url: 'https://join.honeygain.com/KGIBS7A0B7', fave: true },
       ],
     },
   ],

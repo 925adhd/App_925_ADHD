@@ -3,7 +3,7 @@ import '../styles/pages/ReceiptStacker.css'
 
 const APPS = [
   { name: 'Ibotta', url: 'https://ibotta.com/get-the-app', earnings: '$0.10–$5.00', action: 'Activate offers + upload receipt', tip: 'Tap offers, activate matching ones, then upload receipt' },
-  { name: 'Fetch Rewards', url: 'https://fetch.com', earnings: '$0.01–$0.50', action: 'Upload receipt', tip: 'Scan barcode or upload image to earn points' },
+  { name: 'Fetch Rewards', url: 'https://referral.fetch.com/vvv3/referralqr?code=4CVA47', earnings: '$0.01–$0.50', action: 'Upload receipt', tip: 'Scan barcode or upload image to earn points' },
   { name: 'Benjamin', url: 'https://www.benjaminone.com', earnings: '$0.05–$16.00', action: 'Upload receipt + link card', tip: 'Also earn from games, surveys, and linked cards' },
   { name: 'CoinOut', url: 'https://coinout.com', earnings: '$0.01–$0.10', action: 'Upload receipt', tip: 'Snap a photo for instant cash back' },
   { name: 'Receipt Hog', url: 'https://receipthog.com', earnings: '$0.01–$0.05', action: 'Upload receipt', tip: 'Earn coins, sweepstakes entries, and rewards' },
